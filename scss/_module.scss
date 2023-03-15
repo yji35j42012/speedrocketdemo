@@ -91,7 +91,7 @@
 			@include d_f(flex);
 			flex-direction: column;
 			margin-left: 18px;
-			li+li{
+			li + li {
 				margin-top: 5px;
 			}
 		}
