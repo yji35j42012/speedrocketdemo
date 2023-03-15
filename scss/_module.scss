@@ -37,15 +37,16 @@
 	&_nav {
 		@include d_f(flex);
 		width: 100%;
+		margin-bottom: 26px;
 		padding-bottom: 40px;
 		color: #ffffff;
-		border-bottom: 0.5px solid #FFFFFF;
+		border-bottom: 0.5px solid #ffffff;
 		// .footer_nav_group
 		&_group {
 			& + & {
 				margin-left: 94px;
 			}
-			> li+li{
+			> li + li {
 				margin-top: 16px;
 			}
 		}
@@ -73,13 +74,27 @@
 			background-color: #fff;
 			border-radius: 100px;
 		}
-		.icon+.icon{
+		.icon + .icon {
 			margin-left: 8px;
 		}
 	}
 	// .footer_logo
 	&_logo {
+		flex: none;
 		width: 254px;
+	}
+	// .footer_info
+	&_info {
+		@include d_f(flex);
+		color: #fff;
+		ul {
+			@include d_f(flex);
+			flex-direction: column;
+			margin-left: 18px;
+			li+li{
+				margin-top: 5px;
+			}
+		}
 	}
 }
 

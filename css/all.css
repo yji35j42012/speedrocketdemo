@@ -71,9 +71,10 @@ footer .container {
       -ms-flex-align: stretch;
           align-items: stretch;
   width: 100%;
+  margin-bottom: 26px;
   padding-bottom: 40px;
   color: #ffffff;
-  border-bottom: 0.5px solid #FFFFFF;
+  border-bottom: 0.5px solid #ffffff;
 }
 
 .footer_nav_group + .footer_nav_group {
@@ -124,7 +125,44 @@ footer .container {
 }
 
 .footer_logo {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   width: 254px;
+}
+
+.footer_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  color: #fff;
+}
+
+.footer_info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 18px;
+}
+
+.footer_info ul li + li {
+  margin-top: 5px;
 }
 
 .nav {
