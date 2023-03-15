@@ -4,6 +4,18 @@
 	background-color: #ccc;
 }
 
+.container {
+	width: 100%;
+	max-width: 1280px;
+
+	@at-root footer & {
+		position: relative;
+		@include d_f(flex);
+		flex-wrap: wrap;
+		margin: auto;
+	}
+}
+
 .header {
 	position: relative;
 	width: 100%;
@@ -14,6 +26,60 @@
 		@include d_f(flex, space-between, center);
 		height: 54px;
 		padding: 0 9.5px;
+	}
+}
+
+.footer {
+	padding-top: 121px;
+	padding-bottom: 77px;
+	background-color: #090909;
+	// .footer_nav
+	&_nav {
+		@include d_f(flex);
+		width: 100%;
+		padding-bottom: 40px;
+		color: #ffffff;
+		border-bottom: 0.5px solid #FFFFFF;
+		// .footer_nav_group
+		&_group {
+			& + & {
+				margin-left: 94px;
+			}
+			> li+li{
+				margin-top: 16px;
+			}
+		}
+		// .footer_nav_title
+		&_title {
+			font-weight: 700;
+			font-size: 16px;
+		}
+		// .footer_nav_item
+		&_item {
+			font-weight: 400;
+			font-size: 14px;
+		}
+	}
+	// .footer_community
+	&_community {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include d_f(flex);
+		.icon {
+			flex: none;
+			width: 40px;
+			height: 40px;
+			background-color: #fff;
+			border-radius: 100px;
+		}
+		.icon+.icon{
+			margin-left: 8px;
+		}
+	}
+	// .footer_logo
+	&_logo {
+		width: 254px;
 	}
 }
 
@@ -58,9 +124,15 @@
 	}
 	// .nav_item
 	&_item {
+		@include d_f(flex, center);
 		padding: 4px 0;
 		border-bottom: 2px solid transparent;
+		@extend %hand;
 		@include hoverHandler {
+			color: #887766;
+			border-color: #887766;
+		}
+		&.on {
 			color: #887766;
 			border-color: #887766;
 		}
@@ -113,10 +185,35 @@
 	// .nav_groupSec
 	&_groupSec {
 		position: absolute;
-		top: 110px;
+		top: 115px;
+		display: none;
+		padding: 23px 27px 15px;
 		background-color: #ffffff;
 		color: #333333;
 		border-radius: 16px;
+
+		&::before {
+			position: absolute;
+			top: -5px;
+			left: 0;
+			right: 0;
+			content: "";
+			width: 53px;
+			height: 53px;
+			margin: auto;
+			background-color: #fff;
+			transform: rotate(45deg);
+		}
+
+		@at-root .nav_item.on & {
+			display: block;
+		}
+		li {
+			position: relative;
+		}
+		> li + li {
+			margin-top: 31px;
+		}
 	}
 
 	// .nav_btn
@@ -126,8 +223,6 @@
 		width: 26px;
 		height: 18px;
 		@extend %hand;
-
-		
 
 		span {
 			display: block;

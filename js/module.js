@@ -27,9 +27,28 @@ for (let i = 0; i < lang_group_item.length; i++) {
 
 var nav_btn = document.querySelector("#nav_btn");
 var nav_box = document.querySelector("#nav_box");
-
 nav_btn.onclick = function() {
 	nav_box.classList.contains("on")
 		? nav_box.classList.remove("on")
 		: nav_box.classList.add("on");
 };
+
+var secNav = document.querySelectorAll("[name=secNav]");
+var secNav_li = document.querySelectorAll("[name=secNav] > li");
+var secNavNum = null;
+for (let i = 0; i < secNav.length; i++) {
+	const element = secNav[i];
+	element.onclick = function() {
+		if (secNavNum == i) {
+			secNav[secNavNum].classList.remove("on");
+			secNavNum = null;
+		} else if (secNavNum == null) {
+			secNav[i].classList.add("on");
+			secNavNum = i;
+		} else {
+			secNav[secNavNum].classList.remove("on");
+			secNav[i].classList.add("on");
+			secNavNum = i;
+		}
+	};
+}
