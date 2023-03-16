@@ -31,28 +31,30 @@
 			<a class="nav_item_logo" href="#">
 				<!-- <img src="./images/logo_w.svg" alt="光速火箭國際官網"> -->
 			</a>
+			<!-- 打開在class 加上 on -->
 			<nav id="nav_box" class="nav">
 				<ul class="nav_group">
 					<li class="nav_item">
 						<a class="nav_item_link active" href="news.html">最新消息</a>
 					</li>
+					<!-- 打開在class 加上 on -->
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">關於我們</a>
 						<ul class="nav_groupSec">
-							<li><a href="#認識光速火箭">認識光速火箭</a></li>
-							<li><a href="#公司大紀事">公司大紀事</a></li>
-							<li><a href="#理念願景">理念願景</a></li>
-							<li><a href="#人才招募">人才招募</a></li>
-							<li><a href="#經營團隊">經營團隊</a></li>
-							<li><a href="#異業合作">異業合作</a></li>
+							<li><a class="nav_item_link" href="#認識光速火箭">認識光速火箭</a></li>
+							<li><a class="nav_item_link" href="#公司大紀事">公司大紀事</a></li>
+							<li><a class="nav_item_link" href="#理念願景">理念願景</a></li>
+							<li><a class="nav_item_link" href="#人才招募">人才招募</a></li>
+							<li><a class="nav_item_link" href="#經營團隊">經營團隊</a></li>
+							<li><a class="nav_item_link" href="#異業合作">異業合作</a></li>
 						</ul>
 					</li>
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">光速 × 品牌</a>
 						<ul class="nav_groupSec">
-							<li><a href="#SHARECO">SHARECO</a></li>
-							<li><a href="#KP記憶香氛">KP記憶香氛</a></li>
-							<li><a href="#老彭友秘制辣掌">老彭友秘制辣掌</a></li>
+							<li><a class="nav_item_link" href="#SHARECO">SHARECO</a></li>
+							<li><a class="nav_item_link" href="#KP記憶香氛">KP記憶香氛</a></li>
+							<li><a class="nav_item_link" href="#老彭友秘制辣掌">老彭友秘制辣掌</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -65,15 +67,15 @@
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">光速 × 軟體</a>
 						<ul class="nav_groupSec">
-							<li><a href="#一頁商店">一頁商店</a></li>
-							<li><a href="#火箭快遞">火箭快遞</a></li>
+							<li><a class="nav_item_link" href="#一頁商店">一頁商店</a></li>
+							<li><a class="nav_item_link" href="#火箭快遞">火箭快遞</a></li>
 						</ul>
 					</li>
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">銷售據點</a>
 						<ul class="nav_groupSec">
-							<li><a href="#YBG (台灣)">YBG (台灣)</a></li>
-							<li><a href="#海外據點">海外據點</a></li>
+							<li><a class="nav_item_link" href="#YBG (台灣)">YBG (台灣)</a></li>
+							<li><a class="nav_item_link" href="#海外據點">海外據點</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -82,37 +84,78 @@
 				<span></span>
 			</button>
 		</header>
-		<section>section</section>
+		<section class="brand">
+			<div class="container">
+				<h2>旗下品牌</h2>
+				<ul class="brand_group">
+					<li class="brand_item">
+						<div class="brand_item_logo"></div>
+						<div class="brand_item_title">SHARECO</div>
+						<p class="brand_item_txt">融合版畫風格與次文化藝術、以故事為香味的核心，每年銷售 15 萬瓶香水、知名藝人瘦子 E.SO
+							推薦，產品包含香水吊卡、香水、擴香、沐浴、服飾、車用香氛。</p>
+					</li>
+					<li class="brand_item">
+						<div class="brand_item_title">KLOWER PANDOR</div>
+						<p class="brand_item_txt">品牌以 Flower Pandora 概念來命名，以天然保養概念為基礎，不添加任何有害化學物質，調香師精心調配
+							打造神秘誘惑的香氛美學，搭配高質感瓶身設計，妝點家中氛圍。</p>
+					</li>
+					<li class="brand_item">
+						<div class="brand_item_title">老彭友</div>
+						<p class="brand_item_txt">傳承 30 年的秘傳開胃菜，征服上萬老饕，每日新鮮手作，保留食材的鮮脆辣嗆酸，知名美食節目報導，眾多 KOL
+							流口水推薦，產品包含秘制辣掌、醋溜蒜苗鴨、醋辣脆藻。</p>
+					</li>
+					<li class="brand_item">
+						<div class="brand_item_title">一頁商店</div>
+						<p class="brand_item_txt">我們有兩個目標：1.將營運電商的門檻拉到最低、降低電商的營運成本。2.讓品牌方能夠更專注在產品、服務、有更多獲利空間。</p>
+					</li>
+					<li class="brand_item">
+						<div class="brand_item_title">火箭快遞</div>
+						<p class="brand_item_txt">依照我們大量營運經驗淬煉出來的出貨資訊平台，整合電商出貨需要的工具，讓台灣傳統的物流系統更「EC
+							friendly」，節省配送運費、減少拒收耗損、更多電商需要的物流數據追蹤。</p>
+					</li>
+					<li class="brand_item">
+						<div class="brand_item_title">YBG. inc</div>
+						<p class="brand_item_txt">2019 年起，我們為旗下商品打造實體通路品牌 YBG，透過 O2O
+							整合，提供消費者更完整的品牌體驗，現場可實際試用、諮詢，感受香水、擴香的商品特色，目前已進駐全台 15 家百貨門市，並於西門町開設旗艦門市。</p>
+					</li>
+				</ul>
+			</div>
+		</section>
 		<footer class="footer">
+			<div class="footer_back" data-back="回到最上面">
+				<i class="icon _arrow">
+					<img src="./images/icon_arrow_up.svg" alt="">
+				</i>
+			</div>
 			<div class="container">
 				<div class="footer_nav">
 					<ul class="footer_nav_group">
-						<li class="footer_nav_title">最新消息</li>
+						<li class="footer_nav_title"><a href="">最新消息</a></li>
 					</ul>
 					<ul class="footer_nav_group">
 						<li class="footer_nav_title">關於我們</li>
-						<li class="footer_nav_item">認識光速火箭</li>
-						<li class="footer_nav_item">公司大紀事</li>
-						<li class="footer_nav_item">理念願景</li>
-						<li class="footer_nav_item">人才招募</li>
-						<li class="footer_nav_item">經營團隊</li>
-						<li class="footer_nav_item">異業合作</li>
+						<li class="footer_nav_item"><a href="">認識光速火箭</a></li>
+						<li class="footer_nav_item"><a href="">公司大紀事</a></li>
+						<li class="footer_nav_item"><a href="">理念願景</a></li>
+						<li class="footer_nav_item"><a href="">人才招募</a></li>
+						<li class="footer_nav_item"><a href="">經營團隊</a></li>
+						<li class="footer_nav_item"><a href="">異業合作</a></li>
 					</ul>
 					<ul class="footer_nav_group">
 						<li class="footer_nav_title">光速×品牌</li>
-						<li class="footer_nav_item">SHARECO</li>
-						<li class="footer_nav_item">KP記憶香氛</li>
-						<li class="footer_nav_item">老彭友秘制辣掌</li>
+						<li class="footer_nav_item"><a href="">SHARECO</a></li>
+						<li class="footer_nav_item"><a href="">KP記憶香氛</a></li>
+						<li class="footer_nav_item"><a href="">老彭友秘制辣掌</a></li>
 					</ul>
 					<ul class="footer_nav_group">
 						<li class="footer_nav_title">光速×軟體</li>
-						<li class="footer_nav_item">一頁商店</li>
-						<li class="footer_nav_item">火箭快遞</li>
+						<li class="footer_nav_item"><a href="">一頁商店</a></li>
+						<li class="footer_nav_item"><a href="">火箭快遞</a></li>
 					</ul>
 					<ul class="footer_nav_group">
 						<li class="footer_nav_title">營運據點</li>
-						<li class="footer_nav_item">YBG (台灣)</li>
-						<li class="footer_nav_item">海外據點</li>
+						<li class="footer_nav_item"><a href="">YBG (台灣)</a></li>
+						<li class="footer_nav_item"><a href="">海外據點</a></li>
 					</ul>
 				</div>
 				<div class="footer_community">
