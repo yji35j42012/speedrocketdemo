@@ -2,8 +2,6 @@
 	overflow-x: hidden;
 	height: 100%;
 	padding-top: 98px;
-	background-color: #ccc;
-
 	@include mw(L) {
 		padding-top: 54px;
 	}
@@ -487,15 +485,16 @@ h2 {
 		@include d_f(flex, center);
 		width: 100%;
 		flex-wrap: wrap;
-		// margin-top: 190px;
+		margin-top: 95px;
 	}
 
 	// .brand_item
 	&_item {
+		position: relative;
 		width: calc(100% / 3 - 24px);
 		margin-top: 95px;
 		margin-left: 36px;
-		padding: 0 22px;
+		padding: 135px 22px 39px;
 		background: #ffffff;
 		border: 2px solid #e4e4e4;
 		box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.02);
@@ -522,9 +521,18 @@ h2 {
 		}
 		// .brand_item_logo
 		&_logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
 			width: 189px;
 			height: 189px;
+			margin: auto;
+			background: #ffffff;
+			border: 2px solid rgba(51, 51, 51, 0.1);
+			box-shadow: -12px -9px 0px rgba(0, 0, 0, 0.05);
 			border-radius: 100px;
+			transform: translateY(-50%);
 		}
 	}
 }
