@@ -494,7 +494,7 @@ h2 {
 .brand {
 	padding-top: 44px;
 	padding-bottom: 95px;
-	@include mw(L){
+	@include mw(L) {
 		padding-bottom: 57px;
 	}
 	// .brand_group
@@ -580,7 +580,7 @@ h2 {
 .serve {
 	padding-top: 245px;
 	background-color: #f9f9f9;
-	@include mw(L){
+	@include mw(L) {
 		padding: 47px;
 	}
 	// .serve_first
