@@ -1222,22 +1222,22 @@ h4 span {
   }
 }
 
-.attitude_group_item {
+.attitude_item {
   width: calc(100% / 3);
 }
 
-.attitude_group_item + .attitude_group_item {
+.attitude_item + .attitude_item {
   margin-left: 63px;
 }
 
 @media screen and (max-width: 1025px) {
-  .attitude_group_item + .attitude_group_item {
+  .attitude_item + .attitude_item {
     margin-top: 54px;
     margin-left: 0;
   }
 }
 
-.attitude_group_img {
+.attitude_item_img {
   max-width: 141px;
 }
 /*# sourceMappingURL=all.css.map */

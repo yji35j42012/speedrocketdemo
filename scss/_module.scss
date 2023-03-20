@@ -813,18 +813,18 @@ h4 {
 			margin: 49px auto 0;
 			flex-direction: column;
 		}
-		// .attitude_group_item
-		&_item {
-			width: calc(100% / 3);
-			& + & {
-				margin-left: 63px;
-				@include mw(L) {
-					margin-top: 54px;
-					margin-left: 0;
-				}
+	}
+	// .attitude_item
+	&_item {
+		width: calc(100% / 3);
+		& + & {
+			margin-left: 63px;
+			@include mw(L) {
+				margin-top: 54px;
+				margin-left: 0;
 			}
 		}
-		// .attitude_group_img
+		// .attitude_item_img
 		&_img {
 			max-width: 141px;
 		}
