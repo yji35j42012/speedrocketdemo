@@ -1,10 +1,12 @@
-.wrap {
-	overflow-x: hidden;
-	height: 100%;
+body {
 	padding-top: 98px;
 	@include mw(L) {
 		padding-top: 54px;
 	}
+}
+.wrap {
+	overflow-x: hidden;
+	height: 100%;
 }
 
 .container {
@@ -184,7 +186,21 @@ h2 {
 	font-size: 42px;
 	line-height: 57px;
 	text-align: center;
-
+	@include mw(L) {
+		font-size: 28px;
+	}
+	@at-root .serve_first_txt &,
+		.serve_second_txt & {
+		max-width: 485px;
+		text-align: left;
+		@include mw(L) {
+			text-align: center;
+			margin: auto;
+		}
+	}
+	@at-root .attitude_info + & {
+		margin-top: 44px;
+	}
 	&.border_bottom {
 		position: relative;
 		&:after {
@@ -194,10 +210,66 @@ h2 {
 			height: 14px;
 			margin-top: 42px;
 			background-color: #bda782;
+			@at-root .serve_third & {
+				margin: 24px auto 0;
+			}
+			@include mw(L) {
+				width: 226px;
+				height: 7px;
+				margin: 24px auto 0;
+			}
 		}
 	}
 }
 
+h3 {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 49px;
+	text-align: center;
+	@include mw(L) {
+		font-size: 28px;
+	}
+	&.border_bottom {
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			width: 269px;
+			height: 14px;
+			margin: 24px auto;
+			background-color: #bda782;
+			@include mw(L) {
+				width: 226px;
+				height: 7px;
+			}
+		}
+	}
+}
+h4 {
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 140%;
+	text-align: center;
+	font-family: "Noto Sans";
+	@include mw(L) {
+		font-size: 20px;
+	}
+	span {
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 140%;
+		@include mw(L) {
+			font-size: 20px;
+		}
+		@at-root .attitude & {
+			display: block;
+			@include mw(L) {
+				display: inline-block;
+			}
+		}
+	}
+}
 .nav {
 	@include d_f(flex, center, center);
 	height: 100%;
@@ -538,7 +610,7 @@ h2 {
 			width: 100%;
 			max-width: 320px;
 			margin-top: 108px;
-			margin-left: 0;
+			margin-left: 0 !important;
 		}
 		// .brand_item_title
 		&_title {
@@ -581,36 +653,180 @@ h2 {
 	padding-top: 245px;
 	background-color: #f9f9f9;
 	@include mw(L) {
-		padding: 47px;
+		padding-top: 47px;
 	}
 	// .serve_first
 	&_first {
 		@include d_f(flex, center, center);
+		width: 100%;
+		@include mw(L) {
+			flex-direction: column;
+		}
 		// .serve_first_txt
 		&_txt {
-			max-width: 485px;
+			width: 100%;
 			margin-right: 31px;
-			text-align-last: left;
+			@include mw(L) {
+				margin-right: 0;
+				margin-bottom: 57px;
+			}
 			p {
+				max-width: 485px;
 				margin-top: 42px;
 				font-weight: 400;
 				font-size: 26px;
 				line-height: 160%;
 				color: #333333;
+				@include mw(L) {
+					margin: 24px auto 0;
+				}
 			}
 		}
 		// .serve_first_img
 		&_img {
-			max-width: 251px;
+			@include d_f(flex, center, center);
+			width: 100%;
+			span {
+				width: 100%;
+				max-width: 251px;
+				&:nth-child(2) {
+					margin-left: 10px;
+					transform: translateY(-34px);
+					@include mw(L) {
+						margin-left: 4px;
+					}
+				}
+				&:nth-child(3) {
+					margin-left: 10px;
+					transform: translateY(-54px);
+					@include mw(L) {
+						margin-left: 4px;
+					}
+				}
+				@include mw(L) {
+					max-width: 255px;
+				}
+			}
+		}
+	}
+	// .serve_second
+	&_second {
+		@include d_f(flex, center, center);
+		flex-direction: row-reverse;
+		margin-top: 189px;
+		@include mw(L) {
+			flex-direction: column;
+		}
+		// .serve_second_txt
+		&_txt {
+			// max-width: 469px;
+			width: 100%;
+			margin-left: 80px;
+			@include mw(L) {
+				margin-left: 0;
+			}
+			p {
+				margin-top: 42px;
+				font-weight: 400;
+				font-size: 26px;
+				line-height: 160%;
+			}
+		}
+		// .serve_second_img
+		&_img {
+			width: 100%;
+			max-width: 720px;
+			@include mw(L) {
+				margin-top: 30px;
+			}
+		}
+	} // .serve_third
+	&_third {
+		margin-top: 144px;
+		// .serve_third_txt
+		&_txt {
+			p {
+				margin-top: 42px;
+				font-weight: 400;
+				font-size: 26px;
+				line-height: 160%;
+				text-align: center;
+				@include mw(L) {
+					margin-top: 24px;
+				}
+			}
+		}
+		// .serve_third_img
+		&_img {
+			@include d_f(flex);
+			margin-top: 58px;
+			@include mw(L) {
+				margin-top: 28px;
+			}
+			span {
+				display: inline-block;
+				// max-width: 410px;
+			}
+			span + span {
+				margin-left: 25px;
+			}
+		}
+	}
+}
+
+.attitude {
+	margin-top: 110px;
+	padding-top: 60px;
+	padding-bottom: 121px;
+	background: url("../images/attitude_bg.jpg") no-repeat center top/cover
+		#ebdec7;
+	@include mw(L) {
+		padding-bottom: 53px;
+	}
+	// .attitude_info
+	&_info {
+		max-width: 1278px;
+		margin-top: 56px;
+		padding: 53px 49.5px 45px;
+		background: rgba(255, 255, 255, 0.5);
+		@include mw(L) {
+			padding: 26px 49.5px 45px;
+		}
+		p {
+			max-width: 759px;
+			margin: auto;
+			color: #333;
+			font-weight: 400;
+			font-size: 26px;
+			line-height: 160%;
+		}
+	}
+
+	// .attitude_group
+	&_group {
+		@include d_f(flex, center, center);
+		max-width: 1278px;
+		margin: 72px auto 0;
+		text-align: center;
+
+		@include mw(L) {
+			margin: 49px auto 0;
+			flex-direction: column;
+		}
+		// .attitude_group_item
+		&_item {
+			width: calc(100% / 3);
 			& + & {
-				margin-left: 10px;
+				margin-left: 63px;
+				@include mw(L) {
+					margin-top: 54px;
+					margin-left: 0;
+				}
 			}
-			&:nth-child(3) {
-				transform: translateY(-34px);
-			}
-			&:nth-child(4) {
-				transform: translateY(-54px);
-			}
+		}
+		// .attitude_group_img
+		&_img {
+			max-width: 141px;
 		}
 	}
 }
