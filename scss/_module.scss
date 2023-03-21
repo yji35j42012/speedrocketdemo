@@ -830,3 +830,60 @@ h4 {
 		}
 	}
 }
+
+.partner {
+	padding-top: 103px;
+	// .partner_group
+	&_group {
+		@include d_f(flex);
+		flex-wrap: wrap;
+		margin-top: 142px;
+	}
+	// .partner_item
+	&_item {
+		width: calc(100% / 2 - 45px);
+		max-width: 573px;
+		padding-bottom: 68px;
+		&:nth-child(even) {
+			margin-left: 90px;
+		}
+		// .partner_item_txt
+		&_txt {
+			position: relative;
+			@include d_f(flex, center, center);
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 160%;
+			img {
+				width: 51px;
+				margin-right: 48px;
+			}
+		}
+		// .partner_item_info
+		&_info {
+			@include d_f(flex, none, center);
+			margin-top: 78px;
+			padding-left: 93px;
+			> span {
+				width: 153px;
+				height: 153px;
+				margin-right: 32px;
+				border-radius: 100px;
+				background-color: #c4c4c4;
+			}
+		}
+		// .partner_item_detail
+		&_detail {
+			img {
+				width: auto;
+			}
+			span {
+				display: block;
+				margin-top: 12px;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 140%;
+			}
+		}
+	}
+}
