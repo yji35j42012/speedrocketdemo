@@ -293,13 +293,52 @@ h4 {
 	}
 }
 .normal_select {
+	display: inline-block;
 	width: 100%;
 	max-width: 217px;
+	height: 51px;
 	// .normal_select_txt
 	&_txt {
-		display: block;
+		@include d_f(flex, space-between, center);
+		width: 100%;
+		height: 100%;
+		padding: 12px 26px;
 		background-color: #333333;
 		color: #ffffff;
+		border-radius: 100px;
+		&:after {
+			content: "";
+			display: block;
+			width: 16px;
+			height: 14px;
+			background: url("../images/icon/icon_triangle_bottom.svg") no-repeat
+				center/cover;
+		}
+	}
+
+	// .normal_select_group
+	&_group {
+		li {
+			padding: 20px 22px;
+			background-color: rgba(51, 51, 51, 0.9);
+			color: #fff;
+			&:first-child {
+				padding-top: 28px;
+				border-top-left-radius: 16px;
+				border-top-right-radius: 16px;
+			}
+			&:last-child {
+				border-bottom-left-radius: 16px;
+				border-bottom-right-radius: 16px;
+			}
+			&::before {
+				content: "";
+				width: calc(100% - 16px);
+				border-radius: 16px;
+				// 				width: 196px;
+				// height: 47px;
+			}
+		}
 	}
 }
 
@@ -766,6 +805,7 @@ h4 {
 	background-color: #f9f9f9;
 	@include mw(L) {
 		padding-top: 47px;
+		padding-bottom: 62px;
 	}
 	// .serve_first
 	&_first {
@@ -828,6 +868,7 @@ h4 {
 		margin-top: 189px;
 		@include mw(L) {
 			flex-direction: column;
+			margin-top: 104px;
 		}
 		// .serve_second_txt
 		&_txt {
@@ -855,6 +896,9 @@ h4 {
 	} // .serve_third
 	&_third {
 		margin-top: 144px;
+		@include mw(L) {
+			margin-top: 82px;
+		}
 		// .serve_third_txt
 		&_txt {
 			p {
@@ -923,11 +967,17 @@ h4 {
 		@include mw(L) {
 			margin: 49px auto 0;
 			flex-direction: column;
+			align-items: center;
 		}
 	}
 	// .attitude_item
 	&_item {
 		width: calc(100% / 3);
+		@include mw(L) {
+			width: 100%;
+			max-width: 250px;
+			// margin: auto;
+		}
 		& + & {
 			margin-left: 63px;
 			@include mw(L) {
@@ -939,6 +989,10 @@ h4 {
 		&_img {
 			max-width: 141px;
 		}
+		p {
+			margin-top: 12px;
+			line-height: 160%;
+		}
 	}
 }
 
@@ -946,6 +1000,9 @@ h4 {
 	padding-top: 103px;
 	padding-bottom: 85px;
 	background-color: #fff;
+	@include mw(L) {
+		padding-top: 62px;
+	}
 	// .partner_group
 	&_group {
 		@include d_f(flex);
@@ -1068,9 +1125,9 @@ h4 {
 		width: 100%;
 		max-width: 500px;
 		color: #fff;
-@include mw(L){
-	text-align: center;
-}
+		@include mw(L) {
+			text-align: center;
+		}
 		h4 {
 			margin-top: 16px;
 			text-align: left;
