@@ -45,6 +45,16 @@ footer .container {
           align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .home_banner .container {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .news .container {
   max-width: 1294px;
   padding: 76px 57px 97px;
@@ -316,6 +326,13 @@ h1 {
   line-height: 140%;
 }
 
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+}
+
 h2 {
   font-weight: 600;
   font-size: 42px;
@@ -466,8 +483,8 @@ h4 span {
   font-weight: 500;
   font-size: 20px;
   line-height: 27px;
-  color: #fff;
-  border: 2px solid #ffffff;
+  color: #333333;
+  border: 2px solid #333333;
   border-radius: 100px;
 }
 
@@ -476,7 +493,16 @@ h4 span {
   width: 7px;
   height: 12px;
   margin-left: 10px;
-  background: url("../images/icon/icon_arr_right_w.svg") no-repeat center/cover;
+  background: url("../images/icon/icon_arr_right_b.svg") no-repeat center/cover;
+}
+
+.normal_btn._black {
+  color: #fff;
+  border-color: #ffffff;
+}
+
+.normal_btn._black .icon_arr_right {
+  background-image: url("../images/icon/icon_arr_right_w.svg");
 }
 
 .nav {
@@ -1018,6 +1044,10 @@ h4 span {
   }
 }
 
+.brand_item .normal_btn {
+  margin: 44px auto 0;
+}
+
 .brand_item_title {
   font-weight: 700;
   font-size: 22px;
@@ -1554,6 +1584,13 @@ h4 span {
   background-color: #000;
 }
 
+@media screen and (max-width: 1024px) {
+  .home_banner {
+    height: auto;
+    padding-top: 85px;
+  }
+}
+
 .home_banner_txt {
   position: relative;
   width: 100%;
@@ -1561,9 +1598,23 @@ h4 span {
   color: #fff;
 }
 
+@media screen and (max-width: 1024px) {
+  .home_banner_txt {
+    text-align: center;
+  }
+}
+
 .home_banner_txt h4 {
   margin-top: 16px;
   text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .home_banner_txt h4 {
+    margin-top: 0;
+    font-size: 28px;
+    text-align: center;
+  }
 }
 
 .home_banner_txt p {
@@ -1574,8 +1625,21 @@ h4 span {
   line-height: 160%;
 }
 
+@media screen and (max-width: 1024px) {
+  .home_banner_txt p {
+    margin-top: 58px;
+    text-align: left;
+  }
+}
+
 .home_banner_txt .normal_btn {
   margin-top: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .home_banner_txt .normal_btn {
+    margin: 15px auto 0;
+  }
 }
 
 .home_banner_pic {
@@ -1583,6 +1647,13 @@ h4 span {
   right: 0;
   bottom: -40px;
   width: 60%;
+}
+
+@media screen and (max-width: 1024px) {
+  .home_banner_pic {
+    position: relative;
+    width: 100%;
+  }
 }
 
 .home_banner_bg {

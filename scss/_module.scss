@@ -17,6 +17,11 @@
 		position: relative;
 		height: 100%;
 		@include d_f(flex, none, center);
+		@include mw(L) {
+			height: auto;
+			flex-direction: column-reverse;
+			// align-items: center;
+		}
 	}
 	@at-root .news & {
 		max-width: 1294px;
@@ -193,6 +198,10 @@ h1 {
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 140%;
+	@include mw(L) {
+		font-size: 32px;
+		letter-spacing: 1px;
+	}
 }
 h2 {
 	font-weight: 600;
@@ -300,8 +309,8 @@ h4 {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 27px;
-	color: #fff;
-	border: 2px solid #ffffff;
+	color: #333333;
+	border: 2px solid #333333;
 	border-radius: 100px;
 	@extend %hand;
 
@@ -310,8 +319,15 @@ h4 {
 		width: 7px;
 		height: 12px;
 		margin-left: 10px;
-		background: url("../images/icon/icon_arr_right_w.svg") no-repeat
+		background: url("../images/icon/icon_arr_right_b.svg") no-repeat
 			center/cover;
+	}
+	&._black {
+		color: #fff;
+		border-color: #ffffff;
+		.icon_arr_right {
+			background-image: url("../images/icon/icon_arr_right_w.svg");
+		}
 	}
 }
 
@@ -681,6 +697,9 @@ h4 {
 			margin-top: 108px;
 			margin-left: 0 !important;
 		}
+		.normal_btn {
+			margin: 44px auto 0;
+		}
 		// .brand_item_title
 		&_title {
 			font-weight: 700;
@@ -1039,23 +1058,27 @@ h4 {
 	width: 100%;
 	height: 750px;
 	background-color: #000;
-	// background: url("../images/index/home_bg.png") no-repeat center top/cover
-	// 	#fff;
-
-	// &:after{
-	// 	content: '';
-	// 	width: 100%;
-	// 	background:url('../images/index/home_bgwhite.png')no-repeat center bottom/cover;
-	// }
+	@include mw(L) {
+		height: auto;
+		padding-top: 85px;
+	}
 	// .home_banner_txt
 	&_txt {
 		position: relative;
 		width: 100%;
 		max-width: 500px;
 		color: #fff;
+@include mw(L){
+	text-align: center;
+}
 		h4 {
 			margin-top: 16px;
 			text-align: left;
+			@include mw(L) {
+				margin-top: 0;
+				font-size: 28px;
+				text-align: center;
+			}
 		}
 		p {
 			margin-top: 57px;
@@ -1063,9 +1086,16 @@ h4 {
 			font-weight: 400;
 			font-size: 20px;
 			line-height: 160%;
+			@include mw(L) {
+				margin-top: 58px;
+				text-align: left;
+			}
 		}
 		.normal_btn {
 			margin-top: 50px;
+			@include mw(L) {
+				margin: 15px auto 0;
+			}
 		}
 	}
 	// .home_banner_pic
@@ -1074,6 +1104,10 @@ h4 {
 		right: 0;
 		bottom: -40px;
 		width: 60%;
+		@include mw(L) {
+			position: relative;
+			width: 100%;
+		}
 	}
 	// .home_banner_bg
 	&_bg {
