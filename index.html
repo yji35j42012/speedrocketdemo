@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
 	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/aos.css">
 	<link rel="stylesheet" href="./css/all.css">
 	<title>Document</title>
 </head>
@@ -41,20 +42,20 @@
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">關於我們</a>
 						<ul class="nav_groupSec">
-							<li><a class="nav_item_link" href="#認識光速火箭">認識光速火箭</a></li>
-							<li><a class="nav_item_link" href="#公司大紀事">公司大紀事</a></li>
-							<li><a class="nav_item_link" href="#理念願景">理念願景</a></li>
-							<li><a class="nav_item_link" href="#人才招募">人才招募</a></li>
-							<li><a class="nav_item_link" href="#經營團隊">經營團隊</a></li>
-							<li><a class="nav_item_link" href="#異業合作">異業合作</a></li>
+							<li><a class="nav_item_link" href="about.html">認識光速火箭</a></li>
+							<li><a class="nav_item_link" href="history.html">公司大紀事</a></li>
+							<li><a class="nav_item_link" href="vision.html">理念願景</a></li>
+							<li><a class="nav_item_link" href="recruitment.html">人才招募</a></li>
+							<li><a class="nav_item_link" href="team.html">經營團隊</a></li>
+							<li><a class="nav_item_link" href="cooperation.html">異業合作</a></li>
 						</ul>
 					</li>
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">光速 × 品牌</a>
 						<ul class="nav_groupSec">
-							<li><a class="nav_item_link" href="#SHARECO">SHARECO</a></li>
-							<li><a class="nav_item_link" href="#KP記憶香氛">KP記憶香氛</a></li>
-							<li><a class="nav_item_link" href="#老彭友秘制辣掌">老彭友秘制辣掌</a></li>
+							<li><a class="nav_item_link" href="brand_shareco.html">SHARECO</a></li>
+							<li><a class="nav_item_link" href="brand_kr.html">KP記憶香氛</a></li>
+							<li><a class="nav_item_link" href="brand_laopengyu.html">老彭友秘制辣掌</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -67,15 +68,15 @@
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">光速 × 軟體</a>
 						<ul class="nav_groupSec">
-							<li><a class="nav_item_link" href="#一頁商店">一頁商店</a></li>
-							<li><a class="nav_item_link" href="#火箭快遞">火箭快遞</a></li>
+							<li><a class="nav_item_link" href="software_shop.html">一頁商店</a></li>
+							<li><a class="nav_item_link" href="software_delivery.html">火箭快遞</a></li>
 						</ul>
 					</li>
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">銷售據點</a>
 						<ul class="nav_groupSec">
-							<li><a class="nav_item_link" href="#YBG (台灣)">YBG (台灣)</a></li>
-							<li><a class="nav_item_link" href="#海外據點">海外據點</a></li>
+							<li><a class="nav_item_link" href="office_tw.html">YBG (台灣)</a></li>
+							<li><a class="nav_item_link" href="office_overseas.html">海外據點</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -84,41 +85,73 @@
 				<span></span>
 			</button>
 		</header>
-		<section class="brand" style="display: none">
+		<section class="home_banner">
 			<div class="container">
-				<h2>旗下品牌</h2>
+				<div class="home_banner_pic">
+					<img src="./images/index/home_videos.gif" alt="">
+				</div>
+				<div class="home_banner_txt">
+					<h1>SPEEDING ROCKET</h1>
+					<h4>香氛 x 品牌 x 行銷 x 軟體</h4>
+					<p>
+						光速火箭整合香氛產品、品牌行銷、電子商務平台及系統軟體等多個領域，搭配海內外 O2O 線上線下全通路整合策略，使品牌電商效益發揮到最極致，我們是把 “感性抽象” 跟 “理性邏輯”
+						巧妙整合在一起的公司。
+					</p>
+					<button class="normal_btn">
+						了解更多
+						<i class="icon_arr_right"><svg><use xlink:href="#icon_arr_right"/></svg></i>
+					</button>
+				</div>
+			</div>
+			<img class="home_banner_bg" src="./images/index/home_bg.png" alt="">
+		</section>
+		<section class="brand">
+			<div class="container">
+				<h2 data-aos="fade-up">旗下品牌</h2>
 				<ul class="brand_group">
-					<li class="brand_item">
-						<div class="brand_item_logo"></div>
+					<li class="brand_item" data-aos="fade-up">
+						<div class="brand_item_logo">
+							<img src="./images/index/shareco_logo.svg" alt="">
+						</div>
 						<div class="brand_item_title">SHARECO</div>
 						<p class="brand_item_txt">融合版畫風格與次文化藝術、以故事為香味的核心，每年銷售 15 萬瓶香水、知名藝人瘦子 E.SO
 							推薦，產品包含香水吊卡、香水、擴香、沐浴、服飾、車用香氛。</p>
 					</li>
-					<li class="brand_item">
-						<div class="brand_item_logo"></div>
+					<li class="brand_item" data-aos="fade-up">
+						<div class="brand_item_logo">
+							<img src="./images/index/kp_logo.svg" alt="">
+						</div>
 						<div class="brand_item_title">KLOWER PANDOR</div>
 						<p class="brand_item_txt">品牌以 Flower Pandora 概念來命名，以天然保養概念為基礎，不添加任何有害化學物質，調香師精心調配
 							打造神秘誘惑的香氛美學，搭配高質感瓶身設計，妝點家中氛圍。</p>
 					</li>
-					<li class="brand_item">
-						<div class="brand_item_logo"></div>
+					<li class="brand_item" data-aos="fade-up">
+						<div class="brand_item_logo _laopengyu">
+							<img src="./images/index/laopengyu_logo.svg" alt="">
+						</div>
 						<div class="brand_item_title">老彭友</div>
 						<p class="brand_item_txt">傳承 30 年的秘傳開胃菜，征服上萬老饕，每日新鮮手作，保留食材的鮮脆辣嗆酸，知名美食節目報導，眾多 KOL
 							流口水推薦，產品包含秘制辣掌、醋溜蒜苗鴨、醋辣脆藻。</p>
 					</li>
-					<li class="brand_item">
-						<div class="brand_item_logo"></div>
+					<li class="brand_item" data-aos="fade-up">
+						<div class="brand_item_logo _superlanding">
+							<img src="./images/index/superlanding_logo.svg" alt="">
+						</div>
 						<div class="brand_item_title">一頁商店</div>
 						<p class="brand_item_txt">我們有兩個目標：1.將營運電商的門檻拉到最低、降低電商的營運成本。2.讓品牌方能夠更專注在產品、服務、有更多獲利空間。</p>
 					</li>
-					<li class="brand_item">
-						<div class="brand_item_logo"></div>
+					<li class="brand_item" data-aos="fade-up">
+						<div class="brand_item_logo _xdelivery">
+							<img src="./images/index/xdelivery_logo.svg" alt="">
+						</div>
 						<div class="brand_item_title">火箭快遞</div>
 						<p class="brand_item_txt">依照我們大量營運經驗淬煉出來的出貨資訊平台，整合電商出貨需要的工具，讓台灣傳統的物流系統更「EC
 							friendly」，節省配送運費、減少拒收耗損、更多電商需要的物流數據追蹤。</p>
 					</li>
-					<li class="brand_item">
-						<div class="brand_item_logo"></div>
+					<li class="brand_item" data-aos="fade-up">
+						<div class="brand_item_logo _ybg">
+							<img src="./images/index/ybg_logo.svg" alt="">
+						</div>
 						<div class="brand_item_title">YBG. inc</div>
 						<p class="brand_item_txt">2019 年起，我們為旗下商品打造實體通路品牌 YBG，透過 O2O
 							整合，提供消費者更完整的品牌體驗，現場可實際試用、諮詢，感受香水、擴香的商品特色，目前已進駐全台 15 家百貨門市，並於西門町開設旗艦門市。</p>
@@ -126,38 +159,40 @@
 				</ul>
 			</div>
 		</section>
-		<section class="serve" style="display: none">
+		<section class="serve">
 			<div class="container">
 				<div class="serve_first">
-					<div class="serve_first_txt">
+					<div class="serve_first_txt" data-aos="fade-up">
 						<h2 class="border_bottom">品牌力 × 軟體科技 × 服務力 × 全通路</h2>
 						<p>自2016年創立後，創立自有品牌「SHARECO」和「Klower
 							Pandor」、及購入美食品牌「老彭友秘制辣掌」，追求設計品質的商品開發、提升效率的跨平台資訊流通串接，智慧流程化的倉儲物流、具高度服務力的客服營運，四個堅持，使得我們年年得以成長10%以上，2019
 							年成立 YBG.inc 門市品牌跨入O2O全通路新零售模式，國內已開設 19 家百貨專櫃門市，並逐步拓展新加坡、馬來西亞、香港、日本等海外市場。</p>
 					</div>
 					<div class="serve_first_img">
-						<span><img src="./images/Rectangle 1773.jpg" alt=""></span>
-						<span><img src="./images/Rectangle 1774.jpg" alt=""></span>
-						<span><img src="./images/Rectangle 1775.jpg" alt=""></span>
+						<span data-aos="fade-up"><img src="./images/Rectangle 1773.jpg" alt=""></span>
+						<span data-aos="fade-up" data-aos="fade-up" data-aos-delay="300"><img
+								src="./images/Rectangle 1774.jpg" alt=""></span>
+						<span data-aos="fade-up" data-aos="fade-up" data-aos-delay="600"><img
+								src="./images/Rectangle 1775.jpg" alt=""></span>
 					</div>
 				</div>
 				<div class="serve_second">
-					<div class="serve_second_txt">
+					<div class="serve_second_txt" data-aos="fade-up">
 						<h2 class="border_bottom">品牌與 IT 的混血 打造人性化開店平台</h2>
 						<p>光速火箭以自身的營運經驗為基礎，致力打造出「增加一切效率 × 減少各種耗損」的電商平台，以品牌行銷、營運端的觀點，開發出多套包含“一頁商店開店平台” 和
 							“火箭快遞物流資訊平台”等電商軟體系統，把公司內部品牌實際營運經驗與知識，彙整成軟體流程，打造成極度直覺、貼近使用者需求的平台。</p>
 					</div>
-					<div class="serve_second_img">
+					<div class="serve_second_img" data-aos="fade-up">
 						<img src="./images/serve2.png" alt="">
 					</div>
 				</div>
 				<div class="serve_third">
-					<div class="serve_third_txt">
+					<div class="serve_third_txt" data-aos="fade-down">
 						<h2 class="border_bottom">協助品牌一起成長</h2>
 						<p>擅長品牌行銷、擅長 KOL 極大化的行銷策略，搭配上我們的軟體、物流及金流、營運 Know-How，用這些實戰經驗，協助品牌快速成長，長期與「女星高宇蓁的保養品牌
 							J.GAO」、「台灣原創女性服飾品牌 H&J、「知名百萬直播主宥凱品牌 YOUR KIND」，合作品牌整體行銷服務，發揮跨界整合的最大效益。</p>
 					</div>
-					<div class="serve_third_img">
+					<div class="serve_third_img" data-aos="fade-up">
 						<span><img src="./images/Rectangle 1765.jpg" alt=""></span>
 						<span><img src="./images/Rectangle 1766.jpg" alt=""></span>
 						<span><img src="./images/Rectangle 1767.jpg" alt=""></span>
@@ -165,7 +200,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="attitude" style="display: none">
+		<section class="attitude">
 			<div class="container">
 				<h3 class="border_bottom">光速 Mafia 的態度</h3>
 				<h4>
@@ -248,11 +283,24 @@
 							</div>
 						</div>
 					</li>
+					<li class="partner_item">
+						<div class="partner_item_txt">
+							<img src="./images/dot.svg" alt="">
+							光速火箭是一家很有活力具有前瞻性的多面向公司，在這幾年一直以高速及穩定有速度發展，業務範圍之廣令人驚喜！
+						</div>
+						<div class="partner_item_info">
+							<span><img src="" alt=""></span>
+							<div class="partner_item_detail">
+								<img src="./images/partner_logo3.jpg" alt="">
+								<span>XXX 創辦人</span>
+							</div>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</section>
 		<footer class="footer">
-			<div class="footer_back" data-back="回到最上面">
+			<div id="gotoback" class="footer_back" data-back="回到最上面">
 				<i class="icon _arrow">
 					<img src="./images/icon_arrow_up.svg" alt="">
 				</i>
@@ -260,32 +308,32 @@
 			<div class="container">
 				<div class="footer_nav">
 					<ul class="footer_nav_group">
-						<li class="footer_nav_title"><a href="">最新消息</a></li>
+						<li class="footer_nav_title"><a href="news.html">最新消息</a></li>
 					</ul>
 					<ul class="footer_nav_group">
 						<li class="footer_nav_title">關於我們</li>
-						<li class="footer_nav_item"><a href="">認識光速火箭</a></li>
-						<li class="footer_nav_item"><a href="">公司大紀事</a></li>
-						<li class="footer_nav_item"><a href="">理念願景</a></li>
-						<li class="footer_nav_item"><a href="">人才招募</a></li>
-						<li class="footer_nav_item"><a href="">經營團隊</a></li>
-						<li class="footer_nav_item"><a href="">異業合作</a></li>
+						<li class="footer_nav_item"><a href="about.html">認識光速火箭</a></li>
+						<li class="footer_nav_item"><a href="history.html">公司大紀事</a></li>
+						<li class="footer_nav_item"><a href="vision.html">理念願景</a></li>
+						<li class="footer_nav_item"><a href="recruitment.html">人才招募</a></li>
+						<li class="footer_nav_item"><a href="team.html">經營團隊</a></li>
+						<li class="footer_nav_item"><a href="cooperation.html">異業合作</a></li>
 					</ul>
 					<ul class="footer_nav_group">
 						<li class="footer_nav_title">光速×品牌</li>
-						<li class="footer_nav_item"><a href="">SHARECO</a></li>
-						<li class="footer_nav_item"><a href="">KP記憶香氛</a></li>
-						<li class="footer_nav_item"><a href="">老彭友秘制辣掌</a></li>
+						<li class="footer_nav_item"><a href="brand_shareco.html">SHARECO</a></li>
+						<li class="footer_nav_item"><a href="brand_kr.html">KP記憶香氛</a></li>
+						<li class="footer_nav_item"><a href="brand_laopengyu.html">老彭友秘制辣掌</a></li>
 					</ul>
 					<ul class="footer_nav_group">
 						<li class="footer_nav_title">光速×軟體</li>
-						<li class="footer_nav_item"><a href="">一頁商店</a></li>
-						<li class="footer_nav_item"><a href="">火箭快遞</a></li>
+						<li class="footer_nav_item"><a href="software_shop.html">一頁商店</a></li>
+						<li class="footer_nav_item"><a href="software_delivery.html">火箭快遞</a></li>
 					</ul>
 					<ul class="footer_nav_group">
 						<li class="footer_nav_title">營運據點</li>
-						<li class="footer_nav_item"><a href="">YBG (台灣)</a></li>
-						<li class="footer_nav_item"><a href="">海外據點</a></li>
+						<li class="footer_nav_item"><a href="office_tw.html">YBG (台灣)</a></li>
+						<li class="footer_nav_item"><a href="office_overseas.html">海外據點</a></li>
 					</ul>
 				</div>
 				<div class="footer_community">
@@ -304,10 +352,24 @@
 				<div class="copyRight">Copyright 2022 © 光速火箭股份有限公司著作權所有 </div>
 			</div>
 		</footer>
+
+
+
+
+
+		<div style="display: none!important;">
+			<svg>
+				<symbol viewBox="0 0 10 15" id="icon_arr_right" class="icon_arr_right"><path d="M1 1.5L8 7.5L1 13.5" stroke-width="2" stroke-linecap="round"/></symbol>
+			</svg>
+		</div>
 	</div>
 
 
 	<script src="./js/module.js"></script>
+	<script src="./js/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 
 </html>

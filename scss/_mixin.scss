@@ -47,18 +47,36 @@
 $breakpoints: (
 	XXL: 1440px,
 	XL: 1280px,
-	L: 1025px,
+	L: 1024px,
 	M: 995px,
 	S: 767px,
 	XS: 599px,
 	XXS: 360px
+);
+$minbreakpoints: (
+	XXL: 1441px,
+	XL: 1281px,
+	L: 1025px,
+	M: 996px,
+	S: 768px,
+	XS: 600px,
+	XXS: 361px
 );
 @mixin mw($size) {
 	@media screen and (max-width: map-get($breakpoints, $size)) {
 		@content;
 	}
 }
-
+@mixin minmw($size) {
+	@media screen and (min-width: map-get($minbreakpoints, $size )) {
+		@content;
+	}
+}
+@mixin mwrange($min, $max) {
+	@media screen and (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
+		@content;
+	}
+}
 @mixin overflow($x, $y) {
 	overflow-x: $x;
 	overflow-y: $y;

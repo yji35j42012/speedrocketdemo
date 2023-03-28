@@ -52,3 +52,24 @@ for (let i = 0; i < secNav.length; i++) {
 		}
 	};
 }
+
+// var body = document.body;
+var windowScroll = document.querySelector("html");
+window.addEventListener("scroll", function() {
+	if (windowScroll.scrollTop == 0) {
+		document.body.classList.remove("scroll");
+	} else {
+		document.body.classList.add("scroll");
+	}
+});
+
+// gotoback
+var gotoback = document.querySelector("#gotoback");
+gotoback.onclick = function() {
+	console.log("aadf");
+
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	});
+};

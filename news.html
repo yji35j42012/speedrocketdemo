@@ -13,7 +13,7 @@
 
 <body>
 	<div class="wrap">
-		<header class="header">
+		<header id="header" class="header">
 			<div id="lang" class="lang">
 				<div class="lang_txt">
 					<span id="lang_txt">繁中</span>
@@ -31,20 +31,31 @@
 			<a class="nav_item_logo" href="#">
 				<!-- <img src="./images/logo_w.svg" alt="光速火箭國際官網"> -->
 			</a>
+			<!-- 打開在class 加上 on -->
 			<nav id="nav_box" class="nav">
 				<ul class="nav_group">
-					<li class="nav_item" name="nosecNav">
-						<a class="nav_item_link active" href="#">最新消息</a>
+					<li class="nav_item">
+						<a class="nav_item_link active" href="news.html">最新消息</a>
 					</li>
+					<!-- 打開在class 加上 on -->
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">關於我們</a>
 						<ul class="nav_groupSec">
-							<li><a href="#認識光速火箭">認識光速火箭</a></li>
-							<li><a href="#公司大紀事">公司大紀事</a></li>
+							<li><a class="nav_item_link" href="about.html">認識光速火箭</a></li>
+							<li><a class="nav_item_link" href="history.html">公司大紀事</a></li>
+							<li><a class="nav_item_link" href="vision.html">理念願景</a></li>
+							<li><a class="nav_item_link" href="recruitment.html">人才招募</a></li>
+							<li><a class="nav_item_link" href="team.html">經營團隊</a></li>
+							<li><a class="nav_item_link" href="cooperation.html">異業合作</a></li>
 						</ul>
 					</li>
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">光速 × 品牌</a>
+						<ul class="nav_groupSec">
+							<li><a class="nav_item_link" href="brand_shareco.html">SHARECO</a></li>
+							<li><a class="nav_item_link" href="brand_kr.html">KP記憶香氛</a></li>
+							<li><a class="nav_item_link" href="brand_laopengyu.html">老彭友秘制辣掌</a></li>
+						</ul>
 					</li>
 				</ul>
 				<div class="nav_group">
@@ -55,9 +66,17 @@
 				<ul class="nav_group">
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">光速 × 軟體</a>
+						<ul class="nav_groupSec">
+							<li><a class="nav_item_link" href="software_shop.html">一頁商店</a></li>
+							<li><a class="nav_item_link" href="software_delivery.html">火箭快遞</a></li>
+						</ul>
 					</li>
 					<li class="nav_item" name="secNav">
 						<a class="nav_item_link">銷售據點</a>
+						<ul class="nav_groupSec">
+							<li><a class="nav_item_link" href="office_tw.html">YBG (台灣)</a></li>
+							<li><a class="nav_item_link" href="office_overseas.html">海外據點</a></li>
+						</ul>
 					</li>
 				</ul>
 			</nav>
@@ -65,10 +84,73 @@
 				<span></span>
 			</button>
 		</header>
+		<section class="bannerBg"></section>
 
-		<div class="content">
-			news.html
-		</div>
+		<section class="news">
+			<div class="container">
+				<h2>最新消息</h2>
+				<div class="filiter">
+					<label class="normal_select">
+						<span class="normal_select_txt">所有品牌</span>
+						<ul></ul>
+					</label>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div id="gotoback" class="footer_back" data-back="回到最上面">
+				<i class="icon _arrow">
+					<img src="./images/icon_arrow_up.svg" alt="">
+				</i>
+			</div>
+			<div class="container">
+				<div class="footer_nav">
+					<ul class="footer_nav_group">
+						<li class="footer_nav_title"><a href="news.html">最新消息</a></li>
+					</ul>
+					<ul class="footer_nav_group">
+						<li class="footer_nav_title">關於我們</li>
+						<li class="footer_nav_item"><a href="about.html">認識光速火箭</a></li>
+						<li class="footer_nav_item"><a href="history.html">公司大紀事</a></li>
+						<li class="footer_nav_item"><a href="vision.html">理念願景</a></li>
+						<li class="footer_nav_item"><a href="recruitment.html">人才招募</a></li>
+						<li class="footer_nav_item"><a href="team.html">經營團隊</a></li>
+						<li class="footer_nav_item"><a href="cooperation.html">異業合作</a></li>
+					</ul>
+					<ul class="footer_nav_group">
+						<li class="footer_nav_title">光速×品牌</li>
+						<li class="footer_nav_item"><a href="brand_shareco.html">SHARECO</a></li>
+						<li class="footer_nav_item"><a href="brand_kr.html">KP記憶香氛</a></li>
+						<li class="footer_nav_item"><a href="brand_laopengyu.html">老彭友秘制辣掌</a></li>
+					</ul>
+					<ul class="footer_nav_group">
+						<li class="footer_nav_title">光速×軟體</li>
+						<li class="footer_nav_item"><a href="software_shop.html">一頁商店</a></li>
+						<li class="footer_nav_item"><a href="software_delivery.html">火箭快遞</a></li>
+					</ul>
+					<ul class="footer_nav_group">
+						<li class="footer_nav_title">營運據點</li>
+						<li class="footer_nav_item"><a href="office_tw.html">YBG (台灣)</a></li>
+						<li class="footer_nav_item"><a href="office_overseas.html">海外據點</a></li>
+					</ul>
+				</div>
+				<div class="footer_community">
+					<button class="icon _youtube"></button>
+					<button class="icon _in"></button>
+				</div>
+				<div class="footer_info">
+					<a href="index.html" class="footer_logo">
+						<img class="" src="./images/logo_w.svg" alt="光速火箭國際官網">
+					</a>
+					<ul>
+						<li>242 新北市新莊區新北大道二段217號8樓</li>
+						<li>+886 2-85228955</li>
+					</ul>
+				</div>
+				<div class="copyRight">Copyright 2022 © 光速火箭股份有限公司著作權所有 </div>
+			</div>
+		</footer>
 	</div>
 
 
