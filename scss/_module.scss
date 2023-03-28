@@ -295,7 +295,8 @@ h4 {
 }
 
 .normal_btn {
-	padding: 6px 20px;
+	@include d_f(flex, center, center);
+	padding: 6px 13px 6px 20px;
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 27px;
@@ -304,14 +305,13 @@ h4 {
 	border-radius: 100px;
 	@extend %hand;
 
-	.icon_arr_right{
+	.icon_arr_right {
 		display: inline-block;
 		width: 7px;
 		height: 12px;
-		fill: #fff;
-		svg{
-			width: 100%;
-		}
+		margin-left: 10px;
+		background: url("../images/icon/icon_arr_right_w.svg") no-repeat
+			center/cover;
 	}
 }
 
@@ -1064,7 +1064,7 @@ h4 {
 			font-size: 20px;
 			line-height: 160%;
 		}
-		.normal_btn{
+		.normal_btn {
 			margin-top: 50px;
 		}
 	}

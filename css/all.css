@@ -453,7 +453,16 @@ h4 span {
 }
 
 .normal_btn {
-  padding: 6px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 13px 6px 20px;
   font-weight: 500;
   font-size: 20px;
   line-height: 27px;
@@ -466,11 +475,8 @@ h4 span {
   display: inline-block;
   width: 7px;
   height: 12px;
-  fill: #fff;
-}
-
-.normal_btn .icon_arr_right svg {
-  width: 100%;
+  margin-left: 10px;
+  background: url("../images/icon/icon_arr_right_w.svg") no-repeat center/cover;
 }
 
 .nav {
