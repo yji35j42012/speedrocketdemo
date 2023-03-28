@@ -23,6 +23,9 @@
 			// align-items: center;
 		}
 	}
+	@at-root .attitude & {
+		text-align: center;
+	}
 	@at-root .news & {
 		max-width: 1294px;
 		padding: 76px 57px 97px;
@@ -58,7 +61,8 @@
 	background-color: #090909;
 	color: #ffffff;
 	@include mw(L) {
-		padding-top: 54px;
+		padding-top: 59px;
+		padding-bottom: 59px;
 	}
 	// .footer_back
 	&_back {
@@ -74,7 +78,6 @@
 		@extend %hand;
 		&::before {
 			content: "";
-			// position: absolute;
 			position: absolute;
 			top: 0;
 			width: 85px;
@@ -90,6 +93,9 @@
 			text-align: center;
 			font-weight: 700;
 			font-size: 16px;
+			@include mw(L) {
+				display: none;
+			}
 		}
 		.icon {
 			position: absolute;
@@ -164,8 +170,10 @@
 	}
 	// .footer_info
 	&_info {
-		@include d_f(flex);
+		@include d_f(flex, none, center);
 		color: #fff;
+		font-size: 12px;
+		line-height: 160%;
 		@include mw(L) {
 			flex-direction: column;
 		}
@@ -173,8 +181,8 @@
 			@include d_f(flex);
 			flex-direction: column;
 			margin-left: 18px;
-			li + li {
-				margin-top: 5px;
+			li {
+				line-height: 160%;
 			}
 			@include mw(L) {
 				margin-left: 0;
@@ -184,12 +192,24 @@
 		}
 	}
 	.copyRight {
+		@include d_f(flex, center, flex-end);
+		flex-direction: column;
+		font-size: 12px;
 		@include mw(L) {
+			align-items: flex-start;
 			width: 100%;
 			margin-top: 13px;
 			padding-top: 13px;
 			border-top: 0.5px solid #ffffff;
 			font-size: 10px;
+		}
+		li {
+			line-height: 160%;
+			@include mw(L) {
+				&:nth-child(2) {
+					display: none;
+				}
+			}
 		}
 	}
 }
@@ -209,7 +229,10 @@ h2 {
 	line-height: 57px;
 	text-align: center;
 	@include mw(L) {
-		font-size: 28px;
+		font-size: 24px;
+		@at-root .serve & {
+			font-size: 28px;
+		}
 	}
 	@at-root .serve_first_txt &,
 		.serve_second_txt & {
@@ -221,7 +244,10 @@ h2 {
 		}
 	}
 	@at-root .attitude_info + & {
-		margin-top: 44px;
+		margin-top: 145px;
+		@include mw(L) {
+			margin-top: 44px;
+		}
 	}
 	&.border_bottom {
 		position: relative;
@@ -233,7 +259,10 @@ h2 {
 			margin-top: 42px;
 			background-color: #bda782;
 			@at-root .serve_third & {
-				margin: 24px auto 0;
+				margin: 52px auto 0;
+				@include mw(L) {
+					margin: 24px auto 0;
+				}
 			}
 			@include mw(L) {
 				width: 226px;
@@ -259,11 +288,12 @@ h3 {
 			display: block;
 			width: 269px;
 			height: 14px;
-			margin: 24px auto;
+			margin: 42px auto;
 			background-color: #bda782;
 			@include mw(L) {
 				width: 226px;
 				height: 7px;
+				margin: 24px auto;
 			}
 		}
 	}
@@ -343,11 +373,10 @@ h4 {
 }
 
 .normal_btn {
-	@include d_f(flex, center, center);
+	@include d_f(inline-flex, center, center);
 	padding: 6px 13px 6px 20px;
 	font-weight: 500;
 	font-size: 20px;
-	line-height: 27px;
 	color: #333333;
 	border: 2px solid #333333;
 	border-radius: 100px;
@@ -367,6 +396,9 @@ h4 {
 		.icon_arr_right {
 			background-image: url("../images/icon/icon_arr_right_w.svg");
 		}
+		@include mw(L) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -374,7 +406,7 @@ h4 {
 	@include d_f(flex, center, center);
 	height: 100%;
 	color: rgba(255, 255, 255, 1);
-	transition-duration: 0.3s;
+	// transition-duration: 0.1s;
 	@at-root .scroll & {
 		color: rgba(0, 0, 0, 1);
 	}
@@ -419,6 +451,10 @@ h4 {
 		@include d_f(flex, center);
 		padding: 4px 0;
 		border-bottom: 2px solid transparent;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 25px;
 		@extend %hand;
 		@extend %transition;
 		@include minmw(L) {
@@ -455,8 +491,26 @@ h4 {
 				border-bottom: 0.5px solid #979797;
 			}
 		}
+
 		// .nav_item_logo
 		&_logo {
+			position: relative;
+			max-width: 405px;
+
+			img:nth-child(1) {
+				@at-root .scroll & {
+					opacity: 0;
+				}
+			}
+			img:nth-child(2) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				@at-root .scroll & {
+					opacity: 1;
+				}
+			}
 			@include mw(XXL) {
 				margin: 0 40px;
 			}
@@ -691,6 +745,7 @@ h4 {
 	padding-bottom: 95px;
 	background-color: #fff;
 	@include mw(L) {
+		padding-top: 26px;
 		padding-bottom: 57px;
 	}
 	// .brand_group
@@ -708,6 +763,8 @@ h4 {
 	// .brand_item
 	&_item {
 		position: relative;
+		@include d_f(flex, center);
+		flex-direction: column;
 		width: calc(100% / 3 - 24px);
 		margin-top: 189px;
 		margin-left: 36px;
@@ -735,12 +792,19 @@ h4 {
 			max-width: 320px;
 			margin-top: 108px;
 			margin-left: 0 !important;
+			padding: 86px 22px 39px;
 		}
 		.normal_btn {
+			max-height: 31px;
 			margin: 44px auto 0;
+			font-size: 14px;
+			@include mw(S) {
+				margin-top: 21px;
+			}
 		}
 		// .brand_item_title
 		&_title {
+			height: 25px;
 			font-weight: 700;
 			font-size: 22px;
 			line-height: 25px;
@@ -750,9 +814,13 @@ h4 {
 		}
 		// .brand_item_txt
 		&_txt {
+			height: 100%;
 			font-weight: 400;
 			font-size: 18px;
 			line-height: 160%;
+			@include mw(S) {
+				font-size: 16px;
+			}
 		}
 		// .brand_item_logo
 		&_logo {
@@ -800,7 +868,7 @@ h4 {
 }
 
 .serve {
-	padding-top: 245px;
+	padding-top: 181px;
 	padding-bottom: 110px;
 	background-color: #f9f9f9;
 	@include mw(L) {
@@ -831,6 +899,7 @@ h4 {
 				color: #333333;
 				@include mw(L) {
 					margin: 24px auto 0;
+					font-size: 16px;
 				}
 			}
 		}
@@ -883,6 +952,9 @@ h4 {
 				font-weight: 400;
 				font-size: 26px;
 				line-height: 160%;
+				@include mw(L) {
+					font-size: 16px;
+				}
 			}
 		}
 		// .serve_second_img
@@ -893,7 +965,8 @@ h4 {
 				margin-top: 30px;
 			}
 		}
-	} // .serve_third
+	}
+	// .serve_third
 	&_third {
 		margin-top: 144px;
 		@include mw(L) {
@@ -909,6 +982,7 @@ h4 {
 				text-align: center;
 				@include mw(L) {
 					margin-top: 24px;
+					font-size: 16px;
 				}
 			}
 		}
@@ -925,6 +999,9 @@ h4 {
 			}
 			span + span {
 				margin-left: 25px;
+				@include mw(L) {
+					margin-left: 7px;
+				}
 			}
 		}
 	}
@@ -933,8 +1010,8 @@ h4 {
 .attitude {
 	padding-top: 60px;
 	padding-bottom: 121px;
-	background: url("../images/attitude_bg.jpg") no-repeat center top/cover
-		#ebdec7;
+	background: url("../images/home/attitude_bg.svg") no-repeat center top/cover
+		#f9f9f9;
 	@include mw(L) {
 		padding-bottom: 53px;
 	}
@@ -945,7 +1022,8 @@ h4 {
 		padding: 53px 49.5px 45px;
 		background: rgba(255, 255, 255, 0.5);
 		@include mw(L) {
-			padding: 26px 49.5px 45px;
+			margin-top: 26px;
+			padding: 32px 13px 43px;
 		}
 		p {
 			max-width: 759px;
@@ -954,6 +1032,10 @@ h4 {
 			font-weight: 400;
 			font-size: 26px;
 			line-height: 160%;
+			@include mw(L) {
+				margin-bottom: 24px;
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -961,7 +1043,7 @@ h4 {
 	&_group {
 		@include d_f(flex, center, none);
 		max-width: 1278px;
-		margin: 72px auto 0;
+		margin: 87px auto 0;
 		text-align: center;
 
 		@include mw(L) {
@@ -978,10 +1060,20 @@ h4 {
 			max-width: 250px;
 			// margin: auto;
 		}
+		h4 {
+			white-space: nowrap;
+			margin-top: 38px;
+			@include mw(XL) {
+				white-space: break-spaces;
+			}
+		}
 		& + & {
 			margin-left: 63px;
+			@include mw(XL) {
+				margin-left: 20px;
+			}
 			@include mw(L) {
-				margin-top: 54px;
+				margin-top: 48px;
 				margin-left: 0;
 			}
 		}
@@ -989,9 +1081,23 @@ h4 {
 		&_img {
 			max-width: 141px;
 		}
-		p {
-			margin-top: 12px;
+		// .attitude_item_txt
+		&_txt {
+			margin-top: 38px;
 			line-height: 160%;
+			font-weight: 400;
+			font-size: 26px;
+			line-height: 160%;
+			@include mw(L) {
+				margin-top: 12px;
+				font-size: 16px;
+			}
+		}
+	}
+	.normal_btn {
+		margin: 100px auto 0;
+		@include mw(L) {
+			margin: 62px auto 0;
 		}
 	}
 }
@@ -1012,7 +1118,7 @@ h4 {
 		@include mw(L) {
 			flex-direction: column;
 			align-items: center;
-			margin-top: 9px;
+			margin-top: 0;
 		}
 	}
 	// .partner_item
@@ -1028,6 +1134,7 @@ h4 {
 			align-items: flex-start;
 			width: 100%;
 			padding-top: 28px;
+			padding-bottom: 28px;
 			& + & {
 				border-top: 0.5px solid #979797;
 			}
@@ -1058,6 +1165,9 @@ h4 {
 			font-weight: 400;
 			font-size: 24px;
 			line-height: 160%;
+			@include mw(L) {
+				font-size: 16px;
+			}
 			img {
 				width: 51px;
 				margin-right: 48px;
@@ -1073,6 +1183,7 @@ h4 {
 			padding-left: 93px;
 			@include mw(L) {
 				padding-left: 0;
+				margin-top: 24px;
 			}
 			> span {
 				flex: none;
@@ -1091,6 +1202,7 @@ h4 {
 		&_detail {
 			img {
 				width: auto;
+				max-height: 36px;
 				@include mw(L) {
 					width: 113px;
 				}
@@ -1146,6 +1258,7 @@ h4 {
 			@include mw(L) {
 				margin-top: 58px;
 				text-align: left;
+				font-size: 16px;
 			}
 		}
 		.normal_btn {
@@ -1164,6 +1277,8 @@ h4 {
 		@include mw(L) {
 			position: relative;
 			width: 100%;
+			bottom: -55px;
+			left: -30px;
 		}
 	}
 	// .home_banner_bg
