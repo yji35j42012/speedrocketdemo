@@ -55,14 +55,17 @@ for (let i = 0; i < secNav.length; i++) {
 
 // var body = document.body;
 var windowScroll = document.querySelector("html");
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", scrollListener);
+window.addEventListener("touchmove", scrollListener);
+
+function scrollListener() {
+	console.log("aaaaa");
 	if (windowScroll.scrollTop == 0) {
 		document.body.classList.remove("scroll");
 	} else {
 		document.body.classList.add("scroll");
 	}
-});
-
+}
 // gotoback
 var gotoback = document.querySelector("#gotoback");
 gotoback.onclick = function() {
@@ -73,3 +76,10 @@ gotoback.onclick = function() {
 		behavior: "smooth"
 	});
 };
+
+function onload() {
+	console.log("test");
+	// var barTime = setInterval(function () {
+	// 	console.log("test");
+	// }, 20);
+}
