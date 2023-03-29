@@ -346,6 +346,87 @@ h4 span {
   width: 16px;
 }
 
+.normal_input {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 181px;
+  padding: 12px 26px;
+  background-color: #333333;
+  border-radius: 100px;
+}
+
+.normal_input input {
+  width: 100%;
+  margin-right: 5px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.normal_input input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.normal_input input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.normal_input input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.normal_input input::placeholder {
+  color: #fff;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon._trangle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 8px;
+  height: 7px;
+  margin-left: 6px;
+}
+
+.icon._search {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 20px;
+  height: 22px;
+  background: url("../images/icon/icon_search.svg") no-repeat center/cover;
+}
+
+.filiter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.filiter .normal_select + .normal_select,
+.filiter .normal_select + .normal_input {
+  margin-left: 58px;
+}
+
 .wrap {
   height: 100%;
   background-color: #fff;
@@ -1235,25 +1316,6 @@ footer .container {
 
 .lang:active .lang_txt {
   background-color: #5f5e5e;
-}
-
-.icon {
-  display: inline-block;
-}
-
-.icon._trangle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 8px;
-  height: 7px;
-  margin-left: 6px;
 }
 
 .brand {

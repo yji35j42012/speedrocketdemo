@@ -92,7 +92,7 @@
 			<div class="container">
 				<h2>最新消息</h2>
 				<div class="filiter">
-					<label class="normal_select">
+					<label class="normal_select" name="selectHandler">
 						<span class="normal_select_txt">所有品牌</span>
 						<ul class="normal_select_group">
 							<li>SHARECO</li>
@@ -100,9 +100,18 @@
 							<li>老彭友秘制辣掌</li>
 						</ul>
 					</label>
+					<label class="normal_select" name="selectHandler">
+						<span class="normal_select_txt">所有分類</span>
+						<ul class="normal_select_group"></ul>
+					</label>
+					<label class="normal_input">
+						<input type="text" placeholder="搜尋">
+						<i class="icon _search"></i>
+					</label>
 				</div>
 			</div>
 		</section>
+
 		<footer class="footer">
 			<div id="gotoback" class="footer_back" data-back="回到最上面">
 				<i class="icon _arrow">
@@ -168,6 +177,7 @@
 
 
 	<script src="./js/module.js"></script>
+	<script src="./js/news.js"></script>
 </body>
 
 </html>
