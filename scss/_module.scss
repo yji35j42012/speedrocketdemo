@@ -147,13 +147,30 @@
 		@include d_f(flex);
 		.icon {
 			flex: none;
+			@include d_f(flex, center, center);
 			width: 40px;
 			height: 40px;
 			background-color: #fff;
 			border-radius: 100px;
+			@extend %hand;
+			@extend %transition;
+
 			@include mw(L) {
 				width: 35px;
 				height: 35px;
+			}
+			@include hoverHandler {
+				background-color: #bda782;
+			}
+			&._youtube {
+				img {
+					max-width: 23px;
+				}
+			}
+			&._in {
+				img {
+					max-width: 21px;
+				}
 			}
 		}
 		.icon + .icon {
@@ -796,7 +813,7 @@ h4 {
 		border-radius: 100px;
 		@extend %hand;
 
-		@at-root .on &{
+		@at-root .on & {
 			background-color: #5f5e5e;
 		}
 	}
@@ -826,7 +843,6 @@ h4 {
 	}
 	&.on .lang_group {
 		display: block;
-
 	}
 	@include hoverHandler {
 		.lang_txt {

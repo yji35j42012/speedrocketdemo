@@ -1,9 +1,9 @@
-.normal_btn, .normal_btn_arr::before, .normal_btn_arr::after, .normal_btn_arr .line, .nav_item {
+.footer_community .icon, .normal_btn, .normal_btn_arr::before, .normal_btn_arr::after, .normal_btn_arr .line, .nav_item {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
-.footer_back, .footer_nav_group a, .nav_item, .nav_groupSec li, .nav_btn, .lang_txt, .lang_group li {
+.footer_back, .footer_nav_group a, .footer_community .icon, .nav_item, .nav_groupSec li, .nav_btn, .lang_txt, .lang_group li {
   cursor: pointer;
 }
 
@@ -239,6 +239,15 @@ footer .container {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40px;
   height: 40px;
   background-color: #fff;
@@ -250,6 +259,24 @@ footer .container {
     width: 35px;
     height: 35px;
   }
+}
+
+@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+  .footer_community .icon:hover {
+    background-color: #bda782;
+  }
+}
+
+.footer_community .icon:active {
+  background-color: #bda782;
+}
+
+.footer_community .icon._youtube img {
+  max-width: 23px;
+}
+
+.footer_community .icon._in img {
+  max-width: 21px;
 }
 
 .footer_community .icon + .icon {
