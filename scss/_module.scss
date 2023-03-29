@@ -112,7 +112,7 @@ h4 {
 	width: 100%;
 	max-width: 217px;
 	height: 51px;
-
+@extend %hand;
 	// .normal_select_txt
 	&_txt {
 		@include d_f(flex, space-between, center);
@@ -137,6 +137,7 @@ h4 {
 		position: absolute;
 		top: 80px;
 		width: 100%;
+		display: none;
 		padding: 12px 8px;
 		background-color: rgba(51, 51, 51, 0.9);
 		border-radius: 16px;
@@ -284,7 +285,6 @@ h4 {
 
 .filiter {
 	@include d_f(flex, center);
-
 	.normal_select + .normal_select,
 	.normal_select + .normal_input {
 		margin-left: 58px;
