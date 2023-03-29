@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .box:first-child {
+            background-color: #000;
+        }
+
+        .normal_btn {
+            display: flex;
+            align-items: center;
+            padding: 6px 20px;
+            border: 2px solid #333333;
+            border-radius: 100px;
+        }
+
+        .normal_btn_arr {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            min-width: 12px;
+            height: 8px;
+            margin-left: 10px;
+        }
+
+        .normal_btn_arr::before,
+        .normal_btn_arr::after {
+            content: '';
+            position: absolute;
+            right: -2px;
+            display: inline-block;
+            width: 10px;
+            height: 2px;
+            background-color: #333;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+
+        }
+
+        .normal_btn_arr::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .normal_btn_arr::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+
+        .normal_btn_arr .line {
+            display: inline-block;
+            /* position:absolute; */
+            top: 0;
+            bottom: 0;
+            width: 16px;
+            height: 2px;
+            margin: auto 0;
+            background-color: #bda782;
+            border-radius: 100px;
+        }
+
+        .normal_btn img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">
+            <a href="" class="normal_btn _"></a>
+        </div>
+        <div class="box">
+            <a href="" class="normal_btn">
+                了解更多
+                <span class="normal_btn_arr">
+                    <span class="line"></span>
+                </span>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>

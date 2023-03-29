@@ -3,9 +3,9 @@ var lang_group = document.querySelector(".lang_group");
 var lang_txt = document.querySelector("#lang_txt");
 var lang_group_item = document.querySelectorAll(".lang_group > li");
 function langHnadler() {
-	lang_group.classList.contains("on")
-		? lang_group.classList.remove("on")
-		: lang_group.classList.add("on");
+	lang.classList.contains("on")
+		? lang.classList.remove("on")
+		: lang.classList.add("on");
 }
 lang.addEventListener("click", langHnadler);
 
@@ -14,7 +14,7 @@ for (let i = 0; i < lang_group_item.length; i++) {
 	element.onclick = function() {
 		event.stopPropagation();
 		lang_txt.innerHTML = element.innerHTML;
-		lang_group.classList.remove("on");
+		lang.classList.remove("on");
 		// var langData = document.querySelector(
 		// 	"[data-lang=" + element.dataset.lang + "]"
 		// );

@@ -365,42 +365,119 @@ h4 {
 				content: "";
 				width: calc(100% - 16px);
 				border-radius: 16px;
-				// width: 196px;
-				// height: 47px;
 			}
 		}
 	}
 }
 
 .normal_btn {
-	@include d_f(inline-flex, center, center);
-	padding: 6px 13px 6px 20px;
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 20px;
 	font-weight: 500;
 	font-size: 20px;
 	color: #333333;
 	border: 2px solid #333333;
 	border-radius: 100px;
-	@extend %hand;
+	@extend %transition;
 
-	.icon_arr_right {
-		display: inline-block;
-		width: 7px;
-		height: 12px;
-		margin-left: 10px;
-		background: url("../images/icon/icon_arr_right_b.svg") no-repeat
-			center/cover;
-	}
 	&._black {
 		color: #fff;
-		border-color: #ffffff;
-		.icon_arr_right {
-			background-image: url("../images/icon/icon_arr_right_w.svg");
+		border-color: #fff;
+	}
+
+	// .normal_btn_arr
+	&_arr {
+		position: relative;
+		display: inline-flex;
+		justify-content: flex-end;
+		align-items: center;
+		min-width: 4px;
+		height: 8px;
+		margin-left: 10px;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			right: -2px;
+			display: inline-block;
+			width: 10px;
+			height: 2px;
+			background-color: #333;
+			border-top-left-radius: 100px;
+			border-bottom-left-radius: 100px;
+			@extend %transition;
+
+			@at-root ._black & {
+				background-color: #fff;
+			}
 		}
-		@include mw(L) {
-			font-size: 14px;
+		&::before {
+			top: 0;
+			transform: rotate(45deg);
+		}
+		&::after {
+			bottom: 0;
+			transform: rotate(-45deg);
+		}
+		.line {
+			display: inline-block;
+			width: 0;
+			height: 2px;
+			background-color: #bda782;
+			border-radius: 100px;
+			@extend %transition;
+		}
+	}
+
+	@include hoverHandler {
+		color: #bda782;
+		border-color: #bda782;
+
+		&._blackBg {
+			background-color: #000;
+			border-color: #000;
+		}
+		.normal_btn_arr {
+			&::before,
+			&::after {
+				background-color: #bda782;
+			}
+		}
+		.line {
+			width: 16px;
 		}
 	}
 }
+
+// .normal_btn {
+// 	@include d_f(inline-flex, center, center);
+// 	padding: 6px 13px 6px 20px;
+
+// 	border: 2px solid #333333;
+// 	border-radius: 100px;
+// 	@extend %hand;
+
+// 	.icon_arr_right {
+// 		display: inline-block;
+// 		width: 7px;
+// 		height: 12px;
+// 		margin-left: 10px;
+// 		background: url("../images/icon/icon_arr_right_b.svg") no-repeat
+// 			center/cover;
+// 	}
+// 	&._black {
+// 		color: #fff;
+// 		border-color: #ffffff;
+// 		.icon_arr_right {
+// 			background-image: url("../images/icon/icon_arr_right_w.svg");
+// 		}
+// 		@include mw(L) {
+// 			font-size: 14px;
+// 		}
+// 	}
+// }
 
 .nav {
 	@include d_f(flex, center, center);
@@ -576,6 +653,22 @@ h4 {
 			@at-root .nav_item:hover & {
 				display: block;
 			}
+			.nav_item_link {
+				position: relative;
+				// @extend %transition;
+				@include hoverHandler {
+					color: #887766;
+					&:after {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: -5px;
+						width: 100%;
+						height: 2px;
+						background-color: #887766;
+					}
+				}
+			}
 		}
 		@include mw(L) {
 			@at-root .nav_item.on & {
@@ -594,6 +687,7 @@ h4 {
 					border-top-right-radius: 16px;
 				}
 				&:last-child {
+					padding-bottom: 23px;
 					border-bottom-left-radius: 16px;
 					border-bottom-right-radius: 16px;
 				}
@@ -697,10 +791,14 @@ h4 {
 		@include d_f(flex, center, center);
 		width: 60px;
 		height: 30px;
-		background: #9e9e9e;
+		background-color: #9e9e9e;
 		color: #fff;
 		border-radius: 100px;
 		@extend %hand;
+
+		@at-root .on &{
+			background-color: #5f5e5e;
+		}
 	}
 	// .lang_group
 	&_group {
@@ -713,9 +811,7 @@ h4 {
 		text-align: center;
 		background: #e8e8e8;
 		color: #1e1e1e;
-		&.on {
-			display: block;
-		}
+
 		li {
 			width: 60px;
 			height: 30px;
@@ -726,6 +822,15 @@ h4 {
 			@include hoverHandler {
 				background: rgba(100, 100, 100, 0.1);
 			}
+		}
+	}
+	&.on .lang_group {
+		display: block;
+
+	}
+	@include hoverHandler {
+		.lang_txt {
+			background-color: #5f5e5e;
 		}
 	}
 }
