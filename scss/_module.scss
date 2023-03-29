@@ -141,6 +141,9 @@ h4 {
 		padding: 12px 8px;
 		background-color: rgba(51, 51, 51, 0.9);
 		border-radius: 16px;
+		@at-root .on &{
+			display: block;
+		}
 		// display: none;
 		&::before {
 			content: "";
@@ -1421,3 +1424,5 @@ h4 {
 
 .news {
 }
+
+
