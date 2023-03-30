@@ -1601,6 +1601,29 @@ h4 {
 		// .news_item_info
 		&_info {
 			width: 100%;
+			padding: 33.5px 0;
+
+			.date {
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 28px;
+			}
+			.name {
+				margin-top: 12px;
+				font-weight: 600;
+				font-size: 34px;
+				line-height: 46px;
+			}
+			.detail {
+				margin-top: 15px;
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 33px;
+			}
+			.btnBox {
+				margin-top: 30px;
+				text-align: right;
+			}
 		}
 	}
 }

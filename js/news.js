@@ -1,5 +1,8 @@
 // normal_select
 var selectHandler = document.querySelectorAll("[name=selectHandler]");
+var page_input = document.querySelectorAll("[name=page_input]");
+
+
 var selectHandlerItem = null;
 for (let i = 0; i < selectHandler.length; i++) {
 	const element = selectHandler[i];
@@ -26,15 +29,33 @@ for (let i = 0; i < selectHandler.length; i++) {
 	};
 }
 
-var page_group_more = document.querySelector("#page_group_more");
-var page_goPage = document.querySelector("#page_goPage");
-var page_goPage_input = document.querySelector("#page_goPage input");
-page_group_more.onclick = function() {
-	page_group_more.classList.contains("on")
-		? page_group_more.classList.remove("on")
-		: page_group_more.classList.add("on");
-	page_goPage_input.focus();
-};
-page_goPage.onclick = function() {
-	event.stopPropagation();
-};
+var page_group_more = document.querySelectorAll("[name=page_group_more]");
+var more_item = null;
+console.log("page_group_more", page_group_more);
+
+for (let i = 0; i < page_group_more.length; i++) {
+	const element = page_group_more[i];
+	element.onclick = function() {
+		if (more_item == i) {
+			page_group_more[more_item].classList.remove("on");
+			more_item = null;
+		} else if (more_item == null) {
+			page_group_more[i].classList.add("on");
+			page_input[i].focus();
+			more_item = i;
+		} else {
+			page_group_more[more_item].classList.remove("on");
+			page_group_more[i].classList.add("on");
+			page_input[i].focus();
+			more_item = i;
+		}
+	};
+}
+var page_goPage = document.querySelectorAll("[name=page_goPage]");
+for (let i = 0; i < page_goPage.length; i++) {
+	const element = page_goPage[i];
+	element.onclick = function() {
+		event.stopPropagation();
+	};
+}
+
