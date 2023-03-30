@@ -119,14 +119,30 @@
 						<div class="page_item_total">總共有<span>100,023</span>筆資料</div>
 					</div>
 					<ul class="page_group">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li class="page_group_prev">
+							<svg>
+								<use xlink:href="#icon_back"></use>
+							</svg>
+						</li>
+						<li class="on">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li id="page_group_more" class="page_group_more">
+							...
+							<div id="page_goPage" class="page_goPage" data-txt="跳至">
+								<input class="page_goPage_input" type="text">
+								<svg class="page_goPage_icon">
+									<use xlink:href="#icon_back"></use>
+								</svg>
+							</div>
+						</li>
+						<li>33</li>
+						<li>34</li>
+						<li class="page_group_next">
+							<svg>
+								<use xlink:href="#icon_back"></use>
+							</svg>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -195,6 +211,14 @@
 		</footer>
 	</div>
 
+	<div style="display: none!important;">
+		<svg>
+			<symbol viewBox="0 0 10 16" id="icon_back" class="icon_back">
+				<path class="st0"
+					d="M7.57588 15.9999C7.38376 16.0005 7.19394 15.9628 7.02037 15.8897C6.84679 15.8165 6.69387 15.7097 6.57284 15.5771L0.361721 8.72061C0.172581 8.51613 0.0691833 8.25965 0.0691833 7.99496C0.0691833 7.73027 0.172581 7.47379 0.361721 7.26932L6.79145 0.412821C7.00972 0.179452 7.32338 0.0326955 7.66342 0.00483554C8.00346 -0.0230244 8.34202 0.0702947 8.60463 0.264263C8.86724 0.458232 9.03239 0.736962 9.06374 1.03913C9.09509 1.34131 8.99008 1.64217 8.77181 1.87554L3.02363 8.00068L8.57891 14.1258C8.73616 14.2936 8.83605 14.4978 8.86676 14.7144C8.89747 14.931 8.85771 15.1509 8.75219 15.3481C8.64667 15.5452 8.47981 15.7114 8.27134 15.8269C8.06288 15.9424 7.82154 16.0025 7.57588 15.9999Z" />
+			</symbol>
+		</svg>
+	</div>
 
 	<script src="./js/module.js"></script>
 	<script src="./js/news.js"></script>

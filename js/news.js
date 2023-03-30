@@ -25,3 +25,16 @@ for (let i = 0; i < selectHandler.length; i++) {
 		// selectHandlerItem = i;
 	};
 }
+
+var page_group_more = document.querySelector("#page_group_more");
+var page_goPage = document.querySelector("#page_goPage");
+var page_goPage_input = document.querySelector("#page_goPage input");
+page_group_more.onclick = function() {
+	page_group_more.classList.contains("on")
+		? page_group_more.classList.remove("on")
+		: page_group_more.classList.add("on");
+	page_goPage_input.focus();
+};
+page_goPage.onclick = function() {
+	event.stopPropagation();
+};
