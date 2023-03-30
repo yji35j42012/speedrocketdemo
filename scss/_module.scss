@@ -1430,6 +1430,11 @@ h4 {
 }
 
 .bannerBg {
+	// width: 100%;
+	// height: 50vw;
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: center;
 	&._shadow {
 		position: relative;
 		&:after {
@@ -1575,17 +1580,26 @@ h4 {
 }
 
 .news {
-	transform: translateY(-295px);
+	padding: 0 20px;
+	// transform: translateY(-295px);
+	transform: translateY(-15vw);
 	// .news_group
 	&_group {
 		margin-top: 27px;
 	}
 	// .news_item
 	&_item {
+		@include d_f(flex);
 		border-radius: 16px;
 		// .news_item_pic
 		&_pic {
+			width: 100%;
 			max-width: 574px;
+			margin-right: 45px;
+		}
+		// .news_item_info
+		&_info {
+			width: 100%;
 		}
 	}
 }
