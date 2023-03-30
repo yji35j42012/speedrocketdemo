@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .normal_select_group li, .normal_btn, .normal_btn_arr::before, .normal_btn_arr::after, .normal_btn_arr .line, .footer_community .icon, .nav_item, .page_group li {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
@@ -94,6 +95,12 @@ h2.border_bottom:after {
 
 h2 + .filiter {
   margin-top: 53px;
+}
+
+@media screen and (max-width: 995px) {
+  h2 + .filiter {
+    margin-top: 30px;
+  }
 }
 
 h3 {
@@ -217,7 +224,7 @@ h4 span {
 .normal_select_group::before {
   content: "";
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 0;
   right: 0;
   display: block;
@@ -431,9 +438,42 @@ h4 span {
           align-items: stretch;
 }
 
+@media screen and (max-width: 1024px) {
+  .filiter {
+    max-width: 574px;
+    margin: auto;
+  }
+}
+
 .filiter .normal_select + .normal_select,
 .filiter .normal_select + .normal_input {
   margin-left: 58px;
+}
+
+@media screen and (max-width: 1024px) {
+  .filiter .normal_select + .normal_select,
+  .filiter .normal_select + .normal_input {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .filiter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .filiter .normal_select {
+    width: calc(50% - 12px);
+    max-width: 100%;
+  }
+  .filiter .normal_select + .normal_select {
+    margin-left: 24px;
+  }
+  .filiter .normal_input {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 12px;
+  }
 }
 
 .wrap {
@@ -492,6 +532,12 @@ footer .container {
   padding: 76px 57px 97px;
   background-color: #f9f9f9;
   border-radius: 16px;
+}
+
+@media screen and (max-width: 995px) {
+  .news .container {
+    padding: 25px 27px 68px;
+  }
 }
 
 .header {
@@ -2156,8 +2202,14 @@ footer .container {
   bottom: 0;
 }
 
+.bannerBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .bannerBg._shadow {
-  position: relative;
+  position: absolute;
 }
 
 .bannerBg._shadow:after {
@@ -2185,8 +2237,29 @@ footer .container {
   margin-top: 115px;
 }
 
+@media screen and (max-width: 1024px) {
+  .page {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 574px;
+    margin: 30px auto 0;
+  }
+}
+
 .page_item {
   color: #6c6868;
+}
+
+@media screen and (max-width: 1024px) {
+  .page_item {
+    margin-bottom: 24px;
+    text-align: center;
+  }
 }
 
 .page_item_now {
@@ -2232,6 +2305,8 @@ footer .container {
   height: 27px;
   fill: #6c6868;
   color: #6c6868;
+  font-weight: 800;
+  font-size: 18px;
   border-radius: 100px;
 }
 
@@ -2330,9 +2405,15 @@ footer .container {
 }
 
 .news {
+  position: relative;
   padding: 0 20px;
-  -webkit-transform: translateY(-15vw);
-          transform: translateY(-15vw);
+  margin-top: 32vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .news {
+    padding: 0;
+  }
 }
 
 .news_group {
@@ -2343,30 +2424,104 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  border-radius: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .news_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 574px;
+    margin: auto;
+    padding: 36px 0 28px;
+  }
+}
+
+.news_item:first-child {
+  padding-top: 0;
+}
+
+.news_item + .news_item {
+  border-top: 1px solid #979797;
 }
 
 .news_item_pic {
   width: 100%;
   max-width: 574px;
+  min-width: 535px;
   margin-right: 45px;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 1280px) {
+  .news_item_pic {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .news_item_pic {
+    min-width: unset;
+    margin-right: 0;
+  }
 }
 
 .news_item_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  padding: 33.5px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .news_item_info {
+    max-width: 574px;
+    margin-top: 12px;
+  }
 }
 
 .news_item_info .date {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
+}
+
+.news_item_info .new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news_item_info .new::after {
+  content: "NEW";
+  margin-left: 28px;
+  padding: 4px 10px;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #bda782;
+  color: #ffffff;
+  border-radius: 100px;
 }
 
 .news_item_info .name {
@@ -2376,15 +2531,47 @@ footer .container {
   line-height: 46px;
 }
 
+@media screen and (max-width: 1280px) {
+  .news_item_info .name {
+    line-height: 34px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .news_item_info .name {
+    margin-top: 9px;
+  }
+}
+
 .news_item_info .detail {
+  overflow: hidden;
+  display: -webkit-box;
   margin-top: 15px;
+  -webkit-box-orient: vertical;
+  /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+  -webkit-line-clamp: 2;
+  /* 限制指定的行數 */
+  /* 其它瀏覽器降級方式：給定最大高度 */
+  /*max-height:48px;*/
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
 }
 
+@media screen and (max-width: 1024px) {
+  .news_item_info .detail {
+    margin-top: 8px;
+  }
+}
+
 .news_item_info .btnBox {
   margin-top: 30px;
   text-align: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .news_item_info .btnBox {
+    margin: 12px auto 0;
+  }
 }
 /*# sourceMappingURL=all.css.map */
