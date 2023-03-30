@@ -53,14 +53,10 @@ for (let i = 0; i < secNav.length; i++) {
 	};
 }
 
-// var body = document.body;
-var windowScroll = document.querySelector("html");
+var userAgent = navigator.userAgent.toLowerCase();
 window.addEventListener("scroll", scrollListener);
-window.addEventListener("touchmove", scrollListener);
-
 function scrollListener() {
-	console.log("aaaaa");
-	if (windowScroll.scrollTop == 0) {
+	if (window.pageYOffset == 0) {
 		document.body.classList.remove("scroll");
 	} else {
 		document.body.classList.add("scroll");
@@ -69,17 +65,8 @@ function scrollListener() {
 // gotoback
 var gotoback = document.querySelector("#gotoback");
 gotoback.onclick = function() {
-	console.log("aadf");
-
 	window.scrollTo({
 		top: 0,
 		behavior: "smooth"
 	});
 };
-
-function onload() {
-	console.log("test");
-	// var barTime = setInterval(function () {
-	// 	console.log("test");
-	// }, 20);
-}
