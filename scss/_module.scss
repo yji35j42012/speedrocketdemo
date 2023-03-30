@@ -148,7 +148,6 @@ h4 {
 		@at-root .on & {
 			display: block;
 		}
-		// display: none;
 		&::before {
 			content: "";
 			position: absolute;
@@ -196,13 +195,10 @@ h4 {
 	// .normal_btn_arr
 	&_arr {
 		position: relative;
-		display: inline-flex;
-		justify-content: flex-end;
-		align-items: center;
+		@include d_f(inline-flex, flex-end, center);
 		min-width: 4px;
 		height: 8px;
 		margin-left: 10px;
-
 		&::before,
 		&::after {
 			content: "";
@@ -215,7 +211,6 @@ h4 {
 			border-top-left-radius: 100px;
 			border-bottom-left-radius: 100px;
 			@extend %transition;
-
 			@at-root ._black & {
 				background-color: #fff;
 			}
@@ -241,7 +236,6 @@ h4 {
 	@include hoverHandler {
 		color: #bda782;
 		border-color: #bda782;
-
 		&._blackBg {
 			background-color: #000;
 			border-color: #000;
@@ -300,7 +294,7 @@ h4 {
 
 .wrap {
 	height: 100%;
-	background-color: #fff;
+	// background-color: #fff;
 }
 
 .container {
@@ -356,13 +350,11 @@ h4 {
 
 .footer {
 	position: relative;
-	padding-top: 121px;
-	padding-bottom: 77px;
+	padding: 121px 0 77px;
 	background-color: #090909;
 	color: #ffffff;
 	@include mw(L) {
-		padding-top: 59px;
-		padding-bottom: 59px;
+		padding: 59px 0;
 	}
 	// .footer_back
 	&_back {
@@ -454,7 +446,6 @@ h4 {
 			border-radius: 100px;
 			@extend %hand;
 			@extend %transition;
-
 			@include mw(L) {
 				width: 35px;
 				height: 35px;
@@ -1149,10 +1140,21 @@ h4 {
 }
 
 .attitude {
+	position: relative;
 	padding-top: 60px;
 	padding-bottom: 121px;
 	background: url("../images/home/attitude_bg.svg") no-repeat center top/cover
 		#f9f9f9;
+	&:before {
+		content: "";
+		position: absolute;
+		top: -2px;
+		display: block;
+		width: 100%;
+		min-height: 3px;
+		// transform: translateY(-100%);
+		background-color: #f9f9f9;
+	}
 	@include mw(L) {
 		padding-bottom: 53px;
 	}

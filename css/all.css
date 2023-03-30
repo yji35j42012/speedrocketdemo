@@ -438,7 +438,6 @@ h4 span {
 
 .wrap {
   height: 100%;
-  background-color: #fff;
 }
 
 .container {
@@ -531,16 +530,14 @@ footer .container {
 
 .footer {
   position: relative;
-  padding-top: 121px;
-  padding-bottom: 77px;
+  padding: 121px 0 77px;
   background-color: #090909;
   color: #ffffff;
 }
 
 @media screen and (max-width: 1024px) {
   .footer {
-    padding-top: 59px;
-    padding-bottom: 59px;
+    padding: 59px 0;
   }
 }
 
@@ -1740,9 +1737,20 @@ footer .container {
 }
 
 .attitude {
+  position: relative;
   padding-top: 60px;
   padding-bottom: 121px;
   background: url("../images/home/attitude_bg.svg") no-repeat center top/cover #f9f9f9;
+}
+
+.attitude:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  display: block;
+  width: 100%;
+  min-height: 3px;
+  background-color: #f9f9f9;
 }
 
 @media screen and (max-width: 1024px) {
