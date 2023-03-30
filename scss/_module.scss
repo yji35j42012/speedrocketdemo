@@ -1145,16 +1145,15 @@ h4 {
 	padding-bottom: 121px;
 	background: url("../images/home/attitude_bg.svg") no-repeat center top/cover
 		#f9f9f9;
-	&:before {
-		content: "";
-		position: absolute;
-		top: -2px;
-		display: block;
-		width: 100%;
-		min-height: 3px;
-		// transform: translateY(-100%);
-		background-color: #f9f9f9;
-	}
+	// &:before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: -2px;
+	// 	display: block;
+	// 	width: 100%;
+	// 	min-height: 3px;
+	// 	background-color: #f9f9f9;
+	// }
 	@include mw(L) {
 		padding-bottom: 53px;
 	}
