@@ -809,6 +809,10 @@ footer .container {
   line-height: 160%;
 }
 
+.footer .copyRight li:nth-child(2) a {
+  padding: 0 6px;
+}
+
 @media screen and (max-width: 1024px) {
   .footer .copyRight li:nth-child(2) {
     display: none;

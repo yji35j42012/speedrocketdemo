@@ -522,8 +522,11 @@ h4 {
 		}
 		li {
 			line-height: 160%;
-			@include mw(L) {
-				&:nth-child(2) {
+			&:nth-child(2) {
+				a{
+					padding: 0 6px;
+				}
+				@include mw(L) {
 					display: none;
 				}
 			}
