@@ -2335,4 +2335,16 @@ footer .container {
   -webkit-transform: translateY(-295px);
           transform: translateY(-295px);
 }
+
+.news_group {
+  margin-top: 27px;
+}
+
+.news_item {
+  border-radius: 16px;
+}
+
+.news_item_pic {
+  max-width: 574px;
+}
 /*# sourceMappingURL=all.css.map */

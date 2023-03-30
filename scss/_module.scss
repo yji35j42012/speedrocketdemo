@@ -1527,7 +1527,7 @@ h4 {
 		background: #ffffff;
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 		border-radius: 8px;
-		@at-root .on &{
+		@at-root .on & {
 			display: block;
 		}
 		&:before {
@@ -1576,4 +1576,17 @@ h4 {
 
 .news {
 	transform: translateY(-295px);
+
+	// .news_group
+	&_group {
+		margin-top: 27px;
+	}
+	// .news_item
+	&_item {
+		border-radius: 16px;
+		// .news_item_pic
+		&_pic {
+			max-width: 574px;
+		}
+	}
 }
