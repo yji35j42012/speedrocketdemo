@@ -6,8 +6,6 @@ var page_input = document.querySelectorAll("[name=page_input]");
 var selectHandlerItem = null;
 for (let i = 0; i < selectHandler.length; i++) {
 	const element = selectHandler[i];
-	// console.log("element", element);
-	// selectHandlerItem == null ?'' :selectHandler[selectHandlerItem].classList.remove
 	element.onclick = function() {
 		console.log("selectHandler");
 		if (selectHandlerItem == i) {

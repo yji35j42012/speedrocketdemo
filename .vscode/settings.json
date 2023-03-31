@@ -6,6 +6,12 @@
 			"extensionName": ".css",
 			"savePath": "~../css/"
 		},
+		{
+			"format": "compressed",
+			"extensionName": ".min.css", //正式版副檔名為min.css
+			"savePath": "~../css/"
+		},
+
 
 	],
 }
