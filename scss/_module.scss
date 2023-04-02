@@ -239,6 +239,11 @@ h4 {
 			border-radius: 100px;
 			@extend %transition;
 		}
+		@at-root ._back & {
+			margin-left: 0;
+			margin-right: 10px;
+			transform: rotate(180deg);
+		}
 	}
 
 	@include hoverHandler {
@@ -268,10 +273,10 @@ h4 {
 		@include mw(L) {
 			font-size: 14px;
 		}
-		@include hoverHandler {
-			color: #333333;
-			border: 2px solid #333333;
-		}
+		// @include hoverHandler {
+		// 	color: #333333;
+		// 	border: 2px solid #333333;
+		// }
 		@at-root .news_img + & {
 			margin: 72px auto 0;
 			text-align: center;
@@ -1562,6 +1567,17 @@ h4 {
 				#171717 100%
 			);
 		}
+		&._large:after {
+			height: 884px;
+			background: linear-gradient(
+				180deg,
+				rgba(23, 23, 23, 0) 6.95%,
+				#171717 85.56%
+			);
+			@include mw(L){
+				height: 169px;
+			}
+		}
 	}
 }
 
@@ -1920,8 +1936,25 @@ h4 {
 			}
 			& + & {
 				margin-left: 16px;
+				@include mw(L) {
+					margin-left: 12px;
+				}
 			}
 			&._fb {
+				position: relative;
+				// .fb-share-button {
+				// 	position: absolute;
+				// 	top: 0;
+				// 	left: 0;
+				// 	width: 100%;
+				// 	height: 100%;
+				// }
+				.fb_iframe_widget {
+					span {
+						width: 100% !important;
+						height: 100% !important;
+					}
+				}
 				img {
 					width: 19px;
 					@include mw(L) {

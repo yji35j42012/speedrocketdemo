@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+        .soc-media {
+            position: fixed;
+            left: 0;
+            top: 50vh;
+            margin-top: -4vh;
+            font-size: 16px;
+        }
+
+        .soc-media .share-txt {
+            position: absolute;
+            left: -500px;
+            width: 250px;
+            padding: 0 5px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .soc-media .fb-share-txt {
+            background: #3b5998;
+            color: #f8f8f9;
+        }
+
+        .soc-media .tw-share-txt {
+            background: #6cadde;
+            color: #fff;
+        }
+
+        .soc-media .pr-share-txt {
+            background: #8cba4a;
+            color: #fff;
+        }
+
+        .soc-media .share-button {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .soc-media .share-button i {
+            font-size: 22px;
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .soc-media .fb i {
+            background: #3b5998;
+            color: #f8f8f9;
+        }
+
+        .soc-media .tw i {
+            background: #6cadde;
+            color: #fff;
+        }
+
+        .soc-media .pr i {
+            background: #8cba4a;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="soc-media">
+        <div class="share-txt fb-share-txt">Share this property on Facebook</div>
+        <div class="fb share-button" onclick="fbshare()">
+            <i class="fa fa-facebook-f"></i>
+        </div>
+    </div>
+    <script src="https//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+
+        $('.share-button').hover(function () {
+            $(this).prev().animate({
+                'left': '38px'
+            }, 100);
+        }, function () {
+            $(this).prev().animate({
+                'left': '-500px'
+            }, 100);
+        });
+
+        function fbshare() {
+            var fburl = "https://www.facebook.com/sharer/sharer.php?u=";
+            var url = window.location.href;
+            window.open(
+                fburl + url,
+                'targetWindow',
+                'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=450'
+            );
+        }
+    </script>
+</body>
+
+</html>

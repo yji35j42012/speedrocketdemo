@@ -88,7 +88,7 @@
 				<span></span>
 			</button>
 		</header>
-		<section class="bannerBg _shadow">
+		<section class="bannerBg _shadow _large">
 			<img src="../images/news/banner.jpg" alt="">
 		</section>
 
@@ -112,7 +112,7 @@
 						<li class="news_tag_item" data-tag="＃">新品上市</li>
 					</ul>
 					<ul class="news_community">
-						<li class="news_community_item _fb">
+						<li id="fbshare" class="news_community_item _fb">
 							<img src="../images/icon/icon_fb.svg" alt="光速火箭 fb">
 						</li>
 						<li class="news_community_item _twitter">
@@ -140,9 +140,9 @@
 					<img src="../images/news/news_detail_item1.jpg" alt="">
 				</div>
 				<a href="news.html" class="normal_btn _back">
-					<svg>
-						<use xlink:href="#icon_back"></use>
-					</svg>
+					<span class="normal_btn_arr">
+						<span class="line"></span>
+					</span>
 					回列表頁
 				</a>
 			</div>
@@ -219,9 +219,11 @@
 			</symbol>
 		</svg>
 	</div>
-
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"
+		nonce="vG8JZmzA"></script>
 	<script src="../js/module.js"></script>
 	<script src="../js/news.js"></script>
+
 </body>
 
 </html>

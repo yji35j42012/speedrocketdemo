@@ -6,7 +6,7 @@ var page_input = document.querySelectorAll("[name=page_input]");
 var selectHandlerItem = null;
 for (let i = 0; i < selectHandler.length; i++) {
 	const element = selectHandler[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		console.log("selectHandler");
 		if (selectHandlerItem == i) {
 			selectHandler[selectHandlerItem].classList.remove("on");
@@ -33,7 +33,7 @@ console.log("page_group_more", page_group_more);
 
 for (let i = 0; i < page_group_more.length; i++) {
 	const element = page_group_more[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		if (more_item == i) {
 			page_group_more[more_item].classList.remove("on");
 			more_item = null;
@@ -52,8 +52,26 @@ for (let i = 0; i < page_group_more.length; i++) {
 var page_goPage = document.querySelectorAll("[name=page_goPage]");
 for (let i = 0; i < page_goPage.length; i++) {
 	const element = page_goPage[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		event.stopPropagation();
 	};
 }
 
+
+
+// fb分享
+var fbShare = document.querySelector("#fbshare");
+
+fbShare.onclick = function () {
+	var fburl = "https://www.facebook.com/sharer/sharer.php?u=";
+	var url = 'https://whatdoyouwanttoeat.000webhostapp.com/#/';
+	window.open(
+		fburl + url,
+		'targetWindow',
+		'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=800,height=450'
+	);
+}
+
+// https://whatdoyouwanttoeat.000webhostapp.com/#/
+
+// fb分享
