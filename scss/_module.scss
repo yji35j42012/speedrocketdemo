@@ -2093,7 +2093,6 @@ h4 {
 		@at-root .businessTitle1 & {
 			transform: scale(1, 1);
 		}
-
 		&::after {
 			transition-delay: 0.6s;
 			transform: scale(0, 1);
@@ -2106,6 +2105,7 @@ h4 {
 	}
 	// .business_line2
 	&_line2 {
+		// 46+86
 		top: 132px;
 		height: 330px;
 		@at-root .businessTitle2 & {
@@ -2120,6 +2120,12 @@ h4 {
 				transform: scale(1, 1);
 			}
 		}
+	}
+	// .business_line3
+	&_line3{
+		// 132+330
+		top: 462px;
+		height: 130px;
 	}
 	// .business_detail
 	&_detail {

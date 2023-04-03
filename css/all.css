@@ -3129,6 +3129,11 @@ footer .container {
           transform: scale(1, 1);
 }
 
+.business_line3 {
+  top: 462px;
+  height: 130px;
+}
+
 .business_detail {
   display: -webkit-box;
   display: -ms-flexbox;
