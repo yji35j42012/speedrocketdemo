@@ -2060,14 +2060,14 @@ h4 {
 	// .business_title1
 	&_title1 {
 		opacity: 0;
-		@at-root .businessTitle1 & {
+		@at-root .show1 & {
 			opacity: 1;
 		}
 	}
 	// .business_title2
 	&_title2 {
 		opacity: 0;
-		@at-root .businessTitle3 & {
+		@at-root .show3 & {
 			opacity: 1;
 		}
 	}
@@ -2105,7 +2105,7 @@ h4 {
 			}
 			&:nth-child(1) {
 				height: 86px;
-				@at-root .businessTitle1 & {
+				@at-root .show1 & {
 					transform: scale(1, 1);
 					&:after {
 						transform: scale(1, 1);
@@ -2114,7 +2114,7 @@ h4 {
 			}
 			&:nth-child(2) {
 				height: 330px;
-				@at-root .businessTitle2 & {
+				@at-root .show2 & {
 					transform: scale(1, 1);
 					&:after {
 						transform: scale(1, 1);
@@ -2123,13 +2123,13 @@ h4 {
 			}
 			&:nth-child(3) {
 				height: 130px;
-				@at-root .businessTitle3 & {
+				@at-root .show3 & {
 					transform: scale(1, 1);
 				}
 			}
 			&:nth-child(4) {
 				height: 160px;
-				@at-root .businessTitle4 & {
+				@at-root .show4 & {
 					transform: scale(1, 1);
 					&:after {
 						transform: scale(1, 1);
@@ -2180,8 +2180,8 @@ h4 {
 			opacity: 0;
 			transition-duration: 0.3s;
 			transition-delay: 0.4s;
-			
-			@at-root .businessTitle1 & {
+
+			@at-root .show1 & {
 				transform: translateY(0);
 				opacity: 1;
 			}
@@ -2194,7 +2194,7 @@ h4 {
 			opacity: 0;
 			transition-duration: 0.3s;
 			transition-delay: 0.4s;
-			@at-root .businessTitle2 & {
+			@at-root .show2 & {
 				transform: translateY(0);
 				opacity: 1;
 			}
