@@ -48,18 +48,30 @@ for (let i = 0; i < page_goPage.length; i++) {
 }
 
 // page
-var page = document.querySelectorAll("[name=page]");
+var head_page = document.querySelectorAll("#head_page [name=page]");
+var footer_page = document.querySelectorAll("#footer_page [name=page]");
 var pageCount = null;
-for (let i = 0; i < page.length; i++) {
-	const element = page[i];
+
+for (let i = 0; i < head_page.length; i++) {
+	const element = head_page[i];
 	if (element.classList.contains('on')) { pageCount = i }
 	element.onclick = function () {
-		page[pageCount].classList.remove('on')
-		page[i].classList.add('on')
-		pageCount = i
+		pageHandler(i)
 	}
 }
-
+for (let i = 0; i < footer_page.length; i++) {
+	const element = footer_page[i];
+	element.onclick = function () {
+		pageHandler(i)
+	}
+}
+function pageHandler(addNum){
+	head_page[pageCount].classList.remove('on')
+	footer_page[pageCount].classList.remove('on')
+	head_page[addNum].classList.add('on')
+	footer_page[addNum].classList.add('on')
+	pageCount = addNum
+}
 // page
 
 

@@ -67,6 +67,9 @@ h2 {
 
 	@at-root .about_info + h2 {
 		margin-top: 113px;
+		@include mw(L){
+			margin-top: 59px;
+		}
 	}
 }
 h3 {
@@ -1550,6 +1553,7 @@ h4 {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
 	margin: 0 auto;
 	&._shadow {
 		position: absolute;
@@ -1736,48 +1740,95 @@ h4 {
 		}
 		// .about_info_img
 		&_img {
-			&:nth-child(1),
-			&:nth-child(2) {
+			&.img1,
+			&.img2 {
 				width: calc(50% - 43px);
 				margin-top: 95px;
 				@include mw(L) {
-					order: 1;
+					order: 2;
 					width: 100%;
-					margin-top: 0;
+					margin-top: 35px;
 				}
 			}
-			&:nth-child(2) {
+			&.img2 {
 				margin-left: 86px;
 				@include mw(L) {
+					order: 1;
 					margin-left: 0;
 					margin-top: 35px;
 				}
 			}
-			&:nth-child(4) {
-				margin-top: 75px;
+			&.img3 {
 				@include mw(L) {
-					order: 2;
+					display: none;
+				}
+			}
+			&.img4 {
+				display: none;
+				@include mw(L) {
+					order: 6;
+					display: block;
+					width: 100%;
+					margin-top: 44px;
 				}
 			}
 		}
+
 		// .about_info_txt
 		&_txt {
+			position: relative;
+			@include d_f(flex, none, center);
 			width: 100%;
 			font-weight: 400;
 			font-size: 26px;
 			line-height: 160%;
 			text-align: center;
-
+			@include mw(L) {
+				text-align: left;
+			}
+			span {
+				position: absolute;
+				right: 0;
+				display: inline-block;
+				width: 50%;
+				max-width: 544px;
+				padding-right: 36px;
+				font-weight: 400;
+				font-size: 26px;
+				line-height: 160%;
+				text-align: left;
+				color: #fff;
+				@include mw(L) {
+					position: relative;
+					width: 100%;
+					max-width: 100%;
+					padding: 0;
+					color: #333;
+				}
+			}
 			&:nth-child(3) {
 				margin-top: 53px;
+				padding: 0 104px;
 				@include mw(L) {
 					order: 0;
 					margin-top: 0;
+					padding: 0;
 				}
 			}
-
+			&:nth-child(4) {
+				margin-top: 75px;
+				@include mw(L) {
+					order: 4;
+					margin-top: 50px;
+				}
+			}
 			&:nth-child(5) {
 				margin-top: 44px;
+				padding: 0 104px;
+				@include mw(L) {
+					order: 5;
+					padding: 0;
+				}
 			}
 		}
 	}
