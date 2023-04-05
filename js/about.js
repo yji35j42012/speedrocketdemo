@@ -1,80 +1,60 @@
 window.addEventListener("scroll", scrollListener);
 var business = document.querySelector("#business");
 var anishow = document.querySelectorAll("[name=anishow]");
-var showCount = 0;
-var range = 0;
-var itemArr = [];
-// 清資料後第一次載入business.offsetTop會出錯，所以設定setTimeout紀錄要anishow的資料
+var anishowTxt = document.querySelectorAll(".txt");
+var businessTxt = document.querySelectorAll(".businessTxt");
+
+var businessTxtArr = [0]
+var aniArr = [];
+var defaultH = 132;
+var defaultScore = window.innerHeight * (1 / 3);//超出視窗高度的3分之1
+var showCount = 0
+var aboutMarginTop = document.querySelector("#about").offsetTop;
+var business_titleH = document.querySelector("#business_title").clientHeight;
+
+
 setTimeout(() => {
 	for (let i = 0; i < anishow.length; i++) {
-		if (i == 0) {
-			itemArr.push(anishow[i].offsetTop + business.offsetTop);
-		} else {
-			itemArr.push(
-				anishow[i].offsetTop +
-					anishow[i - 1].offsetTop +
-					business.offsetTop
-			);
-		}
+		aniArr.push(anishow[i].offsetTop + business.offsetTop)
 	}
-}, 0);
+}, 10);
 
-console.log("itemArr", itemArr);
 function scrollListener() {
 	var windowHeight = window.pageYOffset;
-	console.log("windowHeight", windowHeight);
-	console.log("business", business.offsetTop);
-	let count = parseInt(showCount) + parseInt(1);
-	if (windowHeight + 300 > itemArr[showCount]) {
-		business.classList.add("show" + count);
-		showCount++;
-		console.log("aaa");
-		// showCount++;
-	} else if (windowHeight < itemArr[showCount] - 487) {
-		business.classList.remove("show" + count);
-		console.log("bbb");
-		// showCount--;
-	} else {
-		console.log("ccc");
+	if (windowHeight + defaultScore > aniArr[showCount]) {
+		showCount++
+		businessTxtArr[showCount] ? business.style = `--lineHeight:${businessTxtArr[showCount]}px` : ''
+		business.classList.add('show' + showCount)
+	} else if (showCount > 0 && aniArr[showCount - 1] - aboutMarginTop - business_titleH > windowHeight) {
+		business.classList.remove('show' + showCount)
+		showCount <= 0 ? showCount = 0 : showCount--;
+		businessTxtArr[showCount] ? business.style = `--lineHeight:${businessTxtArr[showCount]}px` : business.style = `--lineHeight:0px`
 	}
 }
 
-//
-// var show1 = document.querySelector("#business_title1");
-// var business_detail_txt2 = document.querySelector(".business_detail_txt2");
-// var business_title2 = document.querySelector("#business_title2");
-// var business_detail_txt3 = document.querySelector("#business_detail_txt3");
 
-// function scrollListener() {
-// 	var windowHeight = window.pageYOffset;
-// 	var firstRange = show1.offsetTop + business.offsetTop;
-// 	var secondRange = business_detail_txt2.offsetTop + firstRange;
-// 	var thirdRange = business_title2.offsetTop + firstRange;
-// 	var forRange = business_detail_txt3.offsetTop + firstRange;
+setTimeout(() => {
+	for (let i = 0; i < businessTxt.length; i++) {
+		if (i == businessTxt.length - 1) {
+			businessTxtArr.push(business.offsetHeight - 53)
+		} else {
+			businessTxtArr.push(businessTxt[i].offsetTop)
+		}
 
-// 	console.log("windowHeight", windowHeight);
-// 	console.log("firstRange", firstRange);
-// 	if (windowHeight + 300 > firstRange) {
-// 		business.classList.add("show1");
-// 	} else if (windowHeight < firstRange - 487) {
-// 		business.classList.remove("show1");
-// 	}
+	}
+}, 10);
 
-// 	if (windowHeight + 300 > secondRange) {
-// 		business.classList.add("show2");
-// 	} else if (windowHeight < secondRange - 487) {
-// 		business.classList.remove("show2");
-// 	}
-
-// 	if (windowHeight + 300 > thirdRange) {
-// 		business.classList.add("show3");
-// 	} else if (windowHeight < thirdRange - 487) {
-// 		business.classList.remove("show3");
-// 	}
-
-// 	if (windowHeight + 300 > forRange) {
-// 		business.classList.add("show4");
-// 	} else if (windowHeight < forRange - 487) {
-// 		business.classList.remove("show4");
-// 	}
-// }
+business.style = `--lineHeight:0px`
+window.onresize = function () {
+	for (let i = 1; i < businessTxtArr.length; i++) {
+		console.log('businessTxt' + i + ':' + businessTxt[i - 1].offsetTop + '===' + businessTxtArr[i]);
+		if (businessTxt[i - 1].offsetTop !== businessTxtArr[i]) {
+			i == businessTxtArr.length-1 ?businessTxtArr[i]:businessTxtArr[i] = businessTxt[i - 1].offsetTop
+			
+			business.style = `--lineHeight:${businessTxtArr[i]}px`
+		}
+	}
+};
+setTimeout(() => {
+	scrollListener()
+}, 10);

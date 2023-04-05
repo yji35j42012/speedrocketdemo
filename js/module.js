@@ -15,11 +15,6 @@ for (let i = 0; i < lang_group_item.length; i++) {
 		event.stopPropagation();
 		lang_txt.innerHTML = element.innerHTML;
 		lang.classList.remove("on");
-		// var langData = document.querySelector(
-		// 	"[data-lang=" + element.dataset.lang + "]"
-		// );
-		// langData.style.display = "none";
-		// console.log(element.dataset.lang);
 	};
 }
 
