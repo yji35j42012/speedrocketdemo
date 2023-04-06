@@ -676,7 +676,7 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .about .container {
-    padding: 25px 30px 55px;
+    padding: 25px 30px 64px;
   }
 }
 
@@ -2591,8 +2591,14 @@ footer .container {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 35px;
+    max-width: 574px;
+    margin: 35px auto 0;
   }
+}
+
+.about_info_img {
+  -webkit-filter: drop-shadow(-20px -21px 0px rgba(0, 0, 0, 0.05));
+          filter: drop-shadow(-20px -21px 0px rgba(0, 0, 0, 0.05));
 }
 
 .about_info_img.img1, .about_info_img.img2 {
@@ -2750,6 +2756,13 @@ footer .container {
   margin-top: 55px;
 }
 
+@media screen and (max-width: 1024px) {
+  .business {
+    max-width: 574px;
+    margin: 55px auto 0;
+  }
+}
+
 .business::after {
   content: "";
   position: absolute;
@@ -2762,6 +2775,12 @@ footer .container {
   background-color: #887766;
 }
 
+@media screen and (max-width: 1024px) {
+  .business::after {
+    display: none;
+  }
+}
+
 .business_title {
   position: relative;
   display: inline-block;
@@ -2772,6 +2791,12 @@ footer .container {
   font-size: 30px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .business_title {
+    display: none;
+  }
 }
 
 .business_title1 {
@@ -2810,11 +2835,69 @@ footer .container {
           align-items: stretch;
 }
 
+@media screen and (max-width: 1024px) {
+  .business_detail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .business_detail:nth-child(4) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .business_detail_img {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
   width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .business_detail_img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .business_detail_img::before {
+    content: attr(data-businessTitle);
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 85px;
+    height: 88px;
+    margin-right: 16px;
+    padding: 4px 12px;
+    background-color: #887766;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.045em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+  }
 }
 
 .business_detail_img img {
@@ -2866,11 +2949,30 @@ footer .container {
           transform-origin: left;
 }
 
+@media screen and (max-width: 1024px) {
+  .business_detail_item::after {
+    width: 9px;
+    height: 9px;
+    border-radius: 100px;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transition-delay: 0;
+            transition-delay: 0;
+  }
+}
+
 .business_detail_item.rigthTxt::after {
   left: auto;
   right: -1px;
   -webkit-transform-origin: right;
           transform-origin: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .business_detail_item.rigthTxt::after {
+    left: -1px;
+    right: auto;
+  }
 }
 
 .business_detail_item._item3 {
@@ -2938,8 +3040,21 @@ footer .container {
   padding-left: 60px;
 }
 
+@media screen and (max-width: 1024px) {
+  .business_detail_item.leftTxt {
+    padding-left: 20px;
+  }
+}
+
 .business_detail_item.rigthTxt {
   padding-right: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .business_detail_item.rigthTxt {
+    padding-right: 0;
+    padding-left: 20px;
+  }
 }
 
 .business_detail_txt {
