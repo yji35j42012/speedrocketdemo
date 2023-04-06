@@ -2912,6 +2912,7 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .business_detail_img img {
+    width: calc(100% - 101px);
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -2939,6 +2940,12 @@ footer .container {
 .business_detail_item {
   position: relative;
   margin-top: 86px;
+}
+
+@media screen and (max-width: 1024px) {
+  .business_detail_item {
+    margin-top: 22px;
+  }
 }
 
 .business_detail_item::after {
@@ -2986,6 +2993,12 @@ footer .container {
 
 .business_detail_item._item3 {
   margin-top: 114px;
+}
+
+@media screen and (max-width: 1024px) {
+  .business_detail_item._item3 {
+    margin-top: 22px;
+  }
 }
 
 .show1 #business_detail_item1:after {

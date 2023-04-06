@@ -1931,6 +1931,7 @@ h4 {
 					text-align: center;
 				}
 			}
+			
 			img {
 				max-width: 536px;
 				opacity: 0;
@@ -1939,9 +1940,11 @@ h4 {
 				@extend %transition;
 
 				@include mw(L) {
+					width: calc(100% - 101px);
 					opacity: 1;
 					transform: translateY(0);
 				}
+				
 			}
 			@at-root .show1 .img1 {
 				img {
@@ -1966,6 +1969,9 @@ h4 {
 		&_item {
 			position: relative;
 			margin-top: 86px;
+			@include mw(L){
+				margin-top: 22px;
+			}
 			&::after {
 				content: "";
 				position: absolute;
@@ -1998,6 +2004,9 @@ h4 {
 			}
 			&._item3 {
 				margin-top: 114px;
+				@include mw(L){
+					margin-top: 22px;
+				}
 			}
 			@at-root .show1 #business_detail_item1:after {
 				transform: scale(1, 1);
