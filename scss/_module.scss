@@ -1883,6 +1883,7 @@ h4 {
 	}
 	// .business_title2
 	&_title2 {
+		margin-top: 78px;
 		opacity: 0;
 		@at-root .show3 & {
 			opacity: 1;

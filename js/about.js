@@ -1,4 +1,3 @@
-window.addEventListener("scroll", scrollListener);
 var business = document.querySelector("#business");
 var anishow = document.querySelectorAll("[name=anishow]");
 var anishowTxt = document.querySelectorAll(".txt");
@@ -10,21 +9,41 @@ var defaultScore = window.innerHeight * (1 / 3); //超出視窗高度的3分之1
 var showCount = 0;
 var aboutMarginTop = document.querySelector("#about").offsetTop;
 var business_titleH = document.querySelector("#business_title").clientHeight;
-
+var firstRound = true;
 var screen = window.innerWidth <= 1024 ? "ph" : "pc";
+
+// 電腦版要執行
 function getAniShow() {
 	aniArr = [];
 	for (let i = 0; i < anishow.length; i++) {
 		aniArr.push(anishow[i].offsetTop + business.offsetTop);
 	}
+	setTimeout(() => {
+		scrollListener();
+	}, 10);
+	window.addEventListener("scroll", scrollListener);
 }
 function scrollListener() {
 	if (screen !== "pc") return;
 	var windowHeight = window.pageYOffset;
+	if (firstRound) {
+		for (let i = 0; i < aniArr.length; i++) {
+			if (windowHeight > aniArr[i]) {
+				showCount = i + 1;
+				business.classList.add("show" + showCount);
+
+				businessTxtArr[showCount]
+					? businessStyleHandler(businessTxtArr[showCount])
+					: "";
+			}
+		}
+		firstRound = false;
+	}
+
 	if (windowHeight + defaultScore > aniArr[showCount]) {
 		showCount++;
 		businessTxtArr[showCount]
-			? (business.style = `--lineHeight:${businessTxtArr[showCount]}px`)
+			? businessStyleHandler(businessTxtArr[showCount])
 			: "";
 		business.classList.add("show" + showCount);
 	} else if (
@@ -34,43 +53,12 @@ function scrollListener() {
 		business.classList.remove("show" + showCount);
 		showCount <= 0 ? (showCount = 0) : showCount--;
 		businessTxtArr[showCount]
-			? (business.style = `--lineHeight:${businessTxtArr[showCount]}px`)
-			: (business.style = `--lineHeight:0px`);
+			? businessStyleHandler(businessTxtArr[showCount])
+			: businessStyleHandler(0);
 	}
 }
-
-business.style = `--lineHeight:0px`;
-
-function phAos() {
-	var phAos = document.querySelectorAll("[data-phAos]");
-	for (let i = 0; i < phAos.length; i++) {
-		const element = phAos[i];
-		element.setAttribute("data-aos", element.dataset.phaos);
-	}
-}
-
-window.onresize = function() {
-	if (screen == "pc" && window.innerWidth <= 1024) {
-		screen = "ph";
-		clearShowClass();
-		phAos();
-		// aboutInit();
-	} else if (screen == "ph" && window.innerWidth > 1024) {
-		screen = "pc";
-		aboutInit();
-	}
-	if (screen == "pc") {
-		for (let i = 1; i < businessTxtArr.length; i++) {
-			if (businessTxt[i - 1].offsetTop !== businessTxtArr[i]) {
-				i == businessTxtArr.length - 1
-					? businessTxtArr[i]
-					: (businessTxtArr[i] = businessTxt[i - 1].offsetTop);
-				business.style = `--lineHeight:${businessTxtArr[showCount]}px`;
-			}
-		}
-	}
-};
 function aboutInit() {
+	firstRound = true;
 	setTimeout(() => {
 		businessTxtArr = [0];
 		for (let i = 0; i < businessTxt.length; i++) {
@@ -84,9 +72,27 @@ function aboutInit() {
 	setTimeout(() => {
 		getAniShow();
 	}, 10);
-	setTimeout(() => {
-		scrollListener();
-	}, 10);
+}
+function businessStyleHandler(num) {
+	business.style = `--lineHeight:${num}px`;
+}
+
+function removeAos() {
+	var phAos = document.querySelectorAll("[data-phAos]");
+	for (let i = 0; i < phAos.length; i++) {
+		const element = phAos[i];
+		element.setAttribute("data-aos", "");
+	}
+}
+// 手機版要執行
+function phAos() {
+	var phAos = document.querySelectorAll("[data-phAos]");
+	for (let i = 0; i < phAos.length; i++) {
+		const element = phAos[i];
+		element.setAttribute("data-aos", element.dataset.phaos);
+		AOS.init();
+		// aos-init
+	}
 }
 
 function clearShowClass() {
@@ -94,9 +100,36 @@ function clearShowClass() {
 		business.classList.remove("show" + i);
 	}
 }
-aboutInit();
+
+window.onresize = function() {
+	if (screen == "pc" && window.innerWidth <= 1024) {
+		screen = "ph";
+		businessStyleHandler(0);
+		clearShowClass();
+		phAos();
+	} else if (screen == "ph" && window.innerWidth > 1024) {
+		screen = "pc";
+		removeAos();
+		aboutInit();
+	}
+	if (screen == "pc") {
+		for (let i = 1; i < businessTxtArr.length; i++) {
+			if (businessTxt[i - 1].offsetTop !== businessTxtArr[i]) {
+				i == businessTxtArr.length - 1
+					? businessTxtArr[i]
+					: (businessTxtArr[i] = businessTxt[i - 1].offsetTop);
+				showCount == businessTxtArr.length
+					? (showCount = showCount - 1)
+					: showCount;
+				businessStyleHandler(businessTxtArr[showCount]);
+			}
+		}
+	}
+};
 
 if (screen == "ph") {
 	phAos();
+} else if (screen == "pc") {
+	aboutInit();
+	businessStyleHandler(0);
 }
-// console.log("phAos", phAos[0].dataset.phaos);
