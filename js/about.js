@@ -11,6 +11,7 @@ var aboutMarginTop = document.querySelector("#about").offsetTop;
 var business_titleH = document.querySelector("#business_title").clientHeight;
 var firstRound = true;
 var screen = window.innerWidth <= 1024 ? "ph" : "pc";
+var changeAos = document.querySelector("#changeAos");
 
 // 電腦版要執行
 function getAniShow() {
@@ -100,6 +101,17 @@ function clearShowClass() {
 		business.classList.remove("show" + i);
 	}
 }
+function changeTxtAos() {
+	if (screen == "ph") {
+		changeAos.setAttribute("data-aos", 'fade-up');
+	}else if(screen == "pc"){
+		changeAos.setAttribute("data-aos", 'fade-left');
+		changeAos.setAttribute("data-aos-offset", '300');
+		changeAos.setAttribute("data-aos-duration", '300');
+	}
+	// 
+}
+
 
 window.onresize = function() {
 	if (screen == "pc" && window.innerWidth <= 1024) {
@@ -107,10 +119,14 @@ window.onresize = function() {
 		businessStyleHandler(0);
 		clearShowClass();
 		phAos();
+		changeTxtAos()
+
+		
 	} else if (screen == "ph" && window.innerWidth > 1024) {
 		screen = "pc";
 		removeAos();
 		aboutInit();
+		changeTxtAos()
 	}
 	if (screen == "pc") {
 		for (let i = 1; i < businessTxtArr.length; i++) {
@@ -127,9 +143,15 @@ window.onresize = function() {
 	}
 };
 
+
+
+
+
 if (screen == "ph") {
 	phAos();
+	changeTxtAos()
 } else if (screen == "pc") {
 	aboutInit();
 	businessStyleHandler(0);
+	changeTxtAos()
 }
