@@ -1936,6 +1936,11 @@ h4 {
 				transform: translateY(16px);
 				transition-delay: 0.3s;
 				@extend %transition;
+
+				@include mw(L) {
+					opacity: 1;
+					transform: translateY(0);
+				}
 			}
 			@at-root .show1 .img1 {
 				img {
@@ -2015,6 +2020,11 @@ h4 {
 				transition-delay: 0.2s;
 				opacity: 0;
 				@extend %transition;
+
+				@include mw(L) {
+					transform: translateY(-16px);
+					opacity: 1;
+				}
 			}
 			@at-root .show1 .txt1 {
 				transform: translateY(-16px);

@@ -2909,6 +2909,14 @@ footer .container {
           transition-delay: 0.3s;
 }
 
+@media screen and (max-width: 1024px) {
+  .business_detail_img img {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .show1 .img1 img {
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -3010,6 +3018,14 @@ footer .container {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
   opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .business_detail_item .txt {
+    -webkit-transform: translateY(-16px);
+            transform: translateY(-16px);
+    opacity: 1;
+  }
 }
 
 .show1 .txt1 {

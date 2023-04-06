@@ -11,12 +11,15 @@ var showCount = 0;
 var aboutMarginTop = document.querySelector("#about").offsetTop;
 var business_titleH = document.querySelector("#business_title").clientHeight;
 
+var screen = window.innerWidth <= 1024 ? "ph" : "pc";
 function getAniShow() {
+	aniArr = [];
 	for (let i = 0; i < anishow.length; i++) {
 		aniArr.push(anishow[i].offsetTop + business.offsetTop);
 	}
 }
 function scrollListener() {
+	if (screen !== "pc") return;
 	var windowHeight = window.pageYOffset;
 	if (windowHeight + defaultScore > aniArr[showCount]) {
 		showCount++;
@@ -36,29 +39,40 @@ function scrollListener() {
 	}
 }
 
-var screen = window.innerWidth <= 1024 ? "ph" : "pc";
 business.style = `--lineHeight:0px`;
-window.onresize = function() {
-	for (let i = 1; i < businessTxtArr.length; i++) {
-		if (businessTxt[i - 1].offsetTop !== businessTxtArr[i]) {
-			i == businessTxtArr.length - 1
-				? businessTxtArr[i]
-				: (businessTxtArr[i] = businessTxt[i - 1].offsetTop);
 
-			business.style = `--lineHeight:${businessTxtArr[showCount]}px`;
-		}
+function phAos() {
+	var phAos = document.querySelectorAll("[data-phAos]");
+	for (let i = 0; i < phAos.length; i++) {
+		const element = phAos[i];
+		element.setAttribute("data-aos", element.dataset.phaos);
 	}
+}
 
+window.onresize = function() {
 	if (screen == "pc" && window.innerWidth <= 1024) {
 		screen = "ph";
-		aboutInit();
+		clearShowClass();
+		phAos();
+		// aboutInit();
 	} else if (screen == "ph" && window.innerWidth > 1024) {
 		screen = "pc";
 		aboutInit();
 	}
+	if (screen == "pc") {
+		for (let i = 1; i < businessTxtArr.length; i++) {
+			if (businessTxt[i - 1].offsetTop !== businessTxtArr[i]) {
+				i == businessTxtArr.length - 1
+					? businessTxtArr[i]
+					: (businessTxtArr[i] = businessTxt[i - 1].offsetTop);
+				business.style = `--lineHeight:${businessTxtArr[showCount]}px`;
+			}
+		}
+	}
 };
 function aboutInit() {
 	setTimeout(() => {
+		businessTxtArr = [0];
 		for (let i = 0; i < businessTxt.length; i++) {
 			if (i == businessTxt.length - 1) {
 				businessTxtArr.push(business.offsetHeight - 53);
@@ -74,4 +88,15 @@ function aboutInit() {
 		scrollListener();
 	}, 10);
 }
+
+function clearShowClass() {
+	for (let i = 0; i <= showCount; i++) {
+		business.classList.remove("show" + i);
+	}
+}
 aboutInit();
+
+if (screen == "ph") {
+	phAos();
+}
+// console.log("phAos", phAos[0].dataset.phaos);
