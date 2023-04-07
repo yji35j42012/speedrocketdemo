@@ -28,7 +28,5 @@ for (let i = 0; i < shareHanler.length; i++) {
 			default:
 				break;
 		}
-		console.log("shareId", shareId);
-		console.log("webUrl", webUrl);
 	};
 }
