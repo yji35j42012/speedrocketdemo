@@ -21,12 +21,14 @@ for (let i = 0; i < shareHanler.length; i++) {
 				window.open(webUrl + shareurl);
 				break;
 			case "in":
-				webUrl = "https://twitter.com/share?text=";
+				webUrl = "https://www.linkedin.com/sharing/share-offsite/?url=";
 				shareurl =  location.href;
 				window.open(webUrl + shareurl);
 				break;
 			default:
 				break;
 		}
+		console.log("shareId", shareId);
+		console.log("webUrl", webUrl);
 	};
 }
