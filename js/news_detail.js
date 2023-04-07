@@ -1,13 +1,34 @@
-// fb分享
-var fbShare = document.querySelector("#fbshare");
-
-fbShare.onclick = function () {
-	var fburl = "https://www.facebook.com/sharer/sharer.php?u=";
-	var url = 'https://whatdoyouwanttoeat.000webhostapp.com/#/';
-	window.open(
-		fburl + url,
-		'targetWindow',
-		'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=800,height=450'
-	);
+var shareHanler = document.querySelectorAll("[name=shareHanler]");
+var webUrl = "";
+var shareUrl ="";
+for (let i = 0; i < shareHanler.length; i++) {
+	const element = shareHanler[i];
+	element.onclick = function() {
+		var shareId = element.id;
+		switch (shareId) {
+			case "fb":
+				webUrl = "https://www.facebook.com/sharer/sharer.php?u=";
+				shareurl =  location.href;
+				window.open(
+					webUrl + shareurl,
+					"targetWindow",
+					"toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=800,height=450"
+				);
+				break;
+			case "twitter":
+				webUrl = "https://twitter.com/share?text=";
+				shareurl =  location.href;
+				window.open(webUrl + shareurl);
+				break;
+			case "in":
+				webUrl = "https://twitter.com/share?text=";
+				shareurl =  location.href;
+				window.open(webUrl + shareurl);
+				break;
+			default:
+				break;
+		}
+		console.log("shareId", shareId);
+		console.log("webUrl", webUrl);
+	};
 }
-// fb分享
