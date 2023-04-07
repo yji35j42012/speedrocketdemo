@@ -2640,6 +2640,38 @@ footer .container {
   margin-bottom: 54px;
 }
 
+.history_item:nth-child(4) {
+  margin-top: 40px;
+}
+
+.history_item:nth-child(4) .history_item_title {
+  margin-bottom: 54px;
+}
+
+.history_item:nth-child(5) {
+  margin-top: 40px;
+}
+
+.history_item:nth-child(5) .history_item_title {
+  margin-bottom: 64px;
+}
+
+.history_item:nth-child(6) {
+  margin-top: 42px;
+}
+
+.history_item:nth-child(6) .history_item_title {
+  margin-bottom: 57px;
+}
+
+.history_item:nth-child(7) {
+  margin-top: 57px;
+}
+
+.history_item:nth-child(7) .history_item_title {
+  margin-bottom: 55px;
+}
+
 .history_item_title {
   width: 100%;
   text-align: center;
@@ -2667,7 +2699,7 @@ footer .container {
   text-align: right;
 }
 
-.history_item_txt._multiple span + span {
+.history_item_txt._third span + span {
   display: inline-block;
   margin-top: 110px;
 }
@@ -2689,8 +2721,12 @@ footer .container {
   background: rgba(239, 239, 239, 0.9);
 }
 
-.history_item_img._multiple img:nth-child(2),
-.history_item_img._multiple img:nth-child(3) {
+.history_item_img._second img {
+  width: calc(50% - 8px);
+}
+
+.history_item_img._third img:nth-child(2),
+.history_item_img._third img:nth-child(3) {
   width: calc(50% - 8px);
   margin-top: 12px;
 }
