@@ -2616,31 +2616,28 @@ footer .container {
   padding-bottom: 47px;
 }
 
-.history_item::before {
-  content: "";
-  position: absolute;
-  top: 128px;
-  left: 0;
-  right: 0;
-  display: block;
-  width: 34px;
-  height: 34px;
-  margin: auto;
-  background: #dfc9a4;
-  border-radius: 100px;
+.history_item:nth-child(1) .history_item_title {
+  margin-bottom: 71px;
 }
 
-.history_item::after {
-  content: "";
-  position: absolute;
-  top: 128px;
-  left: 0;
-  right: 0;
-  display: block;
-  width: 3px;
-  height: calc(100% - 145px);
-  margin: auto;
-  background: #dfc9a4;
+.history_item:nth-child(2) {
+  margin-top: 47px;
+}
+
+.history_item:nth-child(2) .history_item_title {
+  margin-bottom: 41px;
+}
+
+.history_item:nth-child(2) .history_item_img {
+  margin-top: 17px;
+}
+
+.history_item:nth-child(3) {
+  margin-top: 86px;
+}
+
+.history_item:nth-child(3) .history_item_title {
+  margin-bottom: 54px;
 }
 
 .history_item_title {
@@ -2652,17 +2649,12 @@ footer .container {
   color: #dfc9a4;
 }
 
-.history_item:nth-child(1) .history_item_title {
-  margin-bottom: 71px;
-}
-
 .history_item_txt {
-  width: 100%;
+  width: calc(46% - 22px);
   max-width: 511px;
 }
 
 .history_item_txt span {
-  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 34px;
@@ -2675,13 +2667,18 @@ footer .container {
   text-align: right;
 }
 
+.history_item_txt._multiple span + span {
+  display: inline-block;
+  margin-top: 110px;
+}
+
 .history_item_img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -2690,6 +2687,12 @@ footer .container {
   width: calc(54% - 22px);
   padding: 22px 20px 25px;
   background: rgba(239, 239, 239, 0.9);
+}
+
+.history_item_img._multiple img:nth-child(2),
+.history_item_img._multiple img:nth-child(3) {
+  width: calc(50% - 8px);
+  margin-top: 12px;
 }
 
 .news {
