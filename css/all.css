@@ -651,6 +651,12 @@ footer .container {
   border-radius: 16px;
 }
 
+@media screen and (max-width: 1024px) {
+  .news .container {
+    border-radius: 0;
+  }
+}
+
 @media screen and (max-width: 995px) {
   .news .container {
     padding: 25px 27px 68px;
@@ -679,6 +685,7 @@ footer .container {
 @media screen and (max-width: 1024px) {
   .about .container {
     padding: 25px 30px 64px;
+    border-radius: 0;
   }
 }
 
@@ -687,6 +694,12 @@ footer .container {
   padding: 76px 50px 55px;
   background-color: #f9f9f9;
   border-radius: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .history .container {
+    border-radius: 0;
+  }
 }
 
 .header {

@@ -432,6 +432,9 @@ h4 {
 		padding: 76px 57px 97px;
 		background-color: #f9f9f9;
 		border-radius: 16px;
+		@include mw(L) {
+			border-radius: 0;
+		}
 		@include mw(M) {
 			padding: 25px 27px 68px;
 		}
@@ -451,6 +454,7 @@ h4 {
 		border-radius: 16px;
 		@include mw(L) {
 			padding: 25px 30px 64px;
+			border-radius: 0;
 		}
 	}
 	@at-root .history & {
@@ -458,6 +462,9 @@ h4 {
 		padding: 76px 50px 55px;
 		background-color: #f9f9f9;
 		border-radius: 16px;
+		@include mw(L) {
+			border-radius: 0;
+		}
 	}
 }
 
