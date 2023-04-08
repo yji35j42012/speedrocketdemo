@@ -66,8 +66,9 @@
 			span {
 				position: absolute;
 				right: 0;
-				display: inline-block;
+				@include d_f(inline-flex,none,center);
 				width: 50%;
+				height: 100%;
 				max-width: 544px;
 				padding-right: 36px;
 				font-weight: 400;

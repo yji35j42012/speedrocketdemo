@@ -26,13 +26,13 @@ function getAniShow() {
 }
 function scrollListener() {
 	if (screen !== "pc") return;
+
 	var windowHeight = window.pageYOffset;
 	if (firstRound) {
 		for (let i = 0; i < aniArr.length; i++) {
 			if (windowHeight > aniArr[i]) {
 				showCount = i + 1;
 				business.classList.add("show" + showCount);
-
 				businessTxtArr[showCount]
 					? businessStyleHandler(businessTxtArr[showCount])
 					: "";
@@ -85,6 +85,20 @@ function removeAos() {
 		element.setAttribute("data-aos", "");
 	}
 }
+
+function checkBusinessTxtArr() {
+	for (let i = 1; i < businessTxtArr.length; i++) {
+		if (businessTxt[i - 1].offsetTop !== businessTxtArr[i]) {
+			i == businessTxtArr.length - 1
+				? businessTxtArr[i]
+				: (businessTxtArr[i] = businessTxt[i - 1].offsetTop);
+			showCount == businessTxtArr.length
+				? (showCount = showCount - 1)
+				: showCount;
+			businessStyleHandler(businessTxtArr[showCount]);
+		}
+	}
+}
 // 手機版要執行
 function phAos() {
 	var phAos = document.querySelectorAll("[data-phAos]");
@@ -104,7 +118,7 @@ function clearShowClass() {
 function changeTxtAos() {
 	if (screen == "ph") {
 		changeAos.setAttribute("data-aos", 'fade-up');
-	}else if(screen == "pc"){
+	} else if (screen == "pc") {
 		changeAos.setAttribute("data-aos", 'fade-left');
 		changeAos.setAttribute("data-aos-offset", '300');
 		changeAos.setAttribute("data-aos-duration", '300');
@@ -113,33 +127,22 @@ function changeTxtAos() {
 }
 
 
-window.onresize = function() {
+window.onresize = function () {
 	if (screen == "pc" && window.innerWidth <= 1024) {
 		screen = "ph";
 		businessStyleHandler(0);
 		clearShowClass();
 		phAos();
 		changeTxtAos()
-
-		
 	} else if (screen == "ph" && window.innerWidth > 1024) {
 		screen = "pc";
 		removeAos();
 		aboutInit();
 		changeTxtAos()
+		checkBusinessTxtArr()
 	}
 	if (screen == "pc") {
-		for (let i = 1; i < businessTxtArr.length; i++) {
-			if (businessTxt[i - 1].offsetTop !== businessTxtArr[i]) {
-				i == businessTxtArr.length - 1
-					? businessTxtArr[i]
-					: (businessTxtArr[i] = businessTxt[i - 1].offsetTop);
-				showCount == businessTxtArr.length
-					? (showCount = showCount - 1)
-					: showCount;
-				businessStyleHandler(businessTxtArr[showCount]);
-			}
-		}
+		checkBusinessTxtArr()
 	}
 };
 
