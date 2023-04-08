@@ -505,7 +505,7 @@ h4 {
 		margin: auto;
 		padding-top: 21px;
 		@extend %hand;
-		background: url("../images/footer_arr_bg.svg")no-repeat top/cover;
+		background: url("../images/footer_arr_bg.svg") no-repeat top/cover;
 		transform: translateY(-100%);
 		@include mw(L) {
 			width: 56px;
@@ -994,7 +994,7 @@ h4 {
 		// position: relative;
 		left: 20px;
 		top: auto;
-		width: 60px;
+		width: 42px;
 		transform: translateY(0);
 		._trangle {
 			display: none;
@@ -1003,15 +1003,15 @@ h4 {
 	// .lang_txt
 	&_txt {
 		@include d_f(flex, center, center);
-		width: 62px;
+		min-width: 62px;
 		height: 30px;
-		padding: 0 8px;
+		padding: 0 9px;
 		background-color: #9e9e9e;
 		color: #fff;
 		border-radius: 100px;
 		@extend %hand;
 		@include mw(L) {
-			width: 42px;
+			min-width: 42px;
 			height: 25px;
 			font-size: 12px;
 		}
@@ -1033,6 +1033,7 @@ h4 {
 		@include mw(L) {
 			width: 51px;
 			right: 0;
+			left: -4px;
 			padding: 5px;
 			margin: auto;
 			li + li {
