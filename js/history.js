@@ -17,15 +17,7 @@ function getWidth() {
         element.style = `--txtBall:${history_group.offsetWidth / 2}px`;
     }
 }
-console.log('windowHeight', window.pageYOffset)
-function getAniShow() {
-    aniArr = [];
-    for (let i = 0; i < history_item.length; i++) {
-        const element = history_item[i];
-        aniArr.push(element.offsetTop)
-        console.log(element.offsetTop);
-    }
-}
+
 
 function scrollListener() {
     var windowHeight = window.pageYOffset;
@@ -70,6 +62,5 @@ window.onresize = function () {
 setTimeout(() => {
     scrollListener()
     getWidth()
-    getAniShow()
 }, 100);
 
