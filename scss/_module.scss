@@ -479,7 +479,6 @@ h4 {
 	box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
 	z-index: 2;
 	transition-duration: 0.3s;
-
 	@at-root .scroll & {
 		background: rgba(255, 255, 255, 1);
 	}
@@ -1064,7 +1063,7 @@ h4 {
 		@include d_f(flex, center);
 		width: 100%;
 		flex-wrap: wrap;
-		@include mw(S) {
+		@include mw(L) {
 			flex-direction: column;
 			align-items: center;
 		}
@@ -1092,19 +1091,19 @@ h4 {
 			margin-left: 0;
 		}
 
+		// @include mw(L) {
+		// 	width: calc(100% / 2 - 36px);
+		// 	&:nth-child(3n + 1) {
+		// 		margin-left: 36px;
+		// 	}
+		// 	&:nth-child(odd) {
+		// 		margin-left: 0;
+		// 	}
+		// 	@include hoverHandler {
+		// 		transform: translateY(0) !important;
+		// 	}
+		// }
 		@include mw(L) {
-			width: calc(100% / 2 - 36px);
-			&:nth-child(3n + 1) {
-				margin-left: 36px;
-			}
-			&:nth-child(odd) {
-				margin-left: 0;
-			}
-			@include hoverHandler {
-				transform: translateY(0) !important;
-			}
-		}
-		@include mw(S) {
 			width: 100%;
 			max-width: 320px;
 			margin-top: 108px;
@@ -1156,7 +1155,7 @@ h4 {
 			border-radius: 100px;
 			transform: translateY(-50%);
 
-			@include mw(S) {
+			@include mw(L) {
 				width: 128px;
 				height: 128px;
 			}

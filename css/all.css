@@ -1623,7 +1623,7 @@ footer .container {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .brand_group {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1679,32 +1679,6 @@ footer .container {
 }
 
 @media screen and (max-width: 1024px) {
-  .brand_item {
-    width: calc(100% / 2 - 36px);
-  }
-  .brand_item:nth-child(3n + 1) {
-    margin-left: 36px;
-  }
-  .brand_item:nth-child(odd) {
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 1024px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (max-width: 1024px) and (pointer: fine) and (max-resolution: 2dppx), screen and (max-width: 1024px) and (-moz-touch-enabled: 0) {
-  .brand_item:hover {
-    -webkit-transform: translateY(0) !important;
-            transform: translateY(0) !important;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .brand_item:active {
-    -webkit-transform: translateY(0) !important;
-            transform: translateY(0) !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
   .brand_item {
     width: 100%;
     max-width: 320px;
@@ -1777,7 +1751,7 @@ footer .container {
           transform: translateY(-50%);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .brand_item_logo {
     width: 128px;
     height: 128px;
