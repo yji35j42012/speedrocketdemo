@@ -5,7 +5,7 @@ var history_titleH = document.querySelector(".history_item_title").clientHeight;
 var defaultScore = window.innerHeight * (1 / 3); //超出視窗高度的3分之1
 var showCount = 0
 var screen = window.innerWidth <= 1024 ? "ph" : "pc";
-var defaultH = screen == 'pc' ? 74 : 0;
+var defaultH = screen == 'pc' ? 74 :  -118;
 var aniArr = [];
 var firstRound = true;
 var phH = screen == 'pc' ? 0 : 150;
@@ -21,7 +21,8 @@ function getWidth() {
 
 function scrollListener() {
     var windowHeight = window.pageYOffset;
-
+    console.log('windowHeight', windowHeight + defaultScore);
+    console.log('history_item', history_item[1].offsetTop);
     if (firstRound) {
         for (let i = 0; i < history_item.length; i++) {
             if (windowHeight > history_item[i].offsetTop) {
@@ -48,9 +49,11 @@ function scrollListener() {
 }
 window.onresize = function () {
     getWidth()
+    console.log('defaultScore', defaultScore);
+    console.log('history_ite', history_item[1].offsetTop);
     if (screen == "pc" && window.innerWidth <= 1024) {
         screen = "ph";
-        defaultH = 0
+        defaultH = -118
         phH = 150
     } else if (screen == "ph" && window.innerWidth > 1024) {
         screen = "pc";
