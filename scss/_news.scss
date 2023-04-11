@@ -5,6 +5,9 @@
 	@include mw(L) {
 		padding: 0;
 	}
+	@include mw(XS) {
+		margin-top: 164px;
+	}
 	// .news_group
 	&_group {
 		margin-top: 27px;
@@ -56,15 +59,20 @@
 
 			.new {
 				@include d_f(flex, none, center);
+				box-sizing: border-box;
 				&::after {
 					content: "NEW";
+					@include d_f(flex, center, center);
 					margin-left: 28px;
-					padding: 4px 10px;
+					width: 58px;
+					height: 26px;
+					// padding: 4px 10px;
 					font-weight: 400;
 					font-size: 16px;
 					background-color: #bda782;
 					color: #ffffff;
 					border-radius: 100px;
+					box-sizing: border-box;
 					@include mw(L) {
 						margin-left: 14px;
 						font-size: 14px;
@@ -94,7 +102,7 @@
 				-webkit-line-clamp: 2; /* 限制指定的行數 */
 				/* 其它瀏覽器降級方式：給定最大高度 */
 				/*max-height:48px;*/
-				font-weight: 500;
+				font-weight: 400;
 				font-size: 24px;
 				line-height: 33px;
 				@include mw(L) {
@@ -199,6 +207,7 @@
 		}
 		// .news_community_item
 		&_item {
+			position: relative;
 			flex: none;
 			@include d_f(flex, center, center);
 			width: 52px;
@@ -207,9 +216,37 @@
 			border-radius: 100px;
 			@extend %transition;
 			@extend %hand;
+
+			&::after {
+				content: attr(data-txt);
+				position: absolute;
+				bottom: calc(100% + 15px);
+				display: none;
+				padding: 5px 9px;
+				color: #ffffff;
+				background-color: #333;
+				font-weight: 400;
+				font-size: 14px;
+				white-space: nowrap;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: calc(100% + 5px);
+				display: none;
+				width: 24px;
+				height: 17px;
+				background: url("../images/news/shareBg.svg") no-repeat
+					center/contain;
+			}
 			@include hoverHandler {
 				background-color: #333333;
+				&::before,
+				&::after {
+					display: block;
+				}
 			}
+
 			@include mw(L) {
 				width: 28px;
 				height: 28px;

@@ -160,6 +160,7 @@ h4 {
 		padding: 12px 8px;
 		background-color: rgba(51, 51, 51, 0.9);
 		border-radius: 16px;
+		z-index: 1;
 
 		@at-root .on & {
 			display: block;
@@ -167,14 +168,14 @@ h4 {
 		&::before {
 			content: "";
 			position: absolute;
-			top: 5px;
+			top: 0;
 			left: 0;
 			right: 0;
 			display: block;
 			width: 23px;
 			height: 13px;
 			margin: auto;
-			padding: 8px;
+			padding: 8px 8px 0;
 			transform: translateY(-100%);
 			background: url("../images/selectBg.svg") no-repeat center/contain;
 		}
@@ -182,10 +183,14 @@ h4 {
 			position: relative;
 			padding: 16px 22px;
 			color: #fff;
+			line-height: 27px;
 			@extend %hand;
 			@extend %transition;
+			@include mw(L) {
+				padding: 16px 18px;
+			}
 			@include hoverHandler {
-				background-color: rgba(51, 51, 51, 0.9);
+				background-color: rgba(255, 255, 255, 0.1);
 				border-radius: 100px;
 			}
 		}
@@ -202,7 +207,9 @@ h4 {
 	border: 2px solid #333333;
 	border-radius: 100px;
 	@extend %transition;
-
+@include mw(L){
+	font-size: 14px;
+}
 	&._black {
 		color: #fff;
 		border-color: #fff;
@@ -281,10 +288,6 @@ h4 {
 		@include mw(L) {
 			font-size: 14px;
 		}
-		// @include hoverHandler {
-		// 	color: #333333;
-		// 	border: 2px solid #333333;
-		// }
 		@at-root .news_img + & {
 			margin: 72px auto 0;
 			text-align: center;
@@ -294,11 +297,16 @@ h4 {
 
 .normal_input {
 	@include d_f(inline-flex, none, center);
+	flex: none;
+	width: 100%;
 	max-width: 181px;
 	padding: 12px 26px;
 	background-color: #333333;
 	border-radius: 100px;
-
+	transition-duration: 0.3s;
+	&._in {
+		max-width: 50%;
+	}
 	input {
 		width: 100%;
 		margin-right: 5px;
@@ -310,6 +318,10 @@ h4 {
 		}
 		&::placeholder {
 			color: #fff;
+		}
+
+		&:focus::placeholder {
+			color: #9e9e9e;
 		}
 	}
 }
@@ -400,8 +412,12 @@ h4 {
 }
 
 .wrap {
+	padding-top: 54px;
 	height: 100%;
 	// background-color: #fff;
+	@at-root .headAni & {
+		padding-top: 0;
+	}
 }
 
 .container {
@@ -478,11 +494,14 @@ h4 {
 	left: 0;
 	width: 100%;
 	height: 98px;
-	background: rgba(255, 255, 255, 0);
+	background: rgba(255, 255, 255, 1);
 	box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
 	z-index: 2;
-	transition-duration: 0.3s;
-	@at-root .scroll & {
+	@at-root .headAni & {
+		background: rgba(255, 255, 255, 0);
+		transition-duration: 0.3s;
+	}
+	@at-root .headAni.scroll & {
 		background: rgba(255, 255, 255, 1);
 	}
 	@include mw(L) {
@@ -670,9 +689,12 @@ h4 {
 .nav {
 	@include d_f(flex, center, center);
 	height: 100%;
-	color: rgba(255, 255, 255, 1);
-	// transition-duration: 0.1s;
-	@at-root .scroll & {
+	color: rgba(0, 0, 0, 1);
+	@at-root .headAni & {
+		color: rgba(255, 255, 255, 1);
+		transition-duration: 0.1s;
+	}
+	@at-root .headAni.scroll & {
 		color: rgba(0, 0, 0, 1);
 	}
 	@include mw(L) {
@@ -687,7 +709,7 @@ h4 {
 		width: 100%;
 		height: calc(100vh - 54px);
 		background-color: #f4f4f4;
-		color: #000;
+		color: #000 !important;
 		transform: translateX(100%);
 		transition-duration: 0.3s;
 		&.on {
@@ -756,18 +778,32 @@ h4 {
 		&_logo {
 			position: relative;
 			max-width: 405px;
-
 			img:nth-child(1) {
-				@at-root .scroll & {
-					opacity: 0;
-				}
-			}
-			img:nth-child(2) {
 				position: absolute;
 				top: 0;
 				left: 0;
 				opacity: 0;
-				@at-root .scroll & {
+			}
+			@at-root .headAni & {
+				img:nth-child(1) {
+					position: relative;
+					opacity: 1;
+				}
+				img:nth-child(2) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					@at-root .scroll & {
+						opacity: 1;
+					}
+				}
+			}
+			@at-root .headAni.scroll & {
+				img:nth-child(1) {
+					opacity: 0;
+				}
+				img:nth-child(2) {
 					opacity: 1;
 				}
 			}
@@ -905,10 +941,13 @@ h4 {
 			display: block;
 			width: 26px;
 			height: 3px;
-			background-color: #fff;
+			background-color: #000;
 			border-radius: 100px;
-			transition-duration: 0.3s;
-			@at-root .scroll & {
+			@at-root .headAni & {
+				background-color: #fff;
+				transition-duration: 0.3s;
+			}
+			@at-root .headAni.scroll & {
 				background-color: #000;
 			}
 			&::before,
@@ -919,11 +958,15 @@ h4 {
 				width: 26px;
 				height: 3px;
 				margin: auto;
-				background-color: #fff;
+				background-color: #000;
 				border-radius: 100px;
 				transform-origin: center;
 				transition-duration: 0.3s;
-				@at-root .scroll & {
+
+				@at-root .headAni & {
+					background-color: #fff;
+				}
+				@at-root .headAni.scroll & {
 					background-color: #000;
 				}
 			}
@@ -941,8 +984,12 @@ h4 {
 					opacity: 1;
 					bottom: 0;
 					transform: rotate(45deg);
-					background-color: #fff;
-					@at-root .scroll & {
+					background-color: #000;
+
+					@at-root .headAni & {
+						background-color: #fff;
+					}
+					@at-root .headAni.scroll & {
 						background-color: #000;
 					}
 				}
@@ -950,8 +997,12 @@ h4 {
 					opacity: 1;
 					top: 0;
 					transform: rotate(-45deg);
-					background-color: #fff;
-					@at-root .scroll & {
+					background-color: #000;
+
+					@at-root .headAni & {
+						background-color: #fff;
+					}
+					@at-root .headAni.scroll & {
 						background-color: #000;
 					}
 				}
@@ -1015,10 +1066,22 @@ h4 {
 			top: calc(100% + 18px);
 			right: 0;
 			left: -4px;
-			padding: 5px;
+			padding: 0 5px;
 			margin: auto;
-
-			background: url("../images/lang_bg.svg") no-repeat top/cover;
+			&::before{
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				display: block;
+				width: 10px;
+				height: 6px;
+				margin: auto;
+				background: url('../images/lang_bg.svg')no-repeat center/contain;
+				transform: translateY(-100%);
+			}
+			// background: url("../images/lang_bg.svg") no-repeat top/cover;
 			li + li {
 				border-top: 1px solid #333;
 			}
@@ -1587,13 +1650,12 @@ h4 {
 			}
 		}
 		p {
-			margin-top: 57px;
+			margin-top: 16px;
 			font-style: normal;
 			font-weight: 400;
 			font-size: 20px;
 			line-height: 160%;
 			@include mw(L) {
-				margin-top: 58px;
 				text-align: left;
 				font-size: 16px;
 			}
@@ -1603,6 +1665,17 @@ h4 {
 			@include mw(L) {
 				margin: 15px auto 0;
 			}
+		}
+	}
+	// .home_banner_line
+	&_line{
+		display: inline-block;
+		width: 1px;
+		height: 35px;
+		margin-top: 16px;
+		background-color: #fff;
+		@include mw(L){
+			height: 24px;
 		}
 	}
 	// .home_banner_pic
@@ -1632,6 +1705,9 @@ h4 {
 	left: 0;
 	width: 100%;
 	margin: 0 auto;
+	@include mw(XS) {
+		top: 54px;
+	}
 	&._shadow {
 		position: absolute;
 		&:after {
@@ -1641,12 +1717,22 @@ h4 {
 			left: 0;
 			display: block;
 			width: 100%;
-			height: 338px;
+			height: 384px;
 			background: linear-gradient(
 				180deg,
 				rgba(23, 23, 23, 0) 18.34%,
 				#171717 100%
 			);
+
+			@include mw(XS) {
+				height: 169px;
+				background: linear-gradient(
+					180deg,
+					rgba(23, 23, 23, 0) 18.34%,
+					rgba(23, 23, 23, 0.604465) 43.79%,
+					#171717 91.93%
+				);
+			}
 		}
 		&._large:after {
 			height: 884px;
@@ -1739,6 +1825,12 @@ h4 {
 		// .page_group_more
 		&_more {
 			position: relative;
+			img {
+				position: absolute;
+				width: 4px;
+				bottom: 2px;
+				right: 0;
+			}
 		}
 	}
 
