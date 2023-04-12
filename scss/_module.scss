@@ -207,9 +207,9 @@ h4 {
 	border: 2px solid #333333;
 	border-radius: 100px;
 	@extend %transition;
-@include mw(L){
-	font-size: 14px;
-}
+	@include mw(L) {
+		font-size: 14px;
+	}
 	&._black {
 		color: #fff;
 		border-color: #fff;
@@ -326,7 +326,7 @@ h4 {
 	}
 }
 
-.normal_content{
+.normal_content {
 	position: relative;
 	padding: 0 20px;
 	margin-top: 32vw;
@@ -497,6 +497,9 @@ h4 {
 		@include mw(L) {
 			padding: 25px 16px 68px;
 		}
+	}
+	@at-root .recruitment & {
+		padding: 77px 0 195px;
 	}
 }
 
@@ -1080,8 +1083,8 @@ h4 {
 			left: -4px;
 			padding: 0 5px;
 			margin: auto;
-			&::before{
-				content:'';
+			&::before {
+				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -1090,7 +1093,8 @@ h4 {
 				width: 10px;
 				height: 6px;
 				margin: auto;
-				background: url('../images/lang_bg.svg')no-repeat center/contain;
+				background: url("../images/lang_bg.svg") no-repeat
+					center/contain;
 				transform: translateY(-100%);
 			}
 			// background: url("../images/lang_bg.svg") no-repeat top/cover;
@@ -1680,13 +1684,13 @@ h4 {
 		}
 	}
 	// .home_banner_line
-	&_line{
+	&_line {
 		display: inline-block;
 		width: 1px;
 		height: 35px;
 		margin-top: 16px;
 		background-color: #fff;
-		@include mw(L){
+		@include mw(L) {
 			height: 24px;
 		}
 	}
@@ -1926,3 +1930,91 @@ h4 {
 	}
 }
 
+.recruitment {
+	// .recruitment_term
+	&_term {
+		position: sticky;
+		top: 98px;
+		@include d_f(inline-flex, center, center);
+		width: 100%;
+		margin-top: 64px;
+		padding: 0 45px;
+		z-index: 2;
+		// .recruitment_term_a
+
+		&_a {
+			position: relative;
+			display: block;
+			width: calc(100% / 5);
+			padding: 23px 0;
+			background-color: #fff;
+			text-align: center;
+			border-top: 2px solid #887766;
+			border-bottom: 2px solid #887766;
+			color: #887766;
+			box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
+
+			&:first-child() {
+				border-top-left-radius: 100px;
+				border-bottom-left-radius: 100px;
+				border-left: 2px solid #887766;
+			}
+			&:last-child() {
+				border-top-right-radius: 100px;
+				border-bottom-right-radius: 100px;
+				border-right: 2px solid #887766;
+			}
+
+			& + &::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				display: block;
+				width: 1px;
+				height: 36px;
+				margin: auto 0;
+				background-color: #887766;
+			}
+		}
+	}
+	// .recruitment_title
+	&_title {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 34px;
+		line-height: 46px;
+	}
+	// .recruitment_txt
+	&_txt {
+		margin-top: 40px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 160%;
+		white-space: pre-line;
+
+		@at-root .recruitment_vacancies & {
+			white-space: inherit;
+		}
+	}
+	// .recruitment_join
+	&_join {
+		@include d_f(flex, center, center);
+		margin-top: 103px;
+		padding: 0 107px;
+		// .recruitment_join_pic
+		&_pic {
+			width: 100%;
+			max-width: 380px;
+		}
+	}
+	// .recruitment_vacancies
+	&_vacancies{
+		width: 100%;
+		max-width: 708px;
+		margin: 203px auto 0;
+		text-align: center;
+	}
+}
