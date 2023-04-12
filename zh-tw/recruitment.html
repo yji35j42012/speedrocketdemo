@@ -95,14 +95,14 @@
 		<section class="recruitment normal_content">
 			<div class="container _radioStyle">
 				<h2>人才招募</h2>
-				<div class="recruitment_term">
-					<a href="" class="recruitment_term_a">職涯發展</a>
-					<a href="" class="recruitment_term_a">職缺招募</a>
-					<a href="" class="recruitment_term_a">工作環境</a>
-					<a href="" class="recruitment_term_a">福利制度</a>
-					<a href="" class="recruitment_term_a">聯繫我們</a>
-				</div>
-				<div class="recruitment_join" data-title="加入光速 Mafia">
+				<ul id="recruitment_term" class="recruitment_term">
+					<li class="recruitment_term_li" name="join">職涯發展</li>
+					<li class="recruitment_term_li" name="vacancies">職缺招募</li>
+					<li class="recruitment_term_li" name="office">工作環境</li>
+					<li class="recruitment_term_li" name="benefits">福利制度</li>
+					<li class="recruitment_term_li" name="connect">聯繫我們</li>
+				</ul>
+				<div id="join" class="recruitment_join" data-title="加入光速 Mafia">
 					<div class="recruitment_join_info">
 						<div class="recruitment_title">加入光速 Mafia</div>
 						<div class="recruitment_txt">我們是一群平均年齡在 30 歲左右的公司
@@ -115,7 +115,7 @@
 						<img src="../images/recruitment/mafia.svg" alt="光速火箭 加入光速 Mafia">
 					</div>
 				</div>
-				<div class="recruitment_vacancies">
+				<div id="vacancies" class="recruitment_vacancies">
 					<div class="recruitment_title">永遠在缺人的職位</div>
 					<div class="recruitment_txt">
 						我們求才若渴！好人才永遠不嫌多，如果你是那個跟我們有一樣 tone 調，以下這些位置歡迎你來丟履歷自我推薦！
@@ -128,20 +128,20 @@
 					<span class="recruitment_method" data-txt="應徵方式"></span>
 					<div class="recruitment_info">
 						你可以將履歷寄到光速火箭人事部信箱，我們會盡快回覆您
-						hr@speeding-rocket.com 人事部 HR
+						<span id="mailHandler" class="mail" data-txt="已複製" data-after="人事部 HR">hr@speeding-rocket.com</span>
 
 						或是你可以看看我們 104 求職網站
 					</div>
-					<a href="" class="normal_btn">
+					<a href="https://www.104.com.tw/job/7gg8y?jobsource=jolist_a_relevance" class="normal_btn"
+						target="_blank">
 						光速火箭 104 求職網站
 						<span class="normal_btn_arr">
 							<span class="line"></span>
 						</span>
 					</a>
 				</div>
-
-				<div class="recruitment_office">
-					<div class="recruitment_title">辦公室環境</div>
+				<div id="office" class="recruitment_office">
+					<div class="recruitment_title">工作環境</div>
 					<ul class="recruitment_office_group">
 						<li class="recruitment_office_item">
 							<img src="../images/recruitment/office_photo1.png" alt="光速火箭 辦公室環境1">
@@ -173,7 +173,7 @@
 					</ul>
 				</div>
 
-				<div class="recruitment_benefits">
+				<div id="benefits" class="recruitment_benefits">
 					<div class="recruitment_title">福利制度</div>
 
 					<div class="recruitment_benefits_info">
@@ -215,7 +215,7 @@
 					</div>
 				</div>
 
-				<div class="recruitment_connect">
+				<div id="connect" class="recruitment_connect">
 					<div class="recruitment_title">聯繫我們</div>
 					<div class="recruitment_connect_info">
 						<div class="map">
@@ -307,6 +307,7 @@
 
 
 	<script src="../js/module.js"></script>
+	<script src="../js/recruitment.js"></script>
 
 </body>
 
