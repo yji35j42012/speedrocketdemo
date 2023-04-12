@@ -2762,6 +2762,7 @@ footer .container {
 
 .page_goPage {
   position: absolute;
+  left: 4px;
   bottom: 115%;
   width: 105px;
   display: none;
@@ -2771,6 +2772,8 @@ footer .container {
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+  -webkit-transform: translateX(calc(-50% + 8px));
+          transform: translateX(calc(-50% + 8px));
 }
 
 .on .page_goPage {
@@ -3275,7 +3278,10 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .news_item_info .new::after {
+    width: 47px;
+    height: 20px;
     margin-left: 14px;
+    font-size: 14px;
     font-size: 14px;
   }
 }
@@ -3285,12 +3291,6 @@ footer .container {
   font-weight: 600;
   font-size: 34px;
   line-height: 46px;
-}
-
-@media screen and (max-width: 1280px) {
-  .news_item_info .name {
-    line-height: 34px;
-  }
 }
 
 @media screen and (max-width: 1024px) {

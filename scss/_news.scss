@@ -74,7 +74,10 @@
 					border-radius: 100px;
 					box-sizing: border-box;
 					@include mw(L) {
+						width: 47px;
+						height: 20px;
 						margin-left: 14px;
+						font-size: 14px;
 						font-size: 14px;
 					}
 				}
@@ -85,9 +88,7 @@
 				font-weight: 600;
 				font-size: 34px;
 				line-height: 46px;
-				@include mw(XL) {
-					line-height: 34px;
-				}
+			
 				@include mw(L) {
 					margin-top: 9px;
 					font-size: 22px;
