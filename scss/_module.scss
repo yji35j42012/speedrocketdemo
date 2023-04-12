@@ -19,6 +19,9 @@ h2 {
 		@at-root .serve & {
 			font-size: 28px;
 		}
+		@at-root .recruitment & {
+			display: none;
+		}
 	}
 	@at-root .serve_first_txt &,
 		.serve_second_txt & {
@@ -196,7 +199,6 @@ h4 {
 		}
 	}
 }
-
 .normal_btn {
 	display: inline-flex;
 	align-items: center;
@@ -296,9 +298,11 @@ h4 {
 
 	@at-root .recruitment_vacancies & {
 		margin-top: 30px;
+		@include mw(L) {
+			margin-top: 22px;
+		}
 	}
 }
-
 .normal_input {
 	@include d_f(inline-flex, none, center);
 	flex: none;
@@ -329,7 +333,6 @@ h4 {
 		}
 	}
 }
-
 .normal_content {
 	position: relative;
 	padding: 0 20px;
@@ -349,14 +352,12 @@ h4 {
 	padding-left: 5px;
 	color: #fff;
 	transform: translateY(-100%);
-
 	// .breadcrumb_item
 	&_item {
 		font-weight: 400;
 		font-size: 15px;
 		@extend %transition;
 		@extend %hand;
-
 		@include mw(L) {
 			font-size: 12px;
 		}
@@ -396,7 +397,6 @@ h4 {
 		background: url("../images/icon/icon_search.svg") no-repeat center/cover;
 	}
 }
-
 .filiter {
 	@include d_f(flex, center);
 	@include mw(L) {
@@ -426,22 +426,18 @@ h4 {
 		}
 	}
 }
-
 .wrap {
 	padding-top: 54px;
 	height: 100%;
-	// background-color: #fff;
 	@at-root .headAni & {
 		padding-top: 0;
 	}
 }
-
 .container {
 	width: 100%;
 	max-width: 1280px;
 	margin: auto;
 	padding: 0 20px;
-
 	&._radioStyle {
 		max-width: 1294px;
 		background-color: #f9f9f9;
@@ -451,7 +447,6 @@ h4 {
 			border-bottom-right-radius: 0;
 		}
 	}
-
 	@at-root footer & {
 		position: relative;
 		@include d_f(flex, space-between);
@@ -464,7 +459,6 @@ h4 {
 		@include mw(L) {
 			height: auto;
 			flex-direction: column-reverse;
-			// align-items: center;
 		}
 	}
 	@at-root .attitude & {
@@ -503,10 +497,12 @@ h4 {
 		}
 	}
 	@at-root .recruitment & {
-		padding: 77px 0 195px;
+		padding: 77px 0 117px;
+		@include mw(L) {
+			padding: 25px 0 62px;
+		}
 	}
 }
-
 .header {
 	position: fixed;
 	top: 0;
@@ -529,7 +525,6 @@ h4 {
 		padding: 0 20px;
 	}
 }
-
 .footer {
 	position: relative;
 	padding: 121px 0 77px;
@@ -704,7 +699,6 @@ h4 {
 		}
 	}
 }
-
 .nav {
 	@include d_f(flex, center, center);
 	height: 100%;
@@ -1029,7 +1023,6 @@ h4 {
 		}
 	}
 }
-
 .lang {
 	position: absolute;
 	top: 50%;
@@ -1132,7 +1125,6 @@ h4 {
 		}
 	}
 }
-
 .brand {
 	padding-top: 44px;
 	padding-bottom: 95px;
@@ -1277,7 +1269,6 @@ h4 {
 		}
 	}
 }
-
 .serve {
 	padding-top: 181px;
 	padding-bottom: 110px;
@@ -1416,7 +1407,6 @@ h4 {
 		}
 	}
 }
-
 .attitude {
 	position: relative;
 	padding-top: 60px;
@@ -1518,7 +1508,6 @@ h4 {
 		}
 	}
 }
-
 .partner {
 	padding-top: 103px;
 	padding-bottom: 85px;
@@ -1640,7 +1629,6 @@ h4 {
 		}
 	}
 }
-
 .home_banner {
 	overflow: hidden;
 	position: relative;
@@ -1718,7 +1706,6 @@ h4 {
 		bottom: 0;
 	}
 }
-
 .bannerBg {
 	position: absolute;
 	top: 0;
@@ -1767,7 +1754,6 @@ h4 {
 		}
 	}
 }
-
 .page {
 	@include d_f(flex, space-between);
 	margin-top: 115px;
@@ -1913,7 +1899,6 @@ h4 {
 		}
 	}
 }
-
 .line_left {
 	position: relative;
 	padding-left: 59px;
@@ -1933,7 +1918,6 @@ h4 {
 		}
 	}
 }
-
 .recruitment {
 	// .recruitment_term
 	&_term {
@@ -1944,7 +1928,9 @@ h4 {
 		margin-top: 64px;
 		padding: 0 45px;
 		// .recruitment_term_a
-
+		@include mw(L) {
+			display: none;
+		}
 		&_a {
 			position: relative;
 			display: block;
@@ -1989,8 +1975,18 @@ h4 {
 		font-size: 34px;
 		line-height: 46px;
 		@at-root .recruitment_vacancies &,
-			.recruitment_environment & {
+			.recruitment_office &,
+			.recruitment_benefits &,
+			.recruitment_connect & {
 			text-align: center;
+		}
+		@at-root .recruitment_connect & {
+			width: 100%;
+		}
+		@include mw(L) {
+			@at-root .recruitment_join & {
+				display: none;
+			}
 		}
 	}
 	// .recruitment_txt
@@ -2001,23 +1997,58 @@ h4 {
 		font-size: 26px;
 		line-height: 160%;
 		white-space: pre-line;
-
+		@include mw(L) {
+			max-width: 574px;
+			margin-top: 26px;
+			white-space: inherit;
+			text-align: left;
+			font-size: 16px;
+		}
 		@at-root .recruitment_vacancies & {
 			width: 100%;
 			max-width: 708px;
 			margin: 16px auto 0;
 			white-space: inherit;
 			text-align: center;
+			@include mw(L) {
+				max-width: 574px;
+				text-align: left;
+			}
 		}
 	}
 	// .recruitment_join
 	&_join {
 		@include d_f(flex, center, center);
 		padding: 103px 107px 107px;
+		@include mw(L) {
+			flex-direction: column;
+			max-width: 574px;
+			margin: auto;
+			padding: 0 27px 29px;
+			text-align: center;
+
+			&::before {
+				content: attr(data-title);
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 33px;
+				text-align: center;
+			}
+			// .recruitment_join_info
+			&_info {
+				order: 2;
+			}
+		}
 		// .recruitment_join_pic
 		&_pic {
 			width: 100%;
 			max-width: 380px;
+
+			@include mw(L) {
+				order: 1;
+				max-width: 184px;
+				margin-top: 26px;
+			}
 		}
 	}
 	// .recruitment_vacancies
@@ -2025,22 +2056,40 @@ h4 {
 		margin: 0 auto;
 		padding: 96px 107px 111px;
 		background-color: #fff;
+		@include mw(L) {
+			padding: 34px 40px 44px;
+			text-align: center;
+		}
 		// .recruitment_vacancies_group
 		&_group {
 			width: 100%;
 			margin-top: 57px;
 			counter-reset: num;
+			@include mw(L) {
+				max-width: 574px;
+				margin: 26px auto 0;
+				text-align: left;
+			}
 			li {
 				padding: 28px 12px;
 				font-style: normal;
 				font-weight: 700;
 				font-size: 26px;
 				line-height: 35px;
-
+				@include mw(L) {
+					padding: 15px 12px;
+					padding-left: calc(12px + 1.5em);
+					font-size: 18px;
+					line-height: 25px;
+					text-indent: -1.5em;
+				}
 				&::before {
 					counter-increment: num;
 					content: counter(num) ". ";
 					margin-right: 12px;
+					@include mw(L) {
+						margin-right: 8px;
+					}
 				}
 				&:nth-child(odd) {
 					background: #efefef;
@@ -2057,6 +2106,10 @@ h4 {
 		width: 100%;
 		margin-top: 57px;
 		text-align: left;
+		@include mw(L) {
+			margin-top: 44px;
+			text-align: center;
+		}
 		&::before {
 			content: attr(data-txt);
 			@include d_f(inline-flex, center, center);
@@ -2068,6 +2121,11 @@ h4 {
 			font-weight: 700;
 			font-size: 24px;
 			line-height: 160%;
+			@include mw(L) {
+				width: 99px;
+				height: 29px;
+				font-size: 18px;
+			}
 		}
 	}
 	// .recruitment_info
@@ -2078,10 +2136,120 @@ h4 {
 		line-height: 160%;
 		white-space: pre-line;
 		text-align: left;
+		@include mw(L) {
+			font-size: 16px;
+			text-align: center;
+		}
 	}
-	// .recruitment_environment
-	&_environment {
-		padding: 72px 0 120px;
+	// .recruitment_office
+	&_office {
+		padding: 72px 105px 120px;
 		background-color: #ebdec7;
+		@include mw(L) {
+			padding: 34px 20px 39px;
+		}
+		.recruitment_office_group {
+			margin-top: 62px;
+			@include d_f(flex, center, center);
+			flex-wrap: wrap;
+			gap: 47px;
+			@include mw(L) {
+				max-width: 574px;
+				margin: 28px auto 0;
+				gap: 8px;
+			}
+		}
+		.recruitment_office_item {
+			width: calc((100% / 3 - 94px / 3));
+			@include mw(L) {
+				width: calc((100% / 3 - 16px / 3));
+			}
+		}
+	}
+	// .recruitment_benefits
+	&_benefits {
+		padding: 90px 55px 134px;
+		background-color: #f9f9f9;
+		@include mw(L) {
+			padding: 39px 16px 38px;
+		}
+		// .recruitment_benefits_info
+		&_info {
+			@include d_f(flex);
+			margin-top: 78px;
+			.pic {
+				width: 50%;
+				img + img {
+					margin-top: 29px;
+				}
+			}
+			.detail {
+				width: 50%;
+				padding-left: 48px;
+				// .detail_title
+				&_title {
+					@include d_f(inline-flex, center, center);
+					padding: 8px 18px;
+					background-color: #887766;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 28px;
+					line-height: 38px;
+					color: #ffffff;
+					&:not(:first-child) {
+						margin-top: 72px;
+					}
+				}
+				// .detail_group
+				&_group {
+					margin-top: 24px;
+					// .detail_group_item
+					&_item {
+						padding-left: 1em;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 24px;
+						line-height: 160%;
+						color: #3c3c3c;
+						text-indent: -1em;
+					}
+					//
+				}
+			}
+		}
+	}
+	// .recruitment_connect
+	&_connect {
+		@include d_f(flex, space-between);
+		flex-wrap: wrap;
+		width: 100%;
+		padding: 78px 74px;
+		background-color: #fff;
+		// .recruitment_connect_info
+		&_info {
+			width: calc(50% - 32px);
+			margin-top: 75px;
+			.map {
+				iframe {
+					width: 100%;
+					height: 380px;
+				}
+			}
+			.name {
+				margin-top: 33px;
+				margin-bottom: 18px;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 26px;
+				line-height: 35px;
+			}
+			.phone,
+			.address {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 160%;
+			}
+		}
 	}
 }
