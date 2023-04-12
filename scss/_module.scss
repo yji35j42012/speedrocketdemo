@@ -1921,7 +1921,9 @@ h4 {
 	@include mw(L) {
 		padding: 0;
 	}
-
+	@include mw(XS) {
+		margin-top: 164px;
+	}
 	// .vision_txt
 	&_txt {
 		margin: 112px auto 0;

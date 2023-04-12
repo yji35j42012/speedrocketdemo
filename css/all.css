@@ -2857,6 +2857,12 @@ footer .container {
   }
 }
 
+@media screen and (max-width: 599px) {
+  .vision {
+    margin-top: 164px;
+  }
+}
+
 .vision_txt {
   margin: 112px auto 0;
   font-style: normal;
@@ -3624,6 +3630,12 @@ footer .container {
   }
 }
 
+@media screen and (max-width: 599px) {
+  .about {
+    margin-top: 164px;
+  }
+}
+
 .about_info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4214,6 +4226,12 @@ footer .container {
 @media screen and (max-width: 1024px) {
   .history {
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .history {
+    margin-top: 164px;
   }
 }
 
