@@ -293,6 +293,10 @@ h4 {
 			text-align: center;
 		}
 	}
+
+	@at-root .recruitment_vacancies & {
+		margin-top: 30px;
+	}
 }
 
 .normal_input {
@@ -1934,12 +1938,11 @@ h4 {
 	// .recruitment_term
 	&_term {
 		position: sticky;
-		top: 98px;
+		top: 135px;
 		@include d_f(inline-flex, center, center);
 		width: 100%;
 		margin-top: 64px;
 		padding: 0 45px;
-		z-index: 2;
 		// .recruitment_term_a
 
 		&_a {
@@ -1985,6 +1988,10 @@ h4 {
 		font-weight: 600;
 		font-size: 34px;
 		line-height: 46px;
+		@at-root .recruitment_vacancies &,
+			.recruitment_environment & {
+			text-align: center;
+		}
 	}
 	// .recruitment_txt
 	&_txt {
@@ -1996,14 +2003,17 @@ h4 {
 		white-space: pre-line;
 
 		@at-root .recruitment_vacancies & {
+			width: 100%;
+			max-width: 708px;
+			margin: 16px auto 0;
 			white-space: inherit;
+			text-align: center;
 		}
 	}
 	// .recruitment_join
 	&_join {
 		@include d_f(flex, center, center);
-		margin-top: 103px;
-		padding: 0 107px;
+		padding: 103px 107px 107px;
 		// .recruitment_join_pic
 		&_pic {
 			width: 100%;
@@ -2011,10 +2021,67 @@ h4 {
 		}
 	}
 	// .recruitment_vacancies
-	&_vacancies{
+	&_vacancies {
+		margin: 0 auto;
+		padding: 96px 107px 111px;
+		background-color: #fff;
+		// .recruitment_vacancies_group
+		&_group {
+			width: 100%;
+			margin-top: 57px;
+			counter-reset: num;
+			li {
+				padding: 28px 12px;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 26px;
+				line-height: 35px;
+
+				&::before {
+					counter-increment: num;
+					content: counter(num) ". ";
+					margin-right: 12px;
+				}
+				&:nth-child(odd) {
+					background: #efefef;
+				}
+				&:nth-child(even) {
+					background: rgba(235, 222, 199, 0.8);
+				}
+			}
+		}
+	}
+	// .recruitment_method
+	&_method {
+		display: inline-block;
 		width: 100%;
-		max-width: 708px;
-		margin: 203px auto 0;
-		text-align: center;
+		margin-top: 57px;
+		text-align: left;
+		&::before {
+			content: attr(data-txt);
+			@include d_f(inline-flex, center, center);
+			width: 132px;
+			height: 48px;
+			color: #fff;
+			background-color: #887766;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 160%;
+		}
+	}
+	// .recruitment_info
+	&_info {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 160%;
+		white-space: pre-line;
+		text-align: left;
+	}
+	// .recruitment_environment
+	&_environment {
+		padding: 72px 0 120px;
+		background-color: #ebdec7;
 	}
 }

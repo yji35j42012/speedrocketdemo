@@ -420,6 +420,10 @@ h4 span {
   text-align: center;
 }
 
+.recruitment_vacancies .normal_btn {
+  margin-top: 30px;
+}
+
 .normal_input {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2870,7 +2874,7 @@ footer .container {
 .recruitment_term {
   position: -webkit-sticky;
   position: sticky;
-  top: 98px;
+  top: 135px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2883,7 +2887,6 @@ footer .container {
   width: 100%;
   margin-top: 64px;
   padding: 0 45px;
-  z-index: 2;
 }
 
 .recruitment_term_a {
@@ -2932,6 +2935,11 @@ footer .container {
   line-height: 46px;
 }
 
+.recruitment_vacancies .recruitment_title,
+.recruitment_environment .recruitment_title {
+  text-align: center;
+}
+
 .recruitment_txt {
   margin-top: 40px;
   font-style: normal;
@@ -2942,7 +2950,11 @@ footer .container {
 }
 
 .recruitment_vacancies .recruitment_txt {
+  width: 100%;
+  max-width: 708px;
+  margin: 16px auto 0;
   white-space: inherit;
+  text-align: center;
 }
 
 .recruitment_join {
@@ -2955,8 +2967,7 @@ footer .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 103px;
-  padding: 0 107px;
+  padding: 103px 107px 107px;
 }
 
 .recruitment_join_pic {
@@ -2965,10 +2976,79 @@ footer .container {
 }
 
 .recruitment_vacancies {
+  margin: 0 auto;
+  padding: 96px 107px 111px;
+  background-color: #fff;
+}
+
+.recruitment_vacancies_group {
   width: 100%;
-  max-width: 708px;
-  margin: 203px auto 0;
-  text-align: center;
+  margin-top: 57px;
+  counter-reset: num;
+}
+
+.recruitment_vacancies_group li {
+  padding: 28px 12px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 35px;
+}
+
+.recruitment_vacancies_group li::before {
+  counter-increment: num;
+  content: counter(num) ". ";
+  margin-right: 12px;
+}
+
+.recruitment_vacancies_group li:nth-child(odd) {
+  background: #efefef;
+}
+
+.recruitment_vacancies_group li:nth-child(even) {
+  background: rgba(235, 222, 199, 0.8);
+}
+
+.recruitment_method {
+  display: inline-block;
+  width: 100%;
+  margin-top: 57px;
+  text-align: left;
+}
+
+.recruitment_method::before {
+  content: attr(data-txt);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 132px;
+  height: 48px;
+  color: #fff;
+  background-color: #887766;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+}
+
+.recruitment_info {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+  white-space: pre-line;
+  text-align: left;
+}
+
+.recruitment_environment {
+  padding: 72px 0 120px;
+  background-color: #ebdec7;
 }
 
 .news_group {
