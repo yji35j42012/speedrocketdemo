@@ -2143,7 +2143,7 @@ h4 {
 
 		.mail {
 			position: relative;
-			@include d_f(inline-flex, center,center);
+			@include d_f(inline-flex, center, center);
 			font-style: normal;
 			font-weight: 700;
 			font-size: 24px;
@@ -2166,9 +2166,8 @@ h4 {
 				line-height: 1;
 				opacity: 0;
 				@extend %transition;
-				
 			}
-			&::after{
+			&::after {
 				content: attr(data-after);
 				display: block;
 				line-height: 1;
