@@ -1,13 +1,4 @@
 .history {
-	position: relative;
-	margin-top: 32vw;
-	padding: 0 20px;
-	@include mw(L) {
-		padding: 0;
-	}
-	@include mw(XS) {
-		margin-top: 164px;
-	}
 	// .history_group
 	&_group {
 		overflow: hidden;

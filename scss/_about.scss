@@ -1,13 +1,4 @@
 .about {
-	position: relative;
-	padding: 0 20px;
-	margin-top: 32vw;
-	@include mw(L) {
-		padding: 0;
-	}
-	@include mw(XS) {
-		margin-top: 164px;
-	}
 	// .about_info
 	&_info {
 		@include d_f(flex);

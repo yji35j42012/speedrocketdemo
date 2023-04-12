@@ -1,13 +1,4 @@
 .news {
-	position: relative;
-	padding: 0 20px;
-	margin-top: 32vw;
-	@include mw(L) {
-		padding: 0;
-	}
-	@include mw(XS) {
-		margin-top: 164px;
-	}
 	// .news_group
 	&_group {
 		margin-top: 27px;
@@ -88,7 +79,7 @@
 				font-weight: 600;
 				font-size: 34px;
 				line-height: 46px;
-			
+
 				@include mw(L) {
 					margin-top: 9px;
 					font-size: 22px;
