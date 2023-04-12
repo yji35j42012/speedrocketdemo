@@ -1974,6 +1974,10 @@ h4 {
 		font-weight: 600;
 		font-size: 34px;
 		line-height: 46px;
+		@include mw(L) {
+			font-size: 24px;
+			line-height: 33px;
+		}
 		@at-root .recruitment_vacancies &,
 			.recruitment_office &,
 			.recruitment_benefits &,
@@ -2177,15 +2181,32 @@ h4 {
 		&_info {
 			@include d_f(flex);
 			margin-top: 78px;
+			@include mw(L) {
+				flex-direction: column;
+				max-width: 574px;
+				margin: 27px auto 0;
+			}
 			.pic {
 				width: 50%;
+				@include mw(L) {
+					width: 100%;
+				}
 				img + img {
 					margin-top: 29px;
+					@include mw(L) {
+						margin-top: 12px;
+					}
 				}
 			}
 			.detail {
 				width: 50%;
 				padding-left: 48px;
+				@include mw(L) {
+					width: 100%;
+					margin-top: 28px;
+					padding-left: 0;
+					text-align: center;
+				}
 				// .detail_title
 				&_title {
 					@include d_f(inline-flex, center, center);
@@ -2196,8 +2217,16 @@ h4 {
 					font-size: 28px;
 					line-height: 38px;
 					color: #ffffff;
+					@include mw(L) {
+						padding: 2px 18px;
+						font-size: 18px;
+						line-height: 25px;
+					}
 					&:not(:first-child) {
 						margin-top: 72px;
+						@include mw(L) {
+							margin-top: 36px;
+						}
 					}
 				}
 				// .detail_group
@@ -2212,6 +2241,9 @@ h4 {
 						line-height: 160%;
 						color: #3c3c3c;
 						text-indent: -1em;
+						@include mw(L) {
+							font-size: 16px;
+						}
 					}
 					//
 				}
@@ -2225,10 +2257,19 @@ h4 {
 		width: 100%;
 		padding: 78px 74px;
 		background-color: #fff;
+		@include mw(L) {
+			flex-direction: column;
+			padding: 45px 64px;
+		}
 		// .recruitment_connect_info
 		&_info {
 			width: calc(50% - 32px);
 			margin-top: 75px;
+			@include mw(L) {
+				width: 100%;
+				max-width: 574px;
+				margin: 38px auto 0;
+			}
 			.map {
 				iframe {
 					width: 100%;
@@ -2242,6 +2283,13 @@ h4 {
 				font-weight: 600;
 				font-size: 26px;
 				line-height: 35px;
+				@include mw(L) {
+					margin-top: 18px;
+					margin-bottom: 12px;
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 25px;
+				}
 			}
 			.phone,
 			.address {
@@ -2249,6 +2297,9 @@ h4 {
 				font-weight: 500;
 				font-size: 24px;
 				line-height: 160%;
+				@include mw(L) {
+					font-size: 14px;
+				}
 			}
 		}
 	}

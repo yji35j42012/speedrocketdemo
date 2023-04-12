@@ -2956,6 +2956,13 @@ footer .container {
   line-height: 46px;
 }
 
+@media screen and (max-width: 1024px) {
+  .recruitment_title {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+
 .recruitment_vacancies .recruitment_title,
 .recruitment_office .recruitment_title,
 .recruitment_benefits .recruitment_title,
@@ -3253,17 +3260,49 @@ footer .container {
   margin-top: 78px;
 }
 
+@media screen and (max-width: 1024px) {
+  .recruitment_benefits_info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 574px;
+    margin: 27px auto 0;
+  }
+}
+
 .recruitment_benefits_info .pic {
   width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .recruitment_benefits_info .pic {
+    width: 100%;
+  }
 }
 
 .recruitment_benefits_info .pic img + img {
   margin-top: 29px;
 }
 
+@media screen and (max-width: 1024px) {
+  .recruitment_benefits_info .pic img + img {
+    margin-top: 12px;
+  }
+}
+
 .recruitment_benefits_info .detail {
   width: 50%;
   padding-left: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+  .recruitment_benefits_info .detail {
+    width: 100%;
+    margin-top: 28px;
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 .recruitment_benefits_info .detail_title {
@@ -3285,8 +3324,22 @@ footer .container {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1024px) {
+  .recruitment_benefits_info .detail_title {
+    padding: 2px 18px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
 .recruitment_benefits_info .detail_title:not(:first-child) {
   margin-top: 72px;
+}
+
+@media screen and (max-width: 1024px) {
+  .recruitment_benefits_info .detail_title:not(:first-child) {
+    margin-top: 36px;
+  }
 }
 
 .recruitment_benefits_info .detail_group {
@@ -3301,6 +3354,12 @@ footer .container {
   line-height: 160%;
   color: #3c3c3c;
   text-indent: -1em;
+}
+
+@media screen and (max-width: 1024px) {
+  .recruitment_benefits_info .detail_group_item {
+    font-size: 16px;
+  }
 }
 
 .recruitment_connect {
@@ -3320,9 +3379,27 @@ footer .container {
   background-color: #fff;
 }
 
+@media screen and (max-width: 1024px) {
+  .recruitment_connect {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 45px 64px;
+  }
+}
+
 .recruitment_connect_info {
   width: calc(50% - 32px);
   margin-top: 75px;
+}
+
+@media screen and (max-width: 1024px) {
+  .recruitment_connect_info {
+    width: 100%;
+    max-width: 574px;
+    margin: 38px auto 0;
+  }
 }
 
 .recruitment_connect_info .map iframe {
@@ -3339,12 +3416,29 @@ footer .container {
   line-height: 35px;
 }
 
+@media screen and (max-width: 1024px) {
+  .recruitment_connect_info .name {
+    margin-top: 18px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
 .recruitment_connect_info .phone,
 .recruitment_connect_info .address {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 160%;
+}
+
+@media screen and (max-width: 1024px) {
+  .recruitment_connect_info .phone,
+  .recruitment_connect_info .address {
+    font-size: 14px;
+  }
 }
 
 .news_group {
