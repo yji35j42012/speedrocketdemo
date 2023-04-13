@@ -25,35 +25,33 @@ function scrollListener() {
 		recruitment_term[termCount].classList.remove("on");
 		termCount++;
 		recruitment_term[termCount].classList.add("on");
-		console.log('asdf');
 
 	}
 	if (scrollState == "up") {
-		console.log("asdf");
-
-		for (let i = 0; i < term_refer.length; i++) {
-			const element = term_refer[i];
-			if (element.classList.contains("aos-animate")) {
-				console.log("hasClass", hasClass);
-				hasClass = i;
-			}
-		}
+		get_refer()
 		remove();
 	}
 }
 for (let i = 0; i < recruitment_term.length; i++) {
 	const element = recruitment_term[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		var item = document.querySelector("#" + element.getAttribute("name"));
 		var nowScroll = window.scrollY;
 		var goScroll = item.offsetTop + defaultGo;
-		goScroll > nowScroll
-			? goDown(nowScroll, goScroll)
-			: goTop(nowScroll, goScroll);
-		term_refer[i + 1].classList.remove("aos-animate");
+		if (goScroll > nowScroll) {
+			goDown(nowScroll, goScroll)
+			scrollState = 'down'
+		} else {
+			goTop(nowScroll, goScroll)
+			scrollState = 'up'
+			termCount = i
+		}
+		clearTerm()
+		recruitment_term[i].classList.add("on");
 	};
 }
 function goTop(from, to) {
+	scrollState = 'up'
 	let scrollTime = setInterval(() => {
 		if (from <= to) {
 			from = to;
@@ -75,11 +73,10 @@ function goDown(from, to) {
 		}
 	}, 0);
 }
-window.onresize = function() {
+window.onresize = function () {
 	defaultGo = 98 + window.innerWidth * 0.3 - 66 - 103;
 };
 
-// var mailHandler = document.querySelector("#mailHandler");
 const select = DOM => document.querySelector(DOM);
 
 select("#mailHandler").addEventListener("click", e => {
@@ -98,7 +95,6 @@ select("#mailHandler").addEventListener("click", e => {
 		mailHandler.classList.remove("on");
 	}, 2500);
 });
-
 function getItemTop() {
 	var nowScroll = window.scrollY;
 	termArr = [];
@@ -113,10 +109,15 @@ function getItemTop() {
 	if (termCount == null) return;
 	recruitment_term[termCount].classList.add("on");
 }
-
+function get_refer() {
+	for (let i = 0; i < term_refer.length; i++) {
+		const element = term_refer[i];
+		if (element.classList.contains("aos-animate")) {
+			hasClass = i;
+		}
+	}
+}
 function remove() {
-	console.log("hasClass", hasClass);
-	// hasClass <= 1 ? (termCount = 0) : termCount;
 	if (hasClass < termCount) {
 		recruitment_term[termCount].classList.remove("on");
 		recruitment_term[hasClass].classList.add("on");
