@@ -25,13 +25,14 @@ function scrollListener() {
 		recruitment_term[termCount].classList.remove("on");
 		termCount++;
 		recruitment_term[termCount].classList.add("on");
+		console.log('asdf');
+
 	}
 	if (scrollState == "up") {
 		console.log("asdf");
 
 		for (let i = 0; i < term_refer.length; i++) {
 			const element = term_refer[i];
-
 			if (element.classList.contains("aos-animate")) {
 				console.log("hasClass", hasClass);
 				hasClass = i;
@@ -49,8 +50,7 @@ for (let i = 0; i < recruitment_term.length; i++) {
 		goScroll > nowScroll
 			? goDown(nowScroll, goScroll)
 			: goTop(nowScroll, goScroll);
-			term_refer[i+1].classList.remove("aos-animate")
-
+		term_refer[i + 1].classList.remove("aos-animate");
 	};
 }
 function goTop(from, to) {
