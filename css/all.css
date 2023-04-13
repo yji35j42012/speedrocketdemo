@@ -2886,6 +2886,10 @@ footer .container {
           transform: scale(1, 1);
 }
 
+.recruitment {
+  overflow: hidden;
+}
+
 .recruitment_term {
   position: -webkit-sticky;
   position: sticky;
@@ -2902,6 +2906,7 @@ footer .container {
   width: 100%;
   margin-top: 64px;
   padding: 0 45px;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3277,6 +3282,17 @@ footer .container {
 
 .recruitment_office .recruitment_office_item {
   width: calc((100% / 3 - 94px / 3));
+  opacity: 0;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.recruitment_office .recruitment_office_item.aos-animate {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 @media screen and (max-width: 1024px) {

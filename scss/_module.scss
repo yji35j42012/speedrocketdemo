@@ -1919,6 +1919,7 @@ h4 {
 	}
 }
 .recruitment {
+	overflow: hidden;
 	// .recruitment_term
 	&_term {
 		position: sticky;
@@ -1927,6 +1928,7 @@ h4 {
 		width: 100%;
 		margin-top: 64px;
 		padding: 0 45px;
+		z-index: 1;
 		@include mw(L) {
 			display: none;
 		}
@@ -2202,6 +2204,13 @@ h4 {
 		}
 		.recruitment_office_item {
 			width: calc((100% / 3 - 94px / 3));
+			opacity: 0;
+			transform: scale(0, 0);
+			transform-origin: center;
+			&.aos-animate {
+				opacity: 1;
+				transform: scale(1, 1);
+			}
 			@include mw(L) {
 				width: calc((100% / 3 - 16px / 3));
 			}

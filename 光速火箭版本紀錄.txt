@@ -5,25 +5,31 @@
 112.04.07 光速火箭-最新消息、光速火箭-最新消息-了解更多(SpeedRocket_112.04.07_v1)
 112.04.07 光速火箭-修正分享按鈕功能(SpeedRocket_112.04.07_v2)
 
+112.04.11 光速火箭-關於我們-認識光速火箭(SpeedRocket_關於我們_112.04.11_v1)
+112.04.11 光速火箭-關於我們-公司大紀事(SpeedRocket_關於我們_112.04.11_v1)
+  
+
+112.04.13 光速火箭-關於我們-理念願景 (SpeedRocket_關於我們-理念願景、人才招募_112.04.13_v1)
+112.04.13 光速火箭-關於我們-人才招募 (SpeedRocket_關於我們-理念願景、人才招募_112.04.13_v1)
+
+
 
 
 
 
 Will早安
-關於我們-認識光速火箭
-關於我們-公司大紀事
+關於我們-理念願景
+關於我們-人才招募
 畫面已寄出
 
-
-
 檔案位置
-https://drive.google.com/file/d/17_svuD5HfqyKs80VBEONjHIEv9wd7W_9/view?usp=sharing
+https://drive.google.com/file/d/11IkzUGR9zs6G4bCA1v0sjvK5fVwukWGs/view?usp=sharing
 
 測試連結可用以下github網址
-認識光速火箭
-https://yji35j42012.github.io/speedrocketdemo/zh-tw/about.html
-公司大紀事
-https://yji35j42012.github.io/speedrocketdemo/zh-tw/history.html
+理念願景
+https://yji35j42012.github.io/speedrocketdemo/zh-tw/vision.html
+人才招募
+https://yji35j42012.github.io/speedrocketdemo/zh-tw/recruitment.html
 
 畫面對應檔案名稱可看此試算表
 https://docs.google.com/spreadsheets/d/1TSJ5A92Krl2jmSqq_j1yRk176DYd1hpx-IzOpmeWPNY/edit#gid=1453372134
