@@ -1,14 +1,12 @@
 var recruitment_term = document.querySelectorAll("#recruitment_term > li");
-var body = document.html;
-var nav_box = document.querySelector("#nav_box");
-var join = document.querySelector("#join");
 var defaultGo = 98 + window.innerWidth * 0.3 - 66 - 103;
 var nowScroll = 0;
 var oldScroll = 0;
 var scrollState = "down";
 var termCount = null;
 var termArr = [];
-var defaultScore = window.innerHeight * (3 / 5); //超出視窗高度的3分之1
+var term_refer = document.querySelectorAll("[name=term_refer]");
+var hasClass = 0;
 window.addEventListener("scroll", scrollListener);
 
 function clearTerm() {
@@ -18,10 +16,7 @@ function clearTerm() {
 }
 function scrollListener() {
 	var nowScroll = window.scrollY;
-	console.log("nowScroll", nowScroll);
-
 	nowScroll >= oldScroll ? (scrollState = "down") : (scrollState = "up");
-
 	oldScroll = nowScroll;
 	if (termCount == null && nowScroll > termArr[0] && scrollState == "down") {
 		termCount = 0;
@@ -32,23 +27,13 @@ function scrollListener() {
 		recruitment_term[termCount].classList.add("on");
 	}
 	if (scrollState == "down") {
+		for (let i = 0; i < term_refer.length; i++) {
+			const element = term_refer[i];
+			hasClass = i;
+			console.log(element.classList.contains("aos-animate"), i);
+		}
+		remove();
 	}
-	// if (nowScroll == 0 && termCount !== null) {
-	// 	recruitment_term[termCount].classList.remove("on");
-	// 	termCount = null;
-	// } else if (termCount == 1 && termArr[0] + defaultGo + 50 > nowScroll) {
-	// 	recruitment_term[termCount].classList.remove("on");
-	// 	termCount = 0;
-	// 	recruitment_term[termCount].classList.add("on");
-	// } else if (
-	// 	termCount !== 0 &&
-	// 	termArr[termCount] - defaultScore > nowScroll &&
-	// 	scrollState == "up"
-	// ) {
-	// 	recruitment_term[termCount].classList.remove("on");
-	// 	termCount--;
-	// 	recruitment_term[termCount].classList.add("on");
-	// }
 }
 for (let i = 0; i < recruitment_term.length; i++) {
 	const element = recruitment_term[i];
@@ -120,10 +105,14 @@ function getItemTop() {
 	}
 	if (termCount == null) return;
 	recruitment_term[termCount].classList.add("on");
-	console.log("termArr", termArr);
-	console.log("termCount", termCount);
 }
 
+function remove() {
+	if (hasClass < termCount) {
+		recruitment_term[termCount].classList.remove("on");
+		recruitment_term[hasClass].classList.add("on");
+	}
+}
 setTimeout(() => {
 	getItemTop();
 	scrollListener();
