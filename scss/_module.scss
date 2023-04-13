@@ -2296,7 +2296,7 @@ h4 {
 		background-color: #fff;
 		@include mw(L) {
 			flex-direction: column;
-			padding: 45px 64px;
+			padding: 45px 44px;
 		}
 		// .recruitment_connect_info
 		&_info {
@@ -2311,6 +2311,9 @@ h4 {
 				iframe {
 					width: 100%;
 					height: 380px;
+					@include mw(L) {
+						height: 214px;
+					}
 				}
 			}
 			.name {

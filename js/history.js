@@ -20,8 +20,6 @@ function getWidth() {
 
 function scrollListener() {
 	var windowHeight = window.pageYOffset;
-	console.log("windowHeight", windowHeight + defaultScore);
-	console.log("history_item", history_item[1].offsetTop);
 	if (firstRound) {
 		for (let i = 0; i < history_item.length; i++) {
 			if (windowHeight > history_item[i].offsetTop) {
