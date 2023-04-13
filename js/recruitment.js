@@ -11,9 +11,6 @@ var termArr = [];
 var defaultScore = window.innerHeight * (3 / 5); //超出視窗高度的3分之1
 window.addEventListener("scroll", scrollListener);
 
-console.log("defaultGo", defaultGo);
-console.log("window.scrollY", window.scrollY);
-
 function clearTerm() {
 	for (let i = 0; i < recruitment_term.length; i++) {
 		recruitment_term[i].classList.remove("on");
@@ -21,8 +18,7 @@ function clearTerm() {
 }
 function scrollListener() {
 	var nowScroll = window.scrollY;
-	console.log("ddd", window.scrollY);
-	console.log("termArr[0] + defaultGo", termArr[0] + defaultGo);
+	console.log("nowScroll", nowScroll);
 
 	nowScroll >= oldScroll ? (scrollState = "down") : (scrollState = "up");
 
@@ -35,24 +31,24 @@ function scrollListener() {
 		termCount++;
 		recruitment_term[termCount].classList.add("on");
 	}
-
-	if (nowScroll == 0 && termCount !== null) {
-		// recruitment_term[termCount].classList.remove("on");
-		// termCount = 0;
-		// recruitment_term[termCount].classList.add("on");
-	} else if (termCount == 1 && termArr[0] + defaultGo + 50 > nowScroll) {
-		recruitment_term[termCount].classList.remove("on");
-		termCount = 0;
-		recruitment_term[termCount].classList.add("on");
-	} else if (
-		termCount !== 0 &&
-		termArr[termCount] - defaultScore > nowScroll &&
-		scrollState == "up"
-	) {
-		recruitment_term[termCount].classList.remove("on");
-		termCount--;
-		recruitment_term[termCount].classList.add("on");
+	if (scrollState == "down") {
 	}
+	// if (nowScroll == 0 && termCount !== null) {
+	// 	recruitment_term[termCount].classList.remove("on");
+	// 	termCount = null;
+	// } else if (termCount == 1 && termArr[0] + defaultGo + 50 > nowScroll) {
+	// 	recruitment_term[termCount].classList.remove("on");
+	// 	termCount = 0;
+	// 	recruitment_term[termCount].classList.add("on");
+	// } else if (
+	// 	termCount !== 0 &&
+	// 	termArr[termCount] - defaultScore > nowScroll &&
+	// 	scrollState == "up"
+	// ) {
+	// 	recruitment_term[termCount].classList.remove("on");
+	// 	termCount--;
+	// 	recruitment_term[termCount].classList.add("on");
+	// }
 }
 for (let i = 0; i < recruitment_term.length; i++) {
 	const element = recruitment_term[i];
