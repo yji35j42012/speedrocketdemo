@@ -26,11 +26,16 @@ function scrollListener() {
 		termCount++;
 		recruitment_term[termCount].classList.add("on");
 	}
-	if (scrollState == "down") {
+	if (scrollState == "up") {
+		console.log("asdf");
+
 		for (let i = 0; i < term_refer.length; i++) {
 			const element = term_refer[i];
-			hasClass = i;
-			console.log(element.classList.contains("aos-animate"), i);
+
+			if (element.classList.contains("aos-animate")) {
+				console.log("hasClass", hasClass);
+				hasClass = i;
+			}
 		}
 		remove();
 	}
@@ -44,6 +49,8 @@ for (let i = 0; i < recruitment_term.length; i++) {
 		goScroll > nowScroll
 			? goDown(nowScroll, goScroll)
 			: goTop(nowScroll, goScroll);
+			term_refer[i+1].classList.remove("aos-animate")
+
 	};
 }
 function goTop(from, to) {
@@ -108,9 +115,13 @@ function getItemTop() {
 }
 
 function remove() {
+	console.log("hasClass", hasClass);
+	// hasClass <= 1 ? (termCount = 0) : termCount;
 	if (hasClass < termCount) {
 		recruitment_term[termCount].classList.remove("on");
 		recruitment_term[hasClass].classList.add("on");
+		termCount--;
+		hasClass--;
 	}
 }
 setTimeout(() => {
