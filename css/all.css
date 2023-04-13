@@ -2677,6 +2677,12 @@ footer .container {
   background-color: #D9D9D9;
 }
 
+.bannerBg_txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4696,13 +4702,18 @@ footer .container {
 @media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
   .recruitment_term_li:hover {
     background-color: #887766;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
 .recruitment_term_li:active {
   background-color: #887766;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+.recruitment_term_li.on {
+  background-color: #887766;
+  color: #ffffff;
 }
 
 .recruitment_term_li:first-child {

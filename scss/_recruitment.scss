@@ -23,9 +23,13 @@
 			border-bottom: 2px solid #887766;
 			color: #887766;
 			box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
-			@include hoverHandler{
+			@include hoverHandler {
 				background-color: #887766;
-				color: #FFFFFF;
+				color: #ffffff;
+			}
+			&.on {
+				background-color: #887766;
+				color: #ffffff;
 			}
 			@extend %hand;
 			@extend %transition;
