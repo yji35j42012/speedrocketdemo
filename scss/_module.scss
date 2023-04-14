@@ -2058,4 +2058,71 @@ h4 {
 		line-height: 140%;
 		text-align: center;
 	}
+	// .cooperation_cooperate
+	&_cooperate {
+		@include d_f(flex, center, center);
+		flex-wrap: wrap;
+		gap: 20px;
+		max-width: 1374px;
+		margin: 77px auto 0;
+		li {
+			width: calc(100% / 5 - 16px);
+			text-align: center;
+			.family {
+				max-width: 207px;
+			}
+			.bonnyread {
+				max-width: 199px;
+			}
+			.jgao {
+				max-width: 197px;
+			}
+			.murfeeli {
+				max-width: 178px;
+			}
+			.hj {
+				max-width: 193px;
+			}
+			.cheungleungkee {
+				max-width: 203px;
+			}
+			.yourkind {
+				max-width: 179px;
+			}
+			.bggoldnatural {
+				max-width: 160px;
+			}
+			.ecpay {
+				max-width: 150px;
+			}
+			.newepay {
+				max-width: 134px;
+			}
+			.ezship {
+				max-width: 197px;
+			}
+			.opay {
+				max-width: 141px;
+			}
+			.smilepay {
+				max-width: 141px;
+			}
+			.cetustek {
+				max-width: 255px;
+			}
+			.ezpay {
+				max-width: 190px;
+			}
+		}
+	}
+
+	// .cooperation_contact
+	&_contact{
+		max-width: 1924px;
+		margin-top: 77px;
+		padding: 73px 0 149px;
+		background-color: #F9F9F9;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+	}
 }

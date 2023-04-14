@@ -3115,6 +3115,97 @@ footer .container {
   text-align: center;
 }
 
+.cooperation_cooperate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1374px;
+  margin: 77px auto 0;
+}
+
+.cooperation_cooperate li {
+  width: calc(100% / 5 - 16px);
+  text-align: center;
+}
+
+.cooperation_cooperate li .family {
+  max-width: 207px;
+}
+
+.cooperation_cooperate li .bonnyread {
+  max-width: 199px;
+}
+
+.cooperation_cooperate li .jgao {
+  max-width: 197px;
+}
+
+.cooperation_cooperate li .murfeeli {
+  max-width: 178px;
+}
+
+.cooperation_cooperate li .hj {
+  max-width: 193px;
+}
+
+.cooperation_cooperate li .cheungleungkee {
+  max-width: 203px;
+}
+
+.cooperation_cooperate li .yourkind {
+  max-width: 179px;
+}
+
+.cooperation_cooperate li .bggoldnatural {
+  max-width: 160px;
+}
+
+.cooperation_cooperate li .ecpay {
+  max-width: 150px;
+}
+
+.cooperation_cooperate li .newepay {
+  max-width: 134px;
+}
+
+.cooperation_cooperate li .ezship {
+  max-width: 197px;
+}
+
+.cooperation_cooperate li .opay {
+  max-width: 141px;
+}
+
+.cooperation_cooperate li .smilepay {
+  max-width: 141px;
+}
+
+.cooperation_cooperate li .cetustek {
+  max-width: 255px;
+}
+
+.cooperation_cooperate li .ezpay {
+  max-width: 190px;
+}
+
+.cooperation_contact {
+  max-width: 1924px;
+  margin-top: 77px;
+  padding: 73px 0 149px;
+  background-color: #F9F9F9;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
 .news_group {
   margin-top: 27px;
 }

@@ -7,6 +7,7 @@ var termCount = null;
 var termArr = [];
 var term_refer = document.querySelectorAll("[name=term_refer]");
 var hasClass = 0;
+var hssCount = 0;
 window.addEventListener("scroll", scrollListener);
 
 function clearTerm() {
@@ -25,33 +26,32 @@ function scrollListener() {
 		recruitment_term[termCount].classList.remove("on");
 		termCount++;
 		recruitment_term[termCount].classList.add("on");
-
 	}
 	if (scrollState == "up") {
-		get_refer()
+		get_refer();
 		remove();
 	}
 }
 for (let i = 0; i < recruitment_term.length; i++) {
 	const element = recruitment_term[i];
-	element.onclick = function () {
+	element.onclick = function() {
 		var item = document.querySelector("#" + element.getAttribute("name"));
 		var nowScroll = window.scrollY;
 		var goScroll = item.offsetTop + defaultGo;
 		if (goScroll > nowScroll) {
-			goDown(nowScroll, goScroll)
-			scrollState = 'down'
+			goDown(nowScroll, goScroll);
+			scrollState = "down";
 		} else {
-			goTop(nowScroll, goScroll)
-			scrollState = 'up'
-			termCount = i
+			goTop(nowScroll, goScroll);
+			scrollState = "up";
+			termCount = i;
 		}
-		clearTerm()
+		clearTerm();
 		recruitment_term[i].classList.add("on");
 	};
 }
 function goTop(from, to) {
-	scrollState = 'up'
+	scrollState = "up";
 	let scrollTime = setInterval(() => {
 		if (from <= to) {
 			from = to;
@@ -73,7 +73,7 @@ function goDown(from, to) {
 		}
 	}, 0);
 }
-window.onresize = function () {
+window.onresize = function() {
 	defaultGo = 98 + window.innerWidth * 0.3 - 66 - 103;
 };
 
@@ -110,19 +110,26 @@ function getItemTop() {
 	recruitment_term[termCount].classList.add("on");
 }
 function get_refer() {
+	hssCount = 0;
 	for (let i = 0; i < term_refer.length; i++) {
 		const element = term_refer[i];
 		if (element.classList.contains("aos-animate")) {
 			hasClass = i;
+			hssCount++;
 		}
 	}
+	console.log("hssCount", hssCount);
 }
 function remove() {
-	if (hasClass < termCount) {
+	if (hssCount == 0 && termCount !== null) {
+		recruitment_term[termCount].classList.remove("on");
+		termCount=null
+	} else if (hasClass < termCount) {
 		recruitment_term[termCount].classList.remove("on");
 		recruitment_term[hasClass].classList.add("on");
 		termCount--;
 		hasClass--;
+		hssCount++;
 	}
 }
 setTimeout(() => {
