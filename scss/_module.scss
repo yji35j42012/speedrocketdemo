@@ -1748,8 +1748,9 @@ h4 {
 	// .banner_group
 	&_group {
 		@include d_f(flex);
-		@extend %transition;
-		// transform: translateX(-100%);
+		// @extend %transition;
+		transform: translateX(-100%);
+		opacity: 0;
 	}
 	// .banner_item
 	&_item {

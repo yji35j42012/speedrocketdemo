@@ -21,11 +21,18 @@ function bannerTimeHandler() {
 }
 
 banner_next.onclick = function() {
-	console.log("banner_next");
-	banner_count++;
-	banner_moveNum = -100 * banner_count;
-	banner_moveHandler();
-	resetTime();
+	console.log("banner_next", banner_count);
+	if (banner_count == banner_maxCount) {
+		banner_count++;
+		banner_moveNum = -100 * banner_count;
+		banner_moveHandler();
+		goFirst();
+	} else {
+		banner_count++;
+		banner_moveNum = -100 * banner_count;
+		banner_moveHandler();
+		resetTime();
+	}
 };
 banner_prev.onclick = function() {
 	console.log("banner_next");
@@ -39,8 +46,18 @@ function resetTime() {
 	clearInterval(bannerTime);
 	bannerTimeHandler();
 }
+
+// 快速換回第一張
+function goFirst() {
+	setTimeout(() => {
+		banner_count = 1;
+		banner_moveNum = -100 * banner_count;
+		banner.style = `transform: translateX(${banner_moveNum}%);transition-duration: 0;opacity:1;`;
+	}, 1000);
+}
+
 function banner_moveHandler() {
-	banner.style = `transform: translateX(${banner_moveNum}%)`;
+	banner.style = `transform: translateX(${banner_moveNum}%);transition-duration: 0.3s;opacity:1;`;
 }
 
 function pushStart() {
@@ -56,7 +73,7 @@ function pushStart() {
 }
 function pushEnd() {
 	var getImg = document.querySelector(
-		"#banner_group > .banner_item:nth-child(1) img"
+		"#banner_group > .banner_item:nth-child(2) img"
 	);
 	const liEnd = document.createElement("li");
 	liEnd.setAttribute("class", "banner_item");
@@ -68,6 +85,7 @@ function pushEnd() {
 setTimeout(() => {
 	pushStart();
 	pushEnd();
+	banner_moveHandler();
 }, 100);
-banner_moveHandler();
+
 bannerTimeHandler();
