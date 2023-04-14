@@ -74,13 +74,10 @@ h2 {
 			margin-top: 59px;
 		}
 	}
-// .bannerBg_txt h2
+	// .bannerBg_txt h2
 	@at-root .bannerBg_txt & {
 		color: #ffffff;
 		line-height: 201.91%;
-		@include mw(L){
-			SPEEDING ROCKET 經營團隊
-		}
 	}
 }
 h3 {
@@ -538,6 +535,9 @@ h4 {
 		@include mw(L) {
 			max-width: 574px;
 		}
+	}
+	@at-root .cooperation & {
+		padding-top: 117px;
 	}
 }
 .header {
@@ -2044,5 +2044,18 @@ h4 {
 				font-size: 14px;
 			}
 		}
+	}
+}
+
+.cooperation {
+	background: linear-gradient(179.87deg, #ebdec7 19.36%, #52442e 72.7%);
+	// .cooperation_txt
+	&_txt {
+		max-width: 708px;
+		margin: 23px auto 0;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 140%;
+		text-align: center;
 	}
 }

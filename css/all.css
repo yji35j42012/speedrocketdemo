@@ -850,6 +850,10 @@ footer .container {
   }
 }
 
+.cooperation .container {
+  padding-top: 117px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -3096,6 +3100,19 @@ footer .container {
     margin-top: 4px;
     font-size: 14px;
   }
+}
+
+.cooperation {
+  background: linear-gradient(179.87deg, #ebdec7 19.36%, #52442e 72.7%);
+}
+
+.cooperation_txt {
+  max-width: 708px;
+  margin: 23px auto 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
 }
 
 .news_group {
