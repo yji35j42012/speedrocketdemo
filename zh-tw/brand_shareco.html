@@ -89,16 +89,38 @@
 			</button>
 		</header>
 
-		<section class="about"
-			style="display: flex;align-items: center;justify-content: center; color: #fff; height: 500px; background-color: #000">
-			檔案製作中，請先移往其他頁面
+		<section class="banner">
+			<ul id="banner_group" class="banner_group">
+				<li class="banner_item">
+					<img src="../images/brand_shareco/banner1.jpg" alt="">
+				</li>
+				<li class="banner_item">
+					<img src="../images/brand_shareco/banner2.jpg" alt="">
+				</li>
+				<li class="banner_item">
+					<img src="../images/brand_shareco/banner3.jpg" alt="">
+				</li>
+			</ul>
+			<i id="banner_prev" class="banner_prev">
+				<svg>
+					<use xlink:href="#icon_back"></use>
+				</svg>
+			</i>
+			<i id="banner_next" class="banner_next">
+				<svg>
+					<use xlink:href="#icon_rightarr"></use>
+				</svg>
+			</i>
+			<ul class="banner_dots">
+				<li class="banner_dots_item on"></li>
+				<li class="banner_dots_item"></li>
+			</ul>
 		</section>
 
 		<footer class="footer">
-			<!-- <div id="gotoback" class="footer_back" data-back="回到最上面"> -->
-				<i id="gotoback" class="footer_gotop icon _arrow" data-back="回到最上面">
-					<img src="../images/icon/icon_arr_top_w.svg" alt="光速火箭 back">
-				</i>
+			<i id="gotoback" class="footer_gotop icon _arrow" data-back="回到最上面">
+				<img src="../images/icon/icon_arr_top_w.svg" alt="光速火箭 back">
+			</i>
 			<!-- </div> -->
 			<div class="container">
 				<div class="footer_nav">
@@ -156,9 +178,21 @@
 			</div>
 		</footer>
 	</div>
-
+	<div style="display: none!important;">
+		<svg>
+			<symbol viewBox="0 0 10 16" id="icon_back" class="icon_back">
+				<path class="st0"
+					d="M7.57588 15.9999C7.38376 16.0005 7.19394 15.9628 7.02037 15.8897C6.84679 15.8165 6.69387 15.7097 6.57284 15.5771L0.361721 8.72061C0.172581 8.51613 0.0691833 8.25965 0.0691833 7.99496C0.0691833 7.73027 0.172581 7.47379 0.361721 7.26932L6.79145 0.412821C7.00972 0.179452 7.32338 0.0326955 7.66342 0.00483554C8.00346 -0.0230244 8.34202 0.0702947 8.60463 0.264263C8.86724 0.458232 9.03239 0.736962 9.06374 1.03913C9.09509 1.34131 8.99008 1.64217 8.77181 1.87554L3.02363 8.00068L8.57891 14.1258C8.73616 14.2936 8.83605 14.4978 8.86676 14.7144C8.89747 14.931 8.85771 15.1509 8.75219 15.3481C8.64667 15.5452 8.47981 15.7114 8.27134 15.8269C8.06288 15.9424 7.82154 16.0025 7.57588 15.9999Z" />
+			</symbol>
+			<symbol viewBox="0 0 8 12" id="icon_rightarr" class="icon_rightarr">
+				<path
+					d="M1,0.7L1,0.7c0.4-0.4,1-0.4,1.4,0L7,5.3c0.4,0.4,0.4,1,0,1.4l-4.6,4.6c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l3.8-3.7c0.1-0.1,0.1-0.2,0-0.3c0,0,0,0,0,0L1,2.1C0.6,1.7,0.6,1.1,1,0.7C1,0.7,1,0.7,1,0.7z" />
+			</symbol>
+		</svg>
+	</div>
 
 	<script src="../js/module.js"></script>
+	<script src="../js/brand.js"></script>
 </body>
 
 </html>

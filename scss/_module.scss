@@ -82,6 +82,9 @@ h2 {
 	@at-root .cooperation_contact & {
 		width: 100%;
 		margin-bottom: 25px;
+		@include mw(L) {
+			margin-bottom: 18px;
+		}
 	}
 }
 h3 {
@@ -543,7 +546,7 @@ h4 {
 	@at-root .cooperation & {
 		padding-top: 117px;
 		@include mw(L) {
-			padding-top: 45px;
+			padding: 45px 0 0;
 		}
 	}
 }
@@ -1736,6 +1739,73 @@ h4 {
 		position: absolute;
 		left: 0;
 		bottom: 0;
+	}
+}
+.banner {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	// .banner_group
+	&_group {
+		@include d_f(flex);
+		@extend %transition;
+		// transform: translateX(-100%);
+	}
+	// .banner_item
+	&_item {
+		width: 100%;
+		flex: none;
+		img {
+			opacity: 0.11;
+		}
+	}
+
+	// .banner_prev
+	&_prev,
+	&_next {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		display: block;
+		width: 14px;
+		height: 22px;
+		margin: auto;
+		fill: #fff;
+		@extend %hand;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&_prev {
+		left: 65px;
+	}
+	&_next {
+		right: 65px;
+	}
+	// .banner_next
+
+	// .banner_dots
+	&_dots {
+		position: absolute;
+		bottom: 43px;
+		@include d_f(flex, center);
+		width: 100%;
+		// .banner_dots_item
+		&_item {
+			flex: none;
+			width: 13px;
+			height: 13px;
+			background-color: #d9d9d9;
+			border-radius: 100px;
+			@extend %hand;
+			& + & {
+				margin-left: 18px;
+			}
+			&.on {
+				background-color: #636363;
+			}
+		}
 	}
 }
 .bannerBg {

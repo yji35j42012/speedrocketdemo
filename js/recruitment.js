@@ -77,24 +77,6 @@ window.onresize = function() {
 	defaultGo = 98 + window.innerWidth * 0.3 - 66 - 103;
 };
 
-const select = DOM => document.querySelector(DOM);
-
-select("#mailHandler").addEventListener("click", e => {
-	// 建立 Range 物件
-	const range = document.createRange();
-	const texts = select("#mailHandler");
-	range.selectNode(texts);
-	// 取得 Selection 物件
-	const selection = window.getSelection();
-	selection.removeAllRanges();
-	selection.addRange(range);
-	document.execCommand("copy");
-	selection.removeAllRanges();
-	mailHandler.classList.add("on");
-	setTimeout(() => {
-		mailHandler.classList.remove("on");
-	}, 2500);
-});
 function getItemTop() {
 	var nowScroll = window.scrollY;
 	termArr = [];
@@ -123,7 +105,7 @@ function get_refer() {
 function remove() {
 	if (hssCount == 0 && termCount !== null) {
 		recruitment_term[termCount].classList.remove("on");
-		termCount=null
+		termCount = null;
 	} else if (hasClass < termCount) {
 		recruitment_term[termCount].classList.remove("on");
 		recruitment_term[hasClass].classList.add("on");
@@ -136,3 +118,17 @@ setTimeout(() => {
 	getItemTop();
 	scrollListener();
 }, 300);
+
+var mailHandler = document.querySelector("#mailHandler");
+mailHandler.onclick = function() {
+	const textarea = document.createElement("textarea");
+	textarea.value = mailHandler.innerHTML;
+	document.body.appendChild(textarea);
+	textarea.select();
+	document.execCommand("copy");
+	document.body.removeChild(textarea);
+	mailHandler.classList.add("on");
+	setTimeout(() => {
+		mailHandler.classList.remove("on");
+	}, 2500);
+};
