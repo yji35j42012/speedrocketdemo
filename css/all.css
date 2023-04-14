@@ -124,6 +124,11 @@ h2 + .filiter {
   line-height: 201.91%;
 }
 
+.cooperation_contact h2 {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
 h3 {
   font-weight: 600;
   font-size: 36px;
@@ -852,6 +857,12 @@ footer .container {
 
 .cooperation .container {
   padding-top: 117px;
+}
+
+@media screen and (max-width: 1024px) {
+  .cooperation .container {
+    padding-top: 45px;
+  }
 }
 
 .header {
@@ -3100,110 +3111,6 @@ footer .container {
     margin-top: 4px;
     font-size: 14px;
   }
-}
-
-.cooperation {
-  background: linear-gradient(179.87deg, #ebdec7 19.36%, #52442e 72.7%);
-}
-
-.cooperation_txt {
-  max-width: 708px;
-  margin: 23px auto 0;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 140%;
-  text-align: center;
-}
-
-.cooperation_cooperate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1374px;
-  margin: 77px auto 0;
-}
-
-.cooperation_cooperate li {
-  width: calc(100% / 5 - 16px);
-  text-align: center;
-}
-
-.cooperation_cooperate li .family {
-  max-width: 207px;
-}
-
-.cooperation_cooperate li .bonnyread {
-  max-width: 199px;
-}
-
-.cooperation_cooperate li .jgao {
-  max-width: 197px;
-}
-
-.cooperation_cooperate li .murfeeli {
-  max-width: 178px;
-}
-
-.cooperation_cooperate li .hj {
-  max-width: 193px;
-}
-
-.cooperation_cooperate li .cheungleungkee {
-  max-width: 203px;
-}
-
-.cooperation_cooperate li .yourkind {
-  max-width: 179px;
-}
-
-.cooperation_cooperate li .bggoldnatural {
-  max-width: 160px;
-}
-
-.cooperation_cooperate li .ecpay {
-  max-width: 150px;
-}
-
-.cooperation_cooperate li .newepay {
-  max-width: 134px;
-}
-
-.cooperation_cooperate li .ezship {
-  max-width: 197px;
-}
-
-.cooperation_cooperate li .opay {
-  max-width: 141px;
-}
-
-.cooperation_cooperate li .smilepay {
-  max-width: 141px;
-}
-
-.cooperation_cooperate li .cetustek {
-  max-width: 255px;
-}
-
-.cooperation_cooperate li .ezpay {
-  max-width: 190px;
-}
-
-.cooperation_contact {
-  max-width: 1924px;
-  margin-top: 77px;
-  padding: 73px 0 149px;
-  background-color: #F9F9F9;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
 }
 
 .news_group {
@@ -5607,5 +5514,245 @@ footer .container {
   .recruitment_connect_info .address {
     font-size: 14px;
   }
+}
+
+.cooperation {
+  background: linear-gradient(179.87deg, #ebdec7 19.36%, #52442e 72.7%);
+}
+
+.cooperation_txt {
+  max-width: 708px;
+  margin: 23px auto 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .cooperation_txt {
+    font-size: 16px;
+    text-align-last: left;
+  }
+}
+
+.cooperation_cooperate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1374px;
+  margin: 77px auto 0;
+}
+
+.cooperation_cooperate li {
+  width: calc(100% / 5 - 16px);
+  text-align: center;
+}
+
+.cooperation_cooperate li .family {
+  max-width: 207px;
+}
+
+.cooperation_cooperate li .bonnyread {
+  max-width: 199px;
+}
+
+.cooperation_cooperate li .jgao {
+  max-width: 197px;
+}
+
+.cooperation_cooperate li .murfeeli {
+  max-width: 178px;
+}
+
+.cooperation_cooperate li .hj {
+  max-width: 193px;
+}
+
+.cooperation_cooperate li .cheungleungkee {
+  max-width: 203px;
+}
+
+.cooperation_cooperate li .yourkind {
+  max-width: 179px;
+}
+
+.cooperation_cooperate li .bggoldnatural {
+  max-width: 160px;
+}
+
+.cooperation_cooperate li .ecpay {
+  max-width: 150px;
+}
+
+.cooperation_cooperate li .newepay {
+  max-width: 134px;
+}
+
+.cooperation_cooperate li .ezship {
+  max-width: 197px;
+}
+
+.cooperation_cooperate li .opay {
+  max-width: 141px;
+}
+
+.cooperation_cooperate li .smilepay {
+  max-width: 141px;
+}
+
+.cooperation_cooperate li .cetustek {
+  max-width: 255px;
+}
+
+.cooperation_cooperate li .ezpay {
+  max-width: 190px;
+}
+
+.cooperation_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1924px;
+  margin-top: 77px;
+  padding: 73px 150px 149px;
+  background-color: #f9f9f9;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+@media screen and (max-width: 1280px) {
+  .cooperation_contact {
+    padding: 73px 70px 149px;
+  }
+}
+
+.cooperation_contact_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(50% - 12px);
+  padding: 37px 0;
+  border: 2px solid #e4e4e4;
+  -webkit-box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+}
+
+.cooperation_contact_detail._md, .cooperation_contact_detail._cd, .cooperation_contact_detail._fd, .cooperation_contact_detail._hr {
+  background-color: #f3f3f3;
+}
+
+.cooperation_contact_title {
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.cooperation_contact_mail {
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+}
+
+.cooperation_contact_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 37px 80px;
+  background: #ffffff;
+  border: 2px solid #e4e4e4;
+  -webkit-box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+}
+
+.cooperation_contact_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin-top: 55px;
+  padding-bottom: 50px;
+  border-bottom: 0.75px solid #929292;
+}
+
+.cooperation_contact_item:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 0.75px;
+  height: 102px;
+  border-left: 0.75px solid #929292;
+}
+
+.cooperation_contact_item._full {
+  width: 100%;
+  padding-bottom: 0;
+  border: none;
+}
+
+.cooperation_contact_name {
+  padding: 3px 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  background: #ebdec7;
+  border-radius: 100px;
 }
 /*# sourceMappingURL=all.css.map */
