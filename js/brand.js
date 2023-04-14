@@ -53,7 +53,7 @@ function goFirst() {
 		banner_count = 1;
 		banner_moveNum = -100 * banner_count;
 		banner.style = `transform: translateX(${banner_moveNum}%);transition-duration: 0;opacity:1;`;
-	}, 1000);
+	}, 350);
 }
 
 function banner_moveHandler() {
