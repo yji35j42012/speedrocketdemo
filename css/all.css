@@ -2726,10 +2726,6 @@ footer .container {
           flex: none;
 }
 
-.banner_item img {
-  opacity: 0.11;
-}
-
 .banner_prev, .banner_next {
   position: absolute;
   top: 0;
