@@ -86,7 +86,7 @@ function pushEnd() {
 function pushDots() {
 	for (let i = 0; i < banner_maxCount; i++) {
 		const liDot = document.createElement("li");
-		liDot.setAttribute("class", "banner_dots_item");
+		liDot.setAttribute("class", "normal_dots_item");
 		banner_dots.append(liDot)
 	}
 	banner_dots_item = document.querySelectorAll("#banner_dots >li");
