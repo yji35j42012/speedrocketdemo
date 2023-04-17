@@ -283,24 +283,30 @@
 			margin-top: 62px;
 			@include d_f(flex, center, center);
 			flex-wrap: wrap;
-			gap: 47px;
 			@include mw(L) {
 				max-width: 574px;
 				margin: 28px auto 0;
-				gap: 8px;
+
 			}
 		}
 		.recruitment_office_item {
 			width: calc((100% / 3 - 94px / 3));
+			margin-left: 47px;
+			margin-bottom: 47px;
 			opacity: 0;
 			transform: scale(0, 0);
 			transform-origin: center;
+			&:nth-child(3n + 1) {
+				margin-left: 0;
+			}
 			&.aos-animate {
 				opacity: 1;
 				transform: scale(1, 1);
 			}
 			@include mw(L) {
 				width: calc((100% / 3 - 16px / 3));
+				margin-left: 8px;
+				margin-bottom: 8px;
 			}
 		}
 	}
