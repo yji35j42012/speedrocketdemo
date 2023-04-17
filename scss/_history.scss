@@ -230,13 +230,13 @@
 				}
 			}
 			&._second {
-				img {
+				span {
 					width: calc(50% - 8px);
 				}
 			}
 			&._third {
-				img:nth-child(2),
-				img:nth-child(3) {
+				span:nth-child(2),
+				span:nth-child(3) {
 					width: calc(50% - 8px);
 					margin-top: 12px;
 				}
