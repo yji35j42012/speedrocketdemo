@@ -6,7 +6,7 @@
           transition-duration: 0.3s;
 }
 
-.normal_select, .normal_select_group li, .normal_dots_item, .breadcrumb_item, .icon_prev, .icon_next, .footer_gotop, .footer_nav_group a, .footer_community .icon, .nav_item, .nav_groupSec li, .nav_btn, .lang_txt, .lang_group li, .page_group li, .news_tag_item, .news_community_item, .recruitment_term_li, .recruitment_info .mail {
+.normal_select, .normal_select_group li, .normal_dots_item, .breadcrumb_item, .icon_prev, .icon_next, .footer_gotop, .footer_nav_group a, .footer_community .icon, .nav_item, .nav_groupSec li, .nav_btn, .lang_txt, .lang_group li, .page_group li, .news_tag_item, .news_community_item, .recruitment_term_li, .recruitment_info .mail, .cooperation_contact_mail {
   cursor: pointer;
 }
 
@@ -5795,10 +5795,6 @@ footer .container {
       -ms-flex-align: stretch;
           align-items: stretch;
   margin-top: 12px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 160%;
 }
 
 .cooperation_contact_mail::before {
@@ -5821,7 +5817,6 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .cooperation_contact_mail {
-    font-size: 12px;
     text-align: center;
   }
 }
@@ -5925,6 +5920,12 @@ footer .container {
 .team {
   padding: 91px 0 165px;
   background-color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .team {
+    padding: 26px 0 68px;
+  }
 }
 
 .team_group {

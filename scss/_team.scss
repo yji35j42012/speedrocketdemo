@@ -1,6 +1,9 @@
 .team {
 	padding: 91px 0 165px;
 	background-color: #fff;
+	@include mw(L){
+		padding: 26px 0 68px;
+	}
 	// .team_group
 	&_group {
 		@include d_f(flex);
