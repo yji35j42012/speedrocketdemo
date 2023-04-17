@@ -221,6 +221,19 @@ h4 span {
   }
 }
 
+.txt24to16 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+}
+
+@media screen and (max-width: 1024px) {
+  .txt24to16 {
+    font-size: 16px;
+  }
+}
+
 .txt24to12 {
   font-style: normal;
   font-weight: 500;
@@ -517,6 +530,9 @@ h4 span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -679,6 +695,9 @@ h4 span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -862,6 +881,9 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1200,6 +1222,9 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1555,6 +1580,9 @@ footer .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2392,6 +2420,9 @@ footer .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
   max-width: 1278px;
   margin: 87px auto 0;
   text-align: center;
@@ -2628,6 +2659,9 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3241,6 +3275,9 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3391,6 +3428,9 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3401,6 +3441,9 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3449,6 +3492,9 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3692,13 +3738,13 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 160%;
   text-align: center;
 }
 
@@ -3714,6 +3760,9 @@ footer .container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3721,9 +3770,6 @@ footer .container {
   height: 100%;
   max-width: 544px;
   padding-right: 36px;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 160%;
   text-align: left;
   color: #fff;
 }
@@ -4015,6 +4061,7 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .business_detail_item::after {
+    top: -8px;
     width: 9px;
     height: 9px;
     border-radius: 100px;
@@ -4072,9 +4119,6 @@ footer .container {
 .business_detail_item .txt {
   position: relative;
   display: block;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 160%;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   -webkit-transition-delay: 0.2s;

@@ -50,9 +50,6 @@
 			position: relative;
 			@include d_f(flex, none, center);
 			width: 100%;
-			font-weight: 400;
-			font-size: 26px;
-			line-height: 160%;
 			text-align: center;
 			@include mw(L) {
 				text-align: left;
@@ -60,14 +57,11 @@
 			span {
 				position: absolute;
 				right: 0;
-				@include d_f(inline-flex,none,center);
+				@include d_f(inline-flex, none, center);
 				width: 50%;
 				height: 100%;
 				max-width: 544px;
 				padding-right: 36px;
-				font-weight: 400;
-				font-size: 26px;
-				line-height: 160%;
 				text-align: left;
 				color: #fff;
 				@include mw(L) {
@@ -261,6 +255,7 @@
 				transform-origin: left;
 				@extend %transition;
 				@include mw(L) {
+					top: -8px;
 					width: 9px;
 					height: 9px;
 					border-radius: 100px;
@@ -298,9 +293,6 @@
 			.txt {
 				position: relative;
 				display: block;
-				font-weight: 400;
-				font-size: 24px;
-				line-height: 160%;
 				transform: translateY(0);
 				transition-delay: 0.2s;
 				opacity: 0;
