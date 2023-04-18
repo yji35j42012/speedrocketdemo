@@ -167,6 +167,15 @@ h4 {
 		line-height: 16px;
 	}
 }
+.txt20to12 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 160%;
+	@include mw(L) {
+		font-size: 12px;
+	}
+}
 .normal_select {
 	position: relative;
 	display: inline-block;
@@ -412,6 +421,11 @@ h4 {
 	bottom: 43px;
 	@include d_f(flex, center);
 	width: 100%;
+	@include mw(L) {
+		@at-root .access_over & {
+			display: none;
+		}
+	}
 	// .normal_dots_item
 	&_item {
 		flex: none;
@@ -420,8 +434,16 @@ h4 {
 		background-color: #d9d9d9;
 		border-radius: 100px;
 		@extend %hand;
+
+		@include mw(L) {
+			width: 8px;
+			height: 8px;
+		}
 		& + & {
 			margin-left: 18px;
+			@include mw(L) {
+				margin-left: 8px;
+			}
 		}
 		&.on {
 			background-color: #636363;
@@ -482,6 +504,7 @@ h4 {
 	}
 
 	// .icon_prev
+	// .icon_next
 	&_prev,
 	&_next {
 		position: absolute;
@@ -502,12 +525,28 @@ h4 {
 			top: 80px;
 			fill: #333;
 		}
+		@include mw(L) {
+			@at-root .banner &,
+				.access_over & {
+				display: none;
+			}
+		}
+		@at-root .access_product &{
+			fill:#D9D9D9;
+			top: -200px;
+		}
 	}
 	&_prev {
 		left: 65px;
+		@include mw(XL) {
+			left: 20px;
+		}
 	}
 	&_next {
 		right: 65px;
+		@include mw(XL) {
+			right: 20px;
+		}
 	}
 }
 .filiter {
@@ -2089,13 +2128,28 @@ h4 {
 	max-width: 1018px;
 	margin: auto;
 	background-color: #efefef;
-	&::before {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: calc(100% - 80px);
-		background-color: #efefef;
+	@at-root .access_product & {
+		max-width: unset;
+		background-color: unset;
+		@include mw(L) {
+			max-width: 574px;
+		}
+	}
+	@at-root .access_over & {
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 80px);
+			background-color: #efefef;
+		}
+		@include mw(XL) {
+			max-width: 930px;
+		}
+		@include mw(L) {
+			max-width: 574px;
+		}
 	}
 }
