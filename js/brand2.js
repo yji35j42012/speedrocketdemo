@@ -47,48 +47,58 @@ var over_dots_item = null;
 // 		access.style = `transform: translateX(${access_moveNum}%);transition-duration: 0;opacity:1;`;
 // 	}, 350);
 // }
-function pushAccessStart() {
-	let getImgS = (access_maxCount - 1) * 4;
-	let getImgE = access_pic.length;
+// function pushAccessStart() {
+// 	let getImgS = (access_maxCount - 1) * 4;
+// 	let getImgE = access_pic.length;
 
-	for (let i = getImgS; i < getImgE; i++) {
+// 	for (let i = getImgS; i < getImgE; i++) {
+// 		var getImg = document.querySelector(
+// 			`#access_over_group > .access_over_item:nth-child(${i}) img`
+// 		);
+// 		var getImg2 = document.querySelector(
+// 			`#access_over_group > .access_over_item:nth-child(${i}) img:nth-child(2)`
+// 		);
+// 		const liStart = document.createElement("li");
+// 		liStart.setAttribute("class", "access_over_item");
+// 		const child1 = document.createElement("img");
+// 		child1.setAttribute("src", getImg.getAttribute("src"));
+// 		child1.setAttribute("alt", getImg.getAttribute("alt"));
+// 		const child2 = document.createElement("img");
+// 		child2.setAttribute("src", getImg2.getAttribute("src"));
+// 		child2.setAttribute("alt", getImg2.getAttribute("alt"));
+// 		liStart.append(child1);
+// 		liStart.append(child2);
+// 		banner.insertBefore(liStart, banner_pic[0]);
+
+
+// 		console.log("getImg", getImg.getAttribute("src"));
+// 		console.log("getImg2", getImg2.getAttribute("src"));
+// 	}
+// }
+function pushAccessEnd() {
+	for (let i = 1; i < 5; i++) {
+		console.log('i' + i);
 		var getImg = document.querySelector(
 			`#access_over_group > .access_over_item:nth-child(${i}) img`
 		);
 		var getImg2 = document.querySelector(
 			`#access_over_group > .access_over_item:nth-child(${i}) img:nth-child(2)`
 		);
-		const liStart = document.createElement("li");
-		liStart.setAttribute("class", "access_over_item");
-		
-		console.log("getImg", getImg.getAttribute("src"));
-		console.log("getImg2", getImg2.getAttribute("src"));
+		const liEnd = document.createElement("li");
+		liEnd.setAttribute("class", "access_over_item");
+		const child1 = document.createElement("img");
+		child1.setAttribute("src", getImg.getAttribute("src"));
+		child1.setAttribute("alt", getImg.getAttribute("alt"));
+		child1.setAttribute("class", getImg.getAttribute("class"));
+		const child2 = document.createElement("img");
+		child2.setAttribute("src", getImg2.getAttribute("src"));
+		child2.setAttribute("alt", getImg2.getAttribute("alt"));
+		child2.setAttribute("class", getImg2.getAttribute("class"));
+		liEnd.append(child1);
+		liEnd.append(child2);
+		access.appendChild(liEnd, access_pic[0]);
 	}
-
-	// console.log("getImg", getImg);
-
-	// for (let index = 0; index < array.length; index++) {
-	// 	const element = array[index];
-
-	// }
-	// const liStart = document.createElement("li");
-	// liStart.setAttribute("class", "access_item");
-	// const child = document.createElement("img");
-	// child.setAttribute("src", getImg.getAttribute("src"));
-	// liStart.append(child);
-	// access.insertBefore(liStart, access_pic[0]);
 }
-// function pushEnd() {
-// 	var getImg = document.querySelector(
-// 		"#access_over_group > .access_item:nth-child(2) img"
-// 	);
-// 	const liEnd = document.createElement("li");
-// 	liEnd.setAttribute("class", "access_item");
-// 	const child = document.createElement("img");
-// 	child.setAttribute("src", getImg.getAttribute("src"));
-// 	liEnd.append(child);
-// 	access.appendChild(liEnd, access_pic[0]);
-// }
 // function dotItem() {
 // 	for (let i = 0; i < over_dots_item.length; i++) {
 // 		const element = over_dots_item[i];
@@ -102,7 +112,7 @@ function pushAccessStart() {
 // 	}
 // }
 
-over_next.onclick = function() {
+over_next.onclick = function () {
 	console.log("over_next");
 	access_count++;
 	access_moveNum = -100 * access_count;
@@ -110,7 +120,7 @@ over_next.onclick = function() {
 	// resetTime();
 	// dotsAccessHandler();
 };
-over_prev.onclick = function() {
+over_prev.onclick = function () {
 	console.log("over_prev");
 	access_count--;
 	access_moveNum = -100 * access_count;
@@ -163,7 +173,7 @@ function pushEpmt() {
 
 setTimeout(() => {
 	pushEpmt();
-	pushAccessStart();
+	pushAccessEnd();
 	// 	pushEnd();
 	// 	access_moveHandler();
 	pushAccissDots();
