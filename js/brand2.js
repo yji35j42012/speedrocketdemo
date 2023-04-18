@@ -47,7 +47,30 @@ var over_dots_item = null;
 // 		access.style = `transform: translateX(${access_moveNum}%);transition-duration: 0;opacity:1;`;
 // 	}, 350);
 // }
-// function pushAccessStart() {
+function pushAccessStart() {
+	let getImgS = (access_maxCount - 1) * 4;
+	let getImgE = access_pic.length;
+	let repair = access_maxCount * 4 - getImgE; //補
+	console.log("getImgS", getImgS);
+	console.log("getImgE", getImgE);
+	console.log("repair", repair);
+	for (let i = getImgS+1; i < getImgE+1; i++) {
+		var getImg = document.querySelector(
+			`#access_over_group > .access_over_item:nth-child(${i}) img`
+		);
+		var getImg2 = document.querySelector(
+			`#access_over_group > .access_over_item:nth-child(${i}) img:nth-child(2)`
+		);
+		console.log("getImg", getImg.getAttribute("src"));
+		console.log("getImg", getImg.getAttribute("alt"));
+		console.log("getImg2", getImg2.getAttribute("src"));
+		console.log("getImg2", getImg2.getAttribute("alt"));
+		// console.log("getImg2", getImg2.getAttribute("src"));
+	}
+	for (let i = 0; i < repair; i++) {
+		console.log("補");
+	}
+}
 // 	let getImgS = (access_maxCount - 1) * 4;
 // 	let getImgE = access_pic.length;
 
@@ -70,14 +93,29 @@ var over_dots_item = null;
 // 		liStart.append(child2);
 // 		banner.insertBefore(liStart, banner_pic[0]);
 
-
 // 		console.log("getImg", getImg.getAttribute("src"));
 // 		console.log("getImg2", getImg2.getAttribute("src"));
 // 	}
 // }
+// function dotItem() {
+// 	for (let i = 0; i < over_dots_item.length; i++) {
+// 		const element = over_dots_item[i];
+// 		element.onclick = function() {
+// 			access_count = i + 1;
+// 			access_moveNum = -100 * access_count;
+// 			access_moveHandler();
+// 			dotsAccessHandler();
+// 			resetTime();
+// 		};
+// 	}
+// }
+
 function pushAccessEnd() {
+	if (access_maxCount <= 1) {
+		return;
+	}
+	console.log("access_maxCount", access_maxCount);
 	for (let i = 1; i < 5; i++) {
-		console.log('i' + i);
 		var getImg = document.querySelector(
 			`#access_over_group > .access_over_item:nth-child(${i}) img`
 		);
@@ -99,20 +137,7 @@ function pushAccessEnd() {
 		access.appendChild(liEnd, access_pic[0]);
 	}
 }
-// function dotItem() {
-// 	for (let i = 0; i < over_dots_item.length; i++) {
-// 		const element = over_dots_item[i];
-// 		element.onclick = function() {
-// 			access_count = i + 1;
-// 			access_moveNum = -100 * access_count;
-// 			access_moveHandler();
-// 			dotsAccessHandler();
-// 			resetTime();
-// 		};
-// 	}
-// }
-
-over_next.onclick = function () {
+over_next.onclick = function() {
 	console.log("over_next");
 	access_count++;
 	access_moveNum = -100 * access_count;
@@ -120,7 +145,7 @@ over_next.onclick = function () {
 	// resetTime();
 	// dotsAccessHandler();
 };
-over_prev.onclick = function () {
+over_prev.onclick = function() {
 	console.log("over_prev");
 	access_count--;
 	access_moveNum = -100 * access_count;
@@ -153,7 +178,6 @@ function dotsAccessHandler() {
 		over_dots_item[access_count - 1].classList.add("on");
 	}
 }
-
 function allDotsRemoveAccess() {
 	for (let i = 0; i < over_dots_item.length; i++) {
 		const element = over_dots_item[i];
@@ -173,6 +197,7 @@ function pushEpmt() {
 
 setTimeout(() => {
 	pushEpmt();
+	pushAccessStart();
 	pushAccessEnd();
 	// 	pushEnd();
 	// 	access_moveHandler();
