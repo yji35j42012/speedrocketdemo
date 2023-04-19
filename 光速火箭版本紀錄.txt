@@ -18,6 +18,24 @@
 112.04.17 光速火箭-關於我們-異業合作 (SpeedRocket_關於我們-經營團隊、異業合作_112.04.17_v1)
 
 
+112.04.19 光速火箭-光速x品牌-SHARECO (SpeedRocket_光速x品牌-SHARECO_112.04.19_v1)
+
+光速火箭-光速x品牌-SHARECO
+畫面已寄出
+
+
+0417需要修正調整部分也可以測試
+測試連結可用以下github網址
+https://yji35j42012.github.io/speedrocketdemo/zh-tw/brand_shareco.html
+
+檔案位置
+https://drive.google.com/file/d/1k185vZTeBuCJIc03pDyierw-MHv8T-JW/view?usp=sharing
+
+
+
+
+
+
 Will早安
 光速火箭-關於我們-經營團隊
 光速火箭-關於我們-異業合作
