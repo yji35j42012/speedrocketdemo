@@ -2909,6 +2909,7 @@ footer .container {
   overflow: hidden;
   position: relative;
   width: 100%;
+  min-height: 219px;
 }
 
 .banner_group {

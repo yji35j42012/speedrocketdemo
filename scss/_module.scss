@@ -1884,6 +1884,7 @@ h4 {
 	overflow: hidden;
 	position: relative;
 	width: 100%;
+	min-height: 219px;
 	// .banner_group
 	&_group {
 		@include d_f(flex);
