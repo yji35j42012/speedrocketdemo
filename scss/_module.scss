@@ -425,6 +425,17 @@ h4 {
 		@at-root .access_over & {
 			display: none;
 		}
+		@at-root .banner &{
+			bottom: 10px;
+		}
+	}
+
+	@at-root .access_product & {
+		display: none;
+		@include mw(L) {
+			left: 0;
+			display: flex;
+		}
 	}
 	// .normal_dots_item
 	&_item {
@@ -531,9 +542,14 @@ h4 {
 				display: none;
 			}
 		}
-		@at-root .access_product &{
-			fill:#D9D9D9;
-			top: -200px;
+		@at-root .access_product & {
+			display: none;
+			fill: #d9d9d9;
+			top: 250px;
+			bottom: auto;
+			@include mw(L) {
+				display: block;
+			}
 		}
 	}
 	&_prev {

@@ -29,6 +29,10 @@
 			@include mw(L) {
 				margin-left: 18px;
 			}
+
+			@include mw(XS) {
+				margin-left: 8px;
+			}
 		}
 	}
 	// .brandSH_introduction
@@ -181,6 +185,13 @@
 				margin-left: 20px;
 			}
 		}
+		// .access_item_pic
+		&_pic {
+			@include mw(XS) {
+				max-width: 80px;
+				margin: auto;
+			}
+		}
 	}
 
 	// .access_over
@@ -188,10 +199,10 @@
 		overflow: hidden;
 		position: relative;
 		// @include d_f(flex,none,center);
-		margin-top: 216px;
+		margin-top: 137px;
 		padding-top: 80px;
 		@include mw(L) {
-			margin-top: 131px;
+			margin-top: 53px;
 		}
 		&::before,
 		&::after {
@@ -248,7 +259,7 @@
 				max-width: 574px;
 				height: 326px;
 				flex-wrap: wrap;
-				padding: 51px 0 35px;
+				padding: 0 15px 35px;
 			}
 		}
 		// .access_over_item
@@ -261,9 +272,18 @@
 			margin-left: 20px;
 			padding: 30px 20px;
 			@include mw(L) {
-				width: calc(50% - 10px);
-				&:nth-child(odd) {
-					margin-left: 0;
+				width: 50%;
+				padding-top: 40px;
+				padding-bottom: 40px;
+				margin-left: 0;
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(5),
+				&:nth-child(6),
+				&:nth-child(9),
+				&:nth-child(10) {
+					border-bottom: 1px solid #333333;
 				}
 			}
 			&:nth-child(4n + 1) {
@@ -284,13 +304,120 @@
 				color: #fff;
 				text-align: center;
 				opacity: 0;
+				pointer-events: none;
 				@extend %transition;
+
+				@include mw(L) {
+					z-index: 2;
+					position: fixed;
+					top: 0;
+					left: 0;
+					@include d_f(flex, center, center);
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.3);
+					backdrop-filter: blur(0);
+					color: #333;
+					&.on {
+						opacity: 1;
+						pointer-events: auto;
+					}
+					// .hoverItem_box
+					&_box {
+						position: relative;
+						@include d_f(flex);
+						flex-wrap: wrap;
+						width: 100%;
+						max-width: 362px;
+						padding: 93px 50px 80px;
+						background-color: #fff;
+						border-radius: 20px;
+					}
+					// .hoverItem_txt
+					&_txt {
+						width: 50%;
+						margin-top: 45px;
+						text-align: left;
+						border-right: 1px solid #333333;
+					}
+				}
+				// .hoverItem_close
+				&_close {
+					display: none;
+					@include mw(L) {
+						position: absolute;
+						top: 23px;
+						right: 20px;
+						width: 30px;
+						height: 30px;
+						display: block;
+						&::before,
+						&:after {
+							content: "";
+							position: absolute;
+							width: 22px;
+							height: 3px;
+							background-color: #979797;
+						}
+						&::before {
+							transform: rotate(45deg);
+						}
+						&::after {
+							transform: rotate(-45deg);
+						}
+					}
+				}
+				// .hoverItem_pic
+				&_pic {
+					display: none;
+					.access_over_flag {
+						width: 40px;
+						height: 40px;
+					}
+					.access_over_logo {
+						&._cheungleungkee {
+							max-width: 253px;
+						}
+						&._pavlion {
+							max-width: 235px;
+						}
+						&._hawooo {
+							max-width: 273px;
+						}
+						&._pnj {
+							max-width: 167px;
+						}
+						&._logo158 {
+							max-width: 235px;
+						}
+						&._hmxy {
+							max-width: 235px;
+						}
+						&._hypestages {
+							max-width: 167px;
+						}
+						&._maxelbeauty {
+							max-width: 167px;
+						}
+						&._sgipomades {
+							max-width: 167px;
+						}
+					}
+					@include mw(L) {
+						@include d_f(flex, center, center);
+						flex-direction: column;
+						width: 100%;
+					}
+				}
 				// .hoverItem_country
 				&_country {
 					font-style: normal;
 					font-weight: 700;
 					font-size: 28px;
 					line-height: 160%;
+					@include mw(L) {
+						font-size: 16px;
+					}
 				}
 				// .hoverItem_countryTw
 				&_countryTw {
@@ -298,6 +425,9 @@
 					font-weight: 600;
 					font-size: 28px;
 					line-height: 160%;
+					@include mw(L) {
+						font-size: 16px;
+					}
 				}
 				// .hoverItem_shop
 				&_shop {
@@ -305,7 +435,13 @@
 					font-weight: 400;
 					font-size: 24px;
 					line-height: 160%;
-
+					@include mw(L) {
+						@include d_f(flex, center, center);
+						width: 50%;
+						margin-top: 45px;
+						font-size: 18px;
+						border-right: 1px solid #333333;
+					}
 					&::before {
 						content: "";
 						display: block;
@@ -313,12 +449,17 @@
 						height: 27px;
 						margin: 13px auto 10px;
 						background-color: #fff;
+						@include mw(L) {
+							display: none;
+						}
 					}
 				}
 			}
-			@include hoverHandler {
-				.hoverItem {
-					opacity: 1;
+			@include minmw(L) {
+				@include hoverHandler {
+					.hoverItem {
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -326,13 +467,17 @@
 		&_flag {
 			width: 62px;
 			height: 62px;
+			@include mw(L) {
+				width: 25px;
+				height: 25px;
+			}
 		}
 		// .access_over_logo
 		&_logo {
 			margin-top: 50px;
+
 			&._cheungleungkee {
 				max-width: 253px;
-				
 			}
 			&._pavlion {
 				max-width: 235px;
@@ -358,34 +503,24 @@
 			&._sgipomades {
 				max-width: 167px;
 			}
-			@include mw(L){
+			@include mw(L) {
+				margin-top: 17px;
 				&._cheungleungkee {
 					max-width: 130px;
-					
 				}
-				&._pavlion {
-					max-width:107px;
+				&._pavlion,
+				&._logo158,
+				&._hmxy,
+				&._hypestages,
+				&._maxelbeauty,
+				&._sgipomades {
+					max-width: 107px;
 				}
 				&._hawooo {
-					max-width:130px;
+					max-width: 130px;
 				}
 				&._pnj {
-					max-width:81px;
-				}
-				&._logo158 {
-					max-width: 235px;
-				}
-				&._hmxy {
-					max-width: 235px;
-				}
-				&._hypestages {
-					max-width: 167px;
-				}
-				&._maxelbeauty {
-					max-width: 167px;
-				}
-				&._sgipomades {
-					max-width: 167px;
+					max-width: 81px;
 				}
 			}
 		}
@@ -417,6 +552,9 @@
 			max-width: 350px;
 			& + & {
 				margin-left: 30px;
+				@include mw(L) {
+					margin-left: 0;
+				}
 			}
 			@include mw(L) {
 				flex: none;
@@ -436,6 +574,9 @@
 			padding-bottom: 30px;
 			border-bottom: 0.5px solid #333333;
 			text-align: center;
+			@include mw(L) {
+				margin-top: 20px;
+			}
 		}
 	}
 }
