@@ -422,9 +422,9 @@ h4 {
 	@include d_f(flex, center);
 	width: 100%;
 	@include mw(L) {
-		@at-root .access_over & {
-			display: none;
-		}
+		// @at-root .access_over & {
+		// 	display: none;
+		// }
 		@at-root .banner & {
 			bottom: 10px;
 		}
@@ -534,11 +534,11 @@ h4 {
 
 		@at-root .access_over & {
 			top: 80px;
+			bottom: 30px;
 			fill: #333;
 		}
 		@include mw(L) {
-			@at-root .banner &,
-				.access_over & {
+			@at-root .banner & {
 				display: none;
 			}
 		}
@@ -2207,7 +2207,11 @@ h4 {
 		background-color: #fff;
 		backdrop-filter: blur(12.5px);
 		border-radius: 20px;
-
+		&._brandSH {
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding: 80px 30px 90px;
+		}
 		// .lightBox_info_close
 		&_close {
 			position: absolute;
