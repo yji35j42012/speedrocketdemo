@@ -2909,6 +2909,9 @@ footer .container {
   overflow: hidden;
   position: relative;
   width: 100%;
+}
+
+.banner img {
   min-height: 219px;
 }
 
