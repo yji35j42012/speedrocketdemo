@@ -425,7 +425,7 @@ h4 {
 		@at-root .access_over & {
 			display: none;
 		}
-		@at-root .banner &{
+		@at-root .banner & {
 			bottom: 10px;
 		}
 	}
@@ -1885,9 +1885,6 @@ h4 {
 	position: relative;
 	width: 100%;
 
-	img{
-		min-height: 219px;
-	}
 	// .banner_group
 	&_group {
 		@include d_f(flex);
@@ -1899,6 +1896,19 @@ h4 {
 	&_item {
 		width: 100%;
 		flex: none;
+		@include mw(XS) {
+			position: relative;
+			overflow: hidden;
+			@include d_f(flex, center, center);
+			text-align: center;
+			height: 219px;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			img {
+				opacity: 0;
+			}
+		}
 	}
 }
 .bannerBg {

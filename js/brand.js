@@ -67,6 +67,10 @@ function pushStart() {
 	);
 	const liStart = document.createElement("li");
 	liStart.setAttribute("class", "banner_item");
+	liStart.setAttribute(
+		"style",
+		"background-image: url('" + getImg.getAttribute("src") + "')"
+	);
 	const child = document.createElement("img");
 	child.setAttribute("src", getImg.getAttribute("src"));
 	liStart.append(child);
@@ -78,6 +82,10 @@ function pushEnd() {
 	);
 	const liEnd = document.createElement("li");
 	liEnd.setAttribute("class", "banner_item");
+	liEnd.setAttribute(
+		"style",
+		"background-image: url('" + getImg.getAttribute("src") + "')"
+	);
 	const child = document.createElement("img");
 	child.setAttribute("src", getImg.getAttribute("src"));
 	liEnd.append(child);

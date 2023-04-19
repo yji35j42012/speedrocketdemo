@@ -2911,10 +2911,6 @@ footer .container {
   width: 100%;
 }
 
-.banner img {
-  min-height: 219px;
-}
-
 .banner_group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2935,6 +2931,30 @@ footer .container {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+}
+
+@media screen and (max-width: 599px) {
+  .banner_item {
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    height: 219px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .banner_item img {
+    opacity: 0;
+  }
 }
 
 .bannerBg {
