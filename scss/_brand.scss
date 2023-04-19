@@ -235,7 +235,9 @@
 		&_group {
 			position: relative;
 			@include d_f(inline-flex);
+			width: 100%;
 			max-width: 1018px;
+			height: 513px;
 			padding: 140px 0 120px;
 			background-color: #efefef;
 			@extend %transition;
@@ -244,7 +246,9 @@
 			}
 			@include mw(L) {
 				max-width: 574px;
+				height: 326px;
 				flex-wrap: wrap;
+				padding: 51px 0 35px;
 			}
 		}
 		// .access_over_item
@@ -257,7 +261,10 @@
 			margin-left: 20px;
 			padding: 30px 20px;
 			@include mw(L) {
-				width: calc(50%);
+				width: calc(50% - 10px);
+				&:nth-child(odd) {
+					margin-left: 0;
+				}
 			}
 			&:nth-child(4n + 1) {
 				@include minmw(L) {
@@ -325,6 +332,7 @@
 			margin-top: 50px;
 			&._cheungleungkee {
 				max-width: 253px;
+				
 			}
 			&._pavlion {
 				max-width: 235px;
@@ -349,6 +357,36 @@
 			}
 			&._sgipomades {
 				max-width: 167px;
+			}
+			@include mw(L){
+				&._cheungleungkee {
+					max-width: 130px;
+					
+				}
+				&._pavlion {
+					max-width:107px;
+				}
+				&._hawooo {
+					max-width:130px;
+				}
+				&._pnj {
+					max-width:81px;
+				}
+				&._logo158 {
+					max-width: 235px;
+				}
+				&._hmxy {
+					max-width: 235px;
+				}
+				&._hypestages {
+					max-width: 167px;
+				}
+				&._maxelbeauty {
+					max-width: 167px;
+				}
+				&._sgipomades {
+					max-width: 167px;
+				}
 			}
 		}
 	}

@@ -6590,7 +6590,9 @@ footer .container {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  width: 100%;
   max-width: 1018px;
+  height: 513px;
   padding: 140px 0 120px;
   background-color: #efefef;
 }
@@ -6604,8 +6606,10 @@ footer .container {
 @media screen and (max-width: 1024px) {
   .access_over_group {
     max-width: 574px;
+    height: 326px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 51px 0 35px;
   }
 }
 
@@ -6634,7 +6638,10 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .access_over_item {
-    width: calc(50%);
+    width: calc(50% - 10px);
+  }
+  .access_over_item:nth-child(odd) {
+    margin-left: 0;
   }
 }
 
@@ -6754,6 +6761,36 @@ footer .container {
 
 .access_over_logo._sgipomades {
   max-width: 167px;
+}
+
+@media screen and (max-width: 1024px) {
+  .access_over_logo._cheungleungkee {
+    max-width: 130px;
+  }
+  .access_over_logo._pavlion {
+    max-width: 107px;
+  }
+  .access_over_logo._hawooo {
+    max-width: 130px;
+  }
+  .access_over_logo._pnj {
+    max-width: 81px;
+  }
+  .access_over_logo._logo158 {
+    max-width: 235px;
+  }
+  .access_over_logo._hmxy {
+    max-width: 235px;
+  }
+  .access_over_logo._hypestages {
+    max-width: 167px;
+  }
+  .access_over_logo._maxelbeauty {
+    max-width: 167px;
+  }
+  .access_over_logo._sgipomades {
+    max-width: 167px;
+  }
 }
 
 .access_product {
