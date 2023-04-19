@@ -34,7 +34,7 @@ function scrollListener() {
 }
 for (let i = 0; i < recruitment_term.length; i++) {
 	const element = recruitment_term[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		var item = document.querySelector("#" + element.getAttribute("name"));
 		var nowScroll = window.scrollY;
 		var goScroll = item.offsetTop + defaultGo;
@@ -73,10 +73,9 @@ function goDown(from, to) {
 		}
 	}, 0);
 }
-window.onresize = function() {
+window.onresize = function () {
 	defaultGo = 98 + window.innerWidth * 0.3 - 66 - 103;
 };
-
 function getItemTop() {
 	var nowScroll = window.scrollY;
 	termArr = [];
@@ -100,7 +99,6 @@ function get_refer() {
 			hssCount++;
 		}
 	}
-	console.log("hssCount", hssCount);
 }
 function remove() {
 	if (hssCount == 0 && termCount !== null) {
@@ -120,7 +118,7 @@ setTimeout(() => {
 }, 300);
 
 var mailHandler = document.querySelector("#mailHandler");
-mailHandler.onclick = function() {
+mailHandler.onclick = function () {
 	const textarea = document.createElement("textarea");
 	textarea.value = mailHandler.innerHTML;
 	document.body.appendChild(textarea);
@@ -132,3 +130,38 @@ mailHandler.onclick = function() {
 		mailHandler.classList.remove("on");
 	}, 2500);
 };
+
+var office = document.querySelectorAll("#recruitment_office_group > .recruitment_office_item")
+var lightBox = document.querySelector("#lightBox");
+var lightBox_close = document.querySelector("#lightBox_close");
+
+
+for (let i = 0; i < office.length; i++) {
+	const element = office[i];
+	element.onclick = function () {
+		if (window.innerWidth > 1024) return
+		let num = i + 1
+		let getPic = document.querySelector(".recruitment_office_item:nth-child(" + num + ") > img");
+		document.querySelector("#lightBox_recruitmentTxt").innerHTML = element.getAttribute("data-office")
+		let setPic = document.querySelector("#lightBox_recruitmentPic");
+		const child = document.createElement("img");
+		child.setAttribute("src", getPic.getAttribute("src"))
+		setPic.append(child)
+		// element.getAttribute("data-office")
+		lightBox.classList.add("on")
+		setTimeout(() => {
+			lightBox.classList.add("op1")
+		}, 20);
+	}
+}
+lightBox_close.onclick = function () {
+	lightBox.classList.remove("op1")
+	setTimeout(() => {
+		lightBox.classList.remove("on");
+		document.querySelector("#lightBox_recruitmentPic").innerHTML = "";
+		document.querySelector("#lightBox_recruitmentTxt").innerHTML = "";
+	}, 50);
+
+
+
+}

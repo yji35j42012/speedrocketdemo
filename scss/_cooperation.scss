@@ -25,116 +25,189 @@
 		max-width: 1374px;
 		margin: 77px auto 0;
 		@include mw(L) {
-			max-width: 574px;
+			// max-width: 574px;
+			align-items: flex-start;
+			max-width: 380px;
 			margin-top: 36px;
 		}
 	}
 	// .cooperation_pic
 	&_pic {
-		width: calc(100% / 5 - 16px);
-		text-align: center;
-		margin-left: 20px;
-		&:nth-child(5n + 1) {
-			@include minmw(L) {
-				margin-left: 0;
-			}
-		}
-		&:nth-child(3n + 1) {
-			@include mw(L) {
-				margin-left: 0;
-			}
-		}
-		.family {
+		@include d_f(flex, center, center);
+		width: 100%;
+		&._family {
 			max-width: 207px;
+			height: 64px;
+			margin-bottom: 67px;
 		}
-		.bonnyread {
+		&._bonnyread {
 			max-width: 199px;
+			height: 64px;
+			margin-left: 93px;
+			margin-bottom: 50px;
 		}
-		.jgao {
+		&._jgao {
 			max-width: 197px;
+			height: 64px;
+			margin-left: 93px;
+			margin-bottom: 51px;
 		}
-		.murfeeli {
+		&._murfeeli {
 			max-width: 178px;
+			height: 64px;
+			margin-left: 93px;
+			margin-bottom: 48px;
 		}
-		.hj {
+		&._hj {
 			max-width: 193px;
+			height: 64px;
+			margin-left: 93px;
+			margin-bottom: 46px;
 		}
-		.cheungleungkee {
+		//
+		&._cheungleungkee {
 			max-width: 203px;
+			height: 77px;
+			margin-bottom: 61px;
 		}
-		.yourkind {
+		&._yourkind {
 			max-width: 179px;
+			height: 77px;
+			margin-left: 106px;
+			margin-bottom: 52px;
 		}
-		.bggoldnatural {
+		&._bggoldnatural {
 			max-width: 160px;
+			height: 77px;
+			margin-left: 110px;
+			margin-bottom: 57px;
 		}
-		.ecpay {
+		&._ecpay {
 			max-width: 150px;
+			height: 77px;
+			margin-left: 141px;
+			margin-bottom: 64px;
 		}
-		.newepay {
+		&._newepay {
 			max-width: 134px;
+			height: 77px;
+			margin-left: 148px;
+			margin-bottom: 70px;
 		}
-		.ezship {
+		//
+		&._ezship {
 			max-width: 197px;
+			height: 65px;
 		}
-		.opay {
+		&._opay {
 			max-width: 141px;
+			height: 65px;
+			margin-left: 133px;
 		}
-		.smilepay {
+		&._smilepay {
 			max-width: 141px;
+			height: 65px;
+			margin-left: 144px;
 		}
-		.cetustek {
+		&._cetustek {
 			max-width: 255px;
+			height: 65px;
+			margin-left: 86px;
 		}
-		.ezpay {
+		&._ezpay {
 			max-width: 190px;
+			height: 65px;
+			margin-left: 58px;
 		}
+
 		@include mw(L) {
-			width: calc(100% / 3 - 14px);
-			.family {
+			&._family {
 				max-width: 90px;
+				height:28px;
+				margin-bottom: 22px;
 			}
-			.bonnyread {
+			&._bonnyread {
 				max-width: 90px;
+				height: 28px;
+				margin-left: 27px;
+				margin-bottom: 17px;
 			}
-			.jgao {
+			&._jgao {
 				max-width: 90px;
+				height: 28px;
+				margin-left: 29px;
+				margin-bottom: 24px;
 			}
-			.murfeeli {
+			&._murfeeli {
 				max-width: 90px;
+				height: 29px;
+				margin-left: 0;
+				margin-bottom: 20px;
 			}
-			.hj {
+			&._hj {
 				max-width: 90px;
+				height: 29px;
+				margin-left: 27px;
+				margin-bottom: 20px;
 			}
-			.cheungleungkee {
+			//
+			&._cheungleungkee {
 				max-width: 90px;
+				height: 29px;
+				margin-left: 29px;
+				margin-bottom: 35px;
 			}
-			.yourkind {
+			&._yourkind {
 				max-width: 90px;
+				height: 38px;
+				margin-left: 0px;
+				margin-bottom: 23px;
 			}
-			.bggoldnatural {
+			&._bggoldnatural {
 				max-width: 90px;
+				height: 38px;
+				margin-left: 27px;
+				margin-bottom: 24px;
 			}
-			.ecpay {
+			&._ecpay {
 				max-width: 77px;
+				height: 38px;
+				margin-left: 35px;
+				margin-bottom: 24px;
 			}
-			.newepay {
-				max-width: 65px;
+			&._newepay {
+				max-width:65px;
+				height: 33px;
+				margin-left: 0px;
+				margin-bottom: 23px;
 			}
-			.ezship {
+			//
+			&._ezship {
 				max-width: 90px;
+				height: 33px;
+				margin-left: 39px;
+				margin-bottom: 33px;
 			}
-			.opay {
+			&._opay {
 				max-width: 75px;
+				height: 33px;
+				margin-left: 37px;
+				margin-bottom: 23px;
 			}
-			.smilepay {
+			&._smilepay {
 				max-width: 78px;
+				height: 36px;
+				margin-left: 0px;
 			}
-			.cetustek {
+			&._cetustek {
 				max-width: 112px;
+				height: 36px;;
+				margin-left:22px;
 			}
-			.ezpay {
+			&._ezpay {
 				max-width: 83px;
+				height: 36px;
+				margin-left: 21px;
 			}
 		}
 	}
@@ -173,9 +246,11 @@
 				background-color: #f3f3f3;
 			}
 
-			&._md,&._wd,&._fd{
+			&._md,
+			&._wd,
+			&._fd {
 				margin-left: 24px;
-				@include mw(L){
+				@include mw(L) {
 					margin-left: 12px;
 				}
 			}

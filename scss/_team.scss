@@ -8,10 +8,6 @@
 	&_group {
 		@include d_f(flex);
 		flex-wrap: wrap;
-		gap: 48px;
-		@include mw(L) {
-			gap: 12px;
-		}
 	}
 	// .team_item
 	&_item {
