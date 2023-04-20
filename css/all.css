@@ -1064,8 +1064,9 @@ footer .container {
 }
 
 .cooperation .container {
-  max-width: 1386px;
+  max-width: 1387px;
   padding-top: 117px;
+  padding: 0 10px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1656,6 +1657,7 @@ footer .container {
   padding-top: 120px;
   color: #333333;
   border-radius: 16px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -5941,7 +5943,13 @@ footer .container {
   margin: 77px auto 0;
 }
 
-@media screen and (max-width: 1385px) {
+@media screen and (max-width: 1404px) {
+  .cooperation_pics {
+    max-width: 1147px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .cooperation_pics {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -5973,95 +5981,160 @@ footer .container {
 .cooperation_pic._bonnyread {
   max-width: 199px;
   height: 64px;
-  margin-left: 93px;
+  margin-left: 92px;
   margin-bottom: 50px;
+}
+
+.cooperation_pic._bonnyread img {
+  max-width: 189px;
 }
 
 .cooperation_pic._jgao {
   max-width: 197px;
   height: 64px;
-  margin-left: 93px;
+  margin-left: 92px;
   margin-bottom: 51px;
 }
 
 .cooperation_pic._murfeeli {
-  max-width: 178px;
+  max-width: 255px;
   height: 64px;
-  margin-left: 93px;
+  margin-left: 62px;
   margin-bottom: 48px;
+}
+
+.cooperation_pic._murfeeli img {
+  max-width: 178px;
 }
 
 .cooperation_pic._hj {
   max-width: 193px;
   height: 64px;
-  margin-left: 93px;
+  margin-left: 50px;
   margin-bottom: 46px;
 }
 
 .cooperation_pic._cheungleungkee {
-  max-width: 203px;
+  max-width: 207px;
   height: 77px;
   margin-bottom: 61px;
 }
 
+.cooperation_pic._cheungleungkee img {
+  max-width: 203px;
+}
+
 .cooperation_pic._yourkind {
-  max-width: 179px;
+  max-width: 199px;
   height: 77px;
-  margin-left: 106px;
+  margin-left: 92px;
   margin-bottom: 52px;
 }
 
+.cooperation_pic._yourkind img {
+  max-width: 179px;
+}
+
 .cooperation_pic._bggoldnatural {
-  max-width: 160px;
+  max-width: 197px;
   height: 77px;
-  margin-left: 110px;
+  margin-left: 92px;
   margin-bottom: 57px;
 }
 
+.cooperation_pic._bggoldnatural img {
+  max-width: 160px;
+}
+
 .cooperation_pic._ecpay {
-  max-width: 150px;
+  max-width: 255px;
   height: 77px;
-  margin-left: 141px;
+  margin-left: 62px;
   margin-bottom: 64px;
 }
 
+.cooperation_pic._ecpay img {
+  max-width: 150px;
+}
+
 .cooperation_pic._newepay {
-  max-width: 134px;
+  max-width: 193px;
   height: 77px;
-  margin-left: 148px;
+  margin-left: 50px;
   margin-bottom: 70px;
 }
 
+.cooperation_pic._newepay img {
+  max-width: 134px;
+}
+
 .cooperation_pic._ezship {
-  max-width: 197px;
+  max-width: 207px;
   height: 65px;
+}
+
+.cooperation_pic._ezship img {
+  max-width: 197px;
 }
 
 .cooperation_pic._opay {
-  max-width: 141px;
+  max-width: 199px;
   height: 65px;
-  margin-left: 133px;
+  margin-left: 92px;
+}
+
+.cooperation_pic._opay img {
+  max-width: 141px;
 }
 
 .cooperation_pic._smilepay {
-  max-width: 141px;
+  max-width: 197px;
   height: 65px;
-  margin-left: 144px;
+  margin-left: 92px;
+}
+
+.cooperation_pic._smilepay img {
+  max-width: 141px;
 }
 
 .cooperation_pic._cetustek {
   max-width: 255px;
   height: 65px;
-  margin-left: 86px;
+  margin-left: 62px;
 }
 
 .cooperation_pic._ezpay {
-  max-width: 190px;
+  max-width: 193px;
   height: 65px;
-  margin-left: 58px;
+  margin-left: 50px;
 }
 
-@media screen and (max-width: 1385px) {
+@media screen and (max-width: 1404px) {
+  .cooperation_pic._family, .cooperation_pic._cheungleungkee, .cooperation_pic._ezship {
+    max-width: 173px;
+  }
+  .cooperation_pic._bonnyread, .cooperation_pic._yourkind, .cooperation_pic._opay {
+    max-width: 174px;
+    margin-left: 30px;
+  }
+  .cooperation_pic._jgao, .cooperation_pic._smilepay, .cooperation_pic._bggoldnatural {
+    max-width: 172px;
+    margin-left: 30px;
+  }
+  .cooperation_pic._murfeeli, .cooperation_pic._ecpay, .cooperation_pic._cetustek {
+    max-width: 170px;
+    margin-left: 30px;
+  }
+  .cooperation_pic._hj, .cooperation_pic._newepay, .cooperation_pic._ezpay {
+    max-width: 168px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cooperation_pic._family img, .cooperation_pic._bonnyread img, .cooperation_pic._jgao img, .cooperation_pic._murfeeli img, .cooperation_pic._hj img, .cooperation_pic._cheungleungkee img, .cooperation_pic._yourkind img, .cooperation_pic._bggoldnatural img, .cooperation_pic._ecpay img, .cooperation_pic._newepay img, .cooperation_pic._ezship img, .cooperation_pic._opay img, .cooperation_pic._smilepay img, .cooperation_pic._cetustek img, .cooperation_pic._ezpay img {
+    max-width: auto;
+  }
   .cooperation_pic._family {
     max-width: 90px;
     height: 28px;

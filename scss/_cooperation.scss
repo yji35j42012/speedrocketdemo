@@ -24,7 +24,10 @@
 		flex-wrap: wrap;
 		max-width: 1374px;
 		margin: 77px auto 0;
-		@media screen and (max-width: 1385px) {
+		@media screen and (max-width: 1404px) {
+			max-width: 1147px;
+		}
+		@include mw(L) {
 			& {
 				// max-width: 574px;
 				align-items: flex-start;
@@ -45,84 +48,253 @@
 		&._bonnyread {
 			max-width: 199px;
 			height: 64px;
-			margin-left: 93px;
+			margin-left: 92px;
 			margin-bottom: 50px;
+			img {
+				max-width: 189px;
+			}
 		}
 		&._jgao {
 			max-width: 197px;
 			height: 64px;
-			margin-left: 93px;
+			margin-left: 92px;
 			margin-bottom: 51px;
 		}
 		&._murfeeli {
-			max-width: 178px;
+			max-width: 255px;
 			height: 64px;
-			margin-left: 93px;
+			margin-left: 62px;
 			margin-bottom: 48px;
+			img {
+				max-width: 178px;
+			}
 		}
 		&._hj {
 			max-width: 193px;
 			height: 64px;
-			margin-left: 93px;
+			margin-left: 50px;
 			margin-bottom: 46px;
 		}
 		//
 		&._cheungleungkee {
-			max-width: 203px;
+			max-width: 207px;
 			height: 77px;
 			margin-bottom: 61px;
+			img {
+				max-width: 203px;
+			}
 		}
 		&._yourkind {
-			max-width: 179px;
+			max-width: 199px;
 			height: 77px;
-			margin-left: 106px;
+			margin-left: 92px;
 			margin-bottom: 52px;
+			img {
+				max-width: 179px;
+			}
 		}
 		&._bggoldnatural {
-			max-width: 160px;
+			max-width: 197px;
 			height: 77px;
-			margin-left: 110px;
+			margin-left: 92px;
 			margin-bottom: 57px;
+			img {
+				max-width: 160px;
+			}
 		}
 		&._ecpay {
-			max-width: 150px;
+			max-width: 255px;
 			height: 77px;
-			margin-left: 141px;
+			margin-left: 62px;
 			margin-bottom: 64px;
+			img {
+				max-width: 150px;
+			}
 		}
 		&._newepay {
-			max-width: 134px;
+			max-width: 193px;
 			height: 77px;
-			margin-left: 148px;
+			margin-left: 50px;
 			margin-bottom: 70px;
+			img {
+				max-width: 134px;
+			}
 		}
 		//
 		&._ezship {
-			max-width: 197px;
+			max-width: 207px;
 			height: 65px;
+			img {
+				max-width: 197px;
+			}
 		}
 		&._opay {
-			max-width: 141px;
+			max-width: 199px;
 			height: 65px;
-			margin-left: 133px;
+			margin-left: 92px;
+			img {
+				max-width: 141px;
+			}
 		}
 		&._smilepay {
-			max-width: 141px;
+			max-width: 197px;
 			height: 65px;
-			margin-left: 144px;
+			margin-left: 92px;
+			img {
+				max-width: 141px;
+			}
 		}
 		&._cetustek {
 			max-width: 255px;
 			height: 65px;
-			margin-left: 86px;
+			margin-left: 62px;
 		}
 		&._ezpay {
-			max-width: 190px;
+			max-width: 193px;
 			height: 65px;
-			margin-left: 58px;
+			margin-left: 50px;
 		}
+		// &._family {
+		// 	max-width: 207px;
+		// 	height: 64px;
+		// 	margin-bottom: 67px;
+		// }
+		// &._bonnyread {
+		// 	max-width: 199px;
+		// 	height: 64px;
+		// 	margin-left: 93px;
+		// 	margin-bottom: 50px;
+		// }
+		// &._jgao {
+		// 	max-width: 197px;
+		// 	height: 64px;
+		// 	margin-left: 93px;
+		// 	margin-bottom: 51px;
+		// }
+		// &._murfeeli {
+		// 	max-width: 178px;
+		// 	height: 64px;
+		// 	margin-left: 93px;
+		// 	margin-bottom: 48px;
+		// }
+		// &._hj {
+		// 	max-width: 193px;
+		// 	height: 64px;
+		// 	margin-left: 93px;
+		// 	margin-bottom: 46px;
+		// }
+		// //
+		// &._cheungleungkee {
+		// 	max-width: 203px;
+		// 	height: 77px;
+		// 	margin-bottom: 61px;
+		// }
+		// &._yourkind {
+		// 	max-width: 179px;
+		// 	height: 77px;
+		// 	margin-left: 106px;
+		// 	margin-bottom: 52px;
+		// }
+		// &._bggoldnatural {
+		// 	max-width: 160px;
+		// 	height: 77px;
+		// 	margin-left: 110px;
+		// 	margin-bottom: 57px;
+		// }
+		// &._ecpay {
+		// 	max-width: 154px;
+		// 	height: 77px;
+		// 	margin-left: 137px;
+		// 	margin-bottom: 64px;
+		// 	img{
+		// 		max-width: 150px;
+		// 	}
+		// }
+		// &._newepay {
+		// 	max-width: 190px;
+		// 	height: 77px;
+		// 	margin-left: 105px;
+		// 	margin-bottom: 70px;
+		// 	img{
+		// 		max-width: 134px;
+		// 	}
+		// }
+		// //
+		// &._ezship {
+		// 	max-width: 203px;
+		// 	height: 65px;
+		// 	img{
+		// 		max-width: 197px;
+		// 	}
+		// }
+		// &._opay {
+		// 	max-width: 141px;
+		// 	height: 65px;
+		// 	margin-left: 127px;
+		// }
+		// &._smilepay {
+		// 	max-width: 141px;
+		// 	height: 65px;
+		// 	margin-left: 144px;
+		// }
+		// &._cetustek {
+		// 	max-width: 255px;
+		// 	height: 65px;
+		// 	margin-left: 86px;
+		// }
+		// &._ezpay {
+		// 	max-width: 190px;
+		// 	height: 65px;
+		// 	margin-left: 58px;
+		// }
+		@media screen and (max-width: 1404px) {
+			&._family,
+			&._cheungleungkee,
+			&._ezship {
+				max-width: 173px;
+			}
+			&._bonnyread,&._yourkind,&._opay {
+				max-width: 174px;
+				margin-left: 30px;
+			}
 
-		@media screen and (max-width: 1385px) {
+			&._jgao,&._smilepay,&._bggoldnatural {
+				max-width: 172px;
+				margin-left: 30px;
+			}
+			&._murfeeli,&._ecpay,&._cetustek {
+				max-width: 170px;
+				margin-left: 30px;
+			}
+			&._hj,&._newepay,&._ezpay {
+				max-width: 168px;
+				margin-left: 30px;
+			}
+
+
+
+		}
+		// @media screen and (max-width: 1385px) {
+		@include mw(L) {
+			&._family,
+			&._bonnyread,
+			&._jgao,
+			&._murfeeli,
+			&._hj,
+			&._cheungleungkee,
+			&._yourkind,
+			&._bggoldnatural,
+			&._ecpay,
+			&._newepay,
+			&._ezship,
+			&._opay,
+			&._smilepay,
+			&._cetustek,
+			&._ezpay {
+				img {
+					max-width: auto;
+				}
+			}
 			&._family {
 				max-width: 90px;
 				height: 28px;

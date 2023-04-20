@@ -689,8 +689,9 @@ h4 {
 		}
 	}
 	@at-root .cooperation & {
-		max-width: 1386px;
+		max-width: 1387px;
 		padding-top: 117px;
+		padding: 0 10px;
 		@include mw(L) {
 			padding: 45px 0 0;
 		}
@@ -1049,6 +1050,7 @@ h4 {
 		padding-top: 120px;
 		color: #333333;
 		border-radius: 16px;
+		text-align: center;
 		@include mw(L) {
 			position: relative;
 			top: 0;
