@@ -165,6 +165,9 @@ var access_maxCount = device == 'pc' ? Math.ceil(access_pic.length / 4) : access
 var over_dots = document.querySelector("#over_dots");
 var over_dots_item = null;
 var lightBox = document.querySelector("#lightBox");
+var lightBox_close = document.querySelector("#lightBox_close");
+
+
 over_next.onclick = function () {
 	console.log('access_count', access_count);
 	if (access_count + 1 >= access_maxCount) {
@@ -187,13 +190,33 @@ over_prev.onclick = function () {
 	access_moveHandler();
 	dotsAccessHandler();
 };
+
 function access_moveHandler() {
 	for (let i = 0; i < access_pic.length; i++) {
 		const element = access_pic[i];
-		element.style.display = "none";
-		if (device=='ph') {
+		if (device == 'ph') {
 			element.onclick = function () {
-				
+				lightBox.classList.add("on");
+				setTimeout(() => {
+					lightBox.classList.add("op1");
+				}, 50);
+				let num = i + 1;
+				var getImg1 = document.querySelector(".access_over_item:nth-child(" + num + ") > .access_over_flag")
+				var getImg2 = document.querySelector(".access_over_item:nth-child(" + num + ") > .access_over_logo")
+				var getTxt1 = document.querySelector(".access_over_item:nth-child(" + num + ") .hoverItem_country")
+				var getTxt2 = document.querySelector(".access_over_item:nth-child(" + num + ") .hoverItem_countryTw")
+				var getTxt3 = document.querySelector(".access_over_item:nth-child(" + num + ") .hoverItem_shop")
+
+				var lightBox_flag = document.querySelector("#lightBox_flag");
+				var lightBox_logo = document.querySelector("#lightBox_logo");
+				var lightBox_country = document.querySelector("#lightBox_country");
+				var lightBox_countryTw = document.querySelector("#lightBox_countryTw");
+				var lightBox_shop = document.querySelector("#lightBox_shop");
+				lightBox_flag.setAttribute("src",getImg1.getAttribute('src'))
+				lightBox_logo.setAttribute("src",getImg2.getAttribute('src'))
+				lightBox_country.innerHTML = getTxt1.innerHTML
+				lightBox_countryTw.innerHTML = getTxt2.innerHTML
+				lightBox_shop.innerHTML = getTxt3.innerHTML
 			};
 		}
 	}
@@ -207,6 +230,12 @@ function access_moveHandler() {
 	// }
 	// access.style.height = access.offsetHeight + 'px';
 	access.style = `transform: translateX(${access_moveNum}%);transition-duration: 0.3s;opacity:1;`;
+}
+lightBox_close.onclick = function () {
+	lightBox.classList.remove("op1");
+	setTimeout(() => {
+		lightBox.classList.remove("on");
+	}, 50);
 }
 
 function dotsAccessHandler() {
@@ -269,7 +298,7 @@ setTimeout(() => {
 	// 	pushEpmt();
 	// 	pushAccessEnd();
 	// 	pushAccessStart();
-	// 	access_moveHandler();
+	access_moveHandler();
 	pushAccissDots();
 }, 100);
 
