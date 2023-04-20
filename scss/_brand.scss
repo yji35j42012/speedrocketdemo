@@ -199,7 +199,7 @@
 	&_over {
 		overflow: hidden;
 		position: relative;
-		@include d_f(flex,center,center);
+		@include d_f(flex, center, center);
 		margin-top: 137px;
 		padding-top: 80px;
 		@include mw(L) {
@@ -283,82 +283,12 @@
 				padding-bottom: 40px;
 				margin-left: 0;
 				padding: 30px 0;
-				// &:nth-child(1),
-				// &:nth-child(2),
-				// &:nth-child(5),
-				// &:nth-child(6),
-				// &:nth-child(9),
-				// &:nth-child(10) {
-				// 	border-bottom: 1px solid #333333;
-				// }
 			}
 			&:nth-child(4n + 1) {
 				@include minmw(L) {
 					margin-left: 0;
 				}
 			}
-
-			// 		// .hoverItem_box
-			// 		&_box {
-			// 			position: relative;
-			// 			@include d_f(flex);
-			// 			flex-wrap: wrap;
-			// 			width: 100%;
-			// 			max-width: 362px;
-			// 			padding: 93px 50px 80px;
-			// 			background-color: #fff;
-			// 			border-radius: 20px;
-			// 		}
-			// 		// .hoverItem_txt
-			// 		&_txt {
-			// 			width: 50%;
-			// 			margin-top: 45px;
-			// 			text-align: left;
-			// 			border-right: 1px solid #333333;
-			// 		}
-			// 	}
-			// 	// .hoverItem_close
-			// 	&_close {
-			// 		display: none;
-			// 		@include mw(L) {
-			// 			position: absolute;
-			// 			top: 23px;
-			// 			right: 20px;
-			// 			width: 30px;
-			// 			height: 30px;
-			// 			display: block;
-			// 			&::before,
-			// 			&:after {
-			// 				content: "";
-			// 				position: absolute;
-			// 				width: 22px;
-			// 				height: 3px;
-			// 				background-color: #979797;
-			// 			}
-			// 			&::before {
-			// 				transform: rotate(45deg);
-			// 			}
-			// 			&::after {
-			// 				transform: rotate(-45deg);
-			// 			}
-			// 		}
-			// 	}
-			// 	// .hoverItem_pic
-			// 	&_pic {
-			// 		display: none;
-			// 		.access_over_flag {
-			// 			width: 40px;
-			// 			height: 40px;
-			// 		}
-			// 		.access_over_logo {
-
-			// 		}
-			// 		@include mw(L) {
-			// 			@include d_f(flex, center, center);
-			// 			flex-direction: column;
-			// 			width: 100%;
-			// 		}
-			// 	}
 
 			@include minmw(L) {
 				@include hoverHandler {
@@ -385,7 +315,6 @@
 		// .access_over_logo
 		&_logo {
 			margin-top: 50px;
-
 			&._cheungleungkee {
 				max-width: 253px;
 			}
@@ -473,16 +402,12 @@
 			@include d_f(flex, center);
 			width: 100%;
 			margin-top: 45px;
-			// border-right: 1px solid #333333;
-			div{
+			div {
 				position: relative;
-				// @include d_f(flex, center,flex-end);
-				// flex-direction: column;
-				// width: 45%;
 				text-align: left;
 				padding-right: 20px;
-				&::after{
-					content:"";
+				&::after {
+					content: "";
 					position: absolute;
 					top: 0;
 					right: 0;
@@ -617,13 +542,13 @@
 			padding: 0 5px;
 			font-size: 18px;
 			// border-right: 1px solid #333333;
-			border: none;;
+			border: none;
 			text-align: center;
 			&::before {
 				display: none;
 			}
-			&::after{
-				content:"";
+			&::after {
+				content: "";
 				position: absolute;
 				top: 0;
 				right: 0;
