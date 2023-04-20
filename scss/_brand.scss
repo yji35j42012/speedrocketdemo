@@ -199,7 +199,7 @@
 	&_over {
 		overflow: hidden;
 		position: relative;
-		// @include d_f(flex,none,center);
+		@include d_f(flex,center,center);
 		margin-top: 137px;
 		padding-top: 80px;
 		@include mw(L) {
@@ -248,7 +248,7 @@
 			position: relative;
 			@include d_f(inline-flex);
 			width: 100%;
-			max-width: 1018px;
+			max-width: 1400px;
 			height: 513px;
 			padding: 140px 0 120px;
 			background-color: #efefef;

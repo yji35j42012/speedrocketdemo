@@ -181,8 +181,9 @@ over_prev.onclick = function() {
 function access_moveHandler() {
 	for (let i = 0; i < access_pic.length; i++) {
 		const element = access_pic[i];
-		if (device == "ph") {
+
 			element.onclick = function() {
+				if (device == "pc") return;
 				lightBox.classList.add("on");
 				setTimeout(() => {
 					lightBox.classList.add("op1");
@@ -227,7 +228,7 @@ function access_moveHandler() {
 				lightBox_countryTw.innerHTML = getTxt2.innerHTML;
 				lightBox_shop.innerHTML = getTxt3.innerHTML;
 			};
-		}
+
 	}
 	// let start = access_count * 4;
 	// let end =

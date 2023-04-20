@@ -809,8 +809,10 @@ h4 span {
 }
 
 .access_over .icon_prev, .access_over .icon_next {
-  top: 80px;
-  bottom: 30px;
+  position: relative;
+  right: 0;
+  left: 0;
+  margin: 0;
   fill: #333;
 }
 
@@ -843,6 +845,10 @@ h4 span {
   }
 }
 
+.access_over .icon_prev {
+  margin-left: 20px;
+}
+
 .icon_next {
   right: 65px;
 }
@@ -851,6 +857,10 @@ h4 span {
   .icon_next {
     right: 20px;
   }
+}
+
+.access_over .icon_next {
+  margin-right: 20px;
 }
 
 .filiter {
@@ -3285,6 +3295,11 @@ footer .container {
   .access_product .overflow_box {
     max-width: 574px;
   }
+}
+
+.access_over .overflow_box {
+  max-width: 1400px;
+  margin: 0 50px;
 }
 
 .access_over .overflow_box::before {
@@ -6800,6 +6815,15 @@ footer .container {
 .access_over {
   overflow: hidden;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 137px;
   padding-top: 80px;
 }
@@ -6867,7 +6891,7 @@ footer .container {
       -ms-flex-align: stretch;
           align-items: stretch;
   width: 100%;
-  max-width: 1018px;
+  max-width: 1400px;
   height: 513px;
   padding: 140px 0 120px;
   background-color: #efefef;
