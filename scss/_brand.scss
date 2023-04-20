@@ -47,6 +47,9 @@
 			margin-top: 34px;
 			padding-bottom: 0;
 		}
+		@at-root .brandSH._kp & {
+			padding-bottom: 0;
+		}
 		// .brandSH_introduction_h2
 		&_h2 {
 			margin-top: 165px;
@@ -122,7 +125,13 @@
 		padding: 137px 0;
 		background: url("../images/brand_shareco/photowall_background.png")
 			no-repeat center/cover;
-
+		@at-root .brandSH._kp & {
+			@include d_f(flex, none, center);
+			padding-top: 241px;
+			padding-bottom: 246px;
+			background-image: unset;
+			// background-image: url("../images/brand_kp/photowall_background.png");
+		}
 		@include mw(L) {
 			padding: 80px 0;
 		}
@@ -153,6 +162,11 @@
 			}
 			// }
 		}
+		// .brandSH_photowall_bg
+		&_bg {
+			position: absolute;
+			pointer-events: none;
+		}
 	}
 }
 
@@ -161,6 +175,9 @@
 	text-align: center;
 	@include mw(L) {
 		padding-top: 28px;
+	}
+	@at-root .brandSH._kp & {
+		padding-top: 0;
 	}
 	// .access_group
 	&_group {

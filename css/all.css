@@ -6582,6 +6582,10 @@ footer .container {
   }
 }
 
+.brandSH._kp .brandSH_introduction {
+  padding-bottom: 0;
+}
+
 .brandSH_introduction_h2 {
   margin-top: 165px;
 }
@@ -6710,6 +6714,21 @@ footer .container {
   background: url("../images/brand_shareco/photowall_background.png") no-repeat center/cover;
 }
 
+.brandSH._kp .brandSH_photowall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 241px;
+  padding-bottom: 246px;
+  background-image: unset;
+}
+
 @media screen and (max-width: 1024px) {
   .brandSH_photowall {
     padding: 80px 0;
@@ -6756,6 +6775,11 @@ footer .container {
   margin-left: 0;
 }
 
+.brandSH_photowall_bg {
+  position: absolute;
+  pointer-events: none;
+}
+
 .access {
   padding-top: 114px;
   text-align: center;
@@ -6765,6 +6789,10 @@ footer .container {
   .access {
     padding-top: 28px;
   }
+}
+
+.brandSH._kp .access {
+  padding-top: 0;
 }
 
 .access_group {
