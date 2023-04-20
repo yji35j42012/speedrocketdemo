@@ -1,32 +1,10 @@
+//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 
-
-
-
-
-// 
+//
 // // var access_time = 6; //6秒
 // let accessTime = null;
 
-
-// 
+//
 // var hoverItemClose = document.querySelectorAll(
 // 	"#access_over_group .hoverItem_close"
 // );
@@ -66,7 +44,6 @@
 // 		hoverItem[i].classList.remove("on");
 // 	};
 // }
-
 
 // // window.onresize = function () {
 // // 	if( window.innerWidth <= 1024){
@@ -149,7 +126,7 @@
 // 	}
 // }
 
-// 	
+//
 // 	dotsAccessHandler();
 // 	dotAccessItem();
 // }
@@ -177,79 +154,20 @@
 // 	}
 // }
 
-
 // // accessTimeHandler();
 
 
 
-// var product_prev = document.querySelector("#product_prev");
-// var product_next = document.querySelector("#product_next");
-// var product_group = document.querySelector("#access_product_group");
-// var product_item = document.querySelectorAll(
-// 	"#access_product_group > .access_product_item"
-// );
-// var product_count = 0;
-// var product_maxCount = product_item.length;
+//
 // var product_dots = document.querySelector("#product_dots");
-// var product_dots_item = null;
-// product_next.onclick = function() {
-// 	if (product_count + 1 >= product_maxCount) {
-// 		product_count = 0;
-// 	} else {
-// 		product_count++;
-// 	}
-// 	product_moveHandler();
-// 	// resetAccessTime();
-// 	dotsProductHandler();
-// };
-// product_prev.onclick = function() {
-// 	if (product_count == 0) {
-// 		product_count = product_maxCount - 1;
-// 	} else {
-// 		product_count--;
-// 	}
-// 	product_moveHandler();
-// 	// resetAccessTime();
-// 	dotsProductHandler();
-// };
-// function product_moveHandler() {
-// 	for (let i = 0; i < product_item.length; i++) {
-// 		if (window.innerWidth <= 1024) {
-// 			const element = product_item[i];
-// 			element.style.display = "none";
-// 			product_item[product_count].style.display = "block";
-// 		}
-// 	}
-// }
-// function allDotsRemoveProduct() {
-// 	for (let i = 0; i < product_dots_item.length; i++) {
-// 		const element = product_dots_item[i];
-// 		element.classList.remove("on");
-// 	}
-// }
-// function dotsProductHandler() {
-// 	allDotsRemoveProduct();
-// 	product_dots_item[product_count].classList.add("on");
-// }
-// function dotProductItem() {
-// 	for (let i = 0; i < product_dots_item.length; i++) {
-// 		const element = product_dots_item[i];
-// 		element.onclick = function() {
-// 			product_count = i;
-// 			product_moveHandler();
-// 			dotsProductHandler();
-// 		};
-// 	}
-// }
-// function pushProductDots() {
-// 	for (let i = 0; i < product_maxCount; i++) {
-// 		const liDot = document.createElement("li");
-// 		liDot.setAttribute("class", "normal_dots_item");
-// 		product_dots.append(liDot);
-// 	}
-// 	product_dots_item = document.querySelectorAll("#product_dots >li");
+
+
+
+
+
+//
 // 	dotsProductHandler();
 // 	dotProductItem();
 // }
 // product_moveHandler();
-// pushProductDots();
+//

@@ -792,6 +792,7 @@ h4 span {
 }
 
 .icon_prev, .icon_next {
+  z-index: 1;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -6683,6 +6684,7 @@ footer .container {
     max-width: 560px;
     -webkit-transform: translateY(-31px);
             transform: translateY(-31px);
+    text-align: left;
   }
 }
 
