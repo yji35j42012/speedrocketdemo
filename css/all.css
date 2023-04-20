@@ -5972,17 +5972,23 @@ footer .container {
   width: 100%;
 }
 
+.cooperation_pic._family, .cooperation_pic._bonnyread, .cooperation_pic._jgao, .cooperation_pic._murfeeli, .cooperation_pic._hj {
+  height: 64px;
+  margin-bottom: 41px;
+}
+
+.cooperation_pic._cheungleungkee, .cooperation_pic._yourkind, .cooperation_pic._bggoldnatural, .cooperation_pic._ecpay, .cooperation_pic._newepay {
+  height: 77px;
+  margin-bottom: 19px;
+}
+
 .cooperation_pic._family {
   max-width: 207px;
-  height: 64px;
-  margin-bottom: 67px;
 }
 
 .cooperation_pic._bonnyread {
   max-width: 199px;
-  height: 64px;
   margin-left: 92px;
-  margin-bottom: 50px;
 }
 
 .cooperation_pic._bonnyread img {
@@ -5991,16 +5997,12 @@ footer .container {
 
 .cooperation_pic._jgao {
   max-width: 197px;
-  height: 64px;
   margin-left: 92px;
-  margin-bottom: 51px;
 }
 
 .cooperation_pic._murfeeli {
   max-width: 255px;
-  height: 64px;
   margin-left: 62px;
-  margin-bottom: 48px;
 }
 
 .cooperation_pic._murfeeli img {
@@ -6009,15 +6011,11 @@ footer .container {
 
 .cooperation_pic._hj {
   max-width: 193px;
-  height: 64px;
   margin-left: 50px;
-  margin-bottom: 46px;
 }
 
 .cooperation_pic._cheungleungkee {
   max-width: 207px;
-  height: 77px;
-  margin-bottom: 61px;
 }
 
 .cooperation_pic._cheungleungkee img {
@@ -6026,9 +6024,7 @@ footer .container {
 
 .cooperation_pic._yourkind {
   max-width: 199px;
-  height: 77px;
   margin-left: 92px;
-  margin-bottom: 52px;
 }
 
 .cooperation_pic._yourkind img {
@@ -6037,9 +6033,7 @@ footer .container {
 
 .cooperation_pic._bggoldnatural {
   max-width: 197px;
-  height: 77px;
   margin-left: 92px;
-  margin-bottom: 57px;
 }
 
 .cooperation_pic._bggoldnatural img {
@@ -6048,9 +6042,7 @@ footer .container {
 
 .cooperation_pic._ecpay {
   max-width: 255px;
-  height: 77px;
   margin-left: 62px;
-  margin-bottom: 64px;
 }
 
 .cooperation_pic._ecpay img {
@@ -6059,18 +6051,19 @@ footer .container {
 
 .cooperation_pic._newepay {
   max-width: 193px;
-  height: 77px;
   margin-left: 50px;
-  margin-bottom: 70px;
 }
 
 .cooperation_pic._newepay img {
   max-width: 134px;
 }
 
+.cooperation_pic._ezship, .cooperation_pic._opay, .cooperation_pic._opay, .cooperation_pic._opay, .cooperation_pic._opay {
+  height: 126px;
+}
+
 .cooperation_pic._ezship {
   max-width: 207px;
-  height: 65px;
 }
 
 .cooperation_pic._ezship img {
@@ -6079,7 +6072,6 @@ footer .container {
 
 .cooperation_pic._opay {
   max-width: 199px;
-  height: 65px;
   margin-left: 92px;
 }
 
@@ -6089,7 +6081,6 @@ footer .container {
 
 .cooperation_pic._smilepay {
   max-width: 197px;
-  height: 65px;
   margin-left: 92px;
 }
 
@@ -6099,13 +6090,11 @@ footer .container {
 
 .cooperation_pic._cetustek {
   max-width: 255px;
-  height: 65px;
   margin-left: 62px;
 }
 
 .cooperation_pic._ezpay {
   max-width: 193px;
-  height: 65px;
   margin-left: 50px;
 }
 
@@ -6141,10 +6130,13 @@ footer .container {
     margin-bottom: 22px;
   }
   .cooperation_pic._bonnyread {
-    max-width: 90px;
+    max-width: 112px;
     height: 28px;
-    margin-left: 27px;
+    margin-left: 22px;
     margin-bottom: 17px;
+  }
+  .cooperation_pic._bonnyread img {
+    max-width: 90px;
   }
   .cooperation_pic._jgao {
     max-width: 90px;
@@ -6159,10 +6151,13 @@ footer .container {
     margin-bottom: 20px;
   }
   .cooperation_pic._hj {
-    max-width: 90px;
+    max-width: 112px;
     height: 29px;
-    margin-left: 27px;
+    margin-left: 22px;
     margin-bottom: 20px;
+  }
+  .cooperation_pic._hj img {
+    max-width: 90px;
   }
   .cooperation_pic._cheungleungkee {
     max-width: 90px;
@@ -6177,39 +6172,57 @@ footer .container {
     margin-bottom: 23px;
   }
   .cooperation_pic._bggoldnatural {
-    max-width: 90px;
+    max-width: 112px;
     height: 38px;
-    margin-left: 27px;
+    margin-left: 22px;
     margin-bottom: 24px;
+  }
+  .cooperation_pic._bggoldnatural img {
+    max-width: 90px;
   }
   .cooperation_pic._ecpay {
-    max-width: 77px;
+    max-width: 90px;
     height: 38px;
-    margin-left: 35px;
+    margin-left: 29px;
     margin-bottom: 24px;
   }
-  .cooperation_pic._newepay {
-    max-width: 65px;
-    height: 33px;
-    margin-left: 0px;
-    margin-bottom: 23px;
+  .cooperation_pic._ecpay img {
+    max-width: 77px;
   }
-  .cooperation_pic._ezship {
+  .cooperation_pic._newepay {
     max-width: 90px;
     height: 33px;
-    margin-left: 39px;
-    margin-bottom: 33px;
-  }
-  .cooperation_pic._opay {
-    max-width: 75px;
-    height: 33px;
-    margin-left: 37px;
+    margin-left: 0px;
     margin-bottom: 23px;
   }
+  .cooperation_pic._newepay img {
+    max-width: 65px;
+  }
+  .cooperation_pic._ezship {
+    max-width: 112px;
+    height: 33px;
+    margin-left: 22px;
+    margin-bottom: 33px;
+  }
+  .cooperation_pic._ezship img {
+    max-width: 90px;
+  }
+  .cooperation_pic._opay {
+    max-width: 90px;
+    height: 33px;
+    margin-left: 29px;
+    margin-bottom: 23px;
+  }
+  .cooperation_pic._opay img {
+    max-width: 75px;
+  }
   .cooperation_pic._smilepay {
-    max-width: 78px;
+    max-width: 90px;
     height: 36px;
     margin-left: 0px;
+  }
+  .cooperation_pic._smilepay img {
+    max-width: 78px;
   }
   .cooperation_pic._cetustek {
     max-width: 112px;
@@ -6217,9 +6230,12 @@ footer .container {
     margin-left: 22px;
   }
   .cooperation_pic._ezpay {
-    max-width: 83px;
+    max-width: 90px;
     height: 36px;
-    margin-left: 21px;
+    margin-left: 29px;
+  }
+  .cooperation_pic._ezpay img {
+    max-width: 83px;
   }
 }
 
