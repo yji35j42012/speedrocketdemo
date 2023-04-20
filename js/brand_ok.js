@@ -306,6 +306,10 @@ window.onresize = function() {
 		access_moveNum = -100 * access_count;
 		access_moveHandler();
 		pushAccissDots();
+
+		product_group.style = "";
+		product_count = 0;
+		dotsProductHandler()
 	}
 };
 setTimeout(() => {
