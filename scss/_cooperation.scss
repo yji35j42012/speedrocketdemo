@@ -24,11 +24,13 @@
 		flex-wrap: wrap;
 		max-width: 1374px;
 		margin: 77px auto 0;
-		@include mw(L) {
-			// max-width: 574px;
-			align-items: flex-start;
-			max-width: 380px;
-			margin-top: 36px;
+		@media screen and (max-width: 1385px) {
+			& {
+				// max-width: 574px;
+				align-items: flex-start;
+				max-width: 380px;
+				margin-top: 36px;
+			}
 		}
 	}
 	// .cooperation_pic
@@ -120,10 +122,10 @@
 			margin-left: 58px;
 		}
 
-		@include mw(L) {
+		@media screen and (max-width: 1385px) {
 			&._family {
 				max-width: 90px;
-				height:28px;
+				height: 28px;
 				margin-bottom: 22px;
 			}
 			&._bonnyread {
@@ -176,7 +178,7 @@
 				margin-bottom: 24px;
 			}
 			&._newepay {
-				max-width:65px;
+				max-width: 65px;
 				height: 33px;
 				margin-left: 0px;
 				margin-bottom: 23px;
@@ -201,8 +203,8 @@
 			}
 			&._cetustek {
 				max-width: 112px;
-				height: 36px;;
-				margin-left:22px;
+				height: 36px;
+				margin-left: 22px;
 			}
 			&._ezpay {
 				max-width: 83px;

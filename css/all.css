@@ -5623,16 +5623,18 @@ footer .container {
           transform-origin: center;
 }
 
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media screen and (min-width: 1025px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1025px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1025px) and (-moz-touch-enabled: 0) {
   .recruitment_office .recruitment_office_item:hover::before {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
   }
 }
 
-.recruitment_office .recruitment_office_item:active::before {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+@media screen and (min-width: 1025px) {
+  .recruitment_office .recruitment_office_item:active::before {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
 }
 
 .recruitment_office .recruitment_office_item::before {
@@ -5939,7 +5941,7 @@ footer .container {
   margin: 77px auto 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1385px) {
   .cooperation_pics {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -6059,7 +6061,7 @@ footer .container {
   margin-left: 58px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1385px) {
   .cooperation_pic._family {
     max-width: 90px;
     height: 28px;
