@@ -115,11 +115,9 @@
 				@include d_f(flex, center, center);
 				max-width: 480px;
 				text-align: center;
-				// transform: translateY(0);
 				@include mw(L) {
 					max-width: 560px;
 					top: -31px;
-					transform: translateY(-31px);
 					text-align: left;
 				}
 			}

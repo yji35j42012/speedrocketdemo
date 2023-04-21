@@ -10,6 +10,14 @@ let bannerTime = null;
 var banner_dots = document.querySelector("#banner_dots");
 var banner_dots_item = null;
 var photo_kp = document.querySelector("#photo_kp");
+var introduction1 = document.querySelector("#introduction1");
+var introduction1_pic = document.querySelector(
+	"#introduction1 > .brandSH_introduction_pic"
+);
+var introduction1_txt = document.querySelector(
+	"#introduction1 > .brandSH_introduction_txt"
+);
+
 function bannerTimeHandler() {
 	bannerTime = setInterval(() => {
 		banner_count++;
@@ -279,6 +287,17 @@ function dotAccessItem() {
 		};
 	}
 }
+function introductionChangeAni() {
+	if (window.innerWidth <= 1024) {
+		introduction1.setAttribute("data-aos", "fade-up");
+		introduction1_pic.setAttribute("data-aos", "");
+		introduction1_txt.setAttribute("data-aos", "");
+	} else if (window.innerWidth > 1024) {
+		introduction1.setAttribute("data-aos", "");
+		introduction1_pic.setAttribute("data-aos", "fade-right");
+		introduction1_txt.setAttribute("data-aos", "fade-left");
+	}
+}
 window.onresize = function() {
 	if (window.innerWidth > 1024 && window.innerWidth <= 1929 && photo_kp) {
 		let move = ((1929 - window.innerWidth) / 2) * -1;
@@ -294,11 +313,13 @@ window.onresize = function() {
 	}
 	if (window.innerWidth <= 1024 && device == "pc") {
 		device = "ph";
+		introductionChangeAni();
 		access_maxCount = access_pic.length;
 		access_moveHandler();
 		pushAccissDots();
 	} else if (device == "ph" && window.innerWidth > 1024) {
 		device = "pc";
+		introductionChangeAni();
 		access_maxCount = Math.ceil(access_pic.length / 4);
 		access_count > access_maxCount
 			? (access_count = access_maxCount - 1)
@@ -398,4 +419,5 @@ function pushProductDots() {
 setTimeout(() => {
 	pushProductDots();
 	productIconAdd();
+	introductionChangeAni();
 }, 200);

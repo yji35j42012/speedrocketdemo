@@ -6797,8 +6797,6 @@ footer .container {
   .brandSH_introduction_item:first-child .brandSH_introduction_txt {
     max-width: 560px;
     top: -31px;
-    -webkit-transform: translateY(-31px);
-            transform: translateY(-31px);
     text-align: left;
   }
 }
