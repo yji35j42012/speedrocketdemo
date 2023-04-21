@@ -518,6 +518,7 @@ h4 {
 	// .icon_next
 	&_prev,
 	&_next {
+		flex: none;
 		z-index: 1;
 		position: absolute;
 		top: 0;
@@ -536,7 +537,8 @@ h4 {
 
 		@at-root .access_over & {
 			position: relative;
-			right: 0;left: 0;
+			right: 0;
+			left: 0;
 			margin: 0;
 			fill: #333;
 		}
