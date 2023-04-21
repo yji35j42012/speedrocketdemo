@@ -9,6 +9,7 @@ var banner_time = 6; //6秒
 let bannerTime = null;
 var banner_dots = document.querySelector("#banner_dots");
 var banner_dots_item = null;
+var photo_kp = document.querySelector("#photo_kp");
 function bannerTimeHandler() {
 	bannerTime = setInterval(() => {
 		banner_count++;
@@ -182,53 +183,42 @@ function access_moveHandler() {
 	for (let i = 0; i < access_pic.length; i++) {
 		const element = access_pic[i];
 
-			element.onclick = function() {
-				if (device == "pc") return;
-				lightBox.classList.add("on");
-				setTimeout(() => {
-					lightBox.classList.add("op1");
-				}, 50);
-				let num = i + 1;
-				var getImg1 = document.querySelector(
-					".access_over_item:nth-child(" +
-						num +
-						") > .access_over_flag"
-				);
-				var getImg2 = document.querySelector(
-					".access_over_item:nth-child(" +
-						num +
-						") > .access_over_logo"
-				);
-				var getTxt1 = document.querySelector(
-					".access_over_item:nth-child(" +
-						num +
-						") .hoverItem_country"
-				);
-				var getTxt2 = document.querySelector(
-					".access_over_item:nth-child(" +
-						num +
-						") .hoverItem_countryTw"
-				);
-				var getTxt3 = document.querySelector(
-					".access_over_item:nth-child(" + num + ") .hoverItem_shop"
-				);
+		element.onclick = function() {
+			if (device == "pc") return;
+			lightBox.classList.add("on");
+			setTimeout(() => {
+				lightBox.classList.add("op1");
+			}, 50);
+			let num = i + 1;
+			var getImg1 = document.querySelector(
+				".access_over_item:nth-child(" + num + ") > .access_over_flag"
+			);
+			var getImg2 = document.querySelector(
+				".access_over_item:nth-child(" + num + ") > .access_over_logo"
+			);
+			var getTxt1 = document.querySelector(
+				".access_over_item:nth-child(" + num + ") .hoverItem_country"
+			);
+			var getTxt2 = document.querySelector(
+				".access_over_item:nth-child(" + num + ") .hoverItem_countryTw"
+			);
+			var getTxt3 = document.querySelector(
+				".access_over_item:nth-child(" + num + ") .hoverItem_shop"
+			);
 
-				var lightBox_flag = document.querySelector("#lightBox_flag");
-				var lightBox_logo = document.querySelector("#lightBox_logo");
-				var lightBox_country = document.querySelector(
-					"#lightBox_country"
-				);
-				var lightBox_countryTw = document.querySelector(
-					"#lightBox_countryTw"
-				);
-				var lightBox_shop = document.querySelector("#lightBox_shop");
-				lightBox_flag.setAttribute("src", getImg1.getAttribute("src"));
-				lightBox_logo.setAttribute("src", getImg2.getAttribute("src"));
-				lightBox_country.innerHTML = getTxt1.innerHTML;
-				lightBox_countryTw.innerHTML = getTxt2.innerHTML;
-				lightBox_shop.innerHTML = getTxt3.innerHTML;
-			};
-
+			var lightBox_flag = document.querySelector("#lightBox_flag");
+			var lightBox_logo = document.querySelector("#lightBox_logo");
+			var lightBox_country = document.querySelector("#lightBox_country");
+			var lightBox_countryTw = document.querySelector(
+				"#lightBox_countryTw"
+			);
+			var lightBox_shop = document.querySelector("#lightBox_shop");
+			lightBox_flag.setAttribute("src", getImg1.getAttribute("src"));
+			lightBox_logo.setAttribute("src", getImg2.getAttribute("src"));
+			lightBox_country.innerHTML = getTxt1.innerHTML;
+			lightBox_countryTw.innerHTML = getTxt2.innerHTML;
+			lightBox_shop.innerHTML = getTxt3.innerHTML;
+		};
 	}
 	// let start = access_count * 4;
 	// let end =
@@ -290,6 +280,15 @@ function dotAccessItem() {
 	}
 }
 window.onresize = function() {
+	if (window.innerWidth > 1024 && window.innerWidth <= 1929 && photo_kp) {
+		let move = ((1929 - window.innerWidth) / 2) * -1;
+		photo_kp.style = `transform: translateX(${move}px);`;
+	} else if (window.innerWidth <= 1024 && photo_kp) {
+		let move = ((1024 - window.innerWidth) / 2) * -1;
+		photo_kp.style = `transform: translateX(${move}px);`;
+	} else if (photo_kp && window.innerWidth > 1929) {
+		photo_kp.style = "";
+	}
 	if (window.innerWidth <= 1024) {
 		productIconAdd();
 	}
@@ -310,7 +309,7 @@ window.onresize = function() {
 
 		product_group.style = "";
 		product_count = 0;
-		dotsProductHandler()
+		dotsProductHandler();
 	}
 };
 setTimeout(() => {
