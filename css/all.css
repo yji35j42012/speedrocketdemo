@@ -6750,6 +6750,7 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .brandSH_introduction_txt {
+    top: -20px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -6796,7 +6797,7 @@ footer .container {
 @media screen and (max-width: 1024px) {
   .brandSH_introduction_item:first-child .brandSH_introduction_txt {
     max-width: 560px;
-    top: -31px;
+    top: -20px;
     text-align: left;
   }
 }

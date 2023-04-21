@@ -90,6 +90,7 @@
 			margin-left: 48px;
 			text-align: left;
 			@include mw(L) {
+				top: -20px;
 				align-items: center;
 				margin-left: 0;
 				margin: auto;
@@ -117,7 +118,7 @@
 				text-align: center;
 				@include mw(L) {
 					max-width: 560px;
-					top: -31px;
+					top: -20px;
 					text-align: left;
 				}
 			}
