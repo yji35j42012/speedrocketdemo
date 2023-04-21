@@ -135,14 +135,15 @@
 			padding-top: 241px;
 			padding-bottom: 246px;
 			background-image: unset;
-			//
-			// background-size: 1929px ;
 			@include mw(L) {
 				padding: 80px 0;
 			}
 			@include mw(S) {
 				background-image: url("../images/brand_kp/photowall_background.png");
 			}
+		}
+		@at-root .brandSH._laopengyu & {
+			background-image: url("../images/brand_laopengyu/photowall_background.jpg");
 		}
 		@include mw(L) {
 			padding: 80px 0;
@@ -238,6 +239,12 @@
 				margin: 53px auto;
 			}
 		}
+		// .access_group._laopengyu
+		&._laopengyu {
+			flex-wrap: wrap;
+			max-width: 1260px;
+			margin: 66px auto 0;
+		}
 	}
 	// .access_item
 	&_item {
@@ -249,6 +256,7 @@
 				margin-left: 20px;
 			}
 		}
+
 		// .access_item_pic
 		&_pic {
 			@include mw(XS) {
@@ -257,7 +265,74 @@
 			}
 		}
 	}
-
+	// .access_laopengyu
+	&_laopengyu {
+		@include d_f(flex, center, center);
+		flex-direction: column;
+		width: 100%;
+		// .access_item_pic
+		&_pic {
+			max-width: 214px;
+			margin-top: 53px;
+			margin-bottom: 30px;
+		}
+	}
+	// .access_laopengyuItem
+	&_laopengyuItem {
+		position: relative;
+		@include d_f(flex, center, center);
+		flex-direction: column;
+		width: calc(100% / 3);
+		max-width: unset;
+		padding: 50px 0;
+		border-bottom :1px solid #d9d9d9;
+		& + &::before {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			content: "";
+			width: 1px;
+			height: 180px;
+			margin: auto;
+			background-color: #d9d9d9;
+		}
+		// .access_laopengyuItem_new
+		&_new {
+			display: inline-block;
+			margin-bottom: 16px;
+			padding: 4px 10px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			color: #ffffff;
+			background-color: #bda782;
+			border-radius: 100px;
+		}
+		// .access_laopengyuItem_name
+		&_name {
+			margin-bottom: 16px;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 26px;
+			line-height: 35px;
+		}
+		// .access_laopengyuItem_phone
+		&_phone {
+			margin-bottom: 16px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 33px;
+		}
+		// .access_laopengyuItem_address
+		&_address {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 27px;
+		}
+	}
 	// .access_over
 	&_over {
 		overflow: hidden;
