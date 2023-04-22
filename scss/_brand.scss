@@ -244,6 +244,11 @@
 			flex-wrap: wrap;
 			max-width: 1260px;
 			margin: 66px auto 0;
+			padding: 0 20px;
+			@include mw(S) {
+				max-width: 320px;
+				margin-top: 40px;
+			}
 		}
 	}
 	// .access_item
@@ -275,6 +280,9 @@
 			max-width: 214px;
 			margin-top: 53px;
 			margin-bottom: 30px;
+			@include mw(S) {
+				max-width: 80px;
+			}
 		}
 	}
 	// .access_laopengyuItem
@@ -285,8 +293,9 @@
 		width: calc(100% / 3);
 		max-width: unset;
 		padding: 50px 0;
-		border-bottom :1px solid #d9d9d9;
-		& + &::before {
+		border-bottom: 1px solid #d9d9d9;
+
+		&::before {
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -296,6 +305,27 @@
 			height: 180px;
 			margin: auto;
 			background-color: #d9d9d9;
+		}
+		@include minmw(L) {
+			&:nth-child(1)::before,
+			&:nth-child(4)::before {
+				display: none;
+			}
+		}
+		@include mw(L) {
+			width: calc(100% / 2);
+			&:nth-child(1)::before,
+			&:nth-child(3)::before,
+			&:nth-child(5)::before {
+				display: none;
+			}
+		}
+		@include mw(S) {
+			width: 100%;
+			padding: 25px 0;
+			&:before {
+				display: none;
+			}
 		}
 		// .access_laopengyuItem_new
 		&_new {
@@ -308,6 +338,11 @@
 			color: #ffffff;
 			background-color: #bda782;
 			border-radius: 100px;
+			@include mw(S) {
+				margin-bottom: 8px;
+				font-size: 12px;
+				line-height: 14px;
+			}
 		}
 		// .access_laopengyuItem_name
 		&_name {
@@ -316,6 +351,11 @@
 			font-weight: 600;
 			font-size: 26px;
 			line-height: 35px;
+			@include mw(S) {
+				margin-bottom: 8px;
+				font-size: 16px;
+				line-height: 22px;
+			}
 		}
 		// .access_laopengyuItem_phone
 		&_phone {
@@ -324,6 +364,11 @@
 			font-weight: 500;
 			font-size: 24px;
 			line-height: 33px;
+			@include mw(S) {
+				margin-bottom: 8px;
+				font-size: 12px;
+				line-height: 16px;
+			}
 		}
 		// .access_laopengyuItem_address
 		&_address {
@@ -331,6 +376,10 @@
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 27px;
+			@include mw(S) {
+				font-size: 12px;
+				line-height: 16px;
+			}
 		}
 	}
 	// .access_over
@@ -576,6 +625,10 @@
 				margin: 28px auto 0;
 				padding: 0;
 			}
+
+			@include mw(S) {
+				max-width: 360px;
+			}
 		}
 
 		// .access_product_item
@@ -597,6 +650,9 @@
 		// .access_product_name
 		&_name {
 			margin-top: 41px;
+			@include mw(L){
+				margin-top: 24px;
+			}
 		}
 		// .access_product_txt
 		// .access_product_detail
@@ -606,6 +662,9 @@
 			padding-bottom: 30px;
 			border-bottom: 0.5px solid #333333;
 			text-align: center;
+			@at-root ._laopengyu & {
+				border: none;
+			}
 			@include mw(L) {
 				margin-top: 20px;
 			}

@@ -3302,6 +3302,12 @@ footer .container {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .access_product .overflow_box {
+    max-width: 360px;
+  }
+}
+
 .access_over .overflow_box {
   max-width: 1400px;
   margin: 0 50px;
@@ -6981,6 +6987,14 @@ footer .container {
       flex-wrap: wrap;
   max-width: 1260px;
   margin: 66px auto 0;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .access_group._laopengyu {
+    max-width: 320px;
+    margin-top: 40px;
+  }
 }
 
 .access_item {
@@ -7028,6 +7042,12 @@ footer .container {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .access_laopengyu_pic {
+    max-width: 80px;
+  }
+}
+
 .access_laopengyuItem {
   position: relative;
   display: -webkit-box;
@@ -7049,7 +7069,7 @@ footer .container {
   border-bottom: 1px solid #d9d9d9;
 }
 
-.access_laopengyuItem + .access_laopengyuItem::before {
+.access_laopengyuItem::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -7059,6 +7079,31 @@ footer .container {
   height: 180px;
   margin: auto;
   background-color: #d9d9d9;
+}
+
+@media screen and (min-width: 1025px) {
+  .access_laopengyuItem:nth-child(1)::before, .access_laopengyuItem:nth-child(4)::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .access_laopengyuItem {
+    width: calc(100% / 2);
+  }
+  .access_laopengyuItem:nth-child(1)::before, .access_laopengyuItem:nth-child(3)::before, .access_laopengyuItem:nth-child(5)::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .access_laopengyuItem {
+    width: 100%;
+    padding: 25px 0;
+  }
+  .access_laopengyuItem:before {
+    display: none;
+  }
 }
 
 .access_laopengyuItem_new {
@@ -7073,12 +7118,28 @@ footer .container {
   border-radius: 100px;
 }
 
+@media screen and (max-width: 767px) {
+  .access_laopengyuItem_new {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
 .access_laopengyuItem_name {
   margin-bottom: 16px;
   font-style: normal;
   font-weight: 600;
   font-size: 26px;
   line-height: 35px;
+}
+
+@media screen and (max-width: 767px) {
+  .access_laopengyuItem_name {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .access_laopengyuItem_phone {
@@ -7089,11 +7150,26 @@ footer .container {
   line-height: 33px;
 }
 
+@media screen and (max-width: 767px) {
+  .access_laopengyuItem_phone {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
 .access_laopengyuItem_address {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 27px;
+}
+
+@media screen and (max-width: 767px) {
+  .access_laopengyuItem_address {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .access_over {
@@ -7449,6 +7525,12 @@ footer .container {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .access_product_group {
+    max-width: 360px;
+  }
+}
+
 .access_product_item {
   width: calc(100% / 3);
   max-width: 350px;
@@ -7478,11 +7560,21 @@ footer .container {
   margin-top: 41px;
 }
 
+@media screen and (max-width: 1024px) {
+  .access_product_name {
+    margin-top: 24px;
+  }
+}
+
 .access_product_txt, .access_product_detail {
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 0.5px solid #333333;
   text-align: center;
+}
+
+._laopengyu .access_product_txt, ._laopengyu .access_product_detail {
+  border: none;
 }
 
 @media screen and (max-width: 1024px) {
