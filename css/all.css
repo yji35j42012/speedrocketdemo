@@ -1078,6 +1078,35 @@ footer .container {
   }
 }
 
+.softwareShop .container {
+  max-width: 1310px;
+  margin: auto;
+  padding-top: 74px;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop .container {
+    padding-top: 34px;
+  }
+}
+
+.softwareShop_success .container {
+  max-width: 1340px;
+  padding: 0 20px 0 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_success .container {
+    max-width: 574px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .softwareShop_success .container {
+    max-width: 390px;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -7695,5 +7724,390 @@ footer .container {
   width: 1px;
   height: 100%;
   background-color: #333;
+}
+
+.softwareShop {
+  background-color: #fff;
+}
+
+.softwareShop_txt {
+  max-width: 1157px;
+  margin: 52px auto 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_txt {
+    max-width: 576px;
+    margin-top: 32px;
+  }
+}
+
+.softwareShop_lists {
+  max-width: 1157px;
+  margin: 52px auto 0;
+  padding: 40px 0;
+  background-color: rgba(235, 222, 199, 0.5);
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_lists {
+    max-width: 576px;
+    margin-top: 17px;
+    padding: 25px 10px;
+  }
+}
+
+.softwareShop_list {
+  max-width: 983px;
+  margin: auto;
+  white-space: pre-line;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_list {
+    white-space: inherit;
+  }
+}
+
+.softwareShop_link {
+  margin-top: 52px;
+  margin-bottom: 165px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_link {
+    margin-top: 32px;
+    margin-bottom: 90px;
+  }
+}
+
+.softwareShop_link a + a {
+  margin-left: 28px;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_link a + a {
+    margin-left: 18px;
+  }
+}
+
+.softwareShop_feature {
+  padding-top: 74px;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_feature {
+    max-width: 574px;
+    margin: auto;
+    padding-top: 34px;
+  }
+}
+
+.softwareShop_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 151px;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_group {
+    max-width: 574px;
+    margin: auto;
+    padding-bottom: 38px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .softwareShop_group {
+    max-width: 320px;
+  }
+}
+
+.softwareShop_item {
+  position: relative;
+  width: calc(100% / 2 - 40px);
+  max-width: 598px;
+  margin-bottom: 178px;
+  padding: 91px 20px 80px;
+  border: 2px solid #e4e4e4;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.softwareShop_item:nth-child(even) {
+  margin-left: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_item:nth-child(even) {
+    margin-left: 0;
+  }
+}
+
+.softwareShop_item:nth-child(2), .softwareShop_item:nth-child(3), .softwareShop_item:nth-child(6) {
+  background-color: #f9f9f9;
+}
+
+.softwareShop_item:nth-child(2) .softwareShop_item_title, .softwareShop_item:nth-child(3) .softwareShop_item_title, .softwareShop_item:nth-child(6) .softwareShop_item_title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f9f9f9));
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
+}
+
+.softwareShop_item:nth-child(5), .softwareShop_item:nth-child(6) {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_item {
+    width: 100%;
+    margin-bottom: 85px;
+    padding-top: 53px;
+    padding-bottom: 15px;
+  }
+  .softwareShop_item:nth-child(5) {
+    margin-bottom: 85px;
+  }
+}
+
+.softwareShop_item_title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 430px;
+  margin: auto;
+  padding: 0 30px;
+  background-color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (max-width: 767px) {
+  .softwareShop_item_title {
+    max-width: 260px;
+    padding: 0 10px;
+  }
+}
+
+.softwareShop_item_title::after {
+  content: attr(data-title);
+  display: block;
+  max-width: 310px;
+  padding: 8px 18px;
+  background-color: #ebdec7;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 41px;
+}
+
+@media screen and (max-width: 767px) {
+  .softwareShop_item_title::after {
+    padding: 4px 8px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+  }
+}
+
+.softwareShop_item_title .num {
+  max-width: 44px;
+  margin-right: 12px;
+}
+
+.softwareShop_item_txt {
+  max-width: 521px;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .softwareShop_item_txt {
+    text-align: left;
+  }
+}
+
+.softwareShop_item_pic {
+  margin: 101px auto 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_item_pic {
+    margin-top: 16px;
+  }
+}
+
+.softwareShop_item_pic._pic1 {
+  max-width: 315px;
+}
+
+.softwareShop_item_pic._pic2 {
+  max-width: 394px;
+}
+
+.softwareShop_item_pic._pic3 {
+  max-width: 384px;
+}
+
+.softwareShop_item_pic._pic4 {
+  max-width: 335px;
+}
+
+.softwareShop_item_pic._pic5 {
+  max-width: 464px;
+}
+
+.softwareShop_item_pic._pic6 {
+  max-width: 344px;
+}
+
+.softwareShop_success {
+  padding: 97px 0 167px;
+  background-color: #ebdec7;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_success {
+    padding: 42px 0 68px;
+  }
+}
+
+.softwareShop_success_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 386px;
+  margin-top: 100px;
+  background-color: #fff;
+  -webkit-box-shadow: -20px -21px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: -20px -21px 0px rgba(0, 0, 0, 0.05);
+}
+
+.softwareShop_success_list + .softwareShop_success_list {
+  margin-top: 58px;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_success_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    margin-top: 39px;
+  }
+}
+
+.softwareShop_success_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 512px;
+          flex: 1 1 512px;
+  padding: 0 50px;
+}
+
+@media screen and (max-width: 1280px) {
+  .softwareShop_success_info {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    padding: 30px 30px 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .softwareShop_success_info {
+    padding: 30px 17px 22px;
+  }
+}
+
+.softwareShop_success_logo {
+  max-width: 301px;
+  margin-bottom: 42px;
+}
+
+.softwareShop_success_logo._kp {
+  max-width: 412px;
+}
+
+@media screen and (max-width: 1280px) {
+  .softwareShop_success_logo {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .softwareShop_success_logo {
+    max-width: 159px;
+  }
+  .softwareShop_success_logo._kp {
+    max-width: 236px;
+  }
+  .softwareShop_success_logo._jgao {
+    min-width: 168px;
+  }
+}
+
+.softwareShop_success_pic {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 768px;
+  min-width: 670px;
+}
+
+.softwareShop_success_pic img {
+  width: auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_success_pic {
+    min-width: unset;
+  }
+  .softwareShop_success_pic img {
+    width: 100%;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=all.css.map */

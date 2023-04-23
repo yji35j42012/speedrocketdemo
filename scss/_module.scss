@@ -698,9 +698,25 @@ h4 {
 			padding: 45px 0 0;
 		}
 	}
-	// @at-root .brandSH &{
-
-	// }
+	@at-root .softwareShop & {
+		max-width: 1310px;
+		margin: auto;
+		padding-top: 74px;
+		@include mw(L) {
+			padding-top: 34px;
+		}
+	}
+	@at-root .softwareShop_success &{
+		max-width: 1340px;
+		padding: 0 20px 0 40px;
+		
+		@include mw(L){
+			max-width: 574px;
+		}
+		@include mw(S){
+			max-width: 390px;
+		}
+	}
 }
 .header {
 	position: fixed;
@@ -2166,7 +2182,6 @@ h4 {
 		}
 	}
 }
-
 .overflow_box {
 	overflow: hidden;
 	max-width: 1018px;
@@ -2203,7 +2218,6 @@ h4 {
 		}
 	}
 }
-
 .lightBox {
 	z-index: 2;
 	position: fixed;
