@@ -58,12 +58,19 @@
 	// .softwareShop_feature
 	&_feature {
 		padding-top: 74px;
+
 		@include mw(L) {
 			max-width: 574px;
 			margin: auto;
 			padding-top: 34px;
 		}
 		// .softwareShop_feature_pic
+		&_pic {
+			@at-root ._delivery & {
+				max-width: 1022px;
+				margin: 0 auto 136px;
+			}
+		}
 	}
 	// .softwareShop_group
 	&_group {
@@ -91,6 +98,9 @@
 		border-radius: 16px;
 		text-align: center;
 
+		@at-root ._delivery & {
+			padding-bottom: 42px;
+		}
 		&:nth-child(even) {
 			margin-left: 80px;
 			@include mw(L) {
@@ -131,21 +141,27 @@
 			padding: 0 30px;
 			background-color: #fff;
 			transform: translateY(-50%);
-
+			text-align: left;
+			@at-root ._delivery & {
+				max-width: 512px;
+				white-space: pre-line;
+			}
 			@include mw(S) {
 				max-width: 260px;
 				padding: 0 10px;
 			}
 			&::after {
 				content: attr(data-title);
-				display: block;
-				max-width: 310px;
+				display: inline-block;
+				max-width: calc(100% - 56px);
+				// max-width: 310px;
 				padding: 8px 18px;
 				background-color: #ebdec7;
 				font-style: normal;
 				font-weight: 500;
 				font-size: 30px;
 				line-height: 41px;
+
 				@include mw(S) {
 					padding: 4px 8px;
 					font-size: 18px;
@@ -162,24 +178,35 @@
 		&_txt {
 			max-width: 521px;
 			margin: auto;
-			@include mw(S) {
-				text-align: left;
-			}
+			text-align: left;
+	
 		}
 		// .softwareShop_item_pic
 		&_pic {
 			margin: 101px auto 0;
+			@at-root ._delivery & {
+				margin-top: 45px;
+			}
 			@include mw(L) {
 				margin-top: 16px;
 			}
 			&._pic1 {
 				max-width: 315px;
+				@at-root ._delivery & {
+					max-width: 521px;
+				}
 			}
 			&._pic2 {
 				max-width: 394px;
+				@at-root ._delivery & {
+					max-width: 521px;
+				}
 			}
 			&._pic3 {
 				max-width: 384px;
+				@at-root ._delivery & {
+					max-width: 521px;
+				}
 			}
 			&._pic4 {
 				max-width: 335px;

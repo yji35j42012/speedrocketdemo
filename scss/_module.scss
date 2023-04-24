@@ -706,14 +706,14 @@ h4 {
 			padding-top: 34px;
 		}
 	}
-	@at-root .softwareShop_success &{
+	@at-root .softwareShop_success & {
 		max-width: 1340px;
 		padding: 0 20px 0 40px;
-		
-		@include mw(L){
+
+		@include mw(L) {
 			max-width: 574px;
 		}
-		@include mw(S){
+		@include mw(S) {
 			max-width: 390px;
 		}
 	}
@@ -1921,6 +1921,10 @@ h4 {
 		// @extend %transition;
 		transform: translateX(-100%);
 		opacity: 0;
+		&._only {
+			transform: translateX(0);
+			opacity: 1;
+		}
 	}
 	// .banner_item
 	&_item {

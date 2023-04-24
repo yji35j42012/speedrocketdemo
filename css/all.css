@@ -2968,6 +2968,12 @@ footer .container {
   opacity: 0;
 }
 
+.banner_group._only {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
 .banner_item {
   width: 100%;
   -webkit-box-flex: 0;
@@ -7811,6 +7817,11 @@ footer .container {
   }
 }
 
+._delivery .softwareShop_feature_pic {
+  max-width: 1022px;
+  margin: 0 auto 136px;
+}
+
 .softwareShop_group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7851,6 +7862,10 @@ footer .container {
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.02);
   border-radius: 16px;
   text-align: center;
+}
+
+._delivery .softwareShop_item {
+  padding-bottom: 42px;
 }
 
 .softwareShop_item:nth-child(even) {
@@ -7908,6 +7923,12 @@ footer .container {
   background-color: #fff;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  text-align: left;
+}
+
+._delivery .softwareShop_item_title {
+  max-width: 512px;
+  white-space: pre-line;
 }
 
 @media screen and (max-width: 767px) {
@@ -7919,8 +7940,8 @@ footer .container {
 
 .softwareShop_item_title::after {
   content: attr(data-title);
-  display: block;
-  max-width: 310px;
+  display: inline-block;
+  max-width: calc(100% - 56px);
   padding: 8px 18px;
   background-color: #ebdec7;
   font-style: normal;
@@ -7946,16 +7967,15 @@ footer .container {
 .softwareShop_item_txt {
   max-width: 521px;
   margin: auto;
-}
-
-@media screen and (max-width: 767px) {
-  .softwareShop_item_txt {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .softwareShop_item_pic {
   margin: 101px auto 0;
+}
+
+._delivery .softwareShop_item_pic {
+  margin-top: 45px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -7968,12 +7988,24 @@ footer .container {
   max-width: 315px;
 }
 
+._delivery .softwareShop_item_pic._pic1 {
+  max-width: 521px;
+}
+
 .softwareShop_item_pic._pic2 {
   max-width: 394px;
 }
 
+._delivery .softwareShop_item_pic._pic2 {
+  max-width: 521px;
+}
+
 .softwareShop_item_pic._pic3 {
   max-width: 384px;
+}
+
+._delivery .softwareShop_item_pic._pic3 {
+  max-width: 521px;
 }
 
 .softwareShop_item_pic._pic4 {
