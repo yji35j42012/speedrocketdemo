@@ -7740,6 +7740,7 @@ footer .container {
   .softwareShop_txt {
     max-width: 576px;
     margin-top: 32px;
+    text-align: left;
   }
 }
 
