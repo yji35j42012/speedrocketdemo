@@ -26,11 +26,16 @@
 	}
 	// .softwareShop_list
 	&_list {
+		position: relative;
+		display: inline-block;
 		max-width: 983px;
 		margin: auto;
 		white-space: pre-line;
+
 		@include mw(L) {
+			padding-left: 20px;
 			white-space: inherit;
+			text-indent: -1em;
 		}
 	}
 	// .softwareShop_link

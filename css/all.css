@@ -7760,6 +7760,8 @@ footer .container {
 }
 
 .softwareShop_list {
+  position: relative;
+  display: inline-block;
   max-width: 983px;
   margin: auto;
   white-space: pre-line;
@@ -7767,7 +7769,9 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .softwareShop_list {
+    padding-left: 20px;
     white-space: inherit;
+    text-indent: -1em;
   }
 }
 
