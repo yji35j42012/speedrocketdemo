@@ -40,11 +40,19 @@
 	&_pic {
 		@include d_f(flex, center, center);
 		width: 100%;
-		&._family,&._bonnyread,&._jgao,&._murfeeli,&._hj{
+		&._family,
+		&._bonnyread,
+		&._jgao,
+		&._murfeeli,
+		&._hj {
 			height: 64px;
-			margin-bottom: 41px ;
+			margin-bottom: 41px;
 		}
-		&._cheungleungkee,&._yourkind,&._bggoldnatural,&._ecpay,&._newepay{
+		&._cheungleungkee,
+		&._yourkind,
+		&._bggoldnatural,
+		&._ecpay,
+		&._newepay {
 			height: 77px;
 			margin-bottom: 19px;
 		}
@@ -129,7 +137,11 @@
 			}
 		}
 		//
-		&._ezship,&._opay,&._opay,&._opay,&._opay{
+		&._ezship,
+		&._opay,
+		&._opay,
+		&._opay,
+		&._opay {
 			height: 126px;
 		}
 		&._ezship {
@@ -264,26 +276,31 @@
 			&._ezship {
 				max-width: 173px;
 			}
-			&._bonnyread,&._yourkind,&._opay {
+			&._bonnyread,
+			&._yourkind,
+			&._opay {
 				max-width: 174px;
 				margin-left: 30px;
 			}
 
-			&._jgao,&._smilepay,&._bggoldnatural {
+			&._jgao,
+			&._smilepay,
+			&._bggoldnatural {
 				max-width: 172px;
 				margin-left: 30px;
 			}
-			&._murfeeli,&._ecpay,&._cetustek {
+			&._murfeeli,
+			&._ecpay,
+			&._cetustek {
 				max-width: 170px;
 				margin-left: 30px;
 			}
-			&._hj,&._newepay,&._ezpay {
+			&._hj,
+			&._newepay,
+			&._ezpay {
 				max-width: 168px;
 				margin-left: 30px;
 			}
-
-
-
 		}
 		// @media screen and (max-width: 1385px) {
 		@include mw(L) {
@@ -316,7 +333,7 @@
 				height: 28px;
 				margin-left: 22px;
 				margin-bottom: 17px;
-				img{
+				img {
 					max-width: 90px;
 				}
 			}
@@ -337,7 +354,7 @@
 				height: 29px;
 				margin-left: 22px;
 				margin-bottom: 20px;
-				img{
+				img {
 					max-width: 90px;
 				}
 			}
@@ -359,7 +376,7 @@
 				height: 38px;
 				margin-left: 22px;
 				margin-bottom: 24px;
-				img{
+				img {
 					max-width: 90px;
 				}
 			}
@@ -368,7 +385,7 @@
 				height: 38px;
 				margin-left: 29px;
 				margin-bottom: 24px;
-				img{
+				img {
 					max-width: 77px;
 				}
 			}
@@ -377,7 +394,7 @@
 				height: 33px;
 				margin-left: 0px;
 				margin-bottom: 23px;
-				img{
+				img {
 					max-width: 65px;
 				}
 			}
@@ -387,7 +404,7 @@
 				height: 33px;
 				margin-left: 22px;
 				margin-bottom: 33px;
-				img{
+				img {
 					max-width: 90px;
 				}
 			}
@@ -396,7 +413,7 @@
 				height: 33px;
 				margin-left: 29px;
 				margin-bottom: 23px;
-				img{
+				img {
 					max-width: 75px;
 				}
 			}
@@ -404,7 +421,7 @@
 				max-width: 90px;
 				height: 36px;
 				margin-left: 0px;
-				img{
+				img {
 					max-width: 78px;
 				}
 			}
@@ -417,7 +434,7 @@
 				max-width: 90px;
 				height: 36px;
 				margin-left: 29px;
-				img{
+				img {
 					max-width: 83px;
 				}
 			}
@@ -451,16 +468,15 @@
 			border: 2px solid #e4e4e4;
 			box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.02);
 			border-radius: 16px;
-			&._md,
-			&._cd,
-			&._fd,
-			&._hr {
+			&._shareco,
+			&._kp,
+			&._full {
 				background-color: #f3f3f3;
 			}
 
-			&._md,
-			&._wd,
-			&._fd {
+			&._shareco,
+			&._laopengyu,
+			&._full {
 				margin-left: 24px;
 				@include mw(L) {
 					margin-left: 12px;

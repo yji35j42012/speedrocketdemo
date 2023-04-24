@@ -6339,16 +6339,16 @@ footer .container {
   border-radius: 16px;
 }
 
-.cooperation_contact_detail._md, .cooperation_contact_detail._cd, .cooperation_contact_detail._fd, .cooperation_contact_detail._hr {
+.cooperation_contact_detail._shareco, .cooperation_contact_detail._kp, .cooperation_contact_detail._full {
   background-color: #f3f3f3;
 }
 
-.cooperation_contact_detail._md, .cooperation_contact_detail._wd, .cooperation_contact_detail._fd {
+.cooperation_contact_detail._shareco, .cooperation_contact_detail._laopengyu, .cooperation_contact_detail._full {
   margin-left: 24px;
 }
 
 @media screen and (max-width: 1024px) {
-  .cooperation_contact_detail._md, .cooperation_contact_detail._wd, .cooperation_contact_detail._fd {
+  .cooperation_contact_detail._shareco, .cooperation_contact_detail._laopengyu, .cooperation_contact_detail._full {
     margin-left: 12px;
   }
 }
@@ -7822,6 +7822,12 @@ footer .container {
   margin: 0 auto 136px;
 }
 
+@media screen and (max-width: 1024px) {
+  ._delivery .softwareShop_feature_pic {
+    margin-bottom: 90px;
+  }
+}
+
 .softwareShop_group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7851,6 +7857,16 @@ footer .container {
   }
 }
 
+._delivery .softwareShop_group {
+  padding-bottom: 176px;
+}
+
+@media screen and (max-width: 1024px) {
+  ._delivery .softwareShop_group {
+    padding-bottom: 58px;
+  }
+}
+
 .softwareShop_item {
   position: relative;
   width: calc(100% / 2 - 40px);
@@ -7866,6 +7882,16 @@ footer .container {
 
 ._delivery .softwareShop_item {
   padding-bottom: 42px;
+}
+
+._delivery .softwareShop_item:nth-child(3) {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  ._delivery .softwareShop_item {
+    padding-bottom: 30px;
+  }
 }
 
 .softwareShop_item:nth-child(even) {
@@ -7932,6 +7958,13 @@ footer .container {
 }
 
 @media screen and (max-width: 767px) {
+  ._delivery .softwareShop_item_title {
+    max-width: 272px;
+    white-space: inherit;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .softwareShop_item_title {
     max-width: 260px;
     padding: 0 10px;
@@ -7976,6 +8009,12 @@ footer .container {
 
 ._delivery .softwareShop_item_pic {
   margin-top: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  ._delivery .softwareShop_item_pic {
+    margin-top: 27px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -8154,6 +8193,13 @@ footer .container {
   background-color: #ebdec7;
 }
 
+@media screen and (max-width: 1024px) {
+  .software {
+    padding-top: 42px;
+    padding-bottom: 68px;
+  }
+}
+
 .software_manufacturers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8173,6 +8219,13 @@ footer .container {
 @media screen and (max-width: 1280px) {
   .software_manufacturers {
     max-width: 1195px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .software_manufacturers {
+    max-width: 355px;
+    margin-top: 43px;
   }
 }
 
@@ -8249,6 +8302,34 @@ footer .container {
   }
   .software_manufacturers_list._relove, .software_manufacturers_list._laopengyu {
     max-width: 170px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .software_manufacturers_list._murfeeli, .software_manufacturers_list._kp, .software_manufacturers_list._jgao, .software_manufacturers_list._hj, .software_manufacturers_list._relove, .software_manufacturers_list._laopengyu {
+    max-width: 70px;
+  }
+  .software_manufacturers_list._shareco, .software_manufacturers_list._yourkind {
+    max-width: 74px;
+  }
+  .software_manufacturers_list._shareco img {
+    max-width: 70px;
+  }
+  .software_manufacturers_list._laopengyu img {
+    max-width: 40px;
+  }
+  .software_manufacturers_list._hj img {
+    max-width: 57px;
+  }
+  .software_manufacturers_list._jgao, .software_manufacturers_list._shareco, .software_manufacturers_list._relove, .software_manufacturers_list._hj, .software_manufacturers_list._yourkind, .software_manufacturers_list._laopengyu {
+    margin-left: 22px;
+  }
+  .software_manufacturers_list._kp, .software_manufacturers_list._hj, .software_manufacturers_list._yourkind, .software_manufacturers_list._laopengyu {
+    height: 58px;
+    margin-top: 20px;
+  }
+  .software_manufacturers_list._murfeeli, .software_manufacturers_list._jgao, .software_manufacturers_list._shareco, .software_manufacturers_list._relove {
+    height: 27px;
   }
 }
 /*# sourceMappingURL=all.css.map */
