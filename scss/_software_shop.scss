@@ -179,7 +179,6 @@
 			max-width: 521px;
 			margin: auto;
 			text-align: left;
-	
 		}
 		// .softwareShop_item_pic
 		&_pic {
@@ -295,6 +294,77 @@
 				img {
 					width: 100%;
 					height: auto;
+				}
+			}
+		}
+	}
+}
+
+.software {
+	padding-top: 97px;
+	padding-bottom: 162px;
+	background-color: #ebdec7;
+
+	// .software_manufacturers
+	&_manufacturers {
+		@include d_f(flex, center);
+		flex-wrap: wrap;
+		max-width: 1240px;
+		margin: 100px auto 0;
+		// .software_manufacturers_list
+		&_list {
+			@include d_f(flex, center, center);
+			width: 100%;
+			&._murfeeli,
+			&._kp {
+				max-width: 245px;
+			}
+			&._jgao,
+			&._hj {
+				max-width: 250px;
+			}
+			&._shareco,
+			&._yourkind {
+				max-width: 260px;
+			}
+			&._relove,
+			&._laopengyu {
+				max-width: 185px;
+			}
+			&._murfeeli,
+			&._jgao,
+			&._shareco,
+			&._relove {
+				height: 73px;
+				margin-left: 75px;
+			}
+			&._kp,
+			&._hj,
+			&._yourkind,
+			&._laopengyu {
+				height: 107px;
+				margin-top: 67px;
+				margin-left: 75px;
+			}
+
+			&._murfeeli {
+				img {
+					max-width: 238px;
+				}
+			}
+			&._hj {
+				img {
+					max-width: 125px;
+				}
+			}
+			&._yourkind {
+				img {
+					max-width: 248px;
+				}
+			}
+			&._laopengyu {
+				img {
+					max-width: 82px;
 				}
 			}
 		}
