@@ -8170,6 +8170,12 @@ footer .container {
   margin: 100px auto 0;
 }
 
+@media screen and (max-width: 1280px) {
+  .software_manufacturers {
+    max-width: 1195px;
+  }
+}
+
 .software_manufacturers_list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8201,12 +8207,14 @@ footer .container {
 
 .software_manufacturers_list._murfeeli, .software_manufacturers_list._jgao, .software_manufacturers_list._shareco, .software_manufacturers_list._relove {
   height: 73px;
-  margin-left: 75px;
 }
 
 .software_manufacturers_list._kp, .software_manufacturers_list._hj, .software_manufacturers_list._yourkind, .software_manufacturers_list._laopengyu {
   height: 107px;
   margin-top: 67px;
+}
+
+.software_manufacturers_list._jgao, .software_manufacturers_list._shareco, .software_manufacturers_list._relove, .software_manufacturers_list._hj, .software_manufacturers_list._yourkind, .software_manufacturers_list._laopengyu {
   margin-left: 75px;
 }
 
@@ -8224,5 +8232,23 @@ footer .container {
 
 .software_manufacturers_list._laopengyu img {
   max-width: 82px;
+}
+
+@media screen and (max-width: 1280px) {
+  .software_manufacturers_list._jgao, .software_manufacturers_list._shareco, .software_manufacturers_list._relove, .software_manufacturers_list._hj, .software_manufacturers_list._yourkind, .software_manufacturers_list._laopengyu {
+    margin-left: 30px;
+  }
+  .software_manufacturers_list._shareco, .software_manufacturers_list._yourkind {
+    max-width: 245px;
+  }
+  .software_manufacturers_list._murfeeli, .software_manufacturers_list._kp {
+    max-width: 230px;
+  }
+  .software_manufacturers_list._jgao, .software_manufacturers_list._hj {
+    max-width: 235px;
+  }
+  .software_manufacturers_list._relove, .software_manufacturers_list._laopengyu {
+    max-width: 170px;
+  }
 }
 /*# sourceMappingURL=all.css.map */
