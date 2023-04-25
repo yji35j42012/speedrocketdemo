@@ -39,22 +39,6 @@
 			text-indent: -1em;
 		}
 	}
-	// .softwareShop_link
-	&_link {
-		margin-top: 52px;
-		margin-bottom: 165px;
-		text-align: center;
-		@include mw(L) {
-			margin-top: 32px;
-			margin-bottom: 90px;
-		}
-		a + a {
-			margin-left: 28px;
-			@include mw(L) {
-				margin-left: 18px;
-			}
-		}
-	}
 	// .softwareShop_feature
 	&_feature {
 		padding-top: 74px;

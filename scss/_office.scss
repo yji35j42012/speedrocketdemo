@@ -1,0 +1,119 @@
+.office {
+	padding-top: 74px;
+	background-color: #fff;
+	// .office_txt
+	&_txt {
+		max-width: 1170px;
+		margin: 52px auto 0;
+		text-align: center;
+	}
+
+	// .office_tw
+	&_tw {
+		@include d_f(flex, center, center);
+		max-width: 1260px;
+		margin: 74px auto 0;
+		// .office_tw_pic
+		&_pic {
+			max-width: 772px;
+		}
+		// .office_tw_detail
+		&_detail {
+			display: inline-block;
+			width: 100%;
+			max-width: 488px;
+			padding: 38px 0;
+			background-color: #ebdec7;
+			text-align: center;
+		}
+		// .office_tw_name
+		&_name {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 34px;
+			line-height: 46px;
+			@include mw(L) {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+		// .office_tw_phone
+		&_phone {
+			margin-top: 8px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 33px;
+			@include mw(L) {
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		// .office_tw_address
+		&_address {
+			margin-top: 8px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 27px;
+			@include mw(L) {
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+		// .office_tw_time
+		&_time {
+			// @include d_f(flex, center, center);
+			flex-wrap: wrap;
+			margin-top: 44px;
+			&::before {
+				content: attr(data-title);
+				display: inline-block;
+				margin: 0 105px;
+				padding: 4px 33px;
+				background-color: #000;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 27px;
+				color: #ffffff;
+				@include mw(L) {
+					font-size: 16px;
+					line-height: 22px;
+				}
+			}
+
+			.info {
+                display: inline-block;
+				// width: 50%;
+				margin-top: 16px;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 140%;
+				@include mw(L) {
+					font-weight: 400;
+					font-size: 12px;
+				}
+				&:nth-child(1) {
+					padding-right: 18px;
+                    margin-left: auto;
+					// text-align: right;
+                    border-right:1px solid #887766;
+				}
+				&:nth-child(2) {
+					padding-left: 18px;
+					// text-align: left;
+				}
+				&::before {
+					content: attr(data-week);
+					display: block;
+				}
+				&::after {
+					content: attr(data-time);
+					display: block;
+				}
+			}
+		}
+	}
+}

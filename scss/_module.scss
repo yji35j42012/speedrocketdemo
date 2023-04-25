@@ -2297,3 +2297,23 @@ h4 {
 		border-right: 1px solid #333;
 	}
 }
+
+.linkGroup {
+	@include d_f(flex, center);
+	margin-top: 52px;
+	margin-bottom: 165px;
+
+	@include mw(L) {
+		margin-top: 32px;
+		margin-bottom: 90px;
+	}
+	a + a {
+		margin-left: 28px;
+		@include mw(L) {
+			margin-left: 18px;
+		}
+		@include mw(XS) {
+			margin-left: 8px;
+		}
+	}
+}

@@ -20,24 +20,6 @@
 			text-align: left;
 		}
 	}
-	// .brandSH_link
-	&_link {
-		@include d_f(flex, center, center);
-		margin-top: 52px;
-		@include mw(L) {
-			margin-top: 28px;
-		}
-		.normal_btn + .normal_btn {
-			margin-left: 28px;
-			@include mw(L) {
-				margin-left: 18px;
-			}
-
-			@include mw(XS) {
-				margin-left: 8px;
-			}
-		}
-	}
 	// .brandSH_introduction
 	&_introduction {
 		@include d_f(flex, space-between);
@@ -52,13 +34,6 @@
 		}
 		@at-root .brandSH._kp & {
 			padding-bottom: 0;
-		}
-		// .brandSH_introduction_h2
-		&_h2 {
-			margin-top: 165px;
-			@include mw(L) {
-				margin-top: 85px;
-			}
 		}
 		// .brandSH_introduction_item
 		&_item {
