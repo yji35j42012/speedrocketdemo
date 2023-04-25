@@ -1,11 +1,21 @@
 .office {
 	padding-top: 74px;
+	padding-bottom: 156px;
 	background-color: #fff;
+	@include mw(L) {
+		padding-top: 34px;
+		padding-bottom: 58px;
+	}
 	// .office_txt
 	&_txt {
 		max-width: 1170px;
 		margin: 52px auto 0;
 		text-align: center;
+		@include mw(L) {
+			max-width: 576px;
+			margin-top: 28px;
+			text-align: left;
+		}
 	}
 
 	// .office_tw
@@ -13,18 +23,27 @@
 		@include d_f(flex, center, center);
 		max-width: 1260px;
 		margin: 74px auto 0;
+		@include mw(L) {
+			max-width: 576px;
+			flex-direction: column;
+		}
 		// .office_tw_pic
 		&_pic {
 			max-width: 772px;
 		}
 		// .office_tw_detail
 		&_detail {
+			align-self: flex-end;
 			display: inline-block;
 			width: 100%;
 			max-width: 488px;
 			padding: 38px 0;
 			background-color: #ebdec7;
 			text-align: center;
+			@include mw(L) {
+				max-width: calc(100% - 14px);
+				padding: 15px 0;
+			}
 		}
 		// .office_tw_name
 		&_name {
@@ -61,30 +80,31 @@
 				line-height: 16px;
 			}
 		}
+		// .office_tw_timeTxt
+		&_timeTxt {
+			display: inline-block;
+			margin: 44px 0 0;
+			padding: 4px 33px;
+			background-color: #000;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 27px;
+			color: #ffffff;
+			@include mw(L) {
+				margin-top: 22px;
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
 		// .office_tw_time
 		&_time {
 			// @include d_f(flex, center, center);
 			flex-wrap: wrap;
-			margin-top: 44px;
-			&::before {
-				content: attr(data-title);
-				display: inline-block;
-				margin: 0 105px;
-				padding: 4px 33px;
-				background-color: #000;
-				font-style: normal;
-				font-weight: 500;
-				font-size: 20px;
-				line-height: 27px;
-				color: #ffffff;
-				@include mw(L) {
-					font-size: 16px;
-					line-height: 22px;
-				}
-			}
+			margin-top: 17px;
 
 			.info {
-                display: inline-block;
+				display: inline-block;
 				// width: 50%;
 				margin-top: 16px;
 				font-style: normal;
@@ -97,9 +117,9 @@
 				}
 				&:nth-child(1) {
 					padding-right: 18px;
-                    margin-left: auto;
+					margin-left: auto;
 					// text-align: right;
-                    border-right:1px solid #887766;
+					border-right: 1px solid #887766;
 				}
 				&:nth-child(2) {
 					padding-left: 18px;
@@ -113,6 +133,138 @@
 					content: attr(data-time);
 					display: block;
 				}
+			}
+		}
+	}
+
+	// .office_area
+	&_area {
+		margin-top: 74px;
+		@include mw(L) {
+			max-width: 576px;
+			margin: 53px auto 0;
+		}
+		// .office_area_title
+		&_title {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 38px;
+			text-align: center;
+			color: #887766;
+			.icon {
+				display: none;
+			}
+			@include mw(L) {
+				@include d_f(flex, space-between, center);
+				width: 100%;
+				height: 60px;
+				padding: 0 13px;
+				background-color: #887766;
+				color: #fff;
+				font-size: 18px;
+				.icon {
+					position: relative;
+					display: block;
+					svg {
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+		// .office_area_group
+		&_group {
+			@include d_f(flex, center, center);
+			flex-wrap: wrap;
+			max-width: 1280px;
+			margin-top: 29px;
+			@extend %transition;
+			@include mw(L) {
+				display: block;
+				height: 0;
+				transform-origin: top center;
+				overflow: hidden;
+			}
+		}
+		// .office_area_item
+		&_item {
+			position: relative;
+			@include d_f(flex, center, center);
+			flex-direction: column;
+			width: calc(100% / 3);
+			max-width: 420px;
+			min-height: 278px;
+			padding: 5px;
+			text-align: center;
+			border-bottom: 1px solid #d9d9d9;
+			@include mw(L) {
+				width: 100%;
+				margin: auto;
+			}
+			@include minmw(L) {
+				&:not(:nth-child(3n + 1)):after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					width: 1px;
+					height: 180px;
+					margin: auto;
+					background-color: #d9d9d9;
+				}
+			}
+		}
+		// .office_area_name
+		&_name {
+			position: relative;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 26px;
+			line-height: 35px;
+
+			&._new {
+				@include d_f(flex, center, center);
+				flex-direction: column;
+				&::before {
+					content: attr(data-new);
+					position: absolute;
+					bottom: calc(100% + 20px);
+					display: inline-block;
+					padding: 4px 10px;
+					background-color: #bda782;
+					border-radius: 100px;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 18px;
+					color: #fff;
+				}
+			}
+		}
+		// .office_area_phone
+		&_phone {
+			margin-top: 16px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 33px;
+		}
+		// .office_area_address
+		&_address {
+			margin-top: 16px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 27px;
+		}
+
+		& + & {
+			margin-top: 74px;
+			@include mw(L) {
+				margin-top: 0;
 			}
 		}
 	}

@@ -692,8 +692,7 @@ h4 {
 	}
 	@at-root .cooperation & {
 		max-width: 1387px;
-		padding-top: 117px;
-		padding: 0 10px;
+		padding: 117px 10px 0;
 		@include mw(L) {
 			padding: 45px 0 0;
 		}
@@ -716,6 +715,9 @@ h4 {
 		@include mw(S) {
 			max-width: 390px;
 		}
+	}
+	@at-root .office &{
+		max-width: 1300px;
 	}
 }
 .header {
