@@ -866,6 +866,20 @@ h4 span {
   margin-right: 20px;
 }
 
+.icon_trangle {
+  position: relative;
+  width: 9px;
+  height: 8px;
+}
+
+.icon_trangle svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .filiter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8493,6 +8507,10 @@ footer .container {
   .office_area {
     max-width: 576px;
     margin: 53px auto 0;
+    border-bottom: 1px solid #887766;
+  }
+  .office_area._borderT {
+    border-top: 1px solid #887766;
   }
 }
 
@@ -8503,10 +8521,23 @@ footer .container {
   line-height: 38px;
   text-align: center;
   color: #887766;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
-.office_area_title .icon {
+.office_area_title .icon_trangle {
   display: none;
+}
+
+.office_area_title.on {
+  background-color: #887766;
+  color: #fff;
+}
+
+.office_area_title.on .icon_trangle {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  fill: #fff;
 }
 
 @media screen and (max-width: 1024px) {
@@ -8523,18 +8554,18 @@ footer .container {
     width: 100%;
     height: 60px;
     padding: 0 13px;
-    background-color: #887766;
-    color: #fff;
     font-size: 18px;
   }
-  .office_area_title .icon {
+  .office_area_title .icon_trangle {
     position: relative;
     display: block;
-  }
-  .office_area_title .icon svg {
-    position: absolute;
-    top: 0;
-    left: 0;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    fill: #887766;
   }
 }
 
@@ -8556,11 +8587,12 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .office_area_group {
+    overflow: hidden;
     display: block;
     height: 0;
+    margin-top: 0;
     -webkit-transform-origin: top center;
             transform-origin: top center;
-    overflow: hidden;
   }
 }
 
@@ -8590,7 +8622,10 @@ footer .container {
 @media screen and (max-width: 1024px) {
   .office_area_item {
     width: 100%;
+    max-width: 100%;
+    min-height: 120px;
     margin: auto;
+    padding: 25px 5px;
   }
 }
 
@@ -8614,6 +8649,13 @@ footer .container {
   font-weight: 600;
   font-size: 26px;
   line-height: 35px;
+}
+
+@media screen and (max-width: 1024px) {
+  .office_area_name {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .office_area_name._new {
@@ -8647,6 +8689,15 @@ footer .container {
   color: #fff;
 }
 
+@media screen and (max-width: 1024px) {
+  .office_area_name._new::before {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
 .office_area_phone {
   margin-top: 16px;
   font-style: normal;
@@ -8655,12 +8706,26 @@ footer .container {
   line-height: 33px;
 }
 
+@media screen and (max-width: 1024px) {
+  .office_area_phone {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
 .office_area_address {
   margin-top: 16px;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 27px;
+}
+
+@media screen and (max-width: 1024px) {
+  .office_area_address {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .office_area + .office_area {
