@@ -1124,6 +1124,10 @@ footer .container {
   max-width: 1300px;
 }
 
+.officeOver .container {
+  padding-top: 77px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -8374,6 +8378,15 @@ footer .container {
 
 .office_tw_pic {
   max-width: 772px;
+  -webkit-filter: drop-shadow(-20px -21px 0px rgba(0, 0, 0, 0.05));
+          filter: drop-shadow(-20px -21px 0px rgba(0, 0, 0, 0.05));
+}
+
+@media screen and (max-width: 1024px) {
+  .office_tw_pic {
+    -webkit-filter: drop-shadow(-5px -6px 0px rgba(0, 0, 0, 0.05));
+            filter: drop-shadow(-5px -6px 0px rgba(0, 0, 0, 0.05));
+  }
 }
 
 .office_tw_detail {
@@ -8389,7 +8402,7 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .office_tw_detail {
-    max-width: calc(100% - 14px);
+    max-width: 100%;
     padding: 15px 0;
   }
 }

@@ -733,6 +733,9 @@ h4 {
 	@at-root .office & {
 		max-width: 1300px;
 	}
+	@at-root .officeOver &{
+		padding-top: 77px;
+	}
 }
 .header {
 	position: fixed;

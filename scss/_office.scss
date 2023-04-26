@@ -30,6 +30,10 @@
 		// .office_tw_pic
 		&_pic {
 			max-width: 772px;
+			filter: drop-shadow(-20px -21px 0px rgba(0, 0, 0, 0.05));
+			@include mw(L){
+				filter: drop-shadow(-5px -6px 0px rgba(0, 0, 0, 0.05));
+			}
 		}
 		// .office_tw_detail
 		&_detail {
@@ -41,7 +45,7 @@
 			background-color: #ebdec7;
 			text-align: center;
 			@include mw(L) {
-				max-width: calc(100% - 14px);
+				max-width: 100%;
 				padding: 15px 0;
 			}
 		}
@@ -296,4 +300,8 @@
 			}
 		}
 	}
+}
+
+.officeOver{
+	
 }
