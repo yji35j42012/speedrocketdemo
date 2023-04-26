@@ -6716,6 +6716,7 @@ footer .container {
 }
 
 .brandSH_introduction {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

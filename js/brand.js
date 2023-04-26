@@ -1,5 +1,3 @@
-
-
 var device = window.innerWidth <= 1024 ? "ph" : "pc";
 var access = document.querySelector("#access_over_group");
 var access_pic = document.querySelectorAll(
@@ -38,17 +36,17 @@ function over_prevHander() {
 	dotsAccessHandler();
 }
 if (over_next) {
-	over_next.addEventListener('click', over_nextHander);
+	over_next.addEventListener("click", over_nextHander);
 }
 if (over_prev) {
-	over_prev.addEventListener('click', over_prevHander);
+	over_prev.addEventListener("click", over_prevHander);
 }
 
 function access_moveHandler(e) {
-	if (access == null) return
+	if (access == null) return;
 	for (let i = 0; i < access_pic.length; i++) {
 		const element = access_pic[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			if (device == "pc") return;
 			lightBox.classList.add("on");
 			setTimeout(() => {
@@ -88,10 +86,10 @@ function access_moveHandler(e) {
 	access.style = `transform: translateX(${access_moveNum}%);transition-duration: 0.3s;opacity:1;`;
 }
 
-if(lightBox_info){
-	lightBox_info.onclick= function (event) {
+if (lightBox_info) {
+	lightBox_info.onclick = function(event) {
 		event.stopPropagation();
-	}
+	};
 }
 function lightBox_close_prevHander(event) {
 	lightBox.classList.remove("op1");
@@ -100,11 +98,11 @@ function lightBox_close_prevHander(event) {
 	}, 50);
 }
 if (lightBox_close) {
-	lightBox_close.addEventListener('click', lightBox_close_prevHander);
+	lightBox_close.addEventListener("click", lightBox_close_prevHander);
 }
 
 if (lightBox) {
-	lightBox.addEventListener('click', lightBox_close_prevHander);
+	lightBox.addEventListener("click", lightBox_close_prevHander);
 }
 function dotsAccessHandler() {
 	allDotsRemoveAccess();
@@ -117,7 +115,7 @@ function allDotsRemoveAccess() {
 	}
 }
 function pushAccissDots() {
-	if (access == null) return
+	if (access == null) return;
 	over_dots.innerHTML = "";
 	for (let i = 0; i < access_maxCount; i++) {
 		const liDot = document.createElement("li");
@@ -131,7 +129,7 @@ function pushAccissDots() {
 function dotAccessItem() {
 	for (let i = 0; i < over_dots_item.length; i++) {
 		const element = over_dots_item[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			access_count = i;
 			access_moveNum = -100 * access_count;
 			access_moveHandler();
@@ -150,7 +148,7 @@ function introductionChangeAni() {
 		introduction1_txt.setAttribute("data-aos", "fade-left");
 	}
 }
-window.onresize = function () {
+window.onresize = function() {
 	if (window.innerWidth > 1024 && window.innerWidth <= 1929 && photo_kp) {
 		let move = ((1929 - window.innerWidth) / 2) * -1;
 		photo_kp.style = `transform: translateX(${move}px);`;
@@ -185,6 +183,71 @@ window.onresize = function () {
 		dotsProductHandler();
 	}
 };
+var startX = 0;
+var nowX = 0;
+var endX = 0;
+function accessTouchStart(event) {
+	// 點擊位置
+	if (!event.touches) {
+		//相容移動端
+		startX = event.clientX;
+	} else {
+		//相容PC端
+		startX = event.touches[0].pageX;
+	}
+	nowX = startX;
+	window.addEventListener("touchmove", accessTouchMove);
+	window.addEventListener("touchend", accessTouchEnd);
+}
+function accessTouchMove() {
+	if (!event.touches) {
+		//相容移動端
+		nowX = event.clientX;
+	} else {
+		//相容PC端
+		nowX = event.touches[0].pageX;
+	}
+	let newX = nowX - startX;
+	if (access_count == 0) {
+		if (nowX < startX) {
+			access.style = `transform: translateX(calc(${access_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
+		}
+	}else if(access_count + 1 >= access_maxCount){
+		if (nowX > startX) {
+			access.style = `transform: translateX(calc(${access_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
+		}
+	}else{
+		access.style = `transform: translateX(calc(${access_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
+	}
+
+}
+function accessTouchEnd() {
+	if (nowX > startX) {
+		if (access_count == 0) {
+			return;
+		} else {
+			access_count--;
+		}
+		access_moveNum = -100 * access_count;
+		access_moveHandler();
+		dotsAccessHandler();
+	} else if (nowX < startX) {
+		if (access_count + 1 >= access_maxCount) {
+			return;
+		} else {
+			access_count++;
+		}
+		access_moveNum = -100 * access_count;
+		access_moveHandler();
+		dotsAccessHandler();
+	}
+	window.removeEventListener("touchmove", accessTouchMove);
+	window.removeEventListener("touchend", accessTouchEnd);
+}
+if (access) {
+	access.addEventListener("touchstart", accessTouchStart);
+}
+
 setTimeout(() => {
 	access_moveHandler();
 	pushAccissDots();
@@ -206,7 +269,7 @@ function productIconAdd() {
 	product_prev.style.top = numT + "px";
 	product_next.style.top = numT + "px";
 }
-product_prev.onclick = function () {
+product_prev.onclick = function() {
 	if (product_count == 0) {
 		product_count = product_maxCount - 1;
 	} else {
@@ -216,7 +279,7 @@ product_prev.onclick = function () {
 	product_moveHandler();
 	dotsProductHandler();
 };
-product_next.onclick = function () {
+product_next.onclick = function() {
 	if (product_count + 1 >= product_maxCount) {
 		product_count = 0;
 	} else {
@@ -237,7 +300,7 @@ function product_moveHandler() {
 function dotProductItem() {
 	for (let i = 0; i < product_dots_item.length; i++) {
 		const element = product_dots_item[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			product_count = i;
 			product_moveNum = -100 * product_count;
 			product_moveHandler();
@@ -265,6 +328,72 @@ function pushProductDots() {
 		dotsProductHandler();
 	}
 }
+
+var startX = 0;
+var nowX = 0;
+var endX = 0;
+function productTouchStart(event) {
+	// 點擊位置
+	if (!event.touches) {
+		//相容移動端
+		startX = event.clientX;
+	} else {
+		//相容PC端
+		startX = event.touches[0].pageX;
+	}
+	nowX = startX;
+	window.addEventListener("touchmove", productTouchMove);
+	window.addEventListener("touchend", productTouchEnd);
+}
+function productTouchMove() {
+	if (!event.touches) {
+		//相容移動端
+		nowX = event.clientX;
+	} else {
+		//相容PC端
+		nowX = event.touches[0].pageX;
+	}
+	let newX = nowX - startX;
+
+	if (product_count == 0) {
+		if (nowX < startX) {
+			product_group.style = `transform: translateX(calc(${product_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
+		}
+	}else if(product_count + 1 >= product_maxCount){
+		if (nowX > startX) {
+			product_group.style = `transform: translateX(calc(${product_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
+		}
+	}else{
+		product_group.style = `transform: translateX(calc(${product_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
+	}
+}
+function productTouchEnd() {
+	if (nowX > startX) {
+		if (product_count == 0) {
+			return;
+		} else {
+			product_count--;
+		}
+		product_moveNum = -100 * product_count;
+		product_moveHandler();
+		dotsProductHandler();
+	} else if (nowX < startX) {
+		if (product_count + 1 >= product_maxCount) {
+			return;
+		} else {
+			product_count++;
+		}
+		product_moveNum = -100 * product_count;
+		product_moveHandler();
+		dotsProductHandler();
+	}
+	window.removeEventListener("touchmove", productTouchMove);
+	window.removeEventListener("touchend", productTouchEnd);
+}
+if (product_group) {
+	product_group.addEventListener("touchstart", productTouchStart);
+}
+
 setTimeout(() => {
 	pushProductDots();
 	productIconAdd();

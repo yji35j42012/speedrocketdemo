@@ -6,6 +6,7 @@ var banner_count = 1;
 var banner_moveNum = -100 * banner_count;
 var banner_maxCount = banner_pic.length;
 var banner_time = 6; //6秒
+var countdown = banner_time;
 let bannerTime = null;
 var banner_dots = document.querySelector("#banner_dots");
 var banner_dots_item = null;
@@ -19,36 +20,48 @@ var introduction1_txt = document.querySelector(
 );
 
 function bannerTimeHandler() {
-	bannerTime = setInterval(() => {
+	countdown--;
+	if (countdown >= 0) {
+		bannerTime = setTimeout(bannerTimeHandler, 1000);
+	} else {
 		banner_count++;
 		banner_moveNum = -100 * banner_count;
 		banner_moveHandler();
 		dotsHandler();
-		resetTime();
-	}, banner_time * 1000);
+		countdown = banner_time;
+		bannerTime = setTimeout(bannerTimeHandler, 1000);
+	}
 }
-banner_next.onclick = function () {
+banner_next.onclick = function() {
 	banner_count++;
 	banner_moveNum = -100 * banner_count;
 	banner_moveHandler();
 	resetTime();
 	dotsHandler();
 };
-banner_prev.onclick = function () {
+banner_prev.onclick = function() {
 	banner_count--;
 	banner_moveNum = -100 * banner_count;
 	banner_moveHandler();
 	resetTime();
 	dotsHandler();
 };
+//時間重置
 function resetTime() {
-	clearInterval(bannerTime);
-	bannerTimeHandler();
+	clearTimeout(bannerTime);
+	countdown = banner_time;
+	bannerTime = setTimeout(bannerTimeHandler, 1000);
 	if (banner_count == banner_maxCount + 1) {
 		goFirst();
 	} else if (banner_count == 0) {
 		goEnd();
 	}
+}
+// 移動
+function banner_moveHandler() {
+	window.removeEventListener("touchmove", bannerTouchMove);
+	window.removeEventListener("touchend", bannerTouchEnd);
+	banner.style = `transform: translateX(${banner_moveNum}%);transition-duration: 0.3s;opacity:1;`;
 }
 // 快速換回第一張
 function goFirst() {
@@ -65,9 +78,6 @@ function goEnd() {
 		banner_moveNum = -100 * banner_count;
 		banner.style = `transform: translateX(${banner_moveNum}%);transition-duration: 0;opacity:1;`;
 	}, 350);
-}
-function banner_moveHandler() {
-	banner.style = `transform: translateX(${banner_moveNum}%);transition-duration: 0.3s;opacity:1;`;
 }
 function pushStart() {
 	var getImg = document.querySelector(
@@ -124,7 +134,7 @@ function dotsHandler() {
 function dotItem() {
 	for (let i = 0; i < banner_dots_item.length; i++) {
 		const element = banner_dots_item[i];
-		element.onclick = function () {
+		element.onclick = function() {
 			banner_count = i + 1;
 			banner_moveNum = -100 * banner_count;
 			banner_moveHandler();
@@ -139,6 +149,66 @@ function allDotsRemove() {
 		element.classList.remove("on");
 	}
 }
+var startX = 0;
+var nowX = 0;
+var endX = 0;
+
+function bannerTouchStart(event) {
+	clearTimeout(bannerTime);
+	bannerTime = null;
+	// 點擊位置
+	if (!event.touches) {
+		//相容移動端
+		startX = event.clientX;
+	} else {
+		//相容PC端
+		startX = event.touches[0].pageX;
+	}
+	nowX = startX;
+	window.addEventListener("touchmove", bannerTouchMove);
+	window.addEventListener("touchend", bannerTouchEnd);
+}
+function bannerTouchMove() {
+	if (!event.touches) {
+		//相容移動端
+		nowX = event.clientX;
+	} else {
+		//相容PC端
+		nowX = event.touches[0].pageX;
+	}
+	let newX = nowX - startX;
+	banner.style = `transform: translateX(calc(${banner_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
+}
+
+function bannerTouchEnd() {
+	if (nowX > startX) {
+		banner_count--;
+		banner_moveNum = -100 * banner_count;
+		banner_moveHandler();
+		if (banner_count == banner_maxCount + 1) {
+			goFirst();
+		} else if (banner_count == 0) {
+			goEnd();
+		}
+		dotsHandler();
+	} else if (nowX < startX) {
+		banner_count++;
+		banner_moveNum = -100 * banner_count;
+		banner_moveHandler();
+		if (banner_count == banner_maxCount + 1) {
+			goFirst();
+		} else if (banner_count == 0) {
+			goEnd();
+		}
+		dotsHandler();
+	}
+	countdown = banner_time;
+	bannerTime = setTimeout(bannerTimeHandler, 1000);
+	window.removeEventListener("touchmove", bannerTouchMove);
+	window.removeEventListener("touchend", bannerTouchEnd);
+}
+banner.addEventListener("touchstart", bannerTouchStart);
+
 setTimeout(() => {
 	pushStart();
 	pushEnd();
