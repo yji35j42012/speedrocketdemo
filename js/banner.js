@@ -5,7 +5,7 @@ var banner_next = document.querySelector("#banner_next");
 var banner_count = 1;
 var banner_moveNum = -100 * banner_count;
 var banner_maxCount = banner_pic.length;
-var banner_time = 6; //6秒
+var banner_time = 5; //6秒
 var countdown = banner_time;
 let bannerTime = null;
 var banner_dots = document.querySelector("#banner_dots");
@@ -27,6 +27,11 @@ function bannerTimeHandler() {
 		banner_count++;
 		banner_moveNum = -100 * banner_count;
 		banner_moveHandler();
+		if (banner_count == banner_maxCount + 1) {
+			goFirst();
+		} else if (banner_count == 0) {
+			goEnd();
+		}
 		dotsHandler();
 		countdown = banner_time;
 		bannerTime = setTimeout(bannerTimeHandler, 1000);
