@@ -134,6 +134,7 @@ mailHandler.onclick = function () {
 var office = document.querySelectorAll("#recruitment_office_group > .recruitment_office_item")
 var lightBox = document.querySelector("#lightBox");
 var lightBox_close = document.querySelector("#lightBox_close");
+var lightBox_info = document.querySelector("#lightBox_info");
 
 
 for (let i = 0; i < office.length; i++) {
@@ -154,14 +155,24 @@ for (let i = 0; i < office.length; i++) {
 		}, 20);
 	}
 }
-lightBox_close.onclick = function () {
+function lightBox_close_prevHander() {
 	lightBox.classList.remove("op1")
 	setTimeout(() => {
 		lightBox.classList.remove("on");
 		document.querySelector("#lightBox_recruitmentPic").innerHTML = "";
 		document.querySelector("#lightBox_recruitmentTxt").innerHTML = "";
 	}, 50);
+}
 
+if (lightBox_close) {
+	lightBox_close.addEventListener('click', lightBox_close_prevHander);
+}
+if (lightBox) {
+	lightBox.addEventListener('click', lightBox_close_prevHander);
+}
 
-
+if(lightBox_info){
+	lightBox_info.onclick= function (event) {
+		event.stopPropagation();
+	}
 }

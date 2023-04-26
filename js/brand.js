@@ -15,8 +15,7 @@ var over_dots = document.querySelector("#over_dots");
 var over_dots_item = null;
 var lightBox = document.querySelector("#lightBox");
 var lightBox_close = document.querySelector("#lightBox_close");
-
-
+var lightBox_info = document.querySelector("#lightBox_info");
 function over_nextHander() {
 	console.log("access_count", access_count);
 	if (access_count + 1 >= access_maxCount) {
@@ -45,8 +44,8 @@ if (over_prev) {
 	over_prev.addEventListener('click', over_prevHander);
 }
 
-function access_moveHandler() {
-	if(access==null) return
+function access_moveHandler(e) {
+	if (access == null) return
 	for (let i = 0; i < access_pic.length; i++) {
 		const element = access_pic[i];
 		element.onclick = function () {
@@ -89,8 +88,12 @@ function access_moveHandler() {
 	access.style = `transform: translateX(${access_moveNum}%);transition-duration: 0.3s;opacity:1;`;
 }
 
-
-function lightBox_close_prevHander() {
+if(lightBox_info){
+	lightBox_info.onclick= function (event) {
+		event.stopPropagation();
+	}
+}
+function lightBox_close_prevHander(event) {
 	lightBox.classList.remove("op1");
 	setTimeout(() => {
 		lightBox.classList.remove("on");
@@ -98,6 +101,10 @@ function lightBox_close_prevHander() {
 }
 if (lightBox_close) {
 	lightBox_close.addEventListener('click', lightBox_close_prevHander);
+}
+
+if (lightBox) {
+	lightBox.addEventListener('click', lightBox_close_prevHander);
 }
 function dotsAccessHandler() {
 	allDotsRemoveAccess();
@@ -110,7 +117,7 @@ function allDotsRemoveAccess() {
 	}
 }
 function pushAccissDots() {
-	if(access==null) return
+	if (access == null) return
 	over_dots.innerHTML = "";
 	for (let i = 0; i < access_maxCount; i++) {
 		const liDot = document.createElement("li");
