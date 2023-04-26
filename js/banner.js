@@ -12,6 +12,7 @@ var banner_dots = document.querySelector("#banner_dots");
 var banner_dots_item = null;
 var photo_kp = document.querySelector("#photo_kp");
 var introduction1 = document.querySelector("#introduction1");
+var bannerBox = document.querySelector("#bannerBox");
 var introduction1_pic = document.querySelector(
 	"#introduction1 > .brandSH_introduction_pic"
 );
@@ -188,7 +189,6 @@ function bannerTouchMove() {
 	let newX = nowX - startX;
 	banner.style = `transform: translateX(calc(${banner_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
 }
-
 function bannerTouchEnd() {
 	if (nowX > startX) {
 		banner_count--;
@@ -218,8 +218,10 @@ function bannerTouchEnd() {
 	window.removeEventListener("mousemove", bannerTouchMove);
 	window.removeEventListener("mouseup", bannerTouchEnd);
 }
-banner.addEventListener("touchstart", bannerTouchStart);
-banner.addEventListener("mousedown", bannerTouchStart);
+bannerBox.addEventListener("touchstart", bannerTouchStart);
+bannerBox.addEventListener("mousedown", bannerTouchStart);
+bannerBox.addEventListener("touchstart", bannerTouchStart);
+bannerBox.addEventListener("mousedown", bannerTouchStart);
 
 setTimeout(() => {
 	pushStart();

@@ -244,8 +244,9 @@ function accessTouchEnd() {
 	window.removeEventListener("touchmove", accessTouchMove);
 	window.removeEventListener("touchend", accessTouchEnd);
 }
-if (access) {
-	access.addEventListener("touchstart", accessTouchStart);
+var accessBox = document.querySelector("#accessBox");
+if (accessBox) {
+	accessBox.addEventListener("touchstart", accessTouchStart);
 }
 
 setTimeout(() => {
@@ -333,6 +334,8 @@ var startX = 0;
 var nowX = 0;
 var endX = 0;
 function productTouchStart(event) {
+	console.log('productTouchStart');
+
 	// 點擊位置
 	if (!event.touches) {
 		//相容移動端
@@ -390,8 +393,9 @@ function productTouchEnd() {
 	window.removeEventListener("touchmove", productTouchMove);
 	window.removeEventListener("touchend", productTouchEnd);
 }
-if (product_group) {
-	product_group.addEventListener("touchstart", productTouchStart);
+var productBox = document.querySelector("#productBox");
+if (productBox) {
+	productBox.addEventListener("touchstart", productTouchStart);
 }
 
 setTimeout(() => {
