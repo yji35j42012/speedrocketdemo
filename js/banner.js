@@ -66,6 +66,8 @@ function resetTime() {
 function banner_moveHandler() {
 	window.removeEventListener("touchmove", bannerTouchMove);
 	window.removeEventListener("touchend", bannerTouchEnd);
+	window.removeEventListener("mousemove", bannerTouchMove);
+	window.removeEventListener("mouseup", bannerTouchEnd);
 	banner.style = `transform: translateX(${banner_moveNum}%);transition-duration: 0.3s;opacity:1;`;
 }
 // 快速換回第一張
@@ -172,6 +174,8 @@ function bannerTouchStart(event) {
 	nowX = startX;
 	window.addEventListener("touchmove", bannerTouchMove);
 	window.addEventListener("touchend", bannerTouchEnd);
+	window.addEventListener("mousemove", bannerTouchMove);
+	window.addEventListener("mouseup", bannerTouchEnd);
 }
 function bannerTouchMove() {
 	if (!event.touches) {
@@ -211,8 +215,11 @@ function bannerTouchEnd() {
 	bannerTime = setTimeout(bannerTimeHandler, 1000);
 	window.removeEventListener("touchmove", bannerTouchMove);
 	window.removeEventListener("touchend", bannerTouchEnd);
+	window.removeEventListener("mousemove", bannerTouchMove);
+	window.removeEventListener("mouseup", bannerTouchEnd);
 }
 banner.addEventListener("touchstart", bannerTouchStart);
+banner.addEventListener("mousedown", bannerTouchStart);
 
 setTimeout(() => {
 	pushStart();
