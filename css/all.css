@@ -135,6 +135,15 @@ h2 + .filiter {
   }
 }
 
+.privacy_title h2 {
+  display: inline-block;
+  max-width: 1294px;
+  margin: auto;
+  padding-bottom: 12px;
+  color: #fff;
+  border-bottom: 3px solid #ffffff;
+}
+
 h3 {
   font-weight: 600;
   font-size: 36px;
@@ -425,18 +434,22 @@ h4 span {
 }
 
 ._black .normal_btn_arr::before,
-._join .normal_btn_arr::before, ._black .normal_btn_arr::after,
-._join .normal_btn_arr::after {
+._join .normal_btn_arr::before,
+._error .normal_btn_arr::before, ._black .normal_btn_arr::after,
+._join .normal_btn_arr::after,
+._error .normal_btn_arr::after {
   background-color: #fff;
 }
 
 .normal_btn_arr::before {
-  bottom: 0;
+  top: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 ._bottom .normal_btn_arr::before {
+  top: auto;
+  bottom: 0;
   left: 2px;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
@@ -516,6 +529,11 @@ h4 span {
     width: 2px;
     height: 16px;
   }
+  .normal_btn:hover._error {
+    background-color: #000000;
+    color: #bda782;
+    border-color: #000;
+  }
 }
 
 .normal_btn:active {
@@ -565,6 +583,12 @@ h4 span {
   height: 16px;
 }
 
+.normal_btn:active._error {
+  background-color: #000000;
+  color: #bda782;
+  border-color: #000;
+}
+
 .normal_btn._back svg {
   width: 7px;
   height: 12px;
@@ -580,6 +604,12 @@ h4 span {
 .news_img + .normal_btn._back {
   margin: 72px auto 0;
   text-align: center;
+}
+
+.normal_btn._error {
+  background-color: #bda782;
+  color: #fff;
+  border-color: #bda782;
 }
 
 .normal_btn._bottom {
@@ -599,6 +629,16 @@ h4 span {
 @media screen and (max-width: 1024px) {
   .recruitment_vacancies .normal_btn {
     margin-top: 22px;
+  }
+}
+
+.error .normal_btn {
+  margin-top: 83px;
+}
+
+@media screen and (max-width: 1024px) {
+  .error .normal_btn {
+    margin-top: 48px;
   }
 }
 
@@ -826,6 +866,10 @@ h4 span {
   }
 }
 
+.privacy_title .breadcrumb {
+  position: relative;
+}
+
 .icon {
   display: inline-block;
 }
@@ -1018,14 +1062,8 @@ h4 span {
 .container._radioStyle {
   max-width: 1294px;
   background-color: #f9f9f9;
-  border-radius: 16px;
-}
-
-@media screen and (max-width: 1024px) {
-  .container._radioStyle {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 footer .container {
@@ -1196,6 +1234,23 @@ footer .container {
   .officeOver .container {
     padding-top: 25px;
     padding-bottom: 68px;
+  }
+}
+
+.privacy .container {
+  padding-top: 87px;
+  padding-bottom: 191px;
+}
+
+.error .container {
+  max-width: 1193px;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .error .container {
+    padding: 0 18px;
   }
 }
 
@@ -3609,6 +3664,38 @@ footer .container {
   .linkGroup a + a {
     margin-left: 8px;
   }
+}
+
+.error {
+  background-color: #fff;
+  padding-top: 114px;
+  padding-bottom: 147px;
+}
+
+@media screen and (max-width: 1024px) {
+  .error {
+    padding-top: 48px;
+    padding-bottom: 68px;
+  }
+}
+
+.error_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 160%;
+  color: #bda782;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .error_title {
+    font-size: 18px;
+  }
+}
+
+.error_pic {
+  margin-top: 57px;
 }
 
 .news_group {
@@ -9088,5 +9175,45 @@ footer .container {
     max-width: 576px;
     margin: 56px auto 0;
   }
+}
+
+.privacy {
+  position: relative;
+  max-width: 1294px;
+  margin: 111px auto 0;
+  background-color: #171717;
+}
+
+.privacy_title {
+  padding-top: 71px;
+}
+
+.privacy_txt {
+  max-width: 1083px;
+  margin: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+}
+
+.privacy_group {
+  max-width: 1083px;
+  margin: 70px auto 0;
+}
+
+.privacy_item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+}
+
+.privacy_item._title {
+  margin-bottom: 18px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 160%;
 }
 /*# sourceMappingURL=all.css.map */

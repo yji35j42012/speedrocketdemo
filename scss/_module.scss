@@ -86,6 +86,15 @@ h2 {
 			margin-bottom: 18px;
 		}
 	}
+
+	.privacy_title & {
+		display: inline-block;
+		max-width: 1294px;
+		margin: auto;
+		padding-bottom: 12px;
+		color: #fff;
+		border-bottom: 3px solid #ffffff;
+	}
 }
 h3 {
 	font-weight: 600;
@@ -299,14 +308,17 @@ h4 {
 			border-bottom-left-radius: 100px;
 			@extend %transition;
 			@at-root ._black &,
-				._join & {
+				._join &,
+				._error & {
 				background-color: #fff;
 			}
 		}
 		&::before {
-			bottom: 0;
+			top: 0;
 			transform: rotate(45deg);
 			@at-root ._bottom & {
+				top: auto;
+				bottom: 0;
 				left: 2px;
 				transform: rotate(135deg);
 			}
@@ -332,9 +344,8 @@ h4 {
 			margin-right: 10px;
 			transform: rotate(180deg);
 		}
+
 		@at-root ._bottom & {
-			// margin-left: 10px;
-			// transform: rotate(90deg);
 			.line {
 				position: absolute;
 				left: 0;
@@ -389,6 +400,11 @@ h4 {
 				height: 16px;
 			}
 		}
+		&._error {
+			background-color: #000000;
+			color: #bda782;
+			border-color: #000;
+		}
 	}
 
 	&._back {
@@ -405,9 +421,14 @@ h4 {
 			text-align: center;
 		}
 	}
+	&._error {
+		background-color: #bda782;
+		color: #fff;
+		border-color: #bda782;
+	}
 	&._bottom {
 		margin-top: 38px;
-		@include mw(L){
+		@include mw(L) {
 			margin-top: 28px;
 		}
 	}
@@ -415,6 +436,13 @@ h4 {
 		margin-top: 30px;
 		@include mw(L) {
 			margin-top: 22px;
+		}
+	}
+
+	.error & {
+		margin-top: 83px;
+		@include mw(L){
+			margin-top: 48px;
 		}
 	}
 }
@@ -540,6 +568,10 @@ h4 {
 				}
 			}
 		}
+	}
+
+	.privacy_title & {
+		position: relative;
 	}
 }
 .icon {
@@ -680,11 +712,13 @@ h4 {
 	&._radioStyle {
 		max-width: 1294px;
 		background-color: #f9f9f9;
-		border-radius: 16px;
-		@include mw(L) {
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
-		}
+		// border-radius: 16px;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+		// @include mw(L) {
+		// 	border-bottom-left-radius: 0;
+		// 	border-bottom-right-radius: 0;
+		// }
 	}
 	@at-root footer & {
 		position: relative;
@@ -782,6 +816,18 @@ h4 {
 		@include mw(L) {
 			padding-top: 25px;
 			padding-bottom: 68px;
+		}
+	}
+	.privacy & {
+		padding-top: 87px;
+		padding-bottom: 191px;
+	}
+	.error & {
+		max-width: 1193px;
+		margin: auto;
+		text-align: center;
+		@include mw(L){
+			padding: 0 18px;
 		}
 	}
 }
@@ -2386,5 +2432,31 @@ h4 {
 		@include mw(XS) {
 			margin-left: 8px;
 		}
+	}
+}
+
+.error {
+	background-color: #fff;
+	padding-top: 114px;
+	padding-bottom: 147px;
+	@include mw(L) {
+		padding-top: 48px;
+		padding-bottom: 68px;
+	}
+	// .error_title
+	&_title {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 42px;
+		line-height: 160%;
+		color: #bda782;
+		text-align: center;
+		@include mw(L) {
+			font-size: 18px;
+		}
+	}
+	// .error_pic
+	&_pic {
+		margin-top: 57px;
 	}
 }
