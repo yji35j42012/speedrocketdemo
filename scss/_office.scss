@@ -215,7 +215,6 @@
 			padding: 12px;
 			text-align: center;
 			border-bottom: 1px solid #d9d9d9;
-			
 
 			.officeOver & {
 				width: calc(100% / 2);
@@ -228,6 +227,9 @@
 				padding: 25px 5px;
 				.officeOver & {
 					width: 100%;
+				}
+				.officeOver &:first-child {
+					border-top: 1px solid #d9d9d9;
 				}
 			}
 			@include minmw(L) {
@@ -299,6 +301,7 @@
 			font-size: 24px;
 			line-height: 33px;
 			@include mw(L) {
+				margin-top: 8px;
 				font-size: 12px;
 				line-height: 16px;
 			}
@@ -311,6 +314,7 @@
 			font-size: 20px;
 			line-height: 27px;
 			@include mw(L) {
+				margin-top: 8px;
 				font-size: 12px;
 				line-height: 16px;
 			}
@@ -321,7 +325,7 @@
 			margin-bottom: 16px;
 			&._pnj {
 				max-width: 149px;
-				@include mw(L){
+				@include mw(L) {
 					min-width: 118px;
 				}
 			}

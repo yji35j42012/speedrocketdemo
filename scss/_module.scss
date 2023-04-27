@@ -281,6 +281,11 @@ h4 {
 		min-width: 4px;
 		height: 8px;
 		margin-left: 10px;
+		@at-root ._bottom & {
+			min-width: 8px;
+			height: 4px;
+			@extend %transition;
+		}
 		&::before,
 		&::after {
 			content: "";
@@ -299,12 +304,20 @@ h4 {
 			}
 		}
 		&::before {
-			top: 0;
+			bottom: 0;
 			transform: rotate(45deg);
+			@at-root ._bottom & {
+				left: 2px;
+				transform: rotate(135deg);
+			}
 		}
 		&::after {
 			bottom: 0;
 			transform: rotate(-45deg);
+			@at-root ._bottom & {
+				right: 2px;
+				transform: rotate(-135deg);
+			}
 		}
 		.line {
 			display: inline-block;
@@ -318,6 +331,19 @@ h4 {
 			margin-left: 0;
 			margin-right: 10px;
 			transform: rotate(180deg);
+		}
+		@at-root ._bottom & {
+			// margin-left: 10px;
+			// transform: rotate(90deg);
+			.line {
+				position: absolute;
+				left: 0;
+				right: 0;
+				// bottom: 0;
+				margin: auto;
+				width: 2px;
+				height: 0;
+			}
 		}
 	}
 
@@ -351,6 +377,18 @@ h4 {
 				background-color: #fff;
 			}
 		}
+		&._bottom {
+			background-color: #000000;
+			color: #bda782;
+			border-color: #000;
+			.normal_btn_arr {
+				height: 15px;
+			}
+			.line {
+				width: 2px;
+				height: 16px;
+			}
+		}
 	}
 
 	&._back {
@@ -367,7 +405,12 @@ h4 {
 			text-align: center;
 		}
 	}
-
+	&._bottom {
+		margin-top: 38px;
+		@include mw(L){
+			margin-top: 28px;
+		}
+	}
 	@at-root .recruitment_vacancies & {
 		margin-top: 30px;
 		@include mw(L) {
@@ -733,10 +776,10 @@ h4 {
 	@at-root .office & {
 		max-width: 1300px;
 	}
-	@at-root .officeOver &{
+	@at-root .officeOver & {
 		padding-top: 77px;
 		padding-bottom: 95px;
-		@include mw(L){
+		@include mw(L) {
 			padding-top: 25px;
 			padding-bottom: 68px;
 		}
@@ -993,9 +1036,13 @@ h4 {
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 25px;
+
 		@extend %hand;
 		@extend %transition;
 		@include minmw(L) {
+			&._rule {
+				display: none;
+			}
 			@include hoverHandler {
 				color: #887766;
 				border-color: #887766;
