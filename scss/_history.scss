@@ -48,7 +48,6 @@
 			transform-origin: top;
 			transition-delay: 0.2s;
 			transition-duration: 0.5s;
-			// @extend %transition;
 
 			@include mw(L) {
 				top: 32px;
