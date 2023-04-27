@@ -1126,6 +1126,14 @@ footer .container {
 
 .officeOver .container {
   padding-top: 77px;
+  padding-bottom: 95px;
+}
+
+@media screen and (max-width: 1024px) {
+  .officeOver .container {
+    padding-top: 25px;
+    padding-bottom: 68px;
+  }
 }
 
 .header {
@@ -8570,6 +8578,11 @@ footer .container {
     padding: 0 13px;
     font-size: 18px;
   }
+  .officeOver .office_area_title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .office_area_title .icon_trangle {
     position: relative;
     display: block;
@@ -8601,12 +8614,12 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .office_area_group {
-    overflow: hidden;
     display: block;
+  }
+  .office .office_area_group {
+    overflow: hidden;
     height: 0;
     margin-top: 0;
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
   }
 }
 
@@ -8628,9 +8641,13 @@ footer .container {
   width: calc(100% / 3);
   max-width: 420px;
   min-height: 278px;
-  padding: 5px;
+  padding: 12px;
   text-align: center;
   border-bottom: 1px solid #d9d9d9;
+}
+
+.officeOver .office_area_item {
+  width: calc(100% / 2);
 }
 
 @media screen and (max-width: 1024px) {
@@ -8641,10 +8658,24 @@ footer .container {
     margin: auto;
     padding: 25px 5px;
   }
+  .officeOver .office_area_item {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1025px) {
-  .office_area_item:not(:nth-child(3n + 1)):after {
+  .office .office_area_item:not(:nth-child(3n + 1)):after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 180px;
+    margin: auto;
+    background-color: #d9d9d9;
+  }
+  .officeOver .office_area_item:nth-child(even):after {
     content: "";
     position: absolute;
     top: 0;
@@ -8740,6 +8771,24 @@ footer .container {
     font-size: 12px;
     line-height: 16px;
   }
+}
+
+.office_area_logo {
+  margin-bottom: 16px;
+}
+
+.office_area_logo._pnj {
+  max-width: 149px;
+}
+
+@media screen and (max-width: 1024px) {
+  .office_area_logo._pnj {
+    min-width: 118px;
+  }
+}
+
+.office_area_logo._maxelbeauty {
+  max-width: 73px;
 }
 
 .office_area + .office_area {

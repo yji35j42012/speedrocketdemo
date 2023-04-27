@@ -735,6 +735,11 @@ h4 {
 	}
 	@at-root .officeOver &{
 		padding-top: 77px;
+		padding-bottom: 95px;
+		@include mw(L){
+			padding-top: 25px;
+			padding-bottom: 68px;
+		}
 	}
 }
 .header {

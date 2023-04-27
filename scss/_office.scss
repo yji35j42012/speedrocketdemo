@@ -31,7 +31,7 @@
 		&_pic {
 			max-width: 772px;
 			filter: drop-shadow(-20px -21px 0px rgba(0, 0, 0, 0.05));
-			@include mw(L){
+			@include mw(L) {
 				filter: drop-shadow(-5px -6px 0px rgba(0, 0, 0, 0.05));
 			}
 		}
@@ -139,6 +139,7 @@
 	// .office_area
 	&_area {
 		margin-top: 74px;
+
 		@include mw(L) {
 			max-width: 576px;
 			margin: 53px auto 0;
@@ -174,7 +175,9 @@
 				height: 60px;
 				padding: 0 13px;
 				font-size: 18px;
-
+				.officeOver & {
+					justify-content: center;
+				}
 				.icon_trangle {
 					position: relative;
 					display: block;
@@ -193,11 +196,12 @@
 			margin-top: 29px;
 			@extend %transition;
 			@include mw(L) {
-				overflow: hidden;
 				display: block;
-				height: 0;
-				margin-top: 0;
-				transform-origin: top center;
+				.office & {
+					overflow: hidden;
+					height: 0;
+					margin-top: 0;
+				}
 			}
 		}
 		// .office_area_item
@@ -208,18 +212,37 @@
 			width: calc(100% / 3);
 			max-width: 420px;
 			min-height: 278px;
-			padding: 5px;
+			padding: 12px;
 			text-align: center;
 			border-bottom: 1px solid #d9d9d9;
+			
+
+			.officeOver & {
+				width: calc(100% / 2);
+			}
 			@include mw(L) {
 				width: 100%;
 				max-width: 100%;
 				min-height: 120px;
 				margin: auto;
 				padding: 25px 5px;
+				.officeOver & {
+					width: 100%;
+				}
 			}
 			@include minmw(L) {
-				&:not(:nth-child(3n + 1)):after {
+				.office &:not(:nth-child(3n + 1)):after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					width: 1px;
+					height: 180px;
+					margin: auto;
+					background-color: #d9d9d9;
+				}
+				.officeOver &:nth-child(even):after {
 					content: "";
 					position: absolute;
 					top: 0;
@@ -293,6 +316,19 @@
 			}
 		}
 
+		// .office_area_logo
+		&_logo {
+			margin-bottom: 16px;
+			&._pnj {
+				max-width: 149px;
+				@include mw(L){
+					min-width: 118px;
+				}
+			}
+			&._maxelbeauty {
+				max-width: 73px;
+			}
+		}
 		& + & {
 			margin-top: 74px;
 			@include mw(L) {
@@ -300,8 +336,4 @@
 			}
 		}
 	}
-}
-
-.officeOver{
-	
 }
