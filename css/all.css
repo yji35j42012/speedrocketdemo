@@ -9144,6 +9144,7 @@ footer .container {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 159px;
     height: 123px;
     font-size: 14px;
     line-height: 19px;
