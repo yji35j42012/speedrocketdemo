@@ -8727,13 +8727,16 @@ footer .container {
 
 .office_area_title {
   font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 38px;
   text-align: center;
   color: #887766;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+}
+
+.office_area_title span {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
 }
 
 .office_area_title .icon_trangle {
@@ -8765,6 +8768,8 @@ footer .container {
     width: 100%;
     height: 60px;
     padding: 0 13px;
+  }
+  .office_area_title span {
     font-size: 18px;
   }
   .officeOver .office_area_title {
