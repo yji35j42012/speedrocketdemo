@@ -78,6 +78,7 @@
 			color: #8b8b8b;
 			background: rgba(235, 222, 199, 0.5);
 			@include mw(L) {
+				margin-bottom: 20px;
 				padding: 2px 0;
 				font-size: 14px;
 				line-height: 19px;
@@ -94,6 +95,7 @@
 			border-radius: 16px;
 			@include mw(L) {
 				flex-direction: column;
+				height: 123px;
 				font-size: 14px;
 				line-height: 19px;
 			}

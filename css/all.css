@@ -1508,6 +1508,9 @@ footer .container {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -8025,6 +8028,19 @@ footer .container {
 
 .softwareShop_item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: calc(100% / 2 - 40px);
   max-width: 598px;
   margin-bottom: 178px;
@@ -8088,20 +8104,17 @@ footer .container {
 .softwareShop_item_title {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-width: 430px;
   margin: auto;
-  padding: 0 30px;
   background-color: #fff;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -8130,7 +8143,6 @@ footer .container {
 .softwareShop_item_title::after {
   content: attr(data-title);
   display: inline-block;
-  max-width: calc(100% - 56px);
   padding: 8px 18px;
   background-color: #ebdec7;
   font-style: normal;
@@ -8153,9 +8165,27 @@ footer .container {
   margin-right: 12px;
 }
 
+@media screen and (min-width: 1025px) {
+  .softwareShop_item_title .num.num2 {
+    max-width: 60px;
+  }
+  .softwareShop_item_title .num.num3 {
+    max-width: 60px;
+  }
+  .softwareShop_item_title .num.num4 {
+    max-width: 60px;
+  }
+  .softwareShop_item_title .num.num5 {
+    max-width: 60px;
+  }
+  .softwareShop_item_title .num.num6 {
+    max-width: 60px;
+  }
+}
+
 .softwareShop_item_txt {
   max-width: 521px;
-  margin: auto;
+  margin: 0 auto;
   text-align: left;
 }
 
@@ -8280,10 +8310,15 @@ footer .container {
 
 @media screen and (max-width: 1280px) {
   .softwareShop_success_info {
+    padding: 30px 30px 22px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .softwareShop_success_info {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
-    padding: 30px 30px 22px;
   }
 }
 
@@ -8554,8 +8589,6 @@ footer .container {
 }
 
 .office_tw_detail {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   display: inline-block;
   width: 100%;
   max-width: 488px;
@@ -9080,6 +9113,7 @@ footer .container {
 
 @media screen and (max-width: 1024px) {
   .rule_item._pic::before {
+    margin-bottom: 20px;
     padding: 2px 0;
     font-size: 14px;
     line-height: 19px;
@@ -9110,6 +9144,7 @@ footer .container {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 123px;
     font-size: 14px;
     line-height: 19px;
   }
