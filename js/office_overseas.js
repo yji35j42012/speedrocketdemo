@@ -1,6 +1,8 @@
 var searchInpBox = document.querySelector("#searchInpBox");
 var searchInp = document.querySelector("#searchInp");
 var searchHandler = document.querySelector("#searchHandler");
+var office_area = document.querySelector("#office_area");
+var nodata = document.querySelector("#nodata");
 
 searchInp.addEventListener("focus", function() {
 	searchInpBox.classList.add("_in");
@@ -10,11 +12,25 @@ searchInp.addEventListener("blur", function() {
 		searchInpBox.classList.remove("_in");
 	}, 100);
 });
-searchHandler.onclick = function(params) {
-	setTimeout(() => {
-		searchInp.blur();
-	}, 100);
-	searchInpBox.classList.remove("_in");
+searchHandler.onclick = function(event) {
+	console.log("nodata.style.display", nodata.style.display);
+
+	if (!searchInpBox.classList.contains("_in")) {
+		return;
+	} else {
+		if (nodata.style.display == "none") {
+			nodata.style.display = "";
+			office_area.style.display = "none";
+		} else {
+			nodata.style.display = "none";
+			office_area.style.display = "";
+		}
+
+		searchInpBox.classList.remove("_in");
+		setTimeout(() => {
+			searchInp.blur();
+		}, 100);
+	}
 };
 
 var selectHandler = document.querySelectorAll("[name=selectHandler]");
