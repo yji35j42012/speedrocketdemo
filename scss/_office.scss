@@ -152,6 +152,9 @@
 		// .office_area_title
 		&_title {
 			font-style: normal;
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 38px;
 			span {
 				font-weight: 600;
 				font-size: 28px;
@@ -176,7 +179,7 @@
 				width: 100%;
 				height: 60px;
 				padding: 0 13px;
-
+				font-size: 18px;
 				span {
 					font-size: 18px;
 				}
