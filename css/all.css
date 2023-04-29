@@ -8885,6 +8885,20 @@ footer .container {
   }
 }
 
+.office_area_ani .office_area_item {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.office_area_ani.on .office_area_item {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
 .office_area_name {
   position: relative;
   font-style: normal;

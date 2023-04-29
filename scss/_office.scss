@@ -262,6 +262,19 @@
 				}
 			}
 		}
+		// .office_area_ani
+		&_ani {
+			.office_area_item {
+				transition-duration: 0.3s;
+				transform: scale(0, 0);
+				transform-origin: center center;
+			}
+			&.on {
+				.office_area_item {
+					transform: scale(1, 1);
+				}
+			}
+		}
 		// .office_area_name
 		&_name {
 			position: relative;

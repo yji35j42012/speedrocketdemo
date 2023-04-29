@@ -4,15 +4,15 @@ var searchHandler = document.querySelector("#searchHandler");
 var office_area = document.querySelector("#office_area");
 var nodata = document.querySelector("#nodata");
 
-searchInp.addEventListener("focus", function() {
+searchInp.addEventListener("focus", function () {
 	searchInpBox.classList.add("_in");
 });
-searchInp.addEventListener("blur", function() {
+searchInp.addEventListener("blur", function () {
 	setTimeout(() => {
 		searchInpBox.classList.remove("_in");
 	}, 100);
 });
-searchHandler.onclick = function(event) {
+searchHandler.onclick = function (event) {
 	if (!searchInpBox.classList.contains("_in")) {
 		return;
 	} else {
@@ -31,7 +31,7 @@ var page_input = document.querySelectorAll("[name=page_input]");
 var selectHandlerItem = null;
 for (let i = 0; i < selectHandler.length; i++) {
 	const element = selectHandler[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		if (selectHandlerItem == i) {
 			selectHandler[selectHandlerItem].classList.remove("on");
 			selectHandlerItem = null;
@@ -52,125 +52,49 @@ var select_brand_txt = document.querySelectorAll("[name=select_brand_txt]");
 var select_brand = document.querySelectorAll("#select_brand > li");
 
 var area_group = document.querySelector("#area_group");
+var area_group_item = document.querySelectorAll("#area_group > li");
 
 // areaNum 1:香港、2:馬來西亞、3:新加坡
 // brandNum 0:all、1:SHARECO、2:KP記憶香氛
 var areaData = [
-	{
-		type: "txt",
-		name: "張梁記 荃新天地店",
-		phone: "+852 6651 2866",
-		address: "荃灣楊屋道1號荃新天地1期 (UG樓UG52B舖)",
-		areaNum: 1,
-		brandNum: 0
-	},
-	{
-		type: "txt",
-		name: "張梁記 尖沙咀美麗華店",
-		phone: "+852 5485 5110",
-		address: "香港尖沙咀彌敦道132號 (美麗華廣場1期G06)",
-		areaNum: 1,
-		brandNum: 0
-	},
-	{
-		type: "txt",
-		name: "張梁記 旺角618上海街店",
-		phone: "+852 6677 4005",
-		address: "香港旺角上海街618號 (1樓102A舖)",
-		areaNum: 1,
-		brandNum: 0
-	},
-	{
-		type: "txt",
-		name: "張梁記 銅鑼灣希慎店",
-		phone: "+852 5291 8462",
-		address: "香港銅鑼灣軒尼詩道500號(希慎廣場 5 樓 501 舖)",
-		areaNum: 1,
-		brandNum: 0
-	},
-	{
-		type: "txt",
-		name: "a1shopee",
-		phone: "+852 5689 5208",
-		address: "香港旺角先達廣場1樓F72店",
-		areaNum: 1,
-		brandNum: 0
-	},
-	{
-		type: "txt",
-		name: "158CM CONCEPT STORE",
-		phone: "+6012-2511125",
-		address:
-			"Eco Palladium, Block B #01-20 Jalan Ekoflora 7/2, Jalan Ekoflora Utama, 81100 , Johor.",
-		areaNum: 2,
-		brandNum: 1
-	},
-	{
-		type: "txt",
-		name: "Pavilion Bukit Jalil - HaWooo Store",
-		phone: "-",
-		address: "No 2 Persiaran Jalil Utama, Bandar Bukit Jalil, Kuala Lumpur",
-		areaNum: 2,
-		brandNum: 0
-	},
-	{
-		type: "txt",
-		name: "HMXY",
-		phone: "+6012-2511125",
-		address:
-			"12-01, Jalan Austin Heights 8/9, Taman Mount Austin, Johor Bahru, Malaysia",
-		areaNum: 2,
-		brandNum: 0
-	},
-	{
-		type: "txt",
-		name: "HYPESTAGES JOHOR",
-		phone: "+6012-2511125",
-		address:
-			"B-0107 Eco Galleria 3, Jalan Eko Botani 3/2, Taman Eko Botani,79100 Iskandar Puteri,Johor.",
-		areaNum: 2,
-		brandNum: 0
-	},
-	{
-		type: "txt",
-		name: "HYPESTAGES",
-		phone: "+6012-2511125",
-		address:
-			"No71,Jalan PJS 11/7, Bandar Sunway, 47500 Petaling Jaya, Selangor",
-		areaNum: 2,
-		brandNum: 0
-	},
-	{
-		type: "pic",
-		name: "PNJ Malaysia",
-		picSrc: "../images/office_overseas/pnj_logo.png",
-		needClass: "office_area_logo _pnj",
-		areaNum: 2,
-		brandNum: 0
-	},
-	{
-		type: "pic",
-		name: "Maxel Beauty Malaysia",
-		picSrc: "../images/office_overseas/maxelbeauty_logo.png",
-		needClass: "office_area_logo _maxelbeauty",
-		areaNum: 2,
-		brandNum: 1
-	},
-	{
-		type: "txt",
-		name: "MENDATORY BY SGPOMADES",
-		phone: "+65 9477 8385",
-		address: "10 Tampines Central 1, #01-41, Singapore 529536",
-		areaNum: 3,
-		brandNum: 1
-	}
 ];
 
 var setAreaData = areaData;
 var selectArea = 0;
 var selectBrand = 0;
 var selectCount = 0;
+
+function setArr() {
+	for (let i = 0; i < area_group_item.length; i++) {
+		const element = area_group_item[i];
+		if (element.getAttribute('data-type') == 'txt') {
+			areaData.push({
+				type: element.getAttribute('data-type'),
+				areaNum: element.getAttribute('data-areaNum'),
+				brandNum: element.getAttribute('data-brandNum'),
+				name: element.children[0].innerHTML,
+				phone: element.children[1].innerHTML,
+				address: element.children[2].innerHTML,
+			})
+		} else if (element.getAttribute('data-type') == 'pic') {
+			areaData.push({
+				type: element.getAttribute('data-type'),
+				areaNum: element.getAttribute('data-areaNum'),
+				brandNum: element.getAttribute('data-brandNum'),
+				name: element.children[1].innerHTML,
+				picSrc: element.children[0].children[0].getAttribute('src'),
+				needClass: element.children[0].getAttribute("class"),
+			})
+		}
+	}
+
+	setData();
+}
+setArr()
+
 function filiter() {
+
+
 	setAreaData = [];
 	let objArr = [];
 	let areaNum = parseInt(selectArea);
@@ -265,6 +189,11 @@ function setData() {
 		}
 		area_group.append(li);
 	}
+
+
+	setTimeout(() => {
+		area_group.classList.add("on");
+	}, 100);
 }
 function setTxt(who, txt) {
 	for (let i = 0; i < select_area_txt.length; i++) {
@@ -277,20 +206,27 @@ function setTxt(who, txt) {
 }
 for (let i = 0; i < select_area.length; i++) {
 	const element = select_area[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		setTxt("area", element.innerHTML);
 		selectArea = element.getAttribute("data-area");
-		filiter();
+
+		area_group.classList.remove("on");
+		setTimeout(() => {
+			filiter();
+		}, 100);
 	};
 }
 
 for (let i = 0; i < select_brand.length; i++) {
 	const element = select_brand[i];
-	element.onclick = function() {
+	element.onclick = function () {
 		setTxt("brand", element.innerHTML);
 		selectBrand = element.getAttribute("data-brand");
-		filiter();
+		area_group.classList.remove("on");
+		setTimeout(() => {
+			filiter();
+		}, 100);
 	};
 }
 filiter();
-setData();
+
