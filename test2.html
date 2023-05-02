@@ -6,25 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-
-<body>
-    <script>
-
-        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-console.log('darkModeMediaQuery',darkModeMediaQuery.matches);
-
-        function handleDarkModeChange(e) {
-            console.log('!~');
-
-            if (e.matches) {
-                console.log('Dark mode enabled');
-            } else {
-                console.log('Light mode enabled');
+    <style>
+        /* Light mode */
+        @media (prefers-color-scheme: light) {
+            body {
+                color: black;
+                background-color: white;
             }
         }
 
-        darkModeMediaQuery.addEventListener(handleDarkModeChange);
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: white;
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    aaaaaa
+    <script>
+
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // 当前为深色主题
+            console.log('Dark mode enabled');
+        } else {
+            // 当前为浅色主题
+            console.log('Light mode enabled');
+        }
     </script>
 </body>
 
