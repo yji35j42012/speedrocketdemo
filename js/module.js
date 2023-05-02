@@ -57,14 +57,13 @@ gotoback.onclick = function() {
 	});
 };
 
-const favicon = document.querySelector('link[rel="icon"]');
+let favicon = document.querySelector('link[rel="shortcut icon"]');
+let isDarkMode = false;
+isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+console.log('isDarkMode',isDarkMode);
 
-if (matchMedia("(prefers-color-scheme: dark)").matches) {
-	console.log('a');
-	// Set the favicon to the dark mode version
-	favicon.href = "/favicon-dark.ico";
+if (isDarkMode) {
+	favicon.href = "../favicon-dark.ico";
 } else {
-	console.log('b');
-	// Set the favicon to the light mode version
-	favicon.href = "/favicon-light.ico";
+	favicon.href = "../favicon-light.ico";
 }

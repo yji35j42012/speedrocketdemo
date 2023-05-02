@@ -10,6 +10,13 @@
   cursor: pointer;
 }
 
+@media (prefers-color-scheme: dark) {
+  /* When in dark mode, use the dark favicon */
+  link[rel="icon"] {
+    href: "/favicon-dark.ico";
+  }
+}
+
 h1 {
   font-style: normal;
   font-weight: 700;
