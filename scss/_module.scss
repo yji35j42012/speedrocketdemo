@@ -1,3 +1,4 @@
+
 h1 {
 	font-style: normal;
 	font-weight: 700;
@@ -441,7 +442,7 @@ h4 {
 
 	.error & {
 		margin-top: 83px;
-		@include mw(L){
+		@include mw(L) {
 			margin-top: 48px;
 		}
 	}
@@ -826,7 +827,7 @@ h4 {
 		max-width: 1193px;
 		margin: auto;
 		text-align: center;
-		@include mw(L){
+		@include mw(L) {
 			padding: 0 18px;
 		}
 	}

@@ -11,7 +11,7 @@ lang.addEventListener("click", langHnadler);
 
 for (let i = 0; i < lang_group_item.length; i++) {
 	const element = lang_group_item[i];
-	element.onclick = function () {
+	element.onclick = function() {
 		event.stopPropagation();
 		lang_txt.innerHTML = element.innerHTML;
 		lang.classList.remove("on");
@@ -22,7 +22,7 @@ for (let i = 0; i < lang_group_item.length; i++) {
 
 var nav_btn = document.querySelector("#nav_btn");
 var nav_box = document.querySelector("#nav_box");
-nav_btn.onclick = function () {
+nav_btn.onclick = function() {
 	nav_box.classList.contains("on")
 		? nav_box.classList.remove("on")
 		: nav_box.classList.add("on");
@@ -33,7 +33,7 @@ var secNav_li = document.querySelectorAll("[name=secNav] > li");
 var secNavNum = null;
 for (let i = 0; i < secNav.length; i++) {
 	const element = secNav[i];
-	element.onclick = function () {
+	element.onclick = function() {
 		if (secNavNum == i) {
 			secNav[secNavNum].classList.remove("on");
 			secNavNum = null;
@@ -48,12 +48,23 @@ for (let i = 0; i < secNav.length; i++) {
 	};
 }
 
-
 // gotoback
 var gotoback = document.querySelector("#gotoback");
-gotoback.onclick = function () {
+gotoback.onclick = function() {
 	window.scrollTo({
 		top: 0,
 		behavior: "smooth"
 	});
 };
+
+const favicon = document.querySelector('link[rel="icon"]');
+
+if (matchMedia("(prefers-color-scheme: dark)").matches) {
+	console.log('a');
+	// Set the favicon to the dark mode version
+	favicon.href = "/favicon-dark.ico";
+} else {
+	console.log('b');
+	// Set the favicon to the light mode version
+	favicon.href = "/favicon-light.ico";
+}
