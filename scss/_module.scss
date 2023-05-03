@@ -913,6 +913,9 @@ h4 {
 		&_group {
 			& + & {
 				margin-left: 94px;
+				@include mw(XL){
+					margin-left: 80px;
+				}
 			}
 			a {
 				@extend %hand;

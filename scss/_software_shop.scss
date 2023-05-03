@@ -83,8 +83,8 @@
 	// .softwareShop_item
 	&_item {
 		position: relative;
-		@include d_f(flex,none,center);
-	
+		@include d_f(flex, none, center);
+
 		flex-direction: column;
 		width: calc(100% / 2 - 40px);
 		max-width: 598px;
@@ -136,11 +136,10 @@
 		&_title {
 			position: absolute;
 			top: 0;
-			// left: 0;
-			// right: 0;
-			@include d_f(inline-flex,center, center);
+			@include d_f(inline-flex, center, center);
 			max-width: 430px;
 			margin: auto;
+			padding: 0 10px;
 			background-color: #fff;
 			transform: translateY(-50%);
 			text-align: left;
@@ -154,7 +153,6 @@
 			}
 			@include mw(S) {
 				max-width: 260px;
-				padding: 0 10px;
 			}
 			&::after {
 				content: attr(data-title);
@@ -178,24 +176,23 @@
 			.num {
 				max-width: 44px;
 				margin-right: 12px;
-				@include minmw(L){
-					&.num2{
+				@include minmw(L) {
+					&.num2 {
 						max-width: 60px;
 					}
-					&.num3{
+					&.num3 {
 						max-width: 60px;
 					}
-					&.num4{
+					&.num4 {
 						max-width: 60px;
 					}
-					&.num5{
+					&.num5 {
 						max-width: 60px;
 					}
-					&.num6{
+					&.num6 {
 						max-width: 60px;
 					}
 				}
-			
 			}
 		}
 		// .softwareShop_item_txt
@@ -278,7 +275,7 @@
 			@include mw(XL) {
 				padding: 30px 30px 22px;
 			}
-			@include mw(L){
+			@include mw(L) {
 				flex: none;
 			}
 			@include mw(S) {

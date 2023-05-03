@@ -10,13 +10,6 @@
   cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  /* When in dark mode, use the dark favicon */
-  link[rel="icon"] {
-    href: "/favicon-dark.ico";
-  }
-}
-
 h1 {
   font-style: normal;
   font-weight: 700;
@@ -1392,6 +1385,12 @@ footer .container {
 
 .footer_nav_group + .footer_nav_group {
   margin-left: 94px;
+}
+
+@media screen and (max-width: 1280px) {
+  .footer_nav_group + .footer_nav_group {
+    margin-left: 80px;
+  }
 }
 
 @media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
@@ -8122,6 +8121,7 @@ footer .container {
           align-items: center;
   max-width: 430px;
   margin: auto;
+  padding: 0 10px;
   background-color: #fff;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -8143,7 +8143,6 @@ footer .container {
 @media screen and (max-width: 767px) {
   .softwareShop_item_title {
     max-width: 260px;
-    padding: 0 10px;
   }
 }
 
