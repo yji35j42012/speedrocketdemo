@@ -1587,12 +1587,6 @@ footer .container {
   padding: 0 6px;
 }
 
-@media screen and (max-width: 1024px) {
-  .footer .copyRight li:nth-child(2) {
-    display: none;
-  }
-}
-
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
