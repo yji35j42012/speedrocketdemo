@@ -5586,10 +5586,6 @@ footer .container {
 
 .recruitment_txt {
   margin-top: 40px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 160%;
   white-space: pre-line;
 }
 
@@ -5599,7 +5595,6 @@ footer .container {
     margin-top: 26px;
     white-space: inherit;
     text-align: left;
-    font-size: 16px;
   }
 }
 
@@ -8957,17 +8952,11 @@ footer .container {
 
 .office_area_phone {
   margin-top: 16px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 33px;
 }
 
 @media screen and (max-width: 1024px) {
   .office_area_phone {
     margin-top: 8px;
-    font-size: 12px;
-    line-height: 16px;
   }
 }
 

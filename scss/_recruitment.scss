@@ -43,7 +43,6 @@
 				border-bottom-right-radius: 100px;
 				border-right: 2px solid #887766;
 			}
-
 			& + &::before {
 				content: "";
 				position: absolute;
@@ -86,17 +85,12 @@
 	// .recruitment_txt
 	&_txt {
 		margin-top: 40px;
-		font-style: normal;
-		font-weight: 400;
-		font-size: 26px;
-		line-height: 160%;
 		white-space: pre-line;
 		@include mw(L) {
 			max-width: 574px;
 			margin-top: 26px;
 			white-space: inherit;
 			text-align: left;
-			font-size: 16px;
 		}
 		@at-root .recruitment_vacancies & {
 			width: 100%;
@@ -120,7 +114,6 @@
 			margin: auto;
 			padding: 0 27px 29px;
 			text-align: center;
-
 			&::before {
 				content: attr(data-title);
 				font-weight: 600;
@@ -147,7 +140,6 @@
 	}
 	// .recruitment_vacancies
 	&_vacancies {
-
 		margin: 0 auto;
 		padding: 96px 107px 111px;
 		background-color: #fff;
@@ -299,11 +291,12 @@
 			transform: scale(0, 0);
 			transform-origin: center;
 			@include minmw(L) {
-			@include hoverHandler {
-				&::before {
-					transform: scale(1, 1);
+				@include hoverHandler {
+					&::before {
+						transform: scale(1, 1);
+					}
 				}
-			}}
+			}
 			&::before {
 				content: attr(data-office);
 				position: absolute;
@@ -417,7 +410,6 @@
 							font-size: 16px;
 						}
 					}
-					//
 				}
 			}
 		}

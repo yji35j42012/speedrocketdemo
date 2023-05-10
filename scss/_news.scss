@@ -46,8 +46,6 @@
 				max-width: 574px;
 				margin-top: 12px;
 			}
-			// padding: 33.5px 0;
-
 			.new {
 				@include d_f(flex, none, center);
 				box-sizing: border-box;
@@ -57,7 +55,6 @@
 					margin-left: 28px;
 					width: 58px;
 					height: 26px;
-					// padding: 4px 10px;
 					font-weight: 400;
 					font-size: 16px;
 					background-color: #bda782;
@@ -73,13 +70,11 @@
 					}
 				}
 			}
-
 			.name {
 				margin-top: 12px;
 				font-weight: 600;
 				font-size: 34px;
 				line-height: 46px;
-
 				@include mw(L) {
 					margin-top: 9px;
 					font-size: 22px;
@@ -156,7 +151,6 @@
 	&_tag {
 		@include d_f(flex, none, center);
 		margin-top: 31px;
-
 		// .news_tag_item
 		&_item {
 			@include d_f(flex, none, center);
@@ -208,7 +202,6 @@
 			border-radius: 100px;
 			@extend %transition;
 			@extend %hand;
-
 			&::after {
 				content: attr(data-txt);
 				position: absolute;
