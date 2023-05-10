@@ -44,7 +44,6 @@
 				}
 			}
 		}
-
 		// .about_info_txt
 		&_txt {
 			position: relative;
@@ -201,7 +200,6 @@
 					text-align: center;
 				}
 			}
-
 			img {
 				max-width: 536px;
 				opacity: 0;
@@ -297,7 +295,6 @@
 				transition-delay: 0.2s;
 				opacity: 0;
 				@extend %transition;
-
 				@include mw(L) {
 					transform: translateY(-16px);
 					opacity: 1;
@@ -334,10 +331,8 @@
 			}
 		}
 		// #business_detail_item3
-
 		// .business_detail_txt
 		&_txt {
-			// position: relative;
 			flex: none;
 			width: 50%;
 			max-width: 50%;
@@ -355,13 +350,11 @@
 			opacity: 0;
 			transition-duration: 0.3s;
 			transition-delay: 0.4s;
-
 			@at-root .show1 & {
 				transform: translateY(0);
 				opacity: 1;
 			}
 		}
-
 		// .business_detail_txt2
 		&_txt2 {
 			padding-top: 65px;

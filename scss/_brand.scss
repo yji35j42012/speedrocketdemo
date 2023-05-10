@@ -100,7 +100,6 @@
 			}
 		}
 	}
-
 	// .brandSH_photowall
 	&_photowall {
 		padding: 137px 0;
@@ -172,7 +171,6 @@
 				transform: scale(1, 1);
 				opacity: 1;
 			}
-			// }
 		}
 		// .brandSH_photowall_bg
 		&_bg {
@@ -207,7 +205,6 @@
 		@include d_f(flex, center);
 		width: 100%;
 		margin-bottom: 43px;
-
 		&._tw {
 			margin-top: 95px;
 			@include mw(L) {
@@ -237,7 +234,6 @@
 				margin-left: 20px;
 			}
 		}
-
 		// .access_item_pic
 		&_pic {
 			@include mw(XS) {
@@ -270,7 +266,6 @@
 		max-width: unset;
 		padding: 50px 0;
 		border-bottom: 1px solid #d9d9d9;
-
 		&::before {
 			position: absolute;
 			top: 0;
@@ -626,7 +621,7 @@
 		// .access_product_name
 		&_name {
 			margin-top: 41px;
-			@include mw(L){
+			@include mw(L) {
 				margin-top: 24px;
 			}
 		}
