@@ -4385,6 +4385,7 @@ footer .container {
 }
 
 .business_title {
+  z-index: 1;
   position: relative;
   display: inline-block;
   padding: 8px 18px;
