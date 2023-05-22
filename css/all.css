@@ -8092,6 +8092,24 @@ footer .container {
   .softwareShop_item:nth-child(5) {
     margin-bottom: 85px;
   }
+  .en._super .softwareShop_item {
+    margin-bottom: 100px;
+  }
+  .en._super .softwareShop_item:nth-child(4), .en._super .softwareShop_item:nth-child(5) {
+    padding-top: 95px;
+  }
+  .en._delivery .softwareShop_item:nth-child(1), .en._delivery .softwareShop_item:nth-child(3) {
+    padding-top: 95px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .en._super .softwareShop_item:nth-child(4), .en._super .softwareShop_item:nth-child(5) {
+    padding-top: 53px;
+  }
+  .en._delivery .softwareShop_item:nth-child(3) {
+    padding-top: 53px;
+  }
 }
 
 .softwareShop_item_title {

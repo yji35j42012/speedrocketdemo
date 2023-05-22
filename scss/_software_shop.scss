@@ -131,6 +131,31 @@
 			&:nth-child(5) {
 				margin-bottom: 85px;
 			}
+			.en._super & {
+				margin-bottom: 100px;
+				&:nth-child(4),
+				&:nth-child(5) {
+					padding-top: 95px;
+				}
+			}
+			.en._delivery & {
+				&:nth-child(1),	&:nth-child(3){
+					padding-top: 95px;
+				}
+			}
+		}
+		@include mw(S) {
+			.en._super & {
+				&:nth-child(4),
+				&:nth-child(5) {
+					padding-top: 53px;
+				}
+			}
+			.en._delivery & {
+				&:nth-child(3){
+					padding-top: 53px;
+				}
+			}
 		}
 		// .softwareShop_item_title
 		&_title {
