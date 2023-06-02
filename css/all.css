@@ -3769,11 +3769,23 @@ footer .container {
   background-color: #fff;
 }
 
-.nav_item_link .style_X::before, .nav_item_link .style_X::after {
+.serve_first_txt .style_X::before,
+.nav_item_link .style_X::before, .serve_first_txt .style_X::after,
+.nav_item_link .style_X::after {
   background-color: #000;
 }
 
 h4 .style_X::before, h4 .style_X::after {
+  width: 20px;
+  height: 4px;
+}
+
+.serve_first_txt .style_X {
+  width: 30px;
+  height: 30px;
+}
+
+.serve_first_txt .style_X::before, .serve_first_txt .style_X::after {
   width: 20px;
   height: 4px;
 }
