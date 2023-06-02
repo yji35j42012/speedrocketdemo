@@ -1,3 +1,4 @@
+var body = document.querySelector("body");
 var lang = document.querySelector("#lang");
 var lang_group = document.querySelector(".lang_group");
 var lang_txt = document.querySelector("#lang_txt");
@@ -17,6 +18,7 @@ lang.addEventListener("click", langHnadler);
 		lang_txt.innerHTML = "简中";
 	} else if (href.indexOf("en-us") !== -1) {
 		lang_txt.innerHTML = "EN";
+		body.classList.add("en")
 	}
 })();
 
@@ -37,6 +39,7 @@ for (let i = 0; i < lang_group_item.length; i++) {
 				num = hrefS.indexOf("zh-cn");
 			} else if (hrefS.indexOf("en-us") !== -1) {
 				num = hrefS.indexOf("en-us");
+
 			}
 
 			hrefS.splice(num, 1, changeLang);
