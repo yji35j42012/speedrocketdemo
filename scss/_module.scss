@@ -3,8 +3,10 @@ h1 {
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 140%;
-	.en & {
-		font-size: 42px;
+	@include minmw(L) {
+		.en & {
+			font-size: 42px;
+		}
 	}
 	@include mw(L) {
 		font-size: 32px;
@@ -30,6 +32,7 @@ h2 {
 		.serve_second_txt & {
 		max-width: 485px;
 		text-align: left;
+
 		@include mw(L) {
 			text-align: center;
 			margin: auto;
@@ -931,8 +934,10 @@ h4 {
 			font-weight: 400;
 			font-size: 14px;
 			.en & a {
-				font-size: 13px;
-				line-height: 18px;
+				@include minmw(L) {
+					font-size: 13px;
+					line-height: 18px;
+				}
 			}
 		}
 	}
@@ -1082,8 +1087,10 @@ h4 {
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 25px;
-		.en & {
-			font-size: 15px;
+		@include minmw(L) {
+			.en & {
+				font-size: 15px;
+			}
 		}
 		@extend %hand;
 		@extend %transition;
@@ -1614,6 +1621,11 @@ h4 {
 				font-size: 26px;
 				line-height: 160%;
 				color: #333333;
+				@include minmw(L) {
+					.en & {
+						font-size: 20px;
+					}
+				}
 				@include mw(L) {
 					margin: 24px auto 0;
 					font-size: 16px;
@@ -1668,6 +1680,11 @@ h4 {
 				font-weight: 400;
 				font-size: 26px;
 				line-height: 160%;
+				@include minmw(L) {
+					.en & {
+						font-size: 20px;
+					}
+				}
 				@include mw(L) {
 					font-size: 16px;
 				}
@@ -1696,6 +1713,11 @@ h4 {
 				font-size: 26px;
 				line-height: 160%;
 				text-align: center;
+				@include minmw(L) {
+					.en & {
+						font-size: 20px;
+					}
+				}
 				@include mw(L) {
 					margin-top: 24px;
 					font-size: 16px;
@@ -1748,6 +1770,11 @@ h4 {
 			font-weight: 400;
 			font-size: 26px;
 			line-height: 160%;
+			.en &{
+				@include minmw(L) {
+					font-size: 20px;
+				}
+			}
 			@include mw(L) {
 				margin-bottom: 24px;
 				font-size: 16px;
@@ -1809,6 +1836,12 @@ h4 {
 			font-weight: 400;
 			font-size: 26px;
 			line-height: 160%;
+
+			@include minmw(L) {
+				.en & {
+					font-size: 20px;
+				}
+			}
 			@include mw(L) {
 				margin-top: 12px;
 				font-size: 16px;
@@ -1885,6 +1918,11 @@ h4 {
 			font-weight: 400;
 			font-size: 24px;
 			line-height: 160%;
+			.en &{
+				@include minmw(L) {
+					font-size: 18px;
+				}
+			}
 			@include mw(L) {
 				font-size: 16px;
 			}
@@ -1936,6 +1974,11 @@ h4 {
 				font-weight: 400;
 				font-size: 18px;
 				line-height: 140%;
+				.en &{
+					@include minmw(L) {
+						font-size: 14px;
+					}
+				}
 				@include mw(L) {
 					font-size: 12px;
 				}
@@ -1965,8 +2008,11 @@ h4 {
 		h4 {
 			margin-top: 16px;
 			text-align: left;
-			.en & {
-				font-size: 28px;
+
+			@include minmw(L) {
+				.en & {
+					font-size: 28px;
+				}
 			}
 			@include mw(L) {
 				margin-top: 0;

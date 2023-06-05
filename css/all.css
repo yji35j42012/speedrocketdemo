@@ -17,8 +17,10 @@ h1 {
   line-height: 140%;
 }
 
-.en h1 {
-  font-size: 42px;
+@media screen and (min-width: 1025px) {
+  .en h1 {
+    font-size: 42px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1443,9 +1445,11 @@ footer .container {
   font-size: 14px;
 }
 
-.en .footer_nav_item a {
-  font-size: 13px;
-  line-height: 18px;
+@media screen and (min-width: 1025px) {
+  .en .footer_nav_item a {
+    font-size: 13px;
+    line-height: 18px;
+  }
 }
 
 .footer_community {
@@ -1725,8 +1729,10 @@ footer .container {
   line-height: 25px;
 }
 
-.en .nav_item {
-  font-size: 15px;
+@media screen and (min-width: 1025px) {
+  .en .nav_item {
+    font-size: 15px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -2511,6 +2517,12 @@ footer .container {
   color: #333333;
 }
 
+@media screen and (min-width: 1025px) {
+  .en .serve_first_txt p {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .serve_first_txt p {
     margin: 24px auto 0;
@@ -2609,6 +2621,12 @@ footer .container {
   line-height: 160%;
 }
 
+@media screen and (min-width: 1025px) {
+  .en .serve_second_txt p {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .serve_second_txt p {
     font-size: 16px;
@@ -2642,6 +2660,12 @@ footer .container {
   font-size: 26px;
   line-height: 160%;
   text-align: center;
+}
+
+@media screen and (min-width: 1025px) {
+  .en .serve_third_txt p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2718,6 +2742,12 @@ footer .container {
   font-weight: 400;
   font-size: 26px;
   line-height: 160%;
+}
+
+@media screen and (min-width: 1025px) {
+  .en .attitude_info p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2816,6 +2846,12 @@ footer .container {
   font-weight: 400;
   font-size: 26px;
   line-height: 160%;
+}
+
+@media screen and (min-width: 1025px) {
+  .en .attitude_item_txt {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2952,6 +2988,12 @@ footer .container {
   line-height: 160%;
 }
 
+@media screen and (min-width: 1025px) {
+  .en .partner_item_txt {
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .partner_item_txt {
     font-size: 16px;
@@ -3030,6 +3072,12 @@ footer .container {
   line-height: 140%;
 }
 
+@media screen and (min-width: 1025px) {
+  .en .partner_item_detail span {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .partner_item_detail span {
     font-size: 12px;
@@ -3069,8 +3117,10 @@ footer .container {
   text-align: left;
 }
 
-.en .home_banner_txt h4 {
-  font-size: 28px;
+@media screen and (min-width: 1025px) {
+  .en .home_banner_txt h4 {
+    font-size: 28px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
