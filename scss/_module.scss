@@ -1101,6 +1101,10 @@ h4 {
 			@include hoverHandler {
 				color: #887766;
 				border-color: #887766;
+				.style_X::before,
+				.style_X::after {
+					background-color: #887766;
+				}
 			}
 		}
 		& + & {
@@ -1125,6 +1129,12 @@ h4 {
 				margin: 0 22px;
 				padding: 26px 24px;
 				border-bottom: 0.5px solid #979797;
+			}
+		}
+		// .nav_item_link
+		&_link {
+			.en & {
+				@include d_f(flex, center, center);
 			}
 		}
 
@@ -1770,7 +1780,7 @@ h4 {
 			font-weight: 400;
 			font-size: 26px;
 			line-height: 160%;
-			.en &{
+			.en & {
 				@include minmw(L) {
 					font-size: 20px;
 				}
@@ -1918,7 +1928,7 @@ h4 {
 			font-weight: 400;
 			font-size: 24px;
 			line-height: 160%;
-			.en &{
+			.en & {
 				@include minmw(L) {
 					font-size: 18px;
 				}
@@ -1974,7 +1984,7 @@ h4 {
 				font-weight: 400;
 				font-size: 18px;
 				line-height: 140%;
-				.en &{
+				.en & {
 					@include minmw(L) {
 						font-size: 14px;
 					}
@@ -2522,23 +2532,32 @@ h4 {
 		height: 2px;
 		margin: 0 auto;
 		background-color: #fff;
+		@extend %transition;
 		.serve_first_txt &,
 		.nav_item_link &,
 		.vision & {
-			background-color: #000;
+			background-color: #333;
 		}
 		h4 & {
 			width: 20px;
 			height: 4px;
 		}
 	}
-	.serve_first_txt &,.vision & {
+	.serve_first_txt &,
+	.vision & {
 		width: 42px;
-		height: 42px;
+		height: 30px;
 		&::before,
 		&::after {
 			width: 30px;
 			height: 4px;
+		}
+	}
+	.nav_item_link & {
+		height: 18px;
+		&::before,
+		&::after {
+			height: 1px;
 		}
 	}
 	&::before {
