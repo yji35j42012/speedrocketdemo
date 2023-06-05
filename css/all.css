@@ -3820,8 +3820,10 @@ footer .container {
 }
 
 .serve_first_txt .style_X::before,
-.nav_item_link .style_X::before, .serve_first_txt .style_X::after,
-.nav_item_link .style_X::after {
+.nav_item_link .style_X::before,
+.vision .style_X::before, .serve_first_txt .style_X::after,
+.nav_item_link .style_X::after,
+.vision .style_X::after {
   background-color: #000;
 }
 
@@ -3830,13 +3832,13 @@ h4 .style_X::before, h4 .style_X::after {
   height: 4px;
 }
 
-.serve_first_txt .style_X {
-  width: 30px;
-  height: 30px;
+.serve_first_txt .style_X, .vision .style_X {
+  width: 42px;
+  height: 42px;
 }
 
-.serve_first_txt .style_X::before, .serve_first_txt .style_X::after {
-  width: 20px;
+.serve_first_txt .style_X::before, .serve_first_txt .style_X::after, .vision .style_X::before, .vision .style_X::after {
+  width: 30px;
   height: 4px;
 }
 
@@ -3992,6 +3994,12 @@ h4 .style_X::before, h4 .style_X::after {
   line-height: 46px;
 }
 
+@media screen and (min-width: 1025px) {
+  .en .news_item_info .name {
+    font-size: 32px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .news_item_info .name {
     margin-top: 9px;
@@ -4013,6 +4021,12 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 400;
   font-size: 24px;
   line-height: 33px;
+}
+
+@media screen and (min-width: 1025px) {
+  .en .news_item_info .detail {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -4083,6 +4097,12 @@ h4 .style_X::before, h4 .style_X::after {
   text-align: left;
 }
 
+@media screen and (min-width: 1025px) {
+  .en .news_name {
+    font-size: 38px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .news_name {
     margin-top: 24.5px;
@@ -4135,6 +4155,12 @@ h4 .style_X::before, h4 .style_X::after {
 
 .news_tag_item:active {
   background-color: #333;
+}
+
+@media screen and (min-width: 1025px) {
+  .en .news_tag_item {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -4305,6 +4331,12 @@ h4 .style_X::before, h4 .style_X::after {
   line-height: 160%;
   white-space: pre-line;
   text-align: left;
+}
+
+@media screen and (min-width: 1025px) {
+  .en .news_content {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -5420,6 +5452,15 @@ h4 .style_X::before, h4 .style_X::after {
 }
 
 .vision_txt._bg + h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 110px;
 }
 
@@ -5742,6 +5783,10 @@ h4 .style_X::before, h4 .style_X::after {
   white-space: pre-line;
 }
 
+.en .recruitment_txt {
+  white-space: inherit;
+}
+
 @media screen and (max-width: 1024px) {
   .recruitment_txt {
     max-width: 574px;
@@ -5757,6 +5802,13 @@ h4 .style_X::before, h4 .style_X::after {
   margin: 16px auto 0;
   white-space: inherit;
   text-align: center;
+}
+
+@media screen and (min-width: 1025px) {
+  .en .recruitment_vacancies .recruitment_txt {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -5807,6 +5859,12 @@ h4 .style_X::before, h4 .style_X::after {
 .recruitment_join_pic {
   width: 100%;
   max-width: 380px;
+}
+
+@media screen and (min-width: 1025px) {
+  .en .recruitment_join_pic {
+    min-width: 380px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -6080,6 +6138,12 @@ h4 .style_X::before, h4 .style_X::after {
           transform-origin: center bottom;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0.2%, #000000), color-stop(27.86%, rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, #000000 0.2%, rgba(0, 0, 0, 0) 27.86%);
+}
+
+@media screen and (min-width: 1025px) {
+  .en .recruitment_office .recruitment_office_item::before {
+    white-space: pre-line;
+  }
 }
 
 .recruitment_office .recruitment_office_item:nth-child(3n + 1) {
@@ -7589,6 +7653,10 @@ h4 .style_X::before, h4 .style_X::after {
   text-align: center;
 }
 
+.en .access_over::after {
+  white-space: pre-line;
+}
+
 @media screen and (max-width: 1024px) {
   .access_over::after {
     top: 40px;
@@ -8314,6 +8382,12 @@ h4 .style_X::before, h4 .style_X::after {
   line-height: 41px;
 }
 
+@media screen and (min-width: 768px) {
+  .en .softwareShop_item_title::after {
+    font-size: 26px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .softwareShop_item_title::after {
     padding: 4px 8px;
@@ -8350,6 +8424,12 @@ h4 .style_X::before, h4 .style_X::after {
   max-width: 521px;
   margin: 0 auto;
   text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .en .softwareShop_item_txt {
+    font-size: 20px;
+  }
 }
 
 .softwareShop_item_pic {
@@ -8448,6 +8528,12 @@ h4 .style_X::before, h4 .style_X::after {
             flex-direction: column;
     height: auto;
     margin-top: 39px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .en .softwareShop_success_list p {
+    font-size: 18px;
   }
 }
 

@@ -139,7 +139,8 @@
 				}
 			}
 			.en._delivery & {
-				&:nth-child(1),	&:nth-child(3){
+				&:nth-child(1),
+				&:nth-child(3) {
 					padding-top: 95px;
 				}
 			}
@@ -152,7 +153,7 @@
 				}
 			}
 			.en._delivery & {
-				&:nth-child(3){
+				&:nth-child(3) {
 					padding-top: 53px;
 				}
 			}
@@ -182,14 +183,18 @@
 			&::after {
 				content: attr(data-title);
 				display: inline-block;
-				// max-width: calc(100% - 56px);
-				// max-width: 310px;
 				padding: 8px 18px;
 				background-color: #ebdec7;
 				font-style: normal;
 				font-weight: 500;
 				font-size: 30px;
 				line-height: 41px;
+
+				@include minmw(S) {
+					.en & {
+						font-size: 26px;
+					}
+				}
 
 				@include mw(S) {
 					padding: 4px 8px;
@@ -225,6 +230,11 @@
 			max-width: 521px;
 			margin: 0 auto;
 			text-align: left;
+			@include minmw(S) {
+				.en & {
+					font-size: 20px;
+				}
+			}
 		}
 		// .softwareShop_item_pic
 		&_pic {
@@ -289,6 +299,13 @@
 				flex-direction: column;
 				height: auto;
 				margin-top: 39px;
+			}
+			@include minmw(L) {
+				.en & {
+					p {
+						font-size: 18px;
+					}
+				}
 			}
 		}
 		// .softwareShop_success_info

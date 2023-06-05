@@ -86,6 +86,9 @@
 	&_txt {
 		margin-top: 40px;
 		white-space: pre-line;
+		.en & {
+			white-space: inherit;
+		}
 		@include mw(L) {
 			max-width: 574px;
 			margin-top: 26px;
@@ -98,6 +101,12 @@
 			margin: 16px auto 0;
 			white-space: inherit;
 			text-align: center;
+			@include minmw(L) {
+				.en & {
+					font-size: 18px;
+					line-height: 22px;
+				}
+			}
 			@include mw(L) {
 				max-width: 574px;
 				text-align: left;
@@ -130,7 +139,11 @@
 		&_pic {
 			width: 100%;
 			max-width: 380px;
-
+			@include minmw(L) {
+				.en & {
+					min-width: 380px;
+				}
+			}
 			@include mw(L) {
 				order: 1;
 				max-width: 184px;
@@ -319,6 +332,11 @@
 					#000000 0.2%,
 					rgba(0, 0, 0, 0) 27.86%
 				);
+				@include minmw(L) {
+					.en &{
+						white-space: pre-line;
+					}
+				}
 			}
 			&:nth-child(3n + 1) {
 				margin-left: 0;

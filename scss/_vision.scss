@@ -55,6 +55,7 @@
 			}
 
 			& + h2 {
+				@include d_f (flex,center,center);
 				margin-top: 110px;
 				@include mw(L) {
 					margin-top: 82px;
