@@ -1,10 +1,18 @@
 var office_area = document.querySelectorAll("[name=office_area]");
 var office_count = null;
 var area_group = document.querySelectorAll("[name=area_group]");
-
+var screen = window.innerWidth <= 1024 ? "ph" : "pc";
+window.onresize = function() {
+	if (screen == "pc" && window.innerWidth <= 1024) {
+		screen = "ph";
+	} else if (screen == "ph" && window.innerWidth > 1024) {
+		screen = "pc";
+	}
+};
 for (let i = 0; i < office_area.length; i++) {
 	const element = office_area[i];
 	element.onclick = function() {
+		if (screen !== "ph") return;
 		if (office_count == null) {
 			element.classList.add("on");
 			office_count = i;

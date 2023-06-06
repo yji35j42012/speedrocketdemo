@@ -73,7 +73,7 @@
 			}
 			&::before {
 				content: attr(data-title);
-				margin-bottom: 46px;
+			margin: 0 auto 64px;
 				padding: 8px 18px;
 				font-style: normal;
 				font-weight: 500;
@@ -91,7 +91,7 @@
 				top: 0;
 				@include d_f(flex, center, center);
 				max-width: 480px;
-				text-align: center;
+
 				@include mw(L) {
 					max-width: 560px;
 					top: -20px;

@@ -3133,6 +3133,17 @@ footer .container {
 }
 
 .home_banner_txt h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 16px;
   text-align: left;
 }
@@ -3850,6 +3861,10 @@ footer .container {
 h4 .style_X::before, h4 .style_X::after {
   width: 20px;
   height: 4px;
+}
+
+.home_banner_txt .style_X {
+  margin: 0 10px;
 }
 
 .serve_first_txt .style_X,
@@ -7227,7 +7242,7 @@ h4 .style_X::before, h4 .style_X::after {
 
 .brandSH_introduction_txt::before {
   content: attr(data-title);
-  margin-bottom: 46px;
+  margin: 0 auto 64px;
   padding: 8px 18px;
   font-style: normal;
   font-weight: 500;
@@ -7245,7 +7260,7 @@ h4 .style_X::before, h4 .style_X::after {
   }
 }
 
-.brandSH_introduction_item:first-child .brandSH_introduction_txt {
+.brandSH_introduction_item:first-child .brandSH_introduction_txt:not(.txtl) {
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7257,11 +7272,10 @@ h4 .style_X::before, h4 .style_X::after {
       -ms-flex-align: center;
           align-items: center;
   max-width: 480px;
-  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
-  .brandSH_introduction_item:first-child .brandSH_introduction_txt {
+  .brandSH_introduction_item:first-child .brandSH_introduction_txt:not(.txtl) {
     max-width: 560px;
     top: -20px;
     text-align: left;

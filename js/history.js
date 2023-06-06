@@ -56,8 +56,6 @@ function scrollListener() {
 }
 window.onresize = function() {
 	getWidth();
-	console.log("defaultScore", defaultScore);
-	console.log("history_ite", history_item[1].offsetTop);
 	if (screen == "pc" && window.innerWidth <= 1024) {
 		screen = "ph";
 		defaultH = -118;
