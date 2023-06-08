@@ -63,6 +63,11 @@
 				padding-right: 36px;
 				text-align: left;
 				color: #fff;
+				.en &{
+					@include mwrange(L,XL) {
+						line-height: 145%;
+					}
+				}
 				@include mw(L) {
 					position: relative;
 					width: 100%;
