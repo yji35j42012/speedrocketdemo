@@ -4411,12 +4411,12 @@ h4 .style_X::before, h4 .style_X::after {
   background-color: #887766;
   color: #ffffff;
 }
-.recruitment_term_li:first-child() {
+.recruitment_term_li:nth-child(1) {
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
   border-left: 2px solid #887766;
 }
-.recruitment_term_li:last-child() {
+.recruitment_term_li:nth-child(5) {
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   border-right: 2px solid #887766;
