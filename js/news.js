@@ -1,6 +1,8 @@
 var selectHandler = document.querySelectorAll("[name=selectHandler]");
-var page_input = document.querySelectorAll("[name=page_input]");
 var selectHandlerItem = null;
+var brandTxt = document.querySelector("#brandTxt");
+var categoriesTxt = document.querySelector("#categoriesTxt");
+
 for (let i = 0; i < selectHandler.length; i++) {
 	const element = selectHandler[i];
 	element.onclick = function() {
@@ -18,6 +20,22 @@ for (let i = 0; i < selectHandler.length; i++) {
 	};
 }
 
+var brandGroup = document.querySelectorAll("#brandGroup > li");
+for (let i = 0; i < brandGroup.length; i++) {
+	const element = brandGroup[i];
+	element.onclick = function() {
+		brandTxt.innerHTML = element.innerHTML;
+	};
+}
+var categorieGroup = document.querySelectorAll("#categorieGroup > li");
+for (let i = 0; i < categorieGroup.length; i++) {
+	const element = categorieGroup[i];
+	element.onclick = function() {
+		categoriesTxt.innerHTML = element.innerHTML;
+	};
+}
+
+var page_input = document.querySelectorAll("[name=page_input]");
 var page_group_more = document.querySelectorAll("[name=page_group_more]");
 var more_item = null;
 for (let i = 0; i < page_group_more.length; i++) {
