@@ -71,12 +71,17 @@
 				}
 			}
 			.name {
+				overflow: hidden;
+				display: -webkit-box;
+				max-height:92px;
 				margin-top: 12px;
 				font-weight: 600;
 				font-size: 34px;
 				line-height: 46px;
-				@include minmw(L){
-					.en &{
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				@include minmw(L) {
+					.en & {
 						font-size: 32px;
 					}
 				}
@@ -97,8 +102,8 @@
 				font-weight: 400;
 				font-size: 24px;
 				line-height: 33px;
-				@include minmw(L){
-					.en &{
+				@include minmw(L) {
+					.en & {
 						font-size: 18px;
 					}
 				}
@@ -151,8 +156,8 @@
 		line-height: 57px;
 		border-left: 6px solid #bda782;
 		text-align: left;
-		@include minmw(L){
-			.en &{
+		@include minmw(L) {
+			.en & {
 				font-size: 38px;
 			}
 		}
@@ -184,8 +189,8 @@
 			@include hoverHandler {
 				background-color: #333;
 			}
-			@include minmw(L){
-				.en &{
+			@include minmw(L) {
+				.en & {
 					font-size: 16px;
 				}
 			}
@@ -308,8 +313,8 @@
 		line-height: 160%;
 		white-space: pre-line;
 		text-align: left;
-		@include minmw(L){
-			.en &{
+		@include minmw(L) {
+			.en & {
 				font-size: 20px;
 			}
 		}

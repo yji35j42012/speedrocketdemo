@@ -4032,10 +4032,15 @@ h4 .style_X::before, h4 .style_X::after {
 }
 
 .news_item_info .name {
+  overflow: hidden;
+  display: -webkit-box;
+  max-height: 92px;
   margin-top: 12px;
   font-weight: 600;
   font-size: 34px;
   line-height: 46px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 @media screen and (min-width: 1025px) {
