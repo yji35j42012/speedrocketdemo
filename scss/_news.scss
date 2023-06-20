@@ -24,11 +24,12 @@
 		}
 		// .news_item_pic
 		&_pic {
+			overflow: hidden;
 			width: 100%;
 			max-width: 574px;
 			min-width: 535px;
 			margin-right: 45px;
-			border-radius: 16px;
+			border-radius: 18px;
 			@include mw(XL) {
 				margin-right: 20px;
 			}
@@ -324,9 +325,11 @@
 	}
 	// .news_img
 	&_img {
+		overflow: hidden;
 		width: 100%;
-		max-width: 1011px;
+		max-width: 940px;
 		margin: 67px auto 0;
 		padding: 0 36px;
+		border-radius: 30px;
 	}
 }
