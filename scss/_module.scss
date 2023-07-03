@@ -152,6 +152,9 @@ h4 {
 		}
 	}
 }
+.word_red{
+	color: red;
+}
 .txt26to16 {
 	font-style: normal;
 	font-weight: 400;
@@ -2108,7 +2111,7 @@ h4 {
 			@include d_f(flex, center, center);
 			text-align: center;
 			height: 219px;
-			background-position: center;
+			background-position: left center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			img {
