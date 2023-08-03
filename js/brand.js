@@ -212,14 +212,13 @@ function accessTouchMove() {
 		if (nowX < startX) {
 			access.style = `transform: translateX(calc(${access_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
 		}
-	}else if(access_count + 1 >= access_maxCount){
+	} else if (access_count + 1 >= access_maxCount) {
 		if (nowX > startX) {
 			access.style = `transform: translateX(calc(${access_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
 		}
-	}else{
+	} else {
 		access.style = `transform: translateX(calc(${access_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
 	}
-
 }
 function accessTouchEnd() {
 	if (nowX > startX) {
@@ -334,7 +333,7 @@ var startX = 0;
 var nowX = 0;
 var endX = 0;
 function productTouchStart(event) {
-	console.log('productTouchStart');
+	console.log("productTouchStart");
 
 	// 點擊位置
 	if (!event.touches) {
@@ -362,11 +361,11 @@ function productTouchMove() {
 		if (nowX < startX) {
 			product_group.style = `transform: translateX(calc(${product_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
 		}
-	}else if(product_count + 1 >= product_maxCount){
+	} else if (product_count + 1 >= product_maxCount) {
 		if (nowX > startX) {
 			product_group.style = `transform: translateX(calc(${product_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
 		}
-	}else{
+	} else {
 		product_group.style = `transform: translateX(calc(${product_moveNum}% + ${newX}px) );transition-duration: 0s;opacity:1;`;
 	}
 }
