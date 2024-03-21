@@ -2926,7 +2926,7 @@ footer .container {
   }
   .linkGroup._kp {
     flex-wrap: wrap;
-    max-width: 320px;
+    max-width: 330px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -2950,12 +2950,9 @@ footer .container {
   .en .linkGroup._sgareco a:nth-child(4) {
     margin-left: 8px;
   }
-  .linkGroup._sgareco a {
+  .linkGroup._kp a, .linkGroup._sgareco a {
     margin-bottom: 8px;
     padding: 6px 10px;
-  }
-  .linkGroup._kp a {
-    margin-bottom: 8px;
   }
 }
 .linkGroup a + a {
