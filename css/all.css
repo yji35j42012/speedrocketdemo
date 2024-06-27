@@ -1846,7 +1846,7 @@ footer .container {
 .brand_item:active {
   transform: translateY(-20px) !important;
 }
-.brand_item:nth-child(3n+1) {
+.brand_item:nth-child(1), .brand_item:nth-child(5) {
   margin-left: 0;
 }
 @media screen and (max-width: 1024px) {

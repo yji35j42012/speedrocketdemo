@@ -1806,8 +1806,8 @@ h4 {
 		@include hoverHandler {
 			transform: translateY(-20px) !important;
 		}
-
-		&:nth-child(3n + 1) {
+		&:nth-child(1),
+		&:nth-child(5) {
 			margin-left: 0;
 		}
 
