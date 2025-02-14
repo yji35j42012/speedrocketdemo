@@ -1806,6 +1806,7 @@ h4 {
 		@include hoverHandler {
 			transform: translateY(-20px) !important;
 		}
+
 		&:nth-child(1),
 		&:nth-child(5) {
 			margin-left: 0;
@@ -2969,9 +2970,11 @@ h4 {
 		&._sgareco {
 			max-width: 370px;
 		}
+
 		&._kp {
-			max-width:295px;
+			max-width: 295px;
 		}
+
 		.en &._sgareco {
 			max-width: 370px;
 
@@ -3099,5 +3102,42 @@ h4 {
 
 	&::after {
 		transform: rotate(-45deg);
+	}
+}
+
+.yearList {
+	@include d_f(flex, center);
+	height: 45px;
+	margin-top: 70px;
+
+	// .yearList_item
+	&_item {
+		position: relative;
+		font-size: 20px;
+		font-weight: 500;
+		list-style: 27px;
+		color: rgba(158, 158, 158, 1);
+		@extend %hand;
+
+		&+& {
+			margin-left: 22px;
+		}
+
+		&.on {
+			color: rgba(136, 119, 102, 1);
+			font-weight: 700;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				display: block;
+				width: 11px;
+				height: 12px;
+				margin: 4px auto 0;
+				background: url('../images/icon/icon_triangle_year.svg')no-repeat center/contain;
+			}
+		}
 	}
 }

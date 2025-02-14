@@ -5,7 +5,7 @@
   transition-duration: 0.3s;
 }
 
-.cooperation_contact_mail, .recruitment_info .mail, .recruitment_term_li, .news_community_item, .news_tag_item, .page_group li, .lang_group li, .lang_txt, .nav_btn, .nav_groupSec li, .nav_item, .footer_community .icon, .footer_nav_group a, .footer_gotop, .icon_prev, .icon_next, .breadcrumb_item, .normal_dots_item, .normal_select_group li, .normal_select {
+.inv_download_btn, .cooperation_contact_mail, .recruitment_info .mail, .recruitment_term_li, .news_community_item, .news_tag_item, .yearList_item, .page_group li, .lang_group li, .lang_txt, .nav_btn, .nav_groupSec li, .nav_item, .footer_community .icon, .footer_nav_group a, .footer_gotop, .icon_prev, .icon_next, .breadcrumb_item, .normal_dots_item, .normal_select_group li, .normal_select {
   cursor: pointer;
 }
 
@@ -3052,6 +3052,39 @@ h4 .style_X::before, h4 .style_X::after {
   transform: rotate(-45deg);
 }
 
+.yearList {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 45px;
+  margin-top: 70px;
+}
+.yearList_item {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  list-style: 27px;
+  color: rgb(158, 158, 158);
+}
+.yearList_item + .yearList_item {
+  margin-left: 22px;
+}
+.yearList_item.on {
+  color: rgb(136, 119, 102);
+  font-weight: 700;
+}
+.yearList_item.on:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 11px;
+  height: 12px;
+  margin: 4px auto 0;
+  background: url("../images/icon/icon_triangle_year.svg") no-repeat center/contain;
+}
+
 .news_group {
   margin-top: 27px;
 }
@@ -4473,7 +4506,7 @@ h4 .style_X::before, h4 .style_X::after {
   border-bottom-left-radius: 100px;
   border-left: 2px solid #887766;
 }
-.recruitment_term_li:nth-child(5) {
+.recruitment_term_li:last-child {
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   border-right: 2px solid #887766;
@@ -7418,4 +7451,157 @@ h4 .style_X::before, h4 .style_X::after {
   font-weight: 700;
   font-size: 30px;
   line-height: 160%;
+}
+
+.inv {
+  padding-top: 90px;
+  padding-bottom: 330px;
+  background-color: rgb(249, 249, 249);
+}
+.inv h2 {
+  position: relative;
+}
+.inv h2:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  right: 0;
+  display: block;
+  width: 275px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: rgb(51, 51, 51);
+}
+.inv .recruitment_term {
+  position: relative;
+  top: 0;
+  margin-top: 90px;
+}
+.inv_info, .inv_report, .inv_revenue {
+  margin-top: 40px;
+}
+.inv_download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1370px;
+  height: 95px;
+  margin: auto;
+  padding: 0 50px;
+  font-weight: 400;
+  font-size: 26px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 8px;
+}
+.inv_download + .inv_download {
+  margin-top: 35px;
+}
+.inv_download_btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(136, 119, 102);
+  font-weight: 700;
+  font-size: 22px;
+}
+.inv_download_btn:after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 30px;
+  margin-left: 12px;
+  background: url("../images/icon/icon_download.svg") no-repeat center/contain;
+}
+.inv_table {
+  width: 100%;
+  max-width: 1550px;
+  margin: auto;
+}
+.inv_table th,
+.inv_table td {
+  height: 95px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+}
+.inv_table th {
+  background-color: rgb(216, 216, 216);
+}
+.inv_table tr:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+.inv_table tr:nth-child(5) td,
+.inv_table tr:nth-child(9) td,
+.inv_table tr:nth-child(13) td,
+.inv_table tr:nth-child(17) td,
+.inv_table tr:last-child td {
+  font-weight: 700;
+}
+.inv_revenue_title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(136, 119, 102);
+}
+.inv_download + .inv_revenue_title {
+  margin-top: 50px;
+}
+.inv_allrep {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 130px;
+}
+.inv_allrep_item {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  width: calc(33.3333333333% - 21.3333333333px);
+  max-width: 488px;
+  margin-left: 32px;
+  margin-bottom: 46px;
+  padding: 58px 21px 16px 0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 8px;
+}
+.inv_allrep_item:nth-child(3n+1) {
+  margin-left: 0;
+}
+.inv_allrep_item .number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 144px;
+  height: 38px;
+  border: 1px solid rgb(51, 51, 51);
+  font-weight: 400;
+  font-size: 16px;
+}
+.inv_allrep_item .number::before {
+  content: attr(data-txt);
+}
+.inv_allrep_item .yreport {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 64px;
+}
+.inv_allrep_item .yreport:after {
+  content: attr(data-txt);
+  margin-left: 8px;
+  font-size: 26px;
+  font-weight: 400;
+}
+.inv_allrep_item .inv_download_btn {
+  margin-top: 77px;
+  margin-left: auto;
 }/*# sourceMappingURL=all.css.map */
