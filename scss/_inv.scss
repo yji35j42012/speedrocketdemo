@@ -3,6 +3,11 @@
 	padding-bottom: 330px;
 	background-color: rgba(249, 249, 249, 1);
 
+	@include mw(L) {
+		padding-top: 38px;
+		padding-bottom: 50px;
+	}
+
 	h2 {
 		position: relative;
 
@@ -20,10 +25,108 @@
 		}
 	}
 
-	.recruitment_term {
-		position: relative;
-		top: 0;
+	// .inv_selbox
+	&_selbox {
 		margin-top: 90px;
+
+		@include mw(L) {
+			position: relative;
+			width: 100%;
+			max-width: 268px;
+			margin: 40px auto 0;
+		}
+
+		.recruitment_term {
+			position: relative;
+			top: 0;
+			margin-top: 0;
+			padding: 0;
+
+			.recruitment_term_li.on {
+				pointer-events: none;
+			}
+
+			@include mw(L) {
+				position: absolute;
+				top: calc(100% + 10px);
+				left: 0;
+				display: none;
+				width: 100%;
+				padding: 16px 20px;
+				border-radius: 16px;
+				background-color: rgba(51, 51, 51, 0.7);
+				border: 1px solid rgba(51, 51, 51, 0.2);
+
+				&.on {
+					display: block;
+				}
+
+				.recruitment_term_li {
+					width: 100%;
+					padding: 0;
+					border: none;
+					background-color: transparent;
+					color: rgba(255, 255, 255, 1);
+					text-align: left;
+
+					&.on {
+						color: rgba(153, 153, 153, 1);
+						pointer-events: none;
+					}
+
+					&::before {
+						display: none;
+					}
+				}
+
+				.recruitment_term_li+.recruitment_term_li {
+					margin-top: 15px;
+				}
+			}
+		}
+
+		@include mw(L) {
+			// &._new {
+			// 	display: block;
+			// 	width: 100%;
+			// 
+			// 	margin: 90px auto 0;
+			// 	padding: 0;
+
+			// 	.recruitment_term_li {
+			// 		width: 100%;
+			// 	}
+			// }
+		}
+
+		// .inv_selbox_txt
+		&_txt {
+			display: none;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			max-width: 268px;
+			height: 37px;
+			padding: 0 20px;
+			background-color: rgba(51, 51, 51, 1);
+			border-radius: 100px;
+			color: rgba(255, 255, 255, 1);
+			font-size: 14px;
+			font-weight: 500;
+			@extend %hand;
+
+			&:after {
+				content: "";
+				display: block;
+				width: 16px;
+				height: 14px;
+				background: url('../images/icon/icon_triangle_bottom.svg')no-repeat center/contain;
+			}
+
+			@include mw(L) {
+				display: flex;
+			}
+		}
 	}
 
 	// .inv_report
@@ -31,7 +134,22 @@
 	&_info,
 	&_report,
 	&_revenue {
+		display: none;
 		margin-top: 40px;
+
+		&.on {
+			display: block;
+		}
+
+		@include mw(L) {
+			margin-top: 20px;
+		}
+	}
+
+	&_info {
+		@include mw(L) {
+			overflow-x: auto;
+		}
 	}
 
 	// .inv_download
@@ -48,13 +166,23 @@
 		border: 1px solid rgba(224, 224, 224, 1);
 		border-radius: 8px;
 
-		&+& {
-			margin-top: 35px;
+		@include mw(L) {
+			height: 56px;
+			padding: 0 12px;
+			font-size: 14px;
 		}
 
-		// .inv_download_btn
-		&_btn {
-			@include d_f(inline-flex, center, center);
+		&+& {
+			margin-top: 35px;
+
+			@include mw(L) {
+				margin-top: 16px;
+			}
+		}
+
+		// .inv_download_icon
+		&_icon {
+			@include d_f(inline-flex, center, centfer);
 			color: rgba(136, 119, 102, 1);
 			font-weight: 700;
 			font-size: 22px;
@@ -68,6 +196,10 @@
 				margin-left: 12px;
 				background: url('../images/icon/icon_download.svg')no-repeat center/contain;
 			}
+
+			@include mw(L) {
+				display: none;
+			}
 		}
 	}
 
@@ -75,6 +207,7 @@
 	&_table {
 		width: 100%;
 		max-width: 1550px;
+		min-width: 455px;
 		margin: auto;
 
 		th,
@@ -84,10 +217,21 @@
 			text-align: center;
 			font-size: 26px;
 			font-weight: 400;
+
+			@include mw(L) {
+				height: 40px;
+				font-size: 12px;
+			}
 		}
 
 		th {
 			background-color: rgba(216, 216, 216, 1);
+
+			&:not(:last-child) span {
+				display: block;
+				width: 100%;
+				border-right: 1px solid rgba(0, 0, 0, 1);
+			}
 		}
 
 		tr:nth-child(even) {
@@ -113,17 +257,34 @@
 			font-size: 20px;
 			color: rgba(136, 119, 102, 1);
 
+			@include mw(L) {
+				font-size: 12px;
+			}
+
 			.inv_download+& {
 				margin-top: 50px;
+
+				@include mw(L) {
+					margin-top: 26px;
+				}
 			}
 		}
 	}
 
 	// .inv_allrep
 	&_allrep {
-		@include d_f(flex);
+		display: none;
 		flex-wrap: wrap;
 		margin-top: 130px;
+
+		@include mw(L) {
+			max-width: 340px;
+			margin: 46px auto 0;
+		}
+
+		&.on {
+			@include d_f(flex);
+		}
 
 		// .inv_allrep_item
 		&_item {
@@ -131,15 +292,33 @@
 			flex-direction: column;
 			width: calc(100% / 3 - 64px / 3);
 			max-width: 488px;
-			margin-left: 32px;
-			margin-bottom: 46px;
 			padding: 58px 21px 16px 0;
 			background-color: rgba(255, 255, 255, 1);
 			border: 1px solid rgba(224, 224, 224, 1);
 			border-radius: 8px;
-&:nth-child(3n + 1){
-	margin-left: 0;
-}
+
+			@include minmw(L) {
+				margin-left: 32px;
+				margin-bottom: 46px;
+
+				&:nth-child(3n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			@include mw(L) {
+				width: calc(50% - 6px);
+				max-width: 164px;
+				margin-bottom: 22px;
+				padding: 12px 0;
+
+				&:nth-child(even) {
+					margin-left: 12px;
+				}
+			}
+
+
+
 			.number {
 				@include d_f(inline-flex, center, center);
 				width: 144px;
@@ -150,6 +329,12 @@
 
 				&::before {
 					content: attr(data-txt);
+				}
+
+				@include mw(L) {
+					width: 100px;
+					height: 24px;
+					font-size: 12px;
 				}
 			}
 
@@ -165,11 +350,33 @@
 					font-size: 26px;
 					font-weight: 400;
 				}
+
+				@include mw(L) {
+					margin-top: 10px;
+					font-size: 24px;
+
+					&:after {
+						font-size: 12px;
+					}
+				}
 			}
 
-			.inv_download_btn {
+			.inv_download_icon {
 				margin-top: 77px;
 				margin-left: auto;
+
+				@include mw(L) {
+					@include d_f(inline-flex, none, center);
+					margin-top: 8px;
+					font-size: 12px;
+					margin-right: auto;
+
+					&:after {
+						width: 18px;
+						height: 16px;
+						margin-left: 4px;
+					}
+				}
 			}
 		}
 	}

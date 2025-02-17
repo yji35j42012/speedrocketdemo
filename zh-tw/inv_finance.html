@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description" content="光速火箭-人才招募">
+	<meta name="description" content="光速火箭-財務資訊">
 	<meta name="keywords" content="光速火箭">
 	<meta name="image" property="og:image" content="https://www.speeding-rocket.com/images/seo.jpg">
 	<meta property="og:image" content="https://www.speeding-rocket.com/images/seo.jpg">
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/aos.css">
 	<link rel="stylesheet" href="../css/all.min.css">
-	<title>光速火箭-人才招募</title>
+	<title>光速火箭-財務資訊</title>
 </head>
 
 <body>
@@ -111,30 +111,40 @@
 		<section class="inv">
 			<div class="container">
 				<h2>投資人專區 / 財務資訊</h2>
-				<ul id="" class="recruitment_term">
-					<li class="recruitment_term_li" name="">財務報表</li>
-					<li class="recruitment_term_li" name="">營收資訊</li>
-					<li class="recruitment_term_li" name="">營收報告</li>
-					<li class="recruitment_term_li" name="">年報</li>
-				</ul>
-				<ul class="yearList">
-					<li class="yearList_item on">2025</li>
+
+				<div class="inv_selbox">
+					<span id="inv_selbox_txt" class="inv_selbox_txt">財務報表</span>
+					<ul id="inv_sel" class="recruitment_term">
+						<li class="recruitment_term_li" name="inv_report">財務報表</li>
+						<li class="recruitment_term_li" name="inv_info">營收資訊</li>
+						<li class="recruitment_term_li" name="inv_revenue">營收報告</li>
+						<li class="recruitment_term_li" name="inv_allrep">年報</li>
+					</ul>
+				</div>
+				<ul id="yearList" class="yearList">
+					<li class="yearList_item">2025</li>
 					<li class="yearList_item">2024</li>
 					<li class="yearList_item">2023</li>
 					<li class="yearList_item">2022</li>
 					<li class="yearList_item">2021</li>
 					<li class="yearList_item">More</li>
 				</ul>
-				<div class="inv_report" style="display: none;">
-					<div class="inv_download">113年Q3合併財報報告書-Q3合併財報報告<a class="inv_download_btn" href=""
-							download="">下載</a></div>
-					<div class="inv_download">113年Q2合併財報報告書-Q2合併財報報告<a class="inv_download_btn" href=""
-							download="">下載</a></div>
-					<div class="inv_download">113年Q1合併財報報告書-Q1合併財報報告<a class="inv_download_btn" href=""
-							download="">下載</a></div>
-				</div>
 
-				<div class="inv_info" style="display: none;">
+				<div id="inv_report" class="inv_report">
+					<a class="inv_download" href="" download="">
+						113年Q3合併財報報告書-Q3合併財報報告
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_download" href="" download="">
+						113年Q2合併財報報告書-Q2合併財報報告
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_download" href="" download="">
+						113年Q1合併財報報告書-Q1合併財報報告
+						<i class="inv_download_icon">下載</i>
+					</a>
+				</div>
+				<div id="inv_info" class="inv_info">
 					<table class="inv_table">
 						<tr>
 							<th><span>月份</span></th>
@@ -246,57 +256,75 @@
 						</tr>
 					</table>
 				</div>
-
-				<div class="inv_revenue" style="display: none;">
+				<div id="inv_revenue" class="inv_revenue">
 					<div class="inv_revenue_title">3Q 2024</div>
-					<div class="inv_download">3Q 2024 法說會 – 新聞稿<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_download">3Q 2024 法說會 – 簡報<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_download">3Q 2024 法說會 - 影音重播<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
+					<a class="inv_download" href="" download="">
+						3Q 2024 法說會 – 新聞稿
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_download" href="" download="">
+						3Q 2024 法說會 – 簡報
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_download" href="" download="">
+						3Q 2024 法說會 - 影音重播
+						<i class="inv_download_icon">下載</i>
+					</a>
 					<div class="inv_revenue_title">2Q 2024</div>
-					<div class="inv_download">2Q 2024 法說會 – 新聞稿<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_download">2Q 2024 法說會 – 簡報<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_download">2Q 2024 法說會 - 影音重播<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
+					<a class="inv_download" href="" download="">
+						2Q 2024 法說會 – 新聞稿
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_download" href="" download="">
+						2Q 2024 法說會 – 簡報
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_download" href="" download="">
+						2Q 2024 法說會 - 影音重播
+						<i class="inv_download_icon">下載</i>
+					</a>
 					<div class="inv_revenue_title">1Q 2024</div>
-					<div class="inv_download">1Q 2024 法說會 – 新聞稿<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_download">1Q 2024 法說會 – 簡報<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_download">1Q 2024 法說會 - 影音重播<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
+					<a class="inv_download" href="" download="">
+						1Q 2024 法說會 – 新聞稿
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_download" href="" download="">
+						1Q 2024 法說會 – 簡報
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_download" href="" download="">
+						1Q 2024 法說會 - 影音重播
+						<i class="inv_download_icon">下載</i>
+					</a>
 				</div>
-				<div class="inv_allrep">
-					<div class="inv_allrep_item">
+				<div id="inv_allrep" class="inv_allrep">
+					<a class="inv_allrep_item" href="" download="">
 						<div class="number" data-txt="股票代碼：">7782</div>
 						<div class="yreport" data-txt="年度報表">2023</div>
-						<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_allrep_item">
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_allrep_item" href="" download="">
 						<div class="number" data-txt="股票代碼：">7782</div>
 						<div class="yreport" data-txt="年度報表">2022</div>
-						<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_allrep_item">
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_allrep_item" href="" download="">
 						<div class="number" data-txt="股票代碼：">7782</div>
 						<div class="yreport" data-txt="年度報表">2021</div>
-						<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_allrep_item">
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_allrep_item" href="" download="">
 						<div class="number" data-txt="股票代碼：">7782</div>
 						<div class="yreport" data-txt="年度報表">2020</div>
-						<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
-					<div class="inv_allrep_item">
+						<i class="inv_download_icon">下載</i>
+					</a>
+					<a class="inv_allrep_item" href="" download="">
 						<div class="number" data-txt="股票代碼：">7782</div>
 						<div class="yreport" data-txt="年度報表">2019</div>
-						<a class="inv_download_btn" href="" download="">下載</a>
-					</div>
+						<i class="inv_download_icon">下載</i>
+					</a>
 				</div>
+
 			</div>
 
 			<div id="lightBox" class="lightBox">
@@ -383,11 +411,7 @@
 
 
 	<script src="../js/module.js"></script>
-	<script src="../js/aos.js"></script>
-	<script src="../js/recruitment.js"></script>
-	<script>
-		AOS.init();
-	</script>
+	<script src="../js/inv.js"></script>
 
 </body>
 

@@ -3106,9 +3106,17 @@ h4 {
 }
 
 .yearList {
-	@include d_f(flex, center);
+	display: none;
 	height: 45px;
 	margin-top: 70px;
+
+	&.on {
+		@include d_f(flex, center);
+	}
+
+	@include mw(L) {
+		margin-top: 26px;
+	}
 
 	// .yearList_item
 	&_item {
@@ -3119,8 +3127,18 @@ h4 {
 		color: rgba(158, 158, 158, 1);
 		@extend %hand;
 
+		@include mw(L) {
+			width: 46px;
+			font-size: 12px;
+			text-align: center;
+		}
+
 		&+& {
 			margin-left: 22px;
+
+			@include mw(L) {
+				margin-left: 0;
+			}
 		}
 
 		&.on {
