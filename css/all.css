@@ -555,6 +555,24 @@ h4 span {
     margin-top: 48px;
   }
 }
+.inv_file_title + .normal_btn {
+  width: 524px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_title + .normal_btn {
+    justify-content: space-between;
+    width: 270px;
+    font-size: 14px;
+    border-width: 1px;
+  }
+  .inv_file_title + .normal_btn .bt_txt {
+    width: calc(100% - 50px);
+    line-height: 20px;
+  }
+}
 
 .normal_input {
   display: inline-flex;
@@ -4507,6 +4525,9 @@ h4 .style_X::before, h4 .style_X::after {
   color: #887766;
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
 }
+.recruitment_term_li._over {
+  width: 25%;
+}
 @media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
   .recruitment_term_li:hover {
     background-color: #887766;
@@ -7484,6 +7505,10 @@ h4 .style_X::before, h4 .style_X::after {
     padding-bottom: 50px;
   }
 }
+.inv_shtbbox {
+  overflow-x: auto;
+  width: 100%;
+}
 .inv h2 {
   position: relative;
 }
@@ -7653,10 +7678,38 @@ h4 .style_X::before, h4 .style_X::after {
   min-width: 455px;
   margin: auto;
 }
+.inv_table_cap {
+  height: 95px;
+  background-color: rgb(96, 96, 96);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 95px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table_cap {
+    height: 48px;
+    font-size: 12px;
+    line-height: 48px;
+  }
+}
+.inv_table_dot {
+  width: 15px;
+  height: 15px;
+  margin: auto;
+  background-color: rgb(51, 51, 51);
+  border-radius: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table_dot {
+    width: 8px;
+    height: 8px;
+  }
+}
 .inv_table th,
 .inv_table td {
   height: 95px;
-  border-bottom: 1px solid rgb(224, 224, 224);
+  border: 1px solid rgb(224, 224, 224);
   text-align: center;
   font-size: 26px;
   font-weight: 400;
@@ -7685,6 +7738,213 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table tr:nth-child(17) td,
 .inv_table tr:last-child td {
   font-weight: 700;
+}
+.inv_table._enterprise tr td, .inv_table._shareholder tr td, .inv_table._stake tr td, .inv_table._pay tr td, .inv_table._t10 tr td {
+  font-weight: 400;
+}
+.inv_table._dire tr td {
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._enterprise {
+    min-width: 592px;
+  }
+  .inv_table._enterprise th {
+    height: 48px;
+  }
+  .inv_table._enterprise th span {
+    font-weight: 700;
+  }
+}
+.inv_table._enterprise td {
+  font-size: 18px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._enterprise td {
+    height: 50px;
+    font-size: 14px;
+  }
+}
+.inv_table._enterprise .date {
+  width: 135px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._stake {
+    min-width: 712px;
+  }
+  .inv_table._stake .first {
+    width: 145px;
+  }
+  .inv_table._stake .sec {
+    width: 185px;
+  }
+}
+.inv_table._stake th span {
+  font-weight: 700;
+}
+.inv_table._stake td {
+  padding: 35px 23px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 28px;
+  vertical-align: top;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._stake td {
+    padding: 18px 20px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._dire {
+    min-width: 900px;
+  }
+}
+.inv_table._dire th {
+  height: 85px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._dire th {
+    height: 48px;
+  }
+}
+.inv_table._dire th span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  border-color: rgba(51, 51, 51, 0.2);
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._dire th span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_table._dire td {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._dire td {
+    font-size: 12px;
+  }
+}
+.inv_table._dire td:last-child {
+  padding-left: 50px;
+  text-align: left;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._dire td:last-child {
+    padding-left: 15px;
+  }
+}
+.inv_table._dire .first {
+  width: 125px;
+}
+.inv_table._dire .sec {
+  width: 125px;
+}
+.inv_table._dire .third {
+  width: 95px;
+}
+.inv_table._dire .forth,
+.inv_table._dire .fif,
+.inv_table._dire .six,
+.inv_table._dire .sev,
+.inv_table._dire .eight,
+.inv_table._dire .nine,
+.inv_table._dire .ten {
+  width: 110px;
+}
+.inv_table._dire .last {
+  width: 300px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._pay {
+    min-width: 738px;
+  }
+}
+.inv_table._pay th span {
+  font-weight: 700;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._pay th {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_table._pay td {
+  padding: 35px 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  vertical-align: top;
+}
+.inv_table._pay td:first-child {
+  vertical-align: middle;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._pay td {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_table._pay .first {
+  min-width: 138px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._pay .first {
+    min-width: 90px;
+  }
+}
+.inv_table._pay .sec {
+  min-width: 350px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._pay .sec {
+    min-width: 190px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._t10 {
+    min-width: 455px;
+  }
+}
+.inv_table._t10 th span {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._t10 th span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_table._t10 th:first-child {
+  padding-left: 70px;
+  text-align: left;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._t10 th:first-child {
+    padding-left: 16px;
+  }
+}
+.inv_table._t10 td:first-child {
+  padding-left: 70px;
+  text-align: left;
+}
+@media screen and (max-width: 1024px) {
+  .inv_table._t10 td:first-child {
+    padding-left: 16px;
+  }
 }
 .inv_revenue_title {
   margin-bottom: 10px;
@@ -7814,4 +8074,554 @@ h4 .style_X::before, h4 .style_X::after {
     height: 16px;
     margin-left: 4px;
   }
+}
+.inv_file {
+  display: none;
+}
+.inv_file.on {
+  display: block;
+}
+.inv_file_title {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(136, 119, 102);
+}
+.inv_shtbbox + .inv_file_title, .normal_btn + .inv_file_title {
+  margin-top: 90px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_shtbbox + .inv_file_title, .normal_btn + .inv_file_title {
+    margin-top: 35px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_title {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+}
+.inv_file_tb th,
+.inv_file_tb td {
+  height: 70px;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: left;
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_tb th,
+  .inv_file_tb td {
+    height: 34px;
+    font-size: 12px;
+  }
+}
+.inv_file_tb th {
+  min-width: 384px;
+  padding-left: 55px;
+  background-color: rgb(217, 217, 217);
+  border: 1px solid rgb(255, 255, 255);
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_tb th {
+    min-width: 80px;
+    padding-top: 7px;
+    padding-left: 6px;
+    padding-right: 14px;
+    line-height: 20px;
+    vertical-align: top;
+  }
+}
+.inv_file_tb td {
+  width: 100%;
+  padding: 15px 55px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(217, 217, 217);
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_tb td {
+    padding: 6px 8px;
+  }
+}
+.inv_file_tb td span {
+  display: block;
+  padding: 40px 0;
+  line-height: 41.6px;
+  font-size: 26px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_tb td span {
+    padding: 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_file_tb + .inv_file_title {
+  margin-top: 90px;
+}
+.inv_file_dw a {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  font-size: 26px;
+  font-weight: 400;
+}
+.inv_file_dw a::before {
+  content: "";
+  flex: none;
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin-right: 16px;
+  background: url("../images/icon/icon_download_tb.svg") no-repeat center/contain;
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_dw a {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .inv_file_dw a::before {
+    width: 26px;
+    height: 26px;
+  }
+}
+.inv_file_dw a + a {
+  margin-top: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_dw a + a {
+    margin-top: 12px;
+  }
+}
+.inv_mana {
+  margin-top: 70px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_mana {
+    margin-top: 46px;
+  }
+}
+.inv_mana.on {
+  display: block;
+}
+.inv_mana_ul {
+  max-width: 1577px;
+  padding-left: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_mana_ul {
+    padding-left: 20px;
+  }
+}
+.inv_mana_item {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+  list-style-type: disc;
+}
+@media screen and (max-width: 1024px) {
+  .inv_mana_item {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_mana_tbbox {
+  margin-top: 35px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_mana_tbbox {
+    overflow-x: auto;
+    margin-top: 8px;
+  }
+}
+.inv_mana_title {
+  margin-top: 80px;
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 28px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_mana_title {
+    margin-top: 22px;
+    font-size: 14px;
+  }
+}
+.inv_labor {
+  margin-top: 70px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_labor {
+    margin-top: 45px;
+  }
+}
+.inv_labor.on {
+  display: block;
+}
+.inv_labor_title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 45px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_labor_title {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_labor_txt {
+  margin-top: 14px;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.inv_labor_txt + .inv_labor_title {
+  margin-top: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_labor_txt + .inv_labor_title {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inv_labor_txt {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_stake {
+  margin-top: 70px;
+}
+.inv_stake.on {
+  display: block;
+}
+.inv_stake_txt {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 40px;
+}
+.inv_stake_tbbox {
+  margin-top: 35px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_stake_tbbox {
+    overflow-x: auto;
+  }
+}
+.inv_dire_txt {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_dire_txt {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_dire_txt + .inv_dire_tbbox {
+  margin-top: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_dire_txt + .inv_dire_tbbox {
+    overflow-x: auto;
+    margin-top: 8px;
+  }
+}
+.inv_dire_result {
+  color: rgb(136, 119, 102);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .inv_dire_result {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+.inv_dire_tbbox + .inv_dire_result {
+  margin-top: 110px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_dire_tbbox + .inv_dire_result {
+    margin-top: 35px;
+  }
+}
+.inv_dire_result + .inv_download {
+  margin-top: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_dire_result + .inv_download {
+    margin-top: 22px;
+  }
+}
+.inv_pay_lists + .inv_shtitle {
+  margin-top: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_lists + .inv_shtitle {
+    margin-top: 22px;
+  }
+}
+.inv_pay_lists li {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  height: 70px;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_lists li {
+    height: 40px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_pay_lists li::before {
+  content: attr(data-txt);
+  display: inline-block;
+  -moz-text-align-last: justify;
+       text-align-last: justify;
+  width: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_lists li::before {
+    width: 40px;
+  }
+}
+.inv_pay_txt {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_txt {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_pay_txt + .inv_shtitle {
+  margin-top: 70px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_txt + .inv_shtitle {
+    margin-top: 22px;
+  }
+}
+.inv_pay_txt + .inv_pay_tbbox {
+  margin-top: 26px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_txt + .inv_pay_tbbox {
+    margin-top: 10px;
+  }
+}
+.inv_pay_txt + .inv_pay_lists {
+  margin-top: 24px;
+}
+.inv_pay_ul {
+  padding-left: 35px;
+  padding-right: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_ul {
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+}
+.inv_pay_ul li {
+  list-style-type: disc;
+  line-height: 28px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_ul li {
+    line-height: 20px;
+  }
+}
+.inv_pay_ul li.nost {
+  margin-left: -35px;
+  list-style: none;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_ul li.nost {
+    margin-left: -25px;
+  }
+}
+.inv_pay_ul._num {
+  padding-left: 35px;
+}
+.inv_pay_ul._num li {
+  list-style-type: decimal;
+}
+.inv_pay_txt .inv_pay_ul li {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_txt .inv_pay_ul li {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_pay_tbbox {
+  overflow-x: auto;
+}
+.inv_pay_tbbox + .inv_pay_txt {
+  margin-top: 28px;
+}
+.inv_pay_tbbox + .inv_pay_txt._cor {
+  margin-top: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_tbbox + .inv_pay_txt._cor {
+    margin-top: 16px;
+  }
+}
+.inv_shtitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 45px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_shtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.inv_dire_txt + .inv_shtitle {
+  margin-top: 55px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_dire_txt + .inv_shtitle {
+    margin-top: 22px;
+  }
+}
+.inv_shtitle + .inv_dire_txt {
+  margin-top: 14px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_shtitle + .inv_dire_txt {
+    margin-top: 12px;
+  }
+}
+.inv_shtitle + .inv_pay_lists {
+  margin-top: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_shtitle + .inv_pay_lists {
+    margin-top: 5px;
+  }
+}
+.inv_shtitle + .inv_pay_txt {
+  margin-top: 14px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_shtitle + .inv_pay_txt {
+    margin-top: 12px;
+  }
+}
+.inv_shtitle + .inv_pay_txt + .inv_pay_tbbox {
+  margin-top: 26px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_shtitle + .inv_pay_txt + .inv_pay_tbbox {
+    margin-top: 10px;
+  }
+}
+.inv_audit .firsttb {
+  min-width: 270px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_audit .firsttb {
+    min-width: 186px;
+  }
+}
+.inv_audit .sectb {
+  width: 100%;
+}
+.inv_audit .thtb {
+  min-width: 350px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_audit .thtb {
+    min-width: 200px;
+  }
+}
+.inv_audit .inv_table._pay td:first-child {
+  padding-left: 65px;
+  vertical-align: top;
+  text-align: left;
+}
+@media screen and (max-width: 1024px) {
+  .inv_audit .inv_table._pay td:first-child {
+    padding-left: 35px;
+  }
+}
+.inv_audit .inv_table._pay td.codate {
+  padding-left: 26px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_audit .inv_table._pay td.codate {
+    padding-left: 20px;
+  }
+}
+.inv_sust .inv_table._pay .codate {
+  padding-left: 26px;
+  padding-right: 26px;
+  text-align: left;
+  vertical-align: top;
+}
+@media screen and (max-width: 1024px) {
+  .inv_sust .inv_table._pay .codate {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inv_sust .inv_table._pay td {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+.inv_sust .firsttb {
+  min-width: 270px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_sust .firsttb {
+    min-width: 180px;
+  }
+}
+.inv_sust .thtb {
+  min-width: 250px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_sust .thtb {
+    min-width: 180px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .inv_t10_tbbox {
+    overflow-x: auto;
+  }
+}
+.inv_switch, .inv_labor, .inv_stake, .inv_dividend, .inv_ann, .inv_agency, .inv_mana {
+  display: none;
+}
+.inv_switch {
+  margin-top: 70px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_switch {
+    margin-top: 45px;
+  }
+}
+.inv_switch.on {
+  display: block;
 }/*# sourceMappingURL=all.css.map */

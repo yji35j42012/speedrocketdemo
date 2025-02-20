@@ -1,6 +1,6 @@
 var inv_sel=document.querySelector("#inv_sel");
 var inv_sel_li=document.querySelectorAll("#inv_sel > li");
-var inv_sel_count=0;
+var inv_sel_count=7;
 var inv_selbox_txt=document.querySelector("#inv_selbox_txt");
 var yearList=document.querySelector("#yearList");
 var yearList_li=document.querySelectorAll("#yearList > li");
@@ -11,6 +11,7 @@ var yearList_li_count=0;
 for (let i=0; i<inv_sel_li.length; i++) {
 	const element=inv_sel_li[i];
 	element.onclick=function () {
+		console.log('aaaaa');
 		inv_sel_li[inv_sel_count].classList.remove("on");
 		inv_sel_li[i].classList.add("on");
 		inv_sel.classList.remove('on');
@@ -56,3 +57,4 @@ function isYearList(s) {
 		yearList.classList.add("on");
 	}
 }
+

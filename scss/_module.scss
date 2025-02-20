@@ -530,6 +530,25 @@ h4 {
 			margin-top: 48px;
 		}
 	}
+
+	.inv_file_title+& {
+		width: 524px;
+		height: 50px;
+		font-size: 20px;
+		font-weight: 500;
+
+		@include mw(L) {
+			justify-content: space-between;
+			width: 270px;
+			font-size: 14px;
+			border-width: 1px;
+
+			.bt_txt {
+				width: calc(100% - 50px);
+				line-height: 20px;
+			}
+		}
+	}
 }
 
 .normal_input {
