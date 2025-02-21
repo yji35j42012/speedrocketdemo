@@ -1037,7 +1037,7 @@ h4 {
 	background-color: #090909;
 	color: #ffffff;
 
-	@include mw(L) {
+	@include mw(XL) {
 		padding: 59px 0;
 	}
 
@@ -1056,7 +1056,7 @@ h4 {
 		background: url("../images/footer_arr_bg.svg") no-repeat top/cover;
 		transform: translateY(-100%);
 
-		@include mw(L) {
+		@include mw(XL) {
 			width: 56px;
 			height: 22px;
 		}
@@ -1066,7 +1066,7 @@ h4 {
 			top: 16px;
 			width: 28px;
 
-			@include mw(L) {
+			@include mw(XL) {
 				top: 12px;
 				width: 21px;
 			}
@@ -1079,7 +1079,7 @@ h4 {
 			width: 80px;
 			text-align: center;
 
-			@include mw(L) {
+			@include mw(XXS) {
 				display: none;
 			}
 		}
@@ -1093,7 +1093,7 @@ h4 {
 		padding-bottom: 40px;
 		border-bottom: 0.5px solid #ffffff;
 
-		@include mw(L) {
+		@include mw(XL) {
 			display: none;
 		}
 
@@ -1148,7 +1148,7 @@ h4 {
 			font-size: 14px;
 
 			.en & a {
-				@include minmw(L) {
+				@include minmw(XL) {
 					font-size: 13px;
 					line-height: 18px;
 				}
@@ -1205,7 +1205,7 @@ h4 {
 		flex: none;
 		width: 254px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			width: 241px;
 		}
 	}
@@ -1217,7 +1217,7 @@ h4 {
 		font-size: 12px;
 		line-height: 160%;
 
-		@include mw(L) {
+		@include mw(XL) {
 			flex-direction: column;
 			align-items: flex-start;
 		}
@@ -1231,7 +1231,7 @@ h4 {
 				line-height: 160%;
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				margin-left: 0;
 				margin-top: 14px;
 				font-size: 10px;
@@ -1244,7 +1244,7 @@ h4 {
 		flex-direction: column;
 		font-size: 12px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			align-items: flex-start;
 			width: 100%;
 			margin-top: 13px;

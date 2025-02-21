@@ -1082,7 +1082,7 @@ footer .container {
   background-color: #090909;
   color: #ffffff;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer {
     padding: 59px 0;
   }
@@ -1102,7 +1102,7 @@ footer .container {
   background: url("../images/footer_arr_bg.svg") no-repeat top/cover;
   transform: translateY(-100%);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer_gotop {
     width: 56px;
     height: 22px;
@@ -1113,7 +1113,7 @@ footer .container {
   top: 16px;
   width: 28px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer_gotop img {
     top: 12px;
     width: 21px;
@@ -1126,7 +1126,7 @@ footer .container {
   width: 80px;
   text-align: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 360px) {
   .footer_gotop::after {
     display: none;
   }
@@ -1140,7 +1140,7 @@ footer .container {
   padding-bottom: 40px;
   border-bottom: 0.5px solid #ffffff;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer_nav {
     display: none;
   }
@@ -1186,7 +1186,7 @@ footer .container {
   font-weight: 400;
   font-size: 14px;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1281px) {
   .en .footer_nav_item a {
     font-size: 13px;
     line-height: 18px;
@@ -1237,7 +1237,7 @@ footer .container {
   flex: none;
   width: 254px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer_logo {
     width: 241px;
   }
@@ -1250,7 +1250,7 @@ footer .container {
   font-size: 12px;
   line-height: 160%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer_info {
     flex-direction: column;
     align-items: flex-start;
@@ -1266,7 +1266,7 @@ footer .container {
 .footer_info ul li {
   line-height: 160%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer_info ul {
     margin-left: 0;
     margin-top: 14px;
@@ -1280,7 +1280,7 @@ footer .container {
   flex-direction: column;
   font-size: 12px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .footer .copyRight {
     align-items: flex-start;
     width: 100%;
@@ -8246,6 +8246,11 @@ h4 .style_X::before, h4 .style_X::after {
 }
 .inv_file_tb + .inv_file_title {
   margin-top: 90px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_file_tb + .inv_file_title {
+    margin-top: 34px;
+  }
 }
 .inv_file_dw a {
   display: flex;

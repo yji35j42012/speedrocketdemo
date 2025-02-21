@@ -37,7 +37,7 @@
 		.inv_audit .inv_normal_txt+&,
 		.inv_sust .inv_normal_txt+&,
 		.inv_int .inv_normal_txt+&,
-		.inv_infos .inv_normal_txt+&  {
+		.inv_infos .inv_normal_txt+& {
 			margin-top: 80px;
 
 			@include mw(L) {
@@ -848,6 +848,10 @@
 
 			&+.inv_file_title {
 				margin-top: 90px;
+
+				@include mw(L) {
+					margin-top: 34px;
+				}
 			}
 		}
 
