@@ -8293,17 +8293,6 @@ h4 .style_X::before, h4 .style_X::after {
     margin-top: 12px;
   }
 }
-.inv_mana {
-  margin-top: 70px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_mana {
-    margin-top: 46px;
-  }
-}
-.inv_mana.on {
-  display: block;
-}
 .inv_mana_ul {
   max-width: 1577px;
   padding-left: 40px;
@@ -8346,17 +8335,6 @@ h4 .style_X::before, h4 .style_X::after {
     font-size: 14px;
   }
 }
-.inv_labor {
-  margin-top: 70px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_labor {
-    margin-top: 45px;
-  }
-}
-.inv_labor.on {
-  display: block;
-}
 .inv_labor_title {
   font-size: 28px;
   font-weight: 700;
@@ -8389,23 +8367,13 @@ h4 .style_X::before, h4 .style_X::after {
     line-height: 20px;
   }
 }
-.inv_stake {
-  margin-top: 70px;
-}
-.inv_stake.on {
-  display: block;
-}
-.inv_stake_txt {
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 40px;
-}
 .inv_stake_tbbox {
   margin-top: 35px;
 }
 @media screen and (max-width: 1024px) {
   .inv_stake_tbbox {
     overflow-x: auto;
+    margin-top: 22px;
   }
 }
 .inv_normal_txt + .inv_dire_tbbox {
@@ -8619,7 +8587,7 @@ h4 .style_X::before, h4 .style_X::after {
     overflow-x: auto;
   }
 }
-.inv_switch, .inv_labor, .inv_stake, .inv_dividend, .inv_ann, .inv_agency, .inv_mana {
+.inv_switch, .inv_dividend, .inv_ann, .inv_agency {
   display: none;
 }
 .inv_switch {

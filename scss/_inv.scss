@@ -811,12 +811,15 @@
 				padding-left: 55px;
 				background-color: rgba(217, 217, 217, 1);
 				border: 1px solid rgba(255, 255, 255, 1);
-&:first-child{
-	border-top-color: rgba(217, 217, 217, 1);
-}
-&:last-child{
-	border-bottom-color: rgba(217, 217, 217, 1);
-}
+
+				&:first-child {
+					border-top-color: rgba(217, 217, 217, 1);
+				}
+
+				&:last-child {
+					border-bottom-color: rgba(217, 217, 217, 1);
+				}
+
 				@include mw(L) {
 					min-width: 80px;
 					padding-top: 7px;
@@ -901,15 +904,6 @@
 
 	// .inv_mana
 	&_mana {
-		margin-top: 70px;
-
-		@include mw(L) {
-			margin-top: 46px;
-		}
-
-		&.on {
-			display: block;
-		}
 
 		// .inv_mana_ul
 		&_ul {
@@ -960,15 +954,6 @@
 
 	// .inv_labor
 	&_labor {
-		margin-top: 70px;
-
-		@include mw(L) {
-			margin-top: 45px;
-		}
-
-		&.on {
-			display: block;
-		}
 
 		// .inv_labor_title
 		&_title {
@@ -1007,18 +992,6 @@
 
 	// .inv_stake
 	&_stake {
-		margin-top: 70px;
-
-		&.on {
-			display: block;
-		}
-
-		// .inv_stake_txt
-		&_txt {
-			font-weight: 400;
-			font-size: 26px;
-			line-height: 40px;
-		}
 
 		// .inv_stake_tbbox
 		&_tbbox {
@@ -1026,6 +999,7 @@
 
 			@include mw(L) {
 				overflow-x: auto;
+				margin-top: 22px;
 			}
 		}
 	}
@@ -1184,9 +1158,7 @@
 			}
 		}
 	}
-
-
-
+	
 	// .inv_audit
 	&_audit {
 		.firsttb {
@@ -1278,19 +1250,14 @@
 	}
 
 	// .inv_switch
-	// .inv_labor
-	// .inv_stake
 	// .inv_dividend
 	// .inv_ann
 	// .inv_agency
 
 	&_switch,
-	&_labor,
-	&_stake,
 	&_dividend,
 	&_ann,
-	&_agency,
-	&_mana {
+	&_agency{
 		display: none;
 	}
 
