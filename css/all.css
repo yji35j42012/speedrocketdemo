@@ -8210,6 +8210,12 @@ h4 .style_X::before, h4 .style_X::after {
   background-color: rgb(217, 217, 217);
   border: 1px solid rgb(255, 255, 255);
 }
+.inv_file_tb th:first-child {
+  border-top-color: rgb(217, 217, 217);
+}
+.inv_file_tb th:last-child {
+  border-bottom-color: rgb(217, 217, 217);
+}
 @media screen and (max-width: 1024px) {
   .inv_file_tb th {
     min-width: 80px;

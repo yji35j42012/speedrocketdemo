@@ -811,7 +811,12 @@
 				padding-left: 55px;
 				background-color: rgba(217, 217, 217, 1);
 				border: 1px solid rgba(255, 255, 255, 1);
-
+&:first-child{
+	border-top-color: rgba(217, 217, 217, 1);
+}
+&:last-child{
+	border-bottom-color: rgba(217, 217, 217, 1);
+}
 				@include mw(L) {
 					min-width: 80px;
 					padding-top: 7px;
