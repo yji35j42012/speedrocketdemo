@@ -1066,7 +1066,7 @@ footer .container {
   background: rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .header {
     display: flex;
     justify-content: center;
@@ -1313,7 +1313,7 @@ footer .container {
   color: rgb(0, 0, 0);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .nav {
     overflow-x: hidden;
     overflow-y: auto;
@@ -1347,7 +1347,7 @@ footer .container {
 .nav_group:nth-child(3) {
   justify-content: flex-start;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .nav_group {
     flex-direction: column;
   }
@@ -1363,17 +1363,17 @@ footer .container {
   font-size: 18px;
   line-height: 25px;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1281px) {
   .en .nav_item {
     font-size: 15px;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1281px) {
   .nav_item._rule {
     display: none;
   }
 }
-@media screen and (min-width: 1025px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1025px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1025px) and (-moz-touch-enabled: 0) {
+@media screen and (min-width: 1281px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1281px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1281px) and (-moz-touch-enabled: 0) {
   .nav_item:hover {
     color: #887766;
     border-color: #887766;
@@ -1383,7 +1383,7 @@ footer .container {
     background-color: #887766;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1281px) {
   .nav_item:active {
     color: #887766;
     border-color: #887766;
@@ -1396,6 +1396,11 @@ footer .container {
 .nav_item + .nav_item {
   margin-left: 104px;
 }
+@media screen and (max-width: 1800px) {
+  .nav_item + .nav_item {
+    margin-left: 46px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .nav_item + .nav_item {
     margin-left: 40px;
@@ -1403,15 +1408,10 @@ footer .container {
 }
 @media screen and (max-width: 1280px) {
   .nav_item + .nav_item {
-    margin-left: 20px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .nav_item + .nav_item {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .nav_item {
     flex-direction: column;
     width: 100%;
@@ -1470,7 +1470,7 @@ footer .container {
     margin: 0 20px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .nav_item_logo {
     display: none;
   }
@@ -1478,7 +1478,7 @@ footer .container {
 .header > .nav_item_logo {
   display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .header > .nav_item_logo {
     display: flex;
     justify-content: center;
@@ -1506,7 +1506,7 @@ footer .container {
   border-radius: 16px;
   text-align: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .nav_groupSec {
     position: relative;
     top: 0;
@@ -1546,7 +1546,7 @@ footer .container {
     display: none;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1281px) {
   .nav_item:hover .nav_groupSec {
     display: block;
   }
@@ -1554,7 +1554,7 @@ footer .container {
     position: relative;
   }
 }
-@media screen and (min-width: 1025px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1025px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1025px) and (-moz-touch-enabled: 0) {
+@media screen and (min-width: 1281px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1281px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1281px) and (-moz-touch-enabled: 0) {
   .nav_groupSec .nav_item_link:hover {
     color: #887766;
   }
@@ -1568,7 +1568,7 @@ footer .container {
     background-color: #887766;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1281px) {
   .nav_groupSec .nav_item_link:active {
     color: #887766;
   }
@@ -1582,7 +1582,7 @@ footer .container {
     background-color: #887766;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .nav_item.on .nav_groupSec {
     display: block;
   }
@@ -1592,7 +1592,7 @@ footer .container {
   padding: 13px 27px;
   background-color: #ffffff;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1281px) {
   .nav_groupSec li:first-child {
     padding-top: 23px;
     border-top-left-radius: 16px;
@@ -1604,7 +1604,7 @@ footer .container {
     border-bottom-right-radius: 16px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .nav_groupSec li {
     padding: 0;
     background-color: #000000;
@@ -1617,7 +1617,7 @@ footer .container {
   width: 26px;
   height: 18px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .nav_btn {
     position: absolute;
     right: 20px;
@@ -1712,7 +1712,7 @@ footer .container {
     right: 20px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .lang {
     left: 20px;
     top: auto;
@@ -1734,7 +1734,7 @@ footer .container {
   color: #fff;
   border-radius: 100px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .lang_txt {
     min-width: 42px;
     height: 25px;
@@ -7509,6 +7509,92 @@ h4 .style_X::before, h4 .style_X::after {
   overflow-x: auto;
   width: 100%;
 }
+.inv_normal_title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 45px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_normal_title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.inv_normal_txt + .inv_normal_title {
+  margin-top: 55px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_normal_txt + .inv_normal_title {
+    margin-top: 22px;
+  }
+}
+.inv_pay .inv_normal_txt + .inv_normal_title, .inv_audit .inv_normal_txt + .inv_normal_title, .inv_sust .inv_normal_txt + .inv_normal_title, .inv_int .inv_normal_txt + .inv_normal_title, .inv_infos .inv_normal_txt + .inv_normal_title {
+  margin-top: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay .inv_normal_txt + .inv_normal_title, .inv_audit .inv_normal_txt + .inv_normal_title, .inv_sust .inv_normal_txt + .inv_normal_title, .inv_int .inv_normal_txt + .inv_normal_title, .inv_infos .inv_normal_txt + .inv_normal_title {
+    margin-top: 22px;
+  }
+}
+.inv_normal_title + .inv_normal_txt {
+  margin-top: 14px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_normal_title + .inv_normal_txt {
+    margin-top: 12px;
+  }
+}
+.inv_normal_title + .inv_pay_lists {
+  margin-top: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_normal_title + .inv_pay_lists {
+    margin-top: 5px;
+  }
+}
+.inv_normal_title + .inv_pay_txt {
+  margin-top: 14px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_normal_title + .inv_pay_txt {
+    margin-top: 12px;
+  }
+}
+.inv_normal_txt {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_normal_txt {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.inv_normal_txt + .inv_pay_tbbox {
+  margin-top: 26px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_normal_txt + .inv_pay_tbbox {
+    margin-top: 10px;
+  }
+}
+.inv_pay_tbbox + .inv_normal_txt {
+  margin-top: 28px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_pay_tbbox + .inv_normal_txt {
+    margin-top: 8px;
+  }
+}
+.inv_audit .inv_normal_txt._cor {
+  margin-top: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .inv_audit .inv_normal_txt._cor {
+    margin-top: 16px;
+  }
+}
 .inv h2 {
   position: relative;
 }
@@ -7837,7 +7923,7 @@ h4 .style_X::before, h4 .style_X::after {
   }
 }
 .inv_table._dire td:last-child {
-  padding-left: 50px;
+  padding-left: 23px;
   text-align: left;
 }
 @media screen and (max-width: 1024px) {
@@ -7905,12 +7991,15 @@ h4 .style_X::before, h4 .style_X::after {
   }
 }
 .inv_table._pay .sec {
-  min-width: 350px;
+  min-width: 330px;
 }
 @media screen and (max-width: 1024px) {
   .inv_table._pay .sec {
     min-width: 190px;
   }
+}
+.inv_table._pay .for {
+  min-width: 220px;
 }
 @media screen and (max-width: 1024px) {
   .inv_table._t10 {
@@ -8308,22 +8397,11 @@ h4 .style_X::before, h4 .style_X::after {
     overflow-x: auto;
   }
 }
-.inv_dire_txt {
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 40px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_dire_txt {
-    font-size: 12px;
-    line-height: 20px;
-  }
-}
-.inv_dire_txt + .inv_dire_tbbox {
+.inv_normal_txt + .inv_dire_tbbox {
   margin-top: 24px;
 }
 @media screen and (max-width: 1024px) {
-  .inv_dire_txt + .inv_dire_tbbox {
+  .inv_normal_txt + .inv_dire_tbbox {
     overflow-x: auto;
     margin-top: 8px;
   }
@@ -8357,11 +8435,11 @@ h4 .style_X::before, h4 .style_X::after {
     margin-top: 22px;
   }
 }
-.inv_pay_lists + .inv_shtitle {
+.inv_pay_lists + .inv_normal_title {
   margin-top: 80px;
 }
 @media screen and (max-width: 1024px) {
-  .inv_pay_lists + .inv_shtitle {
+  .inv_pay_lists + .inv_normal_title {
     margin-top: 22px;
   }
 }
@@ -8394,35 +8472,13 @@ h4 .style_X::before, h4 .style_X::after {
     width: 40px;
   }
 }
-.inv_pay_txt {
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 40px;
+.inv_pay_lists + .inv_pay_tbbox {
+  margin-top: 34px;
 }
 @media screen and (max-width: 1024px) {
-  .inv_pay_txt {
-    font-size: 12px;
-    line-height: 20px;
+  .inv_pay_lists + .inv_pay_tbbox {
+    margin-top: 8px;
   }
-}
-.inv_pay_txt + .inv_shtitle {
-  margin-top: 70px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_pay_txt + .inv_shtitle {
-    margin-top: 22px;
-  }
-}
-.inv_pay_txt + .inv_pay_tbbox {
-  margin-top: 26px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_pay_txt + .inv_pay_tbbox {
-    margin-top: 10px;
-  }
-}
-.inv_pay_txt + .inv_pay_lists {
-  margin-top: 24px;
 }
 .inv_pay_ul {
   padding-left: 35px;
@@ -8437,7 +8493,7 @@ h4 .style_X::before, h4 .style_X::after {
 }
 .inv_pay_ul li {
   list-style-type: disc;
-  line-height: 28px;
+  line-height: 40px;
 }
 @media screen and (max-width: 1024px) {
   .inv_pay_ul li {
@@ -8475,65 +8531,6 @@ h4 .style_X::before, h4 .style_X::after {
 }
 .inv_pay_tbbox + .inv_pay_txt {
   margin-top: 28px;
-}
-.inv_pay_tbbox + .inv_pay_txt._cor {
-  margin-top: 40px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_pay_tbbox + .inv_pay_txt._cor {
-    margin-top: 16px;
-  }
-}
-.inv_shtitle {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 45px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_shtitle {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-.inv_dire_txt + .inv_shtitle {
-  margin-top: 55px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_dire_txt + .inv_shtitle {
-    margin-top: 22px;
-  }
-}
-.inv_shtitle + .inv_dire_txt {
-  margin-top: 14px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_shtitle + .inv_dire_txt {
-    margin-top: 12px;
-  }
-}
-.inv_shtitle + .inv_pay_lists {
-  margin-top: 15px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_shtitle + .inv_pay_lists {
-    margin-top: 5px;
-  }
-}
-.inv_shtitle + .inv_pay_txt {
-  margin-top: 14px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_shtitle + .inv_pay_txt {
-    margin-top: 12px;
-  }
-}
-.inv_shtitle + .inv_pay_txt + .inv_pay_tbbox {
-  margin-top: 26px;
-}
-@media screen and (max-width: 1024px) {
-  .inv_shtitle + .inv_pay_txt + .inv_pay_tbbox {
-    margin-top: 10px;
-  }
 }
 .inv_audit .firsttb {
   min-width: 270px;

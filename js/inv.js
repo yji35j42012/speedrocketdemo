@@ -1,6 +1,6 @@
 var inv_sel=document.querySelector("#inv_sel");
 var inv_sel_li=document.querySelectorAll("#inv_sel > li");
-var inv_sel_count=7;
+var inv_sel_count=0;
 var inv_selbox_txt=document.querySelector("#inv_selbox_txt");
 var yearList=document.querySelector("#yearList");
 var yearList_li=document.querySelectorAll("#yearList > li");

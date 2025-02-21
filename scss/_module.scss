@@ -1024,7 +1024,7 @@ h4 {
 		background: rgba(255, 255, 255, 1);
 	}
 
-	@include mw(L) {
+	@include mw(XL) {
 		@include d_f(flex, center, center);
 		height: 54px;
 		padding: 0 20px;
@@ -1279,7 +1279,7 @@ h4 {
 		color: rgba(0, 0, 0, 1);
 	}
 
-	@include mw(L) {
+	@include mw(XL) {
 		// display: none;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -1315,7 +1315,7 @@ h4 {
 			justify-content: flex-start;
 		}
 
-		@include mw(L) {
+		@include mw(XL) {
 			flex-direction: column;
 		}
 	}
@@ -1330,7 +1330,7 @@ h4 {
 		font-size: 18px;
 		line-height: 25px;
 
-		@include minmw(L) {
+		@include minmw(XL) {
 			.en & {
 				font-size: 15px;
 			}
@@ -1339,7 +1339,7 @@ h4 {
 		@extend %hand;
 		@extend %transition;
 
-		@include minmw(L) {
+		@include minmw(XL) {
 			&._rule {
 				display: none;
 			}
@@ -1358,20 +1358,20 @@ h4 {
 		&+& {
 			margin-left: 104px;
 
+			@include mw(hitem) {
+				margin-left: 46px;
+			}
+
 			@include mw(XXL) {
 				margin-left: 40px;
 			}
 
 			@include mw(XL) {
-				margin-left: 20px;
-			}
-
-			@include mw(L) {
 				margin-left: 0;
 			}
 		}
 
-		@include mw(L) {
+		@include mw(XL) {
 			flex-direction: column;
 			width: 100%;
 			padding: 0;
@@ -1440,14 +1440,14 @@ h4 {
 				margin: 0 20px;
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				display: none;
 			}
 
 			@at-root .header>& {
 				display: none;
 
-				@include mw(L) {
+				@include mw(XL) {
 					@include d_f(flex, center);
 					width: 206px;
 				}
@@ -1473,7 +1473,7 @@ h4 {
 		border-radius: 16px;
 		text-align: center;
 
-		@include mw(L) {
+		@include mw(XL) {
 			position: relative;
 			top: 0;
 			padding: 0;
@@ -1512,7 +1512,7 @@ h4 {
 			}
 		}
 
-		@include minmw(L) {
+		@include minmw(XL) {
 			@at-root .nav_item:hover & {
 				display: block;
 			}
@@ -1536,7 +1536,7 @@ h4 {
 			}
 		}
 
-		@include mw(L) {
+		@include mw(XL) {
 			@at-root .nav_item.on & {
 				display: block;
 			}
@@ -1548,7 +1548,7 @@ h4 {
 			background-color: #ffffff;
 			@extend %hand;
 
-			@include minmw(L) {
+			@include minmw(XL) {
 				&:first-child {
 					padding-top: 23px;
 					border-top-left-radius: 16px;
@@ -1562,7 +1562,7 @@ h4 {
 				}
 			}
 
-			@include mw(L) {
+			@include mw(XL) {
 				padding: 0;
 				background-color: #000000;
 				color: #fff;
@@ -1577,7 +1577,7 @@ h4 {
 		width: 26px;
 		height: 18px;
 
-		@include mw(L) {
+		@include mw(XL) {
 			position: absolute;
 			right: 20px;
 			display: block;
@@ -1682,7 +1682,7 @@ h4 {
 		right: 20px;
 	}
 
-	@include mw(L) {
+	@include mw(XL) {
 		left: 20px;
 		top: auto;
 		width: 42px;
@@ -1704,7 +1704,7 @@ h4 {
 		border-radius: 100px;
 		@extend %hand;
 
-		@include mw(L) {
+		@include mw(XL) {
 			min-width: 42px;
 			height: 25px;
 			font-size: 12px;

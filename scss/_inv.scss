@@ -14,6 +14,100 @@
 		width: 100%;
 	}
 
+	// .inv_normal_title
+	&_normal_title {
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 45px;
+
+		@include mw(L) {
+			font-size: 14px;
+			line-height: 22px;
+		}
+
+		.inv_normal_txt+& {
+			margin-top: 55px;
+
+			@include mw(L) {
+				margin-top: 22px;
+			}
+		}
+
+		.inv_pay .inv_normal_txt+&,
+		.inv_audit .inv_normal_txt+&,
+		.inv_sust .inv_normal_txt+&,
+		.inv_int .inv_normal_txt+&,
+		.inv_infos .inv_normal_txt+&  {
+			margin-top: 80px;
+
+			@include mw(L) {
+				margin-top: 22px;
+			}
+		}
+
+
+		&+.inv_normal_txt {
+			margin-top: 14px;
+
+			@include mw(L) {
+				margin-top: 12px;
+			}
+		}
+
+		&+.inv_pay_lists {
+			margin-top: 15px;
+
+			@include mw(L) {
+				margin-top: 5px;
+			}
+		}
+
+		&+.inv_pay_txt {
+			margin-top: 14px;
+
+			@include mw(L) {
+				margin-top: 12px;
+			}
+		}
+
+	}
+
+	// .inv_normal_txt
+	&_normal_txt {
+		font-size: 26px;
+		font-weight: 400;
+		line-height: 40px;
+
+		@include mw(L) {
+			font-size: 12px;
+			line-height: 20px;
+		}
+
+		&+.inv_pay_tbbox {
+			margin-top: 26px;
+
+			@include mw(L) {
+				margin-top: 10px;
+			}
+		}
+
+		.inv_pay_tbbox+& {
+			margin-top: 28px;
+
+			@include mw(L) {
+				margin-top: 8px;
+			}
+		}
+
+		.inv_audit &._cor {
+			margin-top: 40px;
+
+			@include mw(L) {
+				margin-top: 16px;
+			}
+		}
+	}
+
 	h2 {
 		position: relative;
 
@@ -395,7 +489,7 @@
 			}
 
 			td:last-child {
-				padding-left: 50px;
+				padding-left: 23px;
 				text-align: left;
 
 				@include mw(L) {
@@ -473,11 +567,15 @@
 			}
 
 			.sec {
-				min-width: 350px;
+				min-width: 330px;
 
 				@include mw(L) {
 					min-width: 190px;
 				}
+			}
+
+			.for {
+				min-width: 220px;
 			}
 		}
 
@@ -926,19 +1024,9 @@
 	// .inv_dire
 	&_dire {
 
-
-		// .inv_dire_txt
-		&_txt {
-			font-size: 26px;
-			font-weight: 400;
-			line-height: 40px;
-
-			@include mw(L) {
-				font-size: 12px;
-				line-height: 20px;
-			}
-
-			&+.inv_dire_tbbox {
+		// .inv_dire_tbbox
+		&_tbbox {
+			.inv_normal_txt+& {
 				margin-top: 24px;
 
 				@include mw(L) {
@@ -946,7 +1034,6 @@
 					margin-top: 8px;
 				}
 			}
-
 		}
 
 		// .inv_dire_result
@@ -985,7 +1072,7 @@
 
 		// .inv_pay_lists
 		&_lists {
-			&+.inv_shtitle {
+			&+.inv_normal_title {
 				margin-top: 80px;
 
 				@include mw(L) {
@@ -1018,37 +1105,13 @@
 					}
 				}
 			}
-		}
-
-		// .inv_pay_txt
-		&_txt {
-			font-weight: 400;
-			font-size: 26px;
-			line-height: 40px;
-
-			@include mw(L) {
-				font-size: 12px;
-				line-height: 20px;
-			}
-
-			&+.inv_shtitle {
-				margin-top: 70px;
-
-				@include mw(L) {
-					margin-top: 22px;
-				}
-			}
 
 			&+.inv_pay_tbbox {
-				margin-top: 26px;
+				margin-top: 34px;
 
 				@include mw(L) {
-					margin-top: 10px;
+					margin-top: 8px;
 				}
-			}
-
-			&+.inv_pay_lists {
-				margin-top: 24px;
 			}
 		}
 
@@ -1065,7 +1128,7 @@
 
 			li {
 				list-style-type: disc;
-				line-height: 28px;
+				line-height: 40px;
 
 				@include mw(L) {
 					line-height: 20px;
@@ -1110,69 +1173,10 @@
 			&+.inv_pay_txt {
 				margin-top: 28px;
 			}
-
-			&+.inv_pay_txt._cor {
-				margin-top: 40px;
-
-				@include mw(L) {
-					margin-top: 16px;
-				}
-			}
 		}
 	}
 
-	// .inv_shtitle
-	&_shtitle {
-		font-size: 28px;
-		font-weight: 700;
-		line-height: 45px;
 
-		@include mw(L) {
-			font-size: 14px;
-			line-height: 22px;
-		}
-
-		.inv_dire_txt+& {
-			margin-top: 55px;
-
-			@include mw(L) {
-				margin-top: 22px;
-			}
-		}
-
-		&+.inv_dire_txt {
-			margin-top: 14px;
-
-			@include mw(L) {
-				margin-top: 12px;
-			}
-		}
-
-		&+.inv_pay_lists {
-			margin-top: 15px;
-
-			@include mw(L) {
-				margin-top: 5px;
-			}
-		}
-
-		&+.inv_pay_txt {
-			margin-top: 14px;
-
-			@include mw(L) {
-				margin-top: 12px;
-			}
-
-			&+.inv_pay_tbbox {
-				margin-top: 26px;
-
-				@include mw(L) {
-					margin-top: 10px;
-				}
-			}
-		}
-
-	}
 
 	// .inv_audit
 	&_audit {
@@ -1292,6 +1296,4 @@
 			display: block;
 		}
 	}
-
-
 }
