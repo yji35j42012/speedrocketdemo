@@ -1,4 +1,5 @@
 .inv {
+	position: relative;
 	padding-top: 90px;
 	padding-bottom: 330px;
 	background-color: rgba(249, 249, 249, 1);
@@ -127,19 +128,26 @@
 
 	// .inv_selbox
 	&_selbox {
+		position: sticky;
+		top: 55px;
 		margin-top: 90px;
-
+		background-color: #fff;
+		z-index: 1;
+		@include mw(XL) {
+			top: 20px;
+		}
 		@include mw(L) {
 			position: relative;
+			top: 0;
 			width: 100%;
 			max-width: 268px;
 			margin: 40px auto 0;
 		}
 
 		.recruitment_term {
-			position: relative;
-			top: 0;
-			margin-top: 0;
+			// position: relative;
+			// top: 0;
+			// margin-top: 0;
 			padding: 0;
 
 			.recruitment_term_li.on {
@@ -148,7 +156,7 @@
 
 			@include mw(L) {
 				position: absolute;
-				top: calc(100% + 10px);
+				top: calc(100% - 55px);
 				left: 0;
 				display: none;
 				width: 100%;
@@ -183,20 +191,6 @@
 					margin-top: 15px;
 				}
 			}
-		}
-
-		@include mw(L) {
-			// &._new {
-			// 	display: block;
-			// 	width: 100%;
-			// 
-			// 	margin: 90px auto 0;
-			// 	padding: 0;
-
-			// 	.recruitment_term_li {
-			// 		width: 100%;
-			// 	}
-			// }
 		}
 
 		// .inv_selbox_txt
