@@ -130,12 +130,14 @@
 	&_selbox {
 		position: sticky;
 		top: 55px;
-		margin-top: 90px;
+		padding-top: 90px;
 		background-color: #fff;
 		z-index: 1;
+
 		@include mw(XL) {
 			top: 20px;
 		}
+
 		@include mw(L) {
 			position: relative;
 			top: 0;
@@ -145,9 +147,9 @@
 		}
 
 		.recruitment_term {
-			// position: relative;
-			// top: 0;
-			// margin-top: 0;
+			position: relative;
+			top: 0;
+			margin-top: 0;
 			padding: 0;
 
 			.recruitment_term_li.on {

@@ -133,7 +133,7 @@ for (let i=0; i<inv_term_item.length; i++) {
 		inv_sel.classList.remove('on');
 		var nowScroll=window.scrollY;
 		var goScroll=areaArr[i]-defaultGo
-		console.log('click', areaArr[i],'defaultGo',defaultGo);
+		console.log('click', areaArr[i], 'defaultGo', defaultGo);
 		if (goScroll>nowScroll) {
 			goDown(nowScroll, goScroll)
 			scrollState="down";
