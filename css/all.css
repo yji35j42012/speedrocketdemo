@@ -7803,6 +7803,9 @@ h4 .style_X::before, h4 .style_X::after {
     height: 8px;
   }
 }
+.inv_table_blod td {
+  font-weight: 700 !important;
+}
 .inv_table th,
 .inv_table td {
   height: 95px;
@@ -7828,16 +7831,6 @@ h4 .style_X::before, h4 .style_X::after {
 }
 .inv_table tr:nth-child(even) {
   background-color: rgb(255, 255, 255);
-}
-.inv_table tr:nth-child(5) td,
-.inv_table tr:nth-child(9) td,
-.inv_table tr:nth-child(13) td,
-.inv_table tr:nth-child(17) td,
-.inv_table tr:last-child td {
-  font-weight: 700;
-}
-.inv_table._enterprise tr td, .inv_table._shareholder tr td, .inv_table._stake tr td, .inv_table._pay tr td, .inv_table._t10 tr td {
-  font-weight: 400;
 }
 .inv_table._dire tr td {
   font-weight: 500;
