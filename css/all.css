@@ -7615,7 +7615,7 @@ h4 .style_X::before, h4 .style_X::after {
   position: sticky;
   top: 55px;
   padding-top: 90px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   z-index: 1;
 }
 @media screen and (max-width: 1280px) {

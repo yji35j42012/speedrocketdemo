@@ -5,13 +5,12 @@ var inv_selbox_txt=document.querySelector("#inv_selbox_txt");
 var yearList=document.querySelector("#yearList");
 var yearList_li=document.querySelectorAll("#yearList > li");
 var yearList_li_count=0;
-
+var scroll_body = document.querySelector("html");
 
 
 for (let i=0; i<inv_sel_li.length; i++) {
 	const element=inv_sel_li[i];
 	element.onclick=function () {
-		console.log('aaaaa');
 		inv_sel_li[inv_sel_count].classList.remove("on");
 		inv_sel_li[i].classList.add("on");
 		inv_sel.classList.remove('on');
@@ -20,6 +19,7 @@ for (let i=0; i<inv_sel_li.length; i++) {
 		document.querySelector("#"+inv_sel_li[i].getAttribute('name')).classList.add('on');
 		isYearList(inv_sel_li[i].getAttribute('name'))
 		inv_sel_count=i;
+		scroll_body.scrollTo(0,0)
 	}
 }
 
