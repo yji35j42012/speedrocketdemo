@@ -219,8 +219,8 @@ window.onresize=function () {
 		defaultGo=230
 	} else {
 		defaultGo=100
-		areaArr[2]=480;
-		areaArr[3]=590;
+		areaArr[2]=570;
+		areaArr[3]=690;
 	}
 }
 
@@ -237,8 +237,8 @@ var yearList_li_count=0;
 	} else {
 		defaultGo=100
 		rangeArr=[0, 180, 365, 500]
-		areaArr[2]=480;
-		areaArr[3]=590;
+		areaArr[2]=570;
+		areaArr[3]=690;
 	}
 
 	for (let i=0; i<areaArr.length; i++) {
