@@ -7816,6 +7816,7 @@ h4 .style_X::before, h4 .style_X::after {
 .inv_table th,
 .inv_table td {
   height: 95px;
+  padding: 5px;
   border: 1px solid rgb(224, 224, 224);
   text-align: center;
   font-size: 26px;
