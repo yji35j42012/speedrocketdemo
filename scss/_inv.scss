@@ -350,7 +350,7 @@
 		th,
 		td {
 			height: 95px;
-			padding: 5px;
+			padding: 5px 0;
 			border: 1px solid rgba(224, 224, 224, 1);
 			text-align: center;
 			font-size: 26px;
@@ -445,7 +445,7 @@
 
 		&._dire {
 			@include mw(L) {
-				min-width: 900px;
+				min-width: 1000px;
 			}
 
 			th {
@@ -490,11 +490,11 @@
 			}
 
 			.first {
-				width: 125px;
+				width: 85px;
 			}
 
 			.sec {
-				width: 125px;
+				width: 167px;
 			}
 
 			.third {
@@ -503,8 +503,11 @@
 
 			.forth,
 			.fif,
+			.sev {
+				width: 110px;
+			}
+
 			.six,
-			.sev,
 			.eight,
 			.nine,
 			.ten {
@@ -568,6 +571,15 @@
 
 			.for {
 				min-width: 220px;
+			}
+			.fir_2{
+
+			}
+			.forth_2{
+				min-width: 410px;
+				@include mw(L){
+					min-width: 210px;
+				}
 			}
 		}
 
@@ -1173,7 +1185,7 @@
 			}
 		}
 
-		.inv_table._pay td:first-child {
+		.inv_table._pay:not(._ot) td:first-child {
 			padding-left: 65px;
 			vertical-align: top;
 			text-align: left;
@@ -1182,7 +1194,10 @@
 				padding-left: 35px;
 			}
 		}
-
+		.inv_table._pay._ot td{
+			padding-left: 5px;
+			padding-right: 5px;
+		}
 		.inv_table._pay td.codate {
 			padding-left: 26px;
 
@@ -1201,8 +1216,7 @@
 			vertical-align: top;
 
 			@include mw(L) {
-				padding-top: 18px;
-				padding-bottom: 18px;
+				padding: 18px;
 			}
 		}
 
