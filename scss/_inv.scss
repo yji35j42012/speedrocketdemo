@@ -159,6 +159,10 @@
 				pointer-events: none;
 			}
 
+			.recruitment_term_li.on+.recruitment_term_li::before {
+				display: none;
+			}
+
 			@include mw(L) {
 				position: absolute;
 				top: calc(100% - 55px);
@@ -572,12 +576,13 @@
 			.for {
 				min-width: 220px;
 			}
-			.fir_2{
 
-			}
-			.forth_2{
+			.fir_2 {}
+
+			.forth_2 {
 				min-width: 410px;
-				@include mw(L){
+
+				@include mw(L) {
 					min-width: 210px;
 				}
 			}
@@ -1194,10 +1199,12 @@
 				padding-left: 35px;
 			}
 		}
-		.inv_table._pay._ot td{
+
+		.inv_table._pay._ot td {
 			padding-left: 5px;
 			padding-right: 5px;
 		}
+
 		.inv_table._pay td.codate {
 			padding-left: 26px;
 
