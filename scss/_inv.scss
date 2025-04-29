@@ -351,6 +351,27 @@
 			font-weight: 700 !important;
 		}
 
+		&._rev th {
+			width: calc(100% / 3);
+		}
+
+		// .inv_table_link
+		&_link {
+			position: relative;
+			color: #3C5BA8;
+			padding-bottom: 3px;
+
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: #3C5BA8;
+			}
+		}
+
 		th,
 		td {
 			height: 95px;
@@ -1266,11 +1287,13 @@
 	// .inv_dividend
 	// .inv_ann
 	// .inv_agency
+	// .inv_oper
 
 	&_switch,
 	&_dividend,
 	&_ann,
-	&_agency {
+	&_agency,
+	&_oper {
 		display: none;
 	}
 
