@@ -6,7 +6,7 @@ var inv_sel = document.querySelector("#inv_term")
 var inv_term_item = document.querySelectorAll("#inv_term li");
 var nameArr = [];
 var areaArr = [];
-var rangeArr = [0, 525, 750, 1100, 1375];
+var rangeArr = [0, 250, 750, 1100, 1375];
 var termCount = 0;
 var defaultGo = 112;
 var scrollState = "down";
@@ -133,11 +133,11 @@ var yearList_li_count = 0;
 (function () {
 	yearList_li[yearList_li_count].classList.add("on");
 	if (window.innerWidth > 1024) {
-		defaultGo = 230;
-		rangeArr = [0, 525, 750, 1100, 1375];
+		defaultGo = 100;
+		rangeArr = [0, 240, 750, 1325, 1820];
 	} else {
-		defaultGo = 100
-		rangeArr = [0, 180, 365, 500, 680];
+		defaultGo = 30
+		rangeArr = [0, 100, 560, 800, 1000];
 		areaArr[2] = 600;
 		areaArr[3] = 710;
 		areaArr[4] = 832;

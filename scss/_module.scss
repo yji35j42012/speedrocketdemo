@@ -3137,6 +3137,15 @@ h4 {
 		margin-top: 26px;
 	}
 
+	&._inside {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		@include mw(L) {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
 	// .yearList_item
 	&_item {
 		position: relative;
@@ -3178,7 +3187,7 @@ h4 {
 		}
 	}
 
-	&+.inv_download{
+	&+.inv_download {
 		margin-top: 40px;
 	}
 }
