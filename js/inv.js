@@ -28,7 +28,7 @@ for (let i = 0; i < inv_sel_li.length; i++) {
 			yearList_li[2].style = `display:none`;
 			yearList_li[3].style = `display:none`;
 			yearList_li[4].style = `display:none`;
-		}else{
+		} else {
 			yearList_li[2].style = `display:`;
 			yearList_li[3].style = `display:`;
 			yearList_li[4].style = `display:`;

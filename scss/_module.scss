@@ -1268,6 +1268,7 @@ h4 {
 .nav {
 	@include d_f(flex, center, center);
 	height: 100%;
+	padding-bottom: 100px;
 	color: rgba(0, 0, 0, 1);
 
 	@at-root .headAni & {
