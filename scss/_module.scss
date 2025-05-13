@@ -1268,7 +1268,6 @@ h4 {
 .nav {
 	@include d_f(flex, center, center);
 	height: 100%;
-	padding-bottom: 100px;
 	color: rgba(0, 0, 0, 1);
 
 	@at-root .headAni & {
@@ -1295,6 +1294,7 @@ h4 {
 		color: #000 !important;
 		transform: translateX(100%);
 		transition-duration: 0.3s;
+		padding-bottom: 100px;
 
 		&.on {
 			transform: translateX(0%);
