@@ -323,7 +323,7 @@ h4 span {
     padding: 16px 18px;
   }
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .normal_select_group li:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 100px;
@@ -430,7 +430,7 @@ h4 span {
   height: 0;
 }
 
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .normal_btn:hover {
     color: #bda782;
     border-color: #bda782;
@@ -704,7 +704,7 @@ h4 span {
     font-size: 12px;
   }
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .breadcrumb_item:hover {
     color: #bda782;
     text-decoration: underline;
@@ -1168,7 +1168,7 @@ footer .container {
 .en .footer_nav_group + .footer_nav_group:not(:nth-child(2)) {
   margin-left: 40px;
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .footer_nav_group a:hover {
     color: #bda782;
   }
@@ -1222,7 +1222,7 @@ footer .container {
     height: 35px;
   }
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .footer_community .icon:hover {
     background-color: #bda782;
   }
@@ -1390,7 +1390,7 @@ footer .container {
     display: none;
   }
 }
-@media screen and (min-width: 1281px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1281px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1281px) and (-moz-touch-enabled: 0) {
+@media screen and (min-width: 1281px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1281px) and (-moz-touch-enabled: 0) {
   .nav_item:hover {
     color: #887766;
     border-color: #887766;
@@ -1571,7 +1571,7 @@ footer .container {
     position: relative;
   }
 }
-@media screen and (min-width: 1281px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1281px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1281px) and (-moz-touch-enabled: 0) {
+@media screen and (min-width: 1281px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1281px) and (-moz-touch-enabled: 0) {
   .nav_groupSec .nav_item_link:hover {
     color: #887766;
   }
@@ -1806,7 +1806,7 @@ footer .container {
   line-height: 30px;
   border-radius: 100px;
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .lang_group li:hover {
     background: rgba(100, 100, 100, 0.1);
   }
@@ -1824,7 +1824,7 @@ footer .container {
 .lang.on .lang_group {
   display: block;
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .lang:hover .lang_txt {
     background-color: #5f5e5e;
   }
@@ -1873,7 +1873,7 @@ footer .container {
   border-radius: 16px;
   text-align: center;
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .brand_item:hover {
     transform: translateY(-20px) !important;
   }
@@ -2707,7 +2707,7 @@ footer .container {
   font-size: 18px;
   border-radius: 100px;
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .page_group li:hover {
     color: #121212;
     fill: #121212;
@@ -3266,12 +3266,22 @@ h4 .style_X::before, h4 .style_X::after {
     line-height: 30px;
   }
 }
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
+  .news_item_info .name:hover {
+    text-decoration: underline;
+  }
+}
+.news_item_info .name:active {
+  text-decoration: underline;
+}
 .news_item_info .detail {
   overflow: hidden;
   display: -webkit-box;
   margin-top: 15px;
-  -webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
-  -webkit-line-clamp: 2; /* 限制指定的行數 */
+  -webkit-box-orient: vertical;
+  /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+  -webkit-line-clamp: 2;
+  /* 限制指定的行數 */
   /* 其它瀏覽器降級方式：給定最大高度 */
   /*max-height:48px;*/
   font-weight: 400;
@@ -3289,7 +3299,8 @@ h4 .style_X::before, h4 .style_X::after {
     margin-top: 8px;
     font-size: 16px;
     line-height: 22px;
-    -webkit-line-clamp: 1; /* 限制指定的行數 */
+    -webkit-line-clamp: 1;
+    /* 限制指定的行數 */
   }
 }
 @media screen and (max-width: 1024px) {
@@ -3369,7 +3380,7 @@ h4 .style_X::before, h4 .style_X::after {
 .news_tag_item::before {
   content: attr(data-tag);
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .news_tag_item:hover {
     background-color: #333;
   }
@@ -3446,7 +3457,7 @@ h4 .style_X::before, h4 .style_X::after {
   opacity: 0;
   transition-duration: 0.3s;
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .news_community_item:hover {
     background-color: #333333;
   }
@@ -3522,6 +3533,9 @@ h4 .style_X::before, h4 .style_X::after {
   .news_content {
     font-size: 16px;
   }
+}
+.news_content a {
+  color: #385bda;
 }
 .news_img {
   overflow: hidden;
@@ -4558,7 +4572,7 @@ h4 .style_X::before, h4 .style_X::after {
 .recruitment_term_li._over {
   width: 25%;
 }
-@media (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (pointer: fine) and (max-resolution: 2dppx), screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), (-moz-touch-enabled: 0) {
+@media (pointer: fine) and (max-resolution: 2dppx), (-moz-touch-enabled: 0) {
   .recruitment_term_li:hover {
     background-color: #887766;
     color: #ffffff;
@@ -4868,7 +4882,7 @@ h4 .style_X::before, h4 .style_X::after {
   transform: scale(0, 0);
   transform-origin: center;
 }
-@media screen and (min-width: 1025px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1025px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1025px) and (-moz-touch-enabled: 0) {
+@media screen and (min-width: 1025px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1025px) and (-moz-touch-enabled: 0) {
   .recruitment_office .recruitment_office_item:hover::before {
     transform: scale(1, 1);
   }
@@ -6129,7 +6143,7 @@ h4 .style_X::before, h4 .style_X::after {
     margin-left: 0;
   }
 }
-@media screen and (min-width: 1025px) and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2), screen and (min-width: 1025px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1025px) and (-moz-touch-enabled: 0) {
+@media screen and (min-width: 1025px) and (pointer: fine) and (max-resolution: 2dppx), screen and (min-width: 1025px) and (-moz-touch-enabled: 0) {
   .access_over_item:hover .hoverItem {
     opacity: 1;
   }
