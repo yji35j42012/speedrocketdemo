@@ -212,7 +212,7 @@
 		// .office_area_item
 		&_item {
 			position: relative;
-			@include d_f(flex, none, center);
+			@include d_f(flex, center, center);
 			flex-direction: column;
 			width: calc(100% / 3);
 			max-width: 420px;
@@ -222,6 +222,10 @@
 			border-bottom: 1px solid #d9d9d9;
 			.officeOver & {
 				width: calc(100% / 2);
+			}
+
+			.en &{
+				justify-content: flex-start;
 			}
 			@include mw(L) {
 				width: 100%;
