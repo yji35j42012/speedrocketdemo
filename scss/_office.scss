@@ -212,7 +212,7 @@
 		// .office_area_item
 		&_item {
 			position: relative;
-			@include d_f(flex, center, center);
+			@include d_f(flex, none, center);
 			flex-direction: column;
 			width: calc(100% / 3);
 			max-width: 420px;

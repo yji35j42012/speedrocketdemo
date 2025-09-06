@@ -7177,7 +7177,7 @@ h4 .style_X::before, h4 .style_X::after {
 .office_area_item {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: none;
   align-items: center;
   flex-direction: column;
   width: 33.3333333333%;
